@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+
+<script src="/static/js/area.js"></script>
+
+<div class="mx-auto stdbl">
+  <h1 align="center">コース一覧</h1>
+</div>
+
+<div class="mx-auto m-1" style="max-width: 800px;">
+  <table class="table table-sm table-responsive" style="min-width=350px;" id="sorttable">
+    <thead class="thead-light">
+      <tr>
+	<th scope="col" style="width: 30%" class="text-center align-middle">コース名称</th>
+	<th scope="col" style="width: 30%" class="text-center align-middle">サブタイトル</th>
+	<th scope="col" style="width: 40%" class="text-center align-middle">コース概要</th>
+      </tr>
+    </thead>
+    <tbody id="arealist">
+      {% for area in arealist %}
+      <tr id="area-{{area.id}}">
+	<td class="text-center">
+	  <span class="d-inline-block text-truncate" style="max-width: 150px">{{ area.Name }}</span></td>
+	<td class="text-center">
+	  <span class="d-inline-block text-truncate" style="max-width: 150px">{{ area.SubName }}</span></td>
+	<td class="text-center">
+	  <span class="d-inline-block text-truncate" style="max-width: 400px">{{ area.Abstruct }}</span></td>
+      </tr>
+      {% endfor %}
+    </tbody>    
+    <caption class="text-center">コースリスト</caption>
+  </table>
+</div>
+
+{% endblock %}

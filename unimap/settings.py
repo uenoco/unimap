@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -63,7 +64,9 @@ ROOT_URLCONF = 'unimap.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -72,7 +75,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 # `allauth` needs this from django
-                'django.template.context_processors.request',
+                # 'django.template.context_processors.request',
             ],
         },
     },
@@ -138,3 +141,49 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),  # プロジェクト直下のstaticディレクトリを指定
+)
+# Add for wsgi with Apache
+STATIC_ROOT = os.path.join(BASE_DIR, 'deploy')  # プロジェクト直下のdeployディレクトリを指定
+
+#ログ出力先のディレクトリを設定する
+#LOG_BASE_DIR = os.path.join("/var", "log", "app")
+LOG_BASE_DIR = os.path.join( BASE_DIR, "log" )
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "formatters": {"simple": {"format": "%(asctime)s [%(levelname)s] %(message)s"}},
+    "handlers": {
+        #"info": {
+        #    "level": "INFO",
+        #    "class": "logging.FileHandler",
+        #    "filename": os.path.join(LOG_BASE_DIR, "info.log"),
+        #    "formatter": "simple",
+        #},
+        "warning": {
+            "level": "WARNING",
+            "class": "logging.FileHandler",
+            "filename": os.path.join(LOG_BASE_DIR, "warning.log"),
+            "formatter": "simple",
+        },
+        "error": {
+            "level": "ERROR",
+            "class": "logging.FileHandler",
+            "filename": os.path.join(LOG_BASE_DIR, "error.log"),
+            "formatter": "simple",
+        },
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+           "filename": os.path.join(LOG_BASE_DIR, "debug.log"),
+            "formatter": "simple",
+        },
+    },
+    "root": {
+        #"handlers": ["info", "warning", "error"],
+        "handlers": ["warning", "error"],
+        "level": "WARNING",
+    },
+}
+
