@@ -10,12 +10,6 @@ from . import models
 #from unimap.models import Border, RecommendCourse
 from unimap.models import Area, PointData
 
-# Border
-#class BorderAdmin(admin.ModelAdmin):
-#    list_display = [ "n03_001", "n03_002", "n03_003", "n03_004", "n03_007", "geom"]
-#admin.site.register(models.Border, BorderAdmin)
-admin.site.register(models.Border, geoadmin.OSMGeoAdmin)
-
 # Area
 class AreaAdmin(admin.ModelAdmin):
     list_display = ['Name', 'SubName', 'Abstruct', 'Booklet', 'Timestamp' ]
@@ -27,4 +21,21 @@ class PointDataAdmin(admin.ModelAdmin):
 admin.site.register(models.PointData, geoadmin.OSMGeoAdmin)
 
 #admin.site.register(models.PointData, geoadmin.OSMGeoAdmin)
+
+# Route
+admin.site.register(models.Route, geoadmin.OSMGeoAdmin)
+
+# Slope
+admin.site.register(models.Slope, geoadmin.OSMGeoAdmin)
+
+# Zone
+admin.site.register(models.Zone, geoadmin.OSMGeoAdmin)
+
+# Toilet
+admin.site.register(models.Toilet, geoadmin.OSMGeoAdmin)
+
+# Hotel
+admin.site.register(models.Hotel, geoadmin.OSMGeoAdmin)
+
+
 
