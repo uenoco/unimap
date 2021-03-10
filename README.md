@@ -4,12 +4,12 @@ This is the Nara Universal Map on django FrameWork
 
 ## 動作環境
 
-Apache		2.4.X
 Python		3.9.X
-Django          3.1.X
 PostgreSQL      11.1
+Django          3.1.X
 
-データベースとしてPostGISを利用。MySQLは調査中
+Pythonとデータベースは、要事前インストール。
+データベースとしてPostGISを利用。MySQLは調査中。
 
 # インストール方法
 
@@ -19,7 +19,13 @@ PostgreSQL      11.1
 
 ## ソースの展開
 
-任意のディレクトリに展開。Web公開する場合はWebサーバがアクセスできること。
+任意のディレクトリに展開。
+Web公開する場合はWebサーバがアクセスできること。
+
+## （必要に応じて）Python仮想環境構築
+
+$ python -m venv venv
+$ source venv/bin/activate
 
 ## Pythonパッケージのインストール
 
@@ -49,9 +55,13 @@ $ pip install -r requirements.txt
 - python manage.py runserver
 - ブラウザで https://localhost:8000 にアクセス
 
-## Weサーバのテスト
+## Webサーバでの公開
 
-### Apacheの設定
+### Apacheの場合
+
+- インストール
+
+Apache-2.4.X をインストールして起動し、動作を確認
 
 - log/ にアクセス権限を付与
 
@@ -60,11 +70,12 @@ chmod 777 log などでlogディレクトリに書き出せるように設定
 
 - wsgi.conf の配置
 
-wsgi.conf を設定（/etc/httpd/conf.d/など）に配置し、設置したディレクトリにパスを通す
+wsgi.conf を設定ディレクトリ（/etc/httpd/conf.d/など）に配置
+ソースディレクトリなど必要なバスを通す。
 
-- Apache を再起動
+- 設定反映
 
-再起動後ブラウザでアクセス
+Apacheを再起動などで設定反映、ブラウザでアクセス。
 
 
 
