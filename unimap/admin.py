@@ -12,7 +12,7 @@ from unimap.models import Area, PointData
 
 # Area
 class AreaAdmin(admin.ModelAdmin):
-    list_display = ['Name', 'SubName', 'Abstruct', 'Booklet', 'Timestamp' ]
+    list_display = ['Name', 'SubName', 'Booklet' ]
 admin.site.register(models.Area, AreaAdmin)
 
 # Point
@@ -32,7 +32,11 @@ admin.site.register(models.Slope, geoadmin.OSMGeoAdmin)
 admin.site.register(models.Zone, geoadmin.OSMGeoAdmin)
 
 # Toilet
-admin.site.register(models.Toilet, geoadmin.OSMGeoAdmin)
+class ToiletAdmin(geoadmin.OSMGeoAdmin):
+    list_display = ['AreaId','Name','Summery','Babyseat','Ostomate','Nursingbed','Washlet','Rotation','Emergencycall']
+    
+admin.site.register(models.Toilet, ToiletAdmin)
+# admin.site.register(models.Toilet, geoadmin.OSMGeoAdmin)
 
 # Hotel
 admin.site.register(models.Hotel, geoadmin.OSMGeoAdmin)

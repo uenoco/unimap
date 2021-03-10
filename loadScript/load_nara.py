@@ -22,6 +22,7 @@ geojson_file = os.path.abspath(os.path.join(os.path.dirname(__file__), 'N03-20_2
 # 実行
 def run(verbose=True):
     lm = LayerMapping(Border, geojson_file, mapping, transform=False, encoding='UTF-8')
-    lm.save(strict=True, verbose=verbose)
+    print( lm )
+#    lm.save(strict=True, verbose=verbose)
     
     
