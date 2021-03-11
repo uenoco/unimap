@@ -20,7 +20,9 @@
       {% for area in arealist %}
       <tr id="area-{{area.id}}">
 	<td class="text-center">
-	  <span class="d-inline-block text-truncate" style="max-width: 150px">{{ area.Name }}</span></td>
+	  <span class="d-inline-block text-truncate" style="max-width: 150px">
+            <a href="{% url 'map' %}/{{ area.id }}">{{ area.Name }}</a>
+	</span></td>
 	<td class="text-center">
 	  <span class="d-inline-block text-truncate" style="max-width: 150px">{{ area.SubName }}</span></td>
 	<td class="text-center">

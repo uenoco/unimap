@@ -29,6 +29,9 @@ urlpatterns = [
 
     # コース一覧ページ
     path('area', views.arealist, name='arealist'),
+
+    # 暫定のmap
+    path('map', views.map, name='map'),
+    path('map/<int:areaid>', views.map, name='map'),
+
 ]
-
-

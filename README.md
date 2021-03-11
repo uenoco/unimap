@@ -5,7 +5,8 @@ This is the Nara Universal Map on django FrameWork
 ## 動作環境
 
 Python		3.9.X
-PostgreSQL      11.1
+PostgreSQL      13.X
+PostGIS         3.1
 Django          3.1.X
 
 Pythonとデータベースは、要事前インストール。
@@ -63,7 +64,7 @@ $ pip install -r requirements.txt
 
 Apache-2.4.X をインストールして起動し、動作を確認
 
-- log/ にアクセス権限を付与
+- log/ media/ にアクセス権限を付与
 
 chmod 777 log などでlogディレクトリに書き出せるように設定
 既存ログファイルがあれば、それらへの書き込み権限を付与
@@ -77,7 +78,7 @@ wsgi.conf を設定ディレクトリ（/etc/httpd/conf.d/など）に配置
 
 Apacheを再起動などで設定反映、ブラウザでアクセス。
 
+# 参考
 
-
-
-
+* MacOS上でのPython-Django-PostgeSQL環境構築
+https://qiita.com/yasushi00/items/3c944a4f63b132054b41

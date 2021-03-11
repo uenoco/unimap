@@ -13,8 +13,11 @@ class Area(models.Model):
     SubName  = models.CharField(verbose_name="サブタイトル",max_length=24)
     Abstruct = models.TextField(verbose_name="概要",max_length=256)
     Booklet  = models.CharField(verbose_name="収録冊子",max_length=24,null=True,blank=True)
-    Timestamp= models.DateTimeField(verbose_name="更新日時", blank=True, null=True, auto_now=True)
-
+    DEF_LAT  = models.FloatField(verbose_name="中心緯度",default=34.6)
+    DEF_LON  = models.FloatField(verbose_name="中心経度",default=135.8)
+    DEF_Zoom = models.IntegerField(verbose_name="ズームレベル",default=15 )
+    Timestamp= models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
+    
     def __str__(self):
         return self.Name
 
@@ -22,6 +25,24 @@ class Area(models.Model):
         verbose_name = '1.マップエリア'
         verbose_name_plural = '1.マップエリア'
 
+# イラスト地図
+class ImageMap(models.Model):
+    AreaId   = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID")
+    ImageMap = models.ImageField(verbose_name="イラスト地図",upload_to="images/",null=True)
+    LAT1     = models.FloatField(verbose_name="左上緯度")
+    LON1     = models.FloatField(verbose_name="左上経度")
+    LAT2     = models.FloatField(verbose_name="右下緯度")
+    LON2     = models.FloatField(verbose_name="右下経度")
+    Timestamp= models.DateTimeField(verbose_name="更新日時", blank=True, null=True, auto_now=True)
+
+    #def __str__(self):
+    #    return self.AreaId
+
+    class Meta:
+        verbose_name = '1.イメージマップ'
+        verbose_name_plural = '1.イメージマップ'
+    # See https://qiita.com/kojionilk/items/da20c732642ee7377a78
+    
 # 移動ルート
 class Route(models.Model):
     SortType_CHOICES = ( ( 1, 'main'),( 2, 'option') )
@@ -30,6 +51,7 @@ class Route(models.Model):
     Name      = models.CharField(verbose_name="名称",max_length=24,null=False)
     Summery   = models.CharField(verbose_name="概要",max_length=256,null=True,blank=True)
     geom      = models.LineStringField(srid=4326,default=LineString( [135.82, 34.681],[135.83, 34.685]) )
+    Timestamp= models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
     def __str__(self):
         return self.Name
     class Meta:
@@ -64,6 +86,7 @@ class PointData(models.Model):
     Photo360_2= models.CharField(verbose_name="Photo360_2",max_length=256,null=True,blank=True)
     geom      = models.PointField(srid=4326,default=Point([135.82, 34.68]))
     objects   = models.Manager()
+    Timestamp= models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
     
     def __str__(self):
         return self.Name
@@ -81,6 +104,8 @@ class Slope(models.Model):
     Name      = models.CharField(verbose_name="名称",max_length=24,null=False)
     Summery   = models.CharField(verbose_name="概要",max_length=256,null=True,blank=True)
     geom      = models.LineStringField(srid=4326,default=LineString( [135.82, 34.681],[135.83, 34.680]) )
+    Timestamp= models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
+
     def __str__(self):
         return self.Name
     class Meta:
@@ -101,12 +126,13 @@ class Zone(models.Model):
     Photo360  = models.CharField(verbose_name="Photo360",max_length=256,null=True,blank=True)
     Photo360_2= models.CharField(verbose_name="Photo360_2",max_length=256,null=True,blank=True)
     geom      = models.PolygonField(srid=4326)
+    Timestamp= models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
+
     def __str__(self):
         return self.Name
     class Meta:
         verbose_name = '5.ゾーン情報'
         verbose_name_plural = '5.ゾーン情報'
-
 
 # トイレ
 class Toilet(models.Model):
@@ -130,7 +156,9 @@ class Toilet(models.Model):
     Photo360  = models.CharField(verbose_name="Photo360",max_length=256,null=True,blank=True)
     Photo360_2= models.CharField(verbose_name="Photo360_2",max_length=256,null=True,blank=True)
     geom      = models.PointField(srid=4326,default=Point([135.82, 34.68]))
+    Timestamp = models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
     objects   = models.Manager()
+    
     def __str__(self):
         return self.Name
     class Meta:
@@ -157,6 +185,7 @@ class Hotel(models.Model):
     Photo360  = models.CharField(verbose_name="Photo360",max_length=256,null=True,blank=True)
     Photo360_2= models.CharField(verbose_name="Photo360_2",max_length=256,null=True,blank=True)
     geom      = models.PointField(srid=4326,default=Point([135.82, 34.68]))
+    Timestamp = models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
     objects   = models.Manager()
     def __str__(self):
         return self.Name

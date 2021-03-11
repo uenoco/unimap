@@ -39,10 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
+    ## django-leaflet
+    'leaflet',
+    ## django-geojson
+    'djgeojson',
     ## django-allauth
     #'django.contrib.sites',
-    # geodjango
-    #'allauth',
+    ##'allauth',
     #'allauth.account',
     #'allauth.socialaccount',    # ソーシャル連携認証なしでも必要',
     # unimap Applicaition
@@ -139,11 +142,15 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),  # プロジェクト直下のstaticディレクトリを指定
 )
+
+# MEDIA_ROOT for models.ImageField
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # Add for wsgi with Apache
 STATIC_ROOT = os.path.join(BASE_DIR, 'deploy')  # プロジェクト直下のdeployディレクトリを指定
 

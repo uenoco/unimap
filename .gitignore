@@ -6,15 +6,19 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Django Deploy Directory
-/deploy/
-!/deploy/.gitkeep
-
-# Environments
+# Django/Python Environments
 .env
 .env~
 .venv
 venv/
+
+# Deploy Directory for Apache
+/deploy/
+!/deploy/.gitkeep
+
+# Media Directory for models.ImageField
+/media/
+!/media/.gitkeep
 
 # Logging Files
 /log/*

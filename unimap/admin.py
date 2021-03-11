@@ -12,8 +12,12 @@ from unimap.models import Area, PointData
 
 # Area
 class AreaAdmin(admin.ModelAdmin):
-    list_display = ['Name', 'SubName', 'Booklet' ]
+    list_display = ['Name', 'SubName', 'Booklet', 'DEF_LON', 'DEF_LAT' , 'DEF_Zoom' ]
 admin.site.register(models.Area, AreaAdmin)
+
+class ImageMapAdmin(admin.ModelAdmin):
+    list_display = ['AreaId', 'ImageMap', 'LAT1', 'LON1', 'LAT2', 'LON2' ]
+admin.site.register(models.ImageMap, ImageMapAdmin)
 
 # Point
 class PointDataAdmin(admin.ModelAdmin):
