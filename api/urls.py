@@ -7,7 +7,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.views.decorators.csrf import csrf_exempt
 from djgeojson.views import GeoJSONLayerView
-from unimap.models import Toilet
+from unimap.models import Toilet, Hotel
 from api import views
 
 
@@ -18,5 +18,11 @@ urlpatterns = [
         properties=['Name','Summery','Floor','Babyseat','Ostomate','Nursingbed','Washlet','Rotation','Emergencycall',
                     'Photo1','Photo2','Photo3','Photo360','Photo360_2']
     ), name='toilet'),
+
+    path('v1/hotel.geojson',GeoJSONLayerView.as_view(
+        model=Hotel,
+        properties=['Name','Summery','TEL','Address','Access','URL','URL_f21',
+                    'Photo1','Photo2','Photo3','Photo360','Photo360_2']
+    ), name='hotel'),
 ]
 

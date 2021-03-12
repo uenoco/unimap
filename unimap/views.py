@@ -30,9 +30,11 @@ def arealist(request):
 
 # マップ
 def map(request,areaid):
-    area  = Area.objects.get( id=areaid )
-    image = ImageMap.objects.get( AreaId=areaid )
-    params = { 'area':area, 'image': image } 
-    return render(request, 'map.html', params )
-
+    try:
+        area  = Area.objects.get( id=areaid )
+        image = ImageMap.objects.get( AreaId=areaid )
+        params = { 'area':area, 'image': image } 
+        return render(request, 'map.html', params )
+    except:
+        return render(request, 'map.html'  )
 

@@ -95,14 +95,12 @@ var coursePointLayer = new L.GeoJSON.AJAX( GEOJSON_POINT , {
 */
 
 //  ホテル表示
-/*
 var hotelLayer = new L.GeoJSON.AJAX( GEOJSON_HOTEL , {
   pointToLayer: function (feature, latlng) {
 	  return L.marker(latlng, {icon: IconHotel, opacity: "0.8"});
   },
   onEachFeature: onEachFeatureHotel
 });
-*/
 
 //  多目的トイレ表示
 var toiletLayer = new L.GeoJSON.AJAX( GEOJSON_TOILET , {
@@ -139,7 +137,7 @@ var routeLayer   = L.layerGroup([ ]);
 */
 
 var overlayMaps = {
-//  "バリアフリーホテル"   : hotelLayer,
+  "バリアフリーホテル"   : hotelLayer,
   "多目的トイレ"   : toiletLayer,
 //  "おすすめコース" : courseLayer,
 //  "イラストマップ" : imageLayer,
@@ -148,7 +146,7 @@ var overlayMaps = {
 };
 
 //map.addLayer( courseLayer );
-//map.addLayer( hotelLayer );
+map.addLayer( hotelLayer );
 map.addLayer( toiletLayer );
 //map.addLayer( routeLayer );
 //map.addLayer( imageLayer );

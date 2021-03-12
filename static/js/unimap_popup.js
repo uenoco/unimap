@@ -246,7 +246,7 @@ function setPopupContentWC(feature){
     popupRouteSearch += TemplateParts_RouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
     //popupRouteSearch += TemplateParts_DemoSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
     popupContent = popupContent.replace("TOILET_ROUTE_SEARCH", popupRouteSearch );
-  }else{
+    }else{
 	  popupContent = '<h3>No Data</h3><hr class="full"><p>Sorry</p>';
   }
 
@@ -256,98 +256,99 @@ function setPopupContentWC(feature){
 
 //  PopupContent for the HOTEL
 function onEachFeatureHotel(feature, layer) {
-	popupContent = setPopupContentHotel(feature);
-  layer.bindPopup(popupContent);
+    popupContent = setPopupContentHotel(feature);
+    layer.bindPopup(popupContent);
 }
 
 //  PopupContent for the HOTEL
 function setPopupContentHotel(feature){
-  var popupContent = TemplatePopup_Hotel
-  var popupParts = "" ;
+    var popupContent = TemplatePopup_Hotel
+    var popupParts = "" ;
 
-  if ( feature.properties ){
-    //  Name
-    if ( feature.properties.Name !== null ){
-      popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.Name );
-    }else{
-      popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
-    }
-    popupContent = popupContent.replace("HOTEL_NAME", popupParts );
-
-    //  Photo1
-    if (( feature.properties.Photo1 !== null )&&( feature.properties.Photo1 != "" )){
-      popupParts = TemplateParts_PhotoH.replace("POPUP_PHOTO", feature.properties.Photo1 );
-    }else{
-      popupParts = "";
-    }
-    popupContent = popupContent.replace("HOTEL_PHOTO1", popupParts );
-
-    //  Photo2
-    if (( feature.properties.Photo2 !== null )&&( feature.properties.Photo2 != "" )){
-      popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
-    }else{
-      popupParts = "";
-    }
-    popupContent = popupContent.replace("HOTEL_PHOTO2", popupParts );
-
-	  //  Summery
-	  if (( feature.properties.Summery !== null )&&( feature.properties.Summery != "" )){
-	    popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
-    }else{
+    if ( feature.properties ){
+	//  Name
+	if ( feature.properties.Name !== null ){
+	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.Name );
+	}else{
+	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
+	}
+	popupContent = popupContent.replace("HOTEL_NAME", popupParts );
+	
+	//  Photo1
+	if (( feature.properties.Photo1 !== null )&&( feature.properties.Photo1 != "" )){
+	    popupParts = TemplateParts_PhotoH.replace("POPUP_PHOTO", feature.properties.Photo1 );
+	}else{
 	    popupParts = "";
-    }
-    popupContent = popupContent.replace("HOTEL_SUMMERY", popupParts );
-
-    // TEL
-    if ((feature.properties.TEL !== null ) && (feature.properties.TEL !== "" ) ){
-      popupParts = TemplateItem_TEL.replace( "POPUP_TEL" , feature.properties.TEL  );
-    }else{
-      popupParts = "";
-    }
-    popupContent = popupContent.replace("HOTEL_TEL", popupParts );
-
-    // ADDRESS
-    if ((feature.properties.Address !== null ) && (feature.properties.Address !== "" ) ){
-      popupParts = TemplateItem_Address.replace( "POPUP_ADDRESS" , feature.properties.Address  );
-    }else{
-      popupParts = "";
-    }
-    popupContent = popupContent.replace("HOTEL_ADDRESS", popupParts );
-
-    // ACCESS
-    if ((feature.properties.Access !== null ) && (feature.properties.Access !== "" ) ){
-      popupParts = TemplateItem_Access.replace( "POPUP_ACCESS" , feature.properties.Access  );
-    }else{
-      popupParts = "";
-    }
-    popupContent = popupContent.replace("HOTEL_ACCESS", popupParts );
-
-    // HOTEL_URL
-    //  URL
-    if (( feature.properties.URL !== null )&&( feature.properties.URL != "" )){
+	}
+	popupContent = popupContent.replace("HOTEL_PHOTO1", popupParts );
+	
+	//  Photo2
+	if (( feature.properties.Photo2 !== null )&&( feature.properties.Photo2 != "" )){
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("HOTEL_PHOTO2", popupParts );
+	
+	//  Summery
+	if (( feature.properties.Summery !== null )&&( feature.properties.Summery != "" )){
+	    popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("HOTEL_SUMMERY", popupParts );
+	
+	// TEL
+	if ((feature.properties.TEL !== null ) && (feature.properties.TEL !== "" ) ){
+	    popupParts = TemplateItem_TEL.replace( "POPUP_TEL" , feature.properties.TEL );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("HOTEL_TEL", popupParts );
+	
+	// ADDRESS
+	if ((feature.properties.Address !== null ) && (feature.properties.Address !== "" ) ){
+	    popupParts = TemplateItem_Address.replace( "POPUP_ADDRESS" , feature.properties.Address  );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("HOTEL_ADDRESS", popupParts );
+	
+	// ACCESS
+	if ((feature.properties.Access !== null ) && (feature.properties.Access !== "" ) ){
+	    popupParts = TemplateItem_Access.replace( "POPUP_ACCESS" , feature.properties.Access  );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("HOTEL_ACCESS", popupParts );
+	
+	// HOTEL_URL
+	//  URL
+	if (( feature.properties.URL !== null )&&( feature.properties.URL != "" )){
 	    popupParts = TemplateParts_Link.replace( "POPUP_URLLINK" , feature.properties.URL );
-	    if (( feature.properties.Urltitle !== null )&&( feature.properties.Urltitle != "" )){
-	      popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.Urltitle );
+	    if (( feature.properties.Urltitle !== undefined )&&( feature.properties.Urltitle !== null )
+		&&( feature.properties.Urltitle != "" )){
+		popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.Urltitle );
 	    }else{
-        popupParts = popupParts.replace( "POPUP_URLTITLE" , "ホテルの公式サイトへ" );
+		popupParts = popupParts.replace( "POPUP_URLTITLE" , "ホテルの公式サイトへ" );
 	    }
 	    popupParts = TemplateItem_URL.replace( "POPUP_LINK" , popupParts );
-    }else{
+	}else{
 	    popupParts = "";
+	}
+	popupContent = popupContent.replace("HOTEL_URL", popupParts );
+	
+	// TemplateParts_HOTELDESC
+	if ((feature.properties.URL_f21 !== null ) && (feature.properties.URL_f21 !== "" ) ){
+	    popupParts = TemplateParts_HOTELDESC.replace( "POPUP_URLDESC" , feature.properties.URL_f21 );
+	}
+	popupContent = popupContent.replace("HOTEL_DESC_BTN", popupParts );
+    }else{
+	popupContent = '<h3>No Data</h3><hr class="full"><p>Sorry</p>';
     }
-    popupContent = popupContent.replace("HOTEL_URL", popupParts );
-
-    // TemplateParts_HOTELDESC
-    if ((feature.properties.URL_f21 !== null ) && (feature.properties.URL_f21 !== "" ) ){
-      popupParts = TemplateParts_HOTELDESC.replace( "POPUP_URLDESC" , feature.properties.URL_f21 );
-    }
-    popupContent = popupContent.replace("HOTEL_DESC_BTN", popupParts );
-  }else{
-        popupContent = '<h3>No Data</h3><hr class="full"><p>Sorry</p>';
-  }
-
-// console.log( popupContent );
-  return( popupContent );
+    
+    // console.log( popupContent );
+    return( popupContent );
 }
 
 
@@ -382,7 +383,7 @@ function onEachFeaturePOI(feature, layer) {
   //window.alert (popupContent);
   layer.bindPopup(popupContent);
 }
-
+ 
 //  PopupContent for the Information 
 function setPopupContentInfo(feature, layer) {
 //  console.log( "setPopupContentInfo()" );

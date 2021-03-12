@@ -76,17 +76,17 @@ class PointData(models.Model):
     Price     = models.IntegerField(verbose_name="価格",null=False,blank=True)
     PriceNote = models.CharField(verbose_name="価格注釈",max_length=256,null=False,blank=True)
     Discount  = models.CharField(verbose_name="割引",max_length=256,null=False,blank=True)
-    Tel       = models.CharField(verbose_name="電話番号",max_length=16,null=False,blank=True)
-    Url       = models.CharField(verbose_name="URL",max_length=256,null=False,blank=True)
-    UrlTitle  = models.CharField(verbose_name="URL名称",max_length=24,null=False,blank=True)
+    TEL       = models.CharField(verbose_name="電話番号",max_length=16,null=False,blank=True)
+    URL       = models.CharField(verbose_name="URL",max_length=256,null=False,blank=True)
+    Urltitle  = models.CharField(verbose_name="URL名称",max_length=24,null=False,blank=True)
     Photo1    = models.CharField(verbose_name="Photo1",max_length=256,null=True,blank=True)
     Photo2    = models.CharField(verbose_name="Photo2",max_length=256,null=True,blank=True)
     Photo3    = models.CharField(verbose_name="Photo3",max_length=256,null=True,blank=True)
     Photo360  = models.CharField(verbose_name="Photo360",max_length=256,null=True,blank=True)
     Photo360_2= models.CharField(verbose_name="Photo360_2",max_length=256,null=True,blank=True)
+    Timestamp = models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
     geom      = models.PointField(srid=4326,default=Point([135.82, 34.68]))
     objects   = models.Manager()
-    Timestamp= models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
     
     def __str__(self):
         return self.Name
@@ -170,15 +170,16 @@ class Toilet(models.Model):
 class Hotel(models.Model):
     SortType_CHOICES = ( ( 101, 'hotel'),( 999, 'etc') )
 
-    AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID")
+    AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID",null=True)
     Sort      = models.IntegerField(verbose_name="地点タイプ",choices=SortType_CHOICES, default=101 )
     Name      = models.CharField(verbose_name="名称",max_length=24,null=False)
     Summery   = models.CharField(verbose_name="概要",max_length=256,null=True)
 
-    Telephone = models.CharField(verbose_name="電話",max_length=24,null=True,blank=True)
+    TEL       = models.CharField(verbose_name="電話",max_length=24,null=True,blank=True)
     Address   = models.CharField(verbose_name="住所",max_length=256,null=True,blank=True)
-    Url       = models.CharField(verbose_name="URL",max_length=256,null=True,blank=True)
-    Url_F21   = models.CharField(verbose_name="URL_F21",max_length=256,null=True,blank=True)
+    Access    = models.CharField(verbose_name="アクセス",max_length=256,null=True,blank=True)
+    URL       = models.CharField(verbose_name="URL",max_length=256,null=True,blank=True)
+    URL_f21   = models.CharField(verbose_name="URL_F21",max_length=256,null=True,blank=True)
 
     Photo1    = models.CharField(verbose_name="Photo1",max_length=256,null=True,blank=True)
     Photo2    = models.CharField(verbose_name="Photo2",max_length=256,null=True,blank=True)
