@@ -1,10 +1,10 @@
 //　アイコン設定
 
 //  アイコン格納場所（URI）
-DEF_ICON_URI = './icon/';
+DEF_ICON_URI = '/static/icons/';
 
 //  画像格納場所（URI）
-DEF_IMAGE_URI = './image/';
+DEF_IMAGE_URI = '/static/image/';
 
 //  スタートアイコン
 var IconStart    = L.icon({ iconUrl: DEF_ICON_URI+'icon_start.png',

@@ -17,13 +17,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from unimap import views
 
 urlpatterns = [
     # 管理ページ
     path('admin/', admin.site.urls),
 
+    # rest-API
+    path('api/', include('api.urls')),
+    
     # 暫定のトップページ
     path('', views.toppage, name='toppage'),
 
@@ -34,4 +37,5 @@ urlpatterns = [
     path('map', views.map, name='map'),
     path('map/<int:areaid>', views.map, name='map'),
 
+    
 ]

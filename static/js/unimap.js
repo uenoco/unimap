@@ -5,19 +5,23 @@
 //  背景地図：初期表示の中心の緯度・経度
 var DEF_LAT=34.6850; 
 var DEF_LON=135.8380; 
+var DEF_ZOOM=15;      //ズームレベル
 
-//  背景地図：初期表示のズームレベル（縮尺）
-var DEF_ZOOM=15;
+//  おすすめルート
+var GEOJSON_ROUTE = '/api/v1/route.geojson/'; // ルート
+var GEOJSON_POINT = '/api/v1/point.geojson/'; // 地点情報
+var GEOJSON_TOILET= '/api/v1/toilet.geojson'; // 多目的トイレ
+var GEOJSON_HOTEL = '/api/v1/hotel.geojson';  // ホテル
+var GEOJSON_PASS  = '/api/v1/pass.geojson';   // 通行情報
 
 //  イラスト地図ファイル
-var DEF_IMAGEMAP = './map/narapark.png';
-
+//var DEF_IMAGEMAP = './map/narapark.png';
 //  イラスト地図表示位置の緯度・経度（左上）
-var IMG_LAT1=34.6903;
-var IMG_LON1=135.82725; 
+//var IMG_LAT1=34.6903;
+//var IMG_LON1=135.82725; 
 //  イラスト地図表示位置の緯度・経度（右下）
-var IMG_LAT2=34.6816;
-var IMG_LON2=135.84599;
+//var IMG_LAT2=34.6816;
+//var IMG_LON2=135.84599;
 
 // osm
 var $maptile = osmorg;
@@ -98,7 +102,7 @@ var hotelLayer = new L.GeoJSON.AJAX( GEOJSON_HOTEL , {
   },
   onEachFeature: onEachFeatureHotel
 });
-/*
+*/
 
 //  多目的トイレ表示
 var toiletLayer = new L.GeoJSON.AJAX( GEOJSON_TOILET , {
@@ -108,6 +112,7 @@ var toiletLayer = new L.GeoJSON.AJAX( GEOJSON_TOILET , {
   onEachFeature: onEachFeatureWC
 });
 
+/*
 //  通行情報レイヤー
 var passLayer = new L.GeoJSON.AJAX( GEOJSON_PASS, { 
     style: function(feature) {
@@ -131,22 +136,23 @@ var imageLayer = new L.imageOverlay(imageUrl, imageBounds, {opacity:1.0} );
 var courseLayer  = L.layerGroup([ courseRouteLayer, courseSlopeLayer, coursePointLayer ]);
 //  ルート検索レイヤ：拡張用
 var routeLayer   = L.layerGroup([ ]);
+*/
 
 var overlayMaps = {
-  "バリアフリーホテル"   : hotelLayer,
+//  "バリアフリーホテル"   : hotelLayer,
   "多目的トイレ"   : toiletLayer,
-  "おすすめコース" : courseLayer,
-  "イラストマップ" : imageLayer,
-  "通行情報"       : passLayer,
+//  "おすすめコース" : courseLayer,
+//  "イラストマップ" : imageLayer,
+//  "通行情報"       : passLayer,
 //  "ルート案内表示" : routeLayer,
 };
 
-map.addLayer( courseLayer );
-map.addLayer( hotelLayer );
+//map.addLayer( courseLayer );
+//map.addLayer( hotelLayer );
 map.addLayer( toiletLayer );
-map.addLayer( routeLayer );
-map.addLayer( imageLayer );
-map.addLayer( passLayer );
+//map.addLayer( routeLayer );
+//map.addLayer( imageLayer );
+//map.addLayer( passLayer );
 
 L.control.layers( baseMaps, overlayMaps ).addTo(map);
 
@@ -166,6 +172,7 @@ infowindow.setPosition('bottomleft');
 infowindow.addTo(map);
 
 //  ルート検索
+/*
 function SearchWheelChairRoute( lon2, lat2 ) {
   map.removeLayer( routeLayer );
   if( (lon2 == 999 ) ||(lat2 == 999) ){ return; }
@@ -177,6 +184,7 @@ function SearchWheelChairRoute( lon2, lat2 ) {
   routeLayer = L.layerGroup([wheelLayer] );
   routeLayer.addTo(map);
 }
+*/
 
 /*
 function SearchWheelChairRouteDemo( lon2, lat2 ) {

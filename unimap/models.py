@@ -161,6 +161,7 @@ class Toilet(models.Model):
     
     def __str__(self):
         return self.Name
+    
     class Meta:
         verbose_name = 'A1.トイレ情報'
         verbose_name_plural = 'A1.トイレ情報'
