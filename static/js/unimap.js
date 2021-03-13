@@ -14,15 +14,6 @@ var GEOJSON_TOILET= '/api/v1/toilet.geojson'; // 多目的トイレ
 var GEOJSON_HOTEL = '/api/v1/hotel.geojson';  // ホテル
 var GEOJSON_PASS  = '/api/v1/pass.geojson';   // 通行情報
 
-//  イラスト地図ファイル
-//var DEF_IMAGEMAP = './map/narapark.png';
-//  イラスト地図表示位置の緯度・経度（左上）
-//var IMG_LAT1=34.6903;
-//var IMG_LON1=135.82725; 
-//  イラスト地図表示位置の緯度・経度（右下）
-//var IMG_LAT2=34.6816;
-//var IMG_LON2=135.84599;
-
 // osm
 var $maptile = osmorg;
 var map = L.map( 'map', {center: [DEF_LAT, DEF_LON], zoom: DEF_ZOOM, zoomControl: true, layers: [ $maptile ]});
@@ -288,3 +279,5 @@ map.on(
   }
 );
 */
+
+

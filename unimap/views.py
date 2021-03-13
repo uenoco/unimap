@@ -3,6 +3,7 @@
 #   Unimap Project
 ####
 import os
+import json
 from django.views.generic import TemplateView
 from django.conf import settings
 from django.shortcuts import render
@@ -28,12 +29,31 @@ def arealist(request):
     params = { 'arealist': arealist }
     return render(request, 'area.html', params)
 
+# Method for Class to JSON
+def cj_method(item):
+    if isinstance(item, object) and hasattr(item, '__dict__'):
+        return item.__dict__
+    else:
+        raise TypeError
+
 # マップ
 def map(request,areaid):
     try:
         area  = Area.objects.get( id=areaid )
         image = ImageMap.objects.get( AreaId=areaid )
-        params = { 'area':area, 'image': image } 
+
+
+        #params = { "id":areaid, 'area':json.dumps(area), 'image': json.dumps(image) } 
+        print( area.id )
+        print( area.Name )
+        print( area.DEF_LON )
+        print( area.DEF_LAT )
+        print( area.DEF_Zoom )
+        print( "KOKO2" )
+               
+        #print( json.dumps(area, default=cj_method, indent=2))
+        params = { "id":areaid, 'area': area, 'image': image }
+        print( params )
         return render(request, 'map.html', params )
     except:
         return render(request, 'map.html'  )
