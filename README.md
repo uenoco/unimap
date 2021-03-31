@@ -58,6 +58,10 @@ $ pip install -r requirements.txt
 
 ## Webサーバでの公開
 
+### さくらのホスティングサーバの場合
+
+準備中
+
 ### Apacheの場合
 
 - インストール
