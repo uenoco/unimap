@@ -26,7 +26,8 @@ SECRET_KEY = '=y99j$1c3#&&#83-69g+8giaj-xh7d=_p=cl+c%+%4anp9j9c_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -95,7 +96,7 @@ DATABASES = {
 #    }
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'unimapdb',
+        'NAME': 'unimap',
         'USER': 'unimap',
         'HOST': 'localhost',
         'PASSWORD': 'unimap00',

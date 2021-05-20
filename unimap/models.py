@@ -9,6 +9,7 @@ from django.contrib.gis.geos import Point, LineString
 
 # 推奨コース
 class Area(models.Model):
+    id       = models.AutoField(primary_key=True)
     Name     = models.CharField(verbose_name="エリア名",max_length=24)
     SubName  = models.CharField(verbose_name="サブタイトル",max_length=24)
     Abstruct = models.TextField(verbose_name="概要",max_length=256)
@@ -27,6 +28,7 @@ class Area(models.Model):
 
 # イラスト地図
 class ImageMap(models.Model):
+    id       = models.AutoField(primary_key=True)
     AreaId   = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID")
     ImageMap = models.ImageField(verbose_name="イラスト地図",upload_to="images/",null=True)
     LAT1     = models.FloatField(verbose_name="左上緯度")
@@ -46,11 +48,12 @@ class ImageMap(models.Model):
 # 移動ルート
 class Route(models.Model):
     SortType_CHOICES = ( ( 1, 'main'),( 2, 'option') )
-    AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID")
-    Sort      = models.IntegerField(verbose_name="ルート種類",choices=SortType_CHOICES, default=1 )
-    Name      = models.CharField(verbose_name="名称",max_length=24,null=False)
-    Summery   = models.CharField(verbose_name="概要",max_length=256,null=True,blank=True)
-    geom      = models.LineStringField(srid=4326,default=LineString( [135.82, 34.681],[135.83, 34.685]) )
+    id       = models.AutoField(primary_key=True)
+    AreaId   = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID")
+    Sort     = models.IntegerField(verbose_name="ルート種類",choices=SortType_CHOICES, default=1 )
+    Name     = models.CharField(verbose_name="名称",max_length=24,null=False)
+    Summery  = models.CharField(verbose_name="概要",max_length=256,null=True,blank=True)
+    geom     = models.LineStringField(srid=4326,default=LineString( [135.82, 34.681],[135.83, 34.685]) )
     Timestamp= models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
     def __str__(self):
         return self.Name
@@ -63,6 +66,7 @@ class PointData(models.Model):
     PointType_CHOICES = ( ( 1, 'route'), ( 2, 'start'), ( 3, 'end'), ( 4, 'start_op'), ( 5, 'end_op'),
                           ( 6, 'location'), ( 7, 'barrguide'), ( 8, 'attension'), ( 9, 'cation'), ( 10, 'busstop') )
 
+    id       = models.AutoField(primary_key=True)
     AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID")
     Sort      = models.IntegerField(verbose_name="地点タイプ",choices=PointType_CHOICES, null=False)
     No        = models.IntegerField(verbose_name="地点番号",null=True,blank=True)
@@ -99,11 +103,12 @@ class PointData(models.Model):
 class Slope(models.Model):
     SortType_CHOICES = ( ( 1, 'ゆるい坂'),( 2, '中くらいの坂'),( 3, '急な坂') )
 
-    AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID")
-    Sort      = models.IntegerField(verbose_name="坂タイプ",choices=SortType_CHOICES, default=1 )
-    Name      = models.CharField(verbose_name="名称",max_length=24,null=False)
-    Summery   = models.CharField(verbose_name="概要",max_length=256,null=True,blank=True)
-    geom      = models.LineStringField(srid=4326,default=LineString( [135.82, 34.681],[135.83, 34.680]) )
+    id       = models.AutoField(primary_key=True)
+    AreaId   = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID")
+    Sort     = models.IntegerField(verbose_name="坂タイプ",choices=SortType_CHOICES, default=1 )
+    Name     = models.CharField(verbose_name="名称",max_length=24,null=False)
+    Summery  = models.CharField(verbose_name="概要",max_length=256,null=True,blank=True)
+    geom     = models.LineStringField(srid=4326,default=LineString( [135.82, 34.681],[135.83, 34.680]) )
     Timestamp= models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
 
     def __str__(self):
@@ -116,6 +121,7 @@ class Slope(models.Model):
 class Zone(models.Model):
     SortType_CHOICES = ( ( 1, 'gravel'),( 2, 'difficulty'),( 3, 'impassable'),( 4, 'traffic') )
 
+    id       = models.AutoField(primary_key=True)
     AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID")
     Sort      = models.IntegerField(verbose_name="ゾーンタイプ",choices=SortType_CHOICES, default=1 )
     Name      = models.CharField(verbose_name="名称",max_length=24,null=False)
@@ -138,6 +144,7 @@ class Zone(models.Model):
 class Toilet(models.Model):
     SortType_CHOICES = ( ( 100, 'toilet'),( 999, 'etc') )
 
+    id       = models.AutoField(primary_key=True)
     AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID",null=True)
     Sort      = models.IntegerField(verbose_name="地点タイプ",choices=SortType_CHOICES, default=100 )
     Name      = models.CharField(verbose_name="名称",max_length=24,null=False)
@@ -170,6 +177,7 @@ class Toilet(models.Model):
 class Hotel(models.Model):
     SortType_CHOICES = ( ( 101, 'hotel'),( 999, 'etc') )
 
+    id       = models.AutoField(primary_key=True)
     AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID",null=True)
     Sort      = models.IntegerField(verbose_name="地点タイプ",choices=SortType_CHOICES, default=101 )
     Name      = models.CharField(verbose_name="名称",max_length=24,null=False)
@@ -195,19 +203,3 @@ class Hotel(models.Model):
         verbose_name = 'A2.ホテル情報'
         verbose_name_plural = 'A2.ホテル情報'
 
-# Border        
-class Border(models.Model):
-    n03_001 = models.CharField(verbose_name='都道府県名', max_length=10)
-    n03_002 = models.CharField(verbose_name='支庁名', max_length=20, blank=True)
-    n03_003 = models.CharField(verbose_name='群・政令市名', max_length=20, blank=True)
-    n03_004 = models.CharField(verbose_name='市区町村名', max_length=20, blank=True)
-    n03_007 = models.CharField(verbose_name='行政区域コード', max_length=5)
-    geom    = models.PolygonField(srid=4326)
-    objects = models.Manager()
-    
-    def __str__(self):
-        return "%s_%s_%s" % (self.n03_001,self.n03_003,self.n03_004)
-
-    class Meta:
-        verbose_name = ('行政区域')
-        verbose_name_plural = ('行政区域一覧')
