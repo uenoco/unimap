@@ -4,7 +4,7 @@ This is the Nara Universal Map on django FrameWork
 
 ## 動作環境
 
-Python		3.9.X
+Python		3.8.X
 PostgreSQL      13.X
 PostGIS         3.1
 Django          3.1.X
