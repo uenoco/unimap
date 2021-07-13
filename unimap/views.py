@@ -42,15 +42,6 @@ def map(request,areaid):
         area  = Area.objects.get( id=areaid )
         image = ImageMap.objects.get( AreaId=areaid )
 
-
-        #params = { "id":areaid, 'area':json.dumps(area), 'image': json.dumps(image) } 
-        print( area.id )
-        print( area.Name )
-        print( area.DEF_LON )
-        print( area.DEF_LAT )
-        print( area.DEF_Zoom )
-        print( "KOKO2" )
-               
         #print( json.dumps(area, default=cj_method, indent=2))
         params = { "id":areaid, 'area': area, 'image': image }
         print( params )
