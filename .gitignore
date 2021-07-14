@@ -13,11 +13,11 @@ __pycache__/
 venv/
 
 # Deploy Directory for Apache
-/deploy/
+/deploy/*
 !/deploy/.gitkeep
 
 # Media Directory for models.ImageField
-/media/
+/media/*
 !/media/.gitkeep
 
 # Logging Files

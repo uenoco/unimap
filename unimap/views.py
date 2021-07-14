@@ -38,22 +38,17 @@ def cj_method(item):
 
 # マップ
 def map(request,areaid):
+    print( "----  map in views.py-----" )
     try:
         area  = Area.objects.get( id=areaid )
-        image = ImageMap.objects.get( AreaId=areaid )
-
-
-        #params = { "id":areaid, 'area':json.dumps(area), 'image': json.dumps(image) } 
         print( area.id )
-        print( area.Name )
-        print( area.DEF_LON )
-        print( area.DEF_LAT )
-        print( area.DEF_Zoom )
-        print( "KOKO2" )
-               
+        image = ImageMap.objects.get( AreaId=area.id )
+        print( image.ImageMap )
+        
         #print( json.dumps(area, default=cj_method, indent=2))
-        params = { "id":areaid, 'area': area, 'image': image }
+        params = { 'imagemap': image }
         print( params )
+        
         return render(request, 'map.html', params )
     except:
         return render(request, 'map.html'  )

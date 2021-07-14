@@ -18,6 +18,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls.static import static # add
+from django.conf import settings           # add
 from unimap import views
 
 urlpatterns = [

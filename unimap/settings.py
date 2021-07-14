@@ -145,13 +145,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),  # プロジェクト直下のstaticディレクトリを指定
 )
+# Add for wsgi with Apache
+STATIC_ROOT = os.path.join(BASE_DIR, 'deploy')  # プロジェクト直下のdeployディレクトリを指定
 
 # MEDIA_ROOT for models.ImageField
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
-
-# Add for wsgi with Apache
-STATIC_ROOT = os.path.join(BASE_DIR, 'deploy')  # プロジェクト直下のdeployディレクトリを指定
 
 #ログ出力先のディレクトリを設定する
 #LOG_BASE_DIR = os.path.join("/var", "log", "app")
