@@ -12,7 +12,7 @@ var GEOJSON_ROUTE = '/api/v1/route.geojson/'; // ルート
 var GEOJSON_POINT = '/api/v1/point.geojson/'; // 地点情報
 var GEOJSON_TOILET= '/api/v1/toilet.geojson'; // 多目的トイレ
 var GEOJSON_HOTEL = '/api/v1/hotel.geojson';  // ホテル
-var GEOJSON_PASS  = '/api/v1/pass.geojson';   // 通行情報
+var GEOJSON_ZONE  = '/api/v1/zone.geojson';   // 通行情報
 
 
 function drawMap( mapimg ){
@@ -105,21 +105,18 @@ var coursePointLayer = new L.GeoJSON.AJAX( GEOJSON_POINT , {
 	onEachFeature: onEachFeatureWC
     });
 
-/*
-//  通行情報レイヤー
-var passLayer = new L.GeoJSON.AJAX( GEOJSON_PASS, { 
-    style: function(feature) {
-      switch (feature.properties.Sort) {
-        case 'impassable': return passImpassableStyle;
-        case 'difficulty': return passDifficultyStyle;
-        case 'gravel':     return passGravelStyle;
-        case 'traffic':    return passTrafficStyle;
-      }
-    },
-    onEachFeature: onEachFeaturePass
-  }
-);
-*/
+    //  通行情報レイヤー
+    var zoneLayer = new L.GeoJSON.AJAX( GEOJSON_ZONE, { 
+	style: function(feature) {
+	    switch (feature.properties.Sort) {
+            case 'impassable': return passImpassableStyle;
+            case 'difficulty': return passDifficultyStyle;
+            case 'gravel':     return passGravelStyle;
+            case 'traffic':    return passTrafficStyle;
+	    }
+	},
+	onEachFeature: onEachFeaturePass
+    });
     
     ////  イラスト地図レイヤー
     var imageUrl = mapimg.url;
@@ -139,7 +136,7 @@ var passLayer = new L.GeoJSON.AJAX( GEOJSON_PASS, {
 	"多目的トイレ"   : toiletLayer,
 	//  "おすすめコース" : courseLayer,
 	"イラストマップ" : imageLayer,
-	//  "通行情報"       : passLayer,
+	"通行情報"      : zoneLayer,
 	//  "ルート案内表示" : routeLayer,
     };
 
@@ -148,7 +145,7 @@ var passLayer = new L.GeoJSON.AJAX( GEOJSON_PASS, {
     map.addLayer( toiletLayer );
     //map.addLayer( routeLayer );
     map.addLayer( imageLayer );
-    //map.addLayer( passLayer );
+    map.addLayer( zoneLayer );
 
     L.control.layers( baseMaps, overlayMaps ).addTo(map);
 
