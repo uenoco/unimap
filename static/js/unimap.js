@@ -14,9 +14,13 @@ var GEOJSON_TOILET= '/api/v1/toilet.geojson'; // 多目的トイレ
 var GEOJSON_HOTEL = '/api/v1/hotel.geojson';  // ホテル
 var GEOJSON_PASS  = '/api/v1/pass.geojson';   // 通行情報
 
-// osm
-var $maptile = osmorg;
-var map = L.map( 'map', {center: [DEF_LAT, DEF_LON], zoom: DEF_ZOOM, zoomControl: true, layers: [ $maptile ]});
+
+function drawMap( mapimg ){
+    console.log( mapimg );
+
+    // osm
+    var $maptile = osmorg;
+    var map = L.map( 'map', {center: [DEF_LAT, DEF_LON], zoom: DEF_ZOOM, zoomControl: true, layers: [ $maptile ]});
 
 /*
 //  Ajax で geojson をゲット
@@ -115,11 +119,13 @@ var passLayer = new L.GeoJSON.AJAX( GEOJSON_PASS, {
     onEachFeature: onEachFeaturePass
   }
 );
+*/
+    
+    ////  イラスト地図レイヤー
+    var imageUrl = mapimg.url, imageBounds = [[ mapimg.lat1, mapimg.lon1 ] , [ mapimg.lat2, mapimg.lon2 ]];
+    var imageLayer = new L.imageOverlay(imageUrl, imageBounds, {opacity:1.0} );
 
-////  イラスト地図レイヤー
-var imageUrl = DEF_IMAGEMAP, imageBounds = [[ IMG_LAT1, IMG_LON1 ] , [IMG_LAT2, IMG_LON2]];
-var imageLayer = new L.imageOverlay(imageUrl, imageBounds, {opacity:1.0} );
-
+/*
 //  Layer Group
 //  ルートレイヤ：観光コース、坂道情報、ルート地点情報
 var courseLayer  = L.layerGroup([ courseRouteLayer, courseSlopeLayer, coursePointLayer ]);
@@ -131,7 +137,7 @@ var overlayMaps = {
   "バリアフリーホテル"   : hotelLayer,
   "多目的トイレ"   : toiletLayer,
 //  "おすすめコース" : courseLayer,
-//  "イラストマップ" : imageLayer,
+  "イラストマップ" : imageLayer,
 //  "通行情報"       : passLayer,
 //  "ルート案内表示" : routeLayer,
 };
@@ -140,7 +146,7 @@ var overlayMaps = {
 map.addLayer( hotelLayer );
 map.addLayer( toiletLayer );
 //map.addLayer( routeLayer );
-//map.addLayer( imageLayer );
+map.addLayer( imageLayer );
 //map.addLayer( passLayer );
 
 L.control.layers( baseMaps, overlayMaps ).addTo(map);
@@ -280,4 +286,4 @@ map.on(
 );
 */
 
-
+}
