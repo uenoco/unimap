@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     ##'allauth',
     #'allauth.account',
     #'allauth.socialaccount',    # ソーシャル連携認証なしでも必要',
+    #CORS
+    'corsheaders',      
     # unimap Applicaition
     'unimap',
 ]
@@ -59,7 +61,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware', #add for CROS
 ]
+
+CORS_ORIGIN_ALLOW_ALL = True #add for CROS
 
 ROOT_URLCONF = 'unimap.urls'
 

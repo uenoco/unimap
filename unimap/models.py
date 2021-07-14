@@ -23,8 +23,8 @@ class Area(models.Model):
         return self.Name
 
     class Meta:
-        verbose_name = '1.マップエリア'
-        verbose_name_plural = '1.マップエリア'
+        verbose_name = '0.マップエリア'
+        verbose_name_plural = '0.マップエリア'
 
 # イラスト地図
 class ImageMap(models.Model):
@@ -53,8 +53,14 @@ class Route(models.Model):
     Sort     = models.IntegerField(verbose_name="ルート種類",choices=SortType_CHOICES, default=1 )
     Name     = models.CharField(verbose_name="名称",max_length=24,null=False)
     Summery  = models.CharField(verbose_name="概要",max_length=256,null=True,blank=True)
-    geom     = models.LineStringField(srid=4326,default=LineString( [135.82, 34.681],[135.83, 34.685]) )
+    geom     = models.LineStringField(verbose_name="ルート座標",srid=4326,default=LineString( [135.82, 34.681],[135.83, 34.685]) )
     Timestamp= models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
+
+    def _get_linestring(self):
+        "Returns a linestring"
+        return '%s' % ( self.geom)
+    LineString = property(_get_linestring)
+    
     def __str__(self):
         return self.Name
     class Meta:
@@ -122,7 +128,7 @@ class Zone(models.Model):
     SortType_CHOICES = ( ( 1, 'gravel'),( 2, 'difficulty'),( 3, 'impassable'),( 4, 'traffic') )
 
     id       = models.AutoField(primary_key=True)
-    AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID")
+    AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID", default=1 )
     Sort      = models.IntegerField(verbose_name="ゾーンタイプ",choices=SortType_CHOICES, default=1 )
     Name      = models.CharField(verbose_name="名称",max_length=24,null=False)
     Summery   = models.CharField(verbose_name="概要",max_length=256,null=True)
@@ -170,8 +176,8 @@ class Toilet(models.Model):
         return self.Name
     
     class Meta:
-        verbose_name = 'A1.トイレ情報'
-        verbose_name_plural = 'A1.トイレ情報'
+        verbose_name = 'A.トイレ情報'
+        verbose_name_plural = 'A.トイレ情報'
 
 # ホテル
 class Hotel(models.Model):
@@ -186,8 +192,8 @@ class Hotel(models.Model):
     TEL       = models.CharField(verbose_name="電話",max_length=24,null=True,blank=True)
     Address   = models.CharField(verbose_name="住所",max_length=256,null=True,blank=True)
     Access    = models.CharField(verbose_name="アクセス",max_length=256,null=True,blank=True)
-    URL       = models.CharField(verbose_name="URL",max_length=256,null=True,blank=True)
-    URL_f21   = models.CharField(verbose_name="URL_F21",max_length=256,null=True,blank=True)
+    URL       = models.CharField(verbose_name="ホテルURL",max_length=256,null=True,blank=True)
+    URL_f21   = models.CharField(verbose_name="紹介URL",max_length=256,null=True,blank=True)
 
     Photo1    = models.CharField(verbose_name="Photo1",max_length=256,null=True,blank=True)
     Photo2    = models.CharField(verbose_name="Photo2",max_length=256,null=True,blank=True)
@@ -200,6 +206,6 @@ class Hotel(models.Model):
     def __str__(self):
         return self.Name
     class Meta:
-        verbose_name = 'A2.ホテル情報'
-        verbose_name_plural = 'A2.ホテル情報'
+        verbose_name = 'B.ホテル情報'
+        verbose_name_plural = 'B.ホテル情報'
 

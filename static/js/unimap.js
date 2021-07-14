@@ -22,21 +22,21 @@ function drawMap( mapimg ){
     var $maptile = osmorg;
     var map = L.map( 'map', {center: [DEF_LAT, DEF_LON], zoom: DEF_ZOOM, zoomControl: true, layers: [ $maptile ]});
 
-/*
-//  Ajax で geojson をゲット
-result = 
-  $.ajax({ type: 'GET', url: GEOJSON_ROUTE })
-   .done(function(geojsonString) {
-     //  ファイル読み込み完了後の処理
-     var geojson = JSON.parse(geojsonString);
-     var Layer = new L.GeoJSON( geojson ,{
-       style: routeDefaultStyle ,
-       onEachFeature: function (feature, layer) {
-         onCoordsSlope( feature );
-       }
-     });
-   });
-*/
+    /*
+    //  Ajax で geojson をゲット
+    result = 
+    $.ajax({ type: 'GET', url: GEOJSON_ROUTE })
+    .done(function(geojsonString) {
+    //  ファイル読み込み完了後の処理
+    var geojson = JSON.parse(geojsonString);
+    var Layer = new L.GeoJSON( geojson ,{
+    style: routeDefaultStyle ,
+    onEachFeature: function (feature, layer) {
+    onCoordsSlope( feature );
+    }
+    });
+    });
+    */
 
 //  Disp Point
 /*
