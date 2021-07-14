@@ -40,15 +40,20 @@ def cj_method(item):
 def map(request,areaid):
     print( "----  map in views.py-----" )
     try:
+        # get areaId
         area  = Area.objects.get( id=areaid )
-        print( area.id )
+        # set ImageMap
         image = ImageMap.objects.get( AreaId=area.id )
-        print( image.ImageMap )
-        
+        mediaURL = settings.MEDIA_URL        # image Bacs-URL
+        # set route
+        #route = route.objects.get( AreaId=area.id )
+
         #print( json.dumps(area, default=cj_method, indent=2))
-        params = { 'imagemap': image }
-        print( params )
+        params = { 'imagemap': image, 'mediaurl': mediaURL }
+        #print( area.id )
+        #print( params )
         
+        print( "----  return in views.py-----" )
         return render(request, 'map.html', params )
     except:
         return render(request, 'map.html'  )

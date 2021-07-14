@@ -16,7 +16,7 @@ var GEOJSON_PASS  = '/api/v1/pass.geojson';   // 通行情報
 
 
 function drawMap( mapimg ){
-    console.log( mapimg );
+    // console.log( mapimg );
 
     // osm
     var $maptile = osmorg;
@@ -89,21 +89,21 @@ var coursePointLayer = new L.GeoJSON.AJAX( GEOJSON_POINT , {
 });
 */
 
-//  ホテル表示
-var hotelLayer = new L.GeoJSON.AJAX( GEOJSON_HOTEL , {
-  pointToLayer: function (feature, latlng) {
-	  return L.marker(latlng, {icon: IconHotel, opacity: "0.8"});
-  },
-  onEachFeature: onEachFeatureHotel
-});
-
-//  多目的トイレ表示
-var toiletLayer = new L.GeoJSON.AJAX( GEOJSON_TOILET , {
-  pointToLayer: function (feature, latlng) {
-	  return L.marker(latlng, {icon: IconToilet, opacity: "0.8"});
-  },
-  onEachFeature: onEachFeatureWC
-});
+    //  ホテル表示
+    var hotelLayer = new L.GeoJSON.AJAX( GEOJSON_HOTEL , {
+	pointToLayer: function (feature, latlng) {
+	    return L.marker(latlng, {icon: IconHotel, opacity: "0.8"});
+	},
+	onEachFeature: onEachFeatureHotel
+    });
+    
+    //  多目的トイレ表示
+    var toiletLayer = new L.GeoJSON.AJAX( GEOJSON_TOILET , {
+	pointToLayer: function (feature, latlng) {
+	    return L.marker(latlng, {icon: IconToilet, opacity: "0.8"});
+	},
+	onEachFeature: onEachFeatureWC
+    });
 
 /*
 //  通行情報レイヤー
@@ -122,34 +122,35 @@ var passLayer = new L.GeoJSON.AJAX( GEOJSON_PASS, {
 */
     
     ////  イラスト地図レイヤー
-    var imageUrl = mapimg.url, imageBounds = [[ mapimg.lat1, mapimg.lon1 ] , [ mapimg.lat2, mapimg.lon2 ]];
+    var imageUrl = mapimg.url;
+    var imageBounds = [[ mapimg.lat1, mapimg.lon1 ] , [ mapimg.lat2, mapimg.lon2 ]];
     var imageLayer = new L.imageOverlay(imageUrl, imageBounds, {opacity:1.0} );
 
-/*
-//  Layer Group
-//  ルートレイヤ：観光コース、坂道情報、ルート地点情報
-var courseLayer  = L.layerGroup([ courseRouteLayer, courseSlopeLayer, coursePointLayer ]);
-//  ルート検索レイヤ：拡張用
-var routeLayer   = L.layerGroup([ ]);
-*/
+    /*
+    //  Layer Group
+    //  ルートレイヤ：観光コース、坂道情報、ルート地点情報
+    var courseLayer  = L.layerGroup([ courseRouteLayer, courseSlopeLayer, coursePointLayer ]);
+    //  ルート検索レイヤ：拡張用
+    var routeLayer   = L.layerGroup([ ]);
+    */
 
-var overlayMaps = {
-  "バリアフリーホテル"   : hotelLayer,
-  "多目的トイレ"   : toiletLayer,
-//  "おすすめコース" : courseLayer,
-  "イラストマップ" : imageLayer,
-//  "通行情報"       : passLayer,
-//  "ルート案内表示" : routeLayer,
-};
+    var overlayMaps = {
+	"バリアフリーホテル"   : hotelLayer,
+	"多目的トイレ"   : toiletLayer,
+	//  "おすすめコース" : courseLayer,
+	"イラストマップ" : imageLayer,
+	//  "通行情報"       : passLayer,
+	//  "ルート案内表示" : routeLayer,
+    };
 
-//map.addLayer( courseLayer );
-map.addLayer( hotelLayer );
-map.addLayer( toiletLayer );
-//map.addLayer( routeLayer );
-map.addLayer( imageLayer );
-//map.addLayer( passLayer );
+    //map.addLayer( courseLayer );
+    map.addLayer( hotelLayer );
+    map.addLayer( toiletLayer );
+    //map.addLayer( routeLayer );
+    map.addLayer( imageLayer );
+    //map.addLayer( passLayer );
 
-L.control.layers( baseMaps, overlayMaps ).addTo(map);
+    L.control.layers( baseMaps, overlayMaps ).addTo(map);
 
 //  GPS位置情報がとれれば中心になるように地図を移動。左下に位置を表示
 var infowindow=L.control();

@@ -18,8 +18,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from django.conf.urls.static import static # add
 from django.conf import settings           # add
+from django.conf.urls.static import static # add
+
 from unimap import views
 
 urlpatterns = [
@@ -35,7 +36,9 @@ urlpatterns = [
     # コース一覧ページ
     path('area', views.arealist, name='arealist'),
 
-    # 暫定のmap
+    # エリアマップ
     path('map', views.map, name='map'),
     path('map/<int:areaid>', views.map, name='map'),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
