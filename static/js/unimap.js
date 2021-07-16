@@ -30,7 +30,7 @@ function onCoordsSlope( feature ) {
     });
     // console.log( "latlngs : " + latlngs );
     popupContent = setPopupContentPass(feature);
-
+	
     switch ( feature.properties.Sort){
     case 1 :    // おすすめルート
 	style = routeMainStyle ;
@@ -151,10 +151,10 @@ function drawMap( mapimg ){
 
     //  ホテル表示
     var hotelLayer = new L.GeoJSON.AJAX( GEOJSON_HOTEL , {
+	onEachFeature: onEachFeatureHotel,
 	pointToLayer: function (feature, latlng) {
 	    return L.marker(latlng, {icon: IconHotel, opacity: "0.8"});
 	},
-	onEachFeature: onEachFeatureHotel
     });
     
     //  多目的トイレ表示

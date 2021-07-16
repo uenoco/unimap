@@ -155,7 +155,20 @@ TemplateParts_DemoSearch= '<form name="routeDemo"><input class="popup-btn" type=
 ////////
 //  ポップアップ制御関数
 ////////
+function checkProp( item ){
+    if ( item == undefined ){
+	return false;
+    }
+    if( item == null ){
+	return false;
+    }
+    if( item == "" ){
+	return false;
+    }
+    return true;
+}
 
+		
 ////
 // Popup for WC
 // 多目的トイレ
@@ -172,7 +185,7 @@ function setPopupContentWC(feature){
     
     if ( feature.properties ){
 	//  Name
-	if ( feature.properties.Name !== null ){
+	if ( feature.properties.Name !== undefined ){
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.Name );
 	}else{
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
@@ -180,7 +193,7 @@ function setPopupContentWC(feature){
 	popupContent = popupContent.replace("TOILET_NAME", popupParts );
 	
 	//  Summery
-	if ( feature.properties.Summery !== null ){
+	if ( feature.properties.Summery !== undefined ){
 	    popupParts = TemplateParts_ToiletSummery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
 	}else{
 	    popupParts = "";
@@ -188,14 +201,14 @@ function setPopupContentWC(feature){
 	popupContent = popupContent.replace("TOILET_SUMMERY", popupParts );
 	
 	//  Photo1
-	if (( feature.properties.Photo1 !== null )&&( feature.properties.Photo1 !== "" )){
+	if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 !== "" )){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	}else{
 	    popupParts = "";
 	}
 	popupContent = popupContent.replace("TOILET_PHOTO1", popupParts );
 	//  Photo2
-	if (( feature.properties.Photo2 !== null )&&( feature.properties.Photo2 !== "" )){
+	if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 !== "" )){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	}else{
 	    popupParts = "";
@@ -226,7 +239,7 @@ function setPopupContentWC(feature){
                                             TemplateParts_PropIcon.replace("POPUP_TOILET_PROP_ICON", popupParts ));  
     
 	  //  Toilet 360 Photo
-    if (( feature.properties.Photo360 !== null ) && ( feature.properties.Photo360 != "" )){
+    if (( feature.properties.Photo360 !== undefined ) && ( feature.properties.Photo360 != "" )){
       popupParts = TemplateParts_360Photo.replace( "POPUP_360PHOTO", feature.properties.Photo360 );
 	  }else{
       popupParts = "";
@@ -236,7 +249,7 @@ function setPopupContentWC(feature){
 	  //  Toilet Describe
 		var popupDescribe = "";
     //  FLOOR
-    if (( feature.properties.Floor !== null ) && ( feature.properties.Floor != "" )){
+    if (( feature.properties.Floor !== undefined ) && ( feature.properties.Floor != "" )){
 	    popupDescribe += TemplateParts_Floor.replace( "POPUP_FLOOR_LEVEL" , feature.properties.Floor );
 	  }
     popupContent = popupContent.replace("TOILET_DESCRIBE", popupDescribe );
@@ -248,10 +261,10 @@ function setPopupContentWC(feature){
     popupContent = popupContent.replace("TOILET_ROUTE_SEARCH", popupRouteSearch );
     }else{
 	  popupContent = '<h3>No Data</h3><hr class="full"><p>Sorry</p>';
-  }
+    }
 
 //  console.log( popupContent );
-  return( popupContent );
+    return( popupContent );
 } 
 
 //  PopupContent for the HOTEL
@@ -264,10 +277,10 @@ function onEachFeatureHotel(feature, layer) {
 function setPopupContentHotel(feature){
     var popupContent = TemplatePopup_Hotel
     var popupParts = "" ;
-
+    
     if ( feature.properties ){
 	//  Name
-	if ( feature.properties.Name !== null ){
+	if ( feature.properties.Name !== undefined ){
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.Name );
 	}else{
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
@@ -275,7 +288,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_NAME", popupParts );
 	
 	//  Photo1
-	if (( feature.properties.Photo1 !== null )&&( feature.properties.Photo1 != "" )){
+	if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )){
 	    popupParts = TemplateParts_PhotoH.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	}else{
 	    popupParts = "";
@@ -283,7 +296,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_PHOTO1", popupParts );
 	
 	//  Photo2
-	if (( feature.properties.Photo2 !== null )&&( feature.properties.Photo2 != "" )){
+	if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	}else{
 	    popupParts = "";
@@ -291,7 +304,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_PHOTO2", popupParts );
 	
 	//  Summery
-	if (( feature.properties.Summery !== null )&&( feature.properties.Summery != "" )){
+	if (( feature.properties.Summery !== undefined )&&( feature.properties.Summery != "" )){
 	    popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
 	}else{
 	    popupParts = "";
@@ -299,7 +312,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_SUMMERY", popupParts );
 	
 	// TEL
-	if ((feature.properties.TEL !== null ) && (feature.properties.TEL !== "" ) ){
+	if ((feature.properties.TEL !== undefined ) && (feature.properties.TEL !== "" ) ){
 	    popupParts = TemplateItem_TEL.replace( "POPUP_TEL" , feature.properties.TEL );
 	}else{
 	    popupParts = "";
@@ -307,7 +320,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_TEL", popupParts );
 	
 	// ADDRESS
-	if ((feature.properties.Address !== null ) && (feature.properties.Address !== "" ) ){
+	if ((feature.properties.Address !== undefined ) && (feature.properties.Address !== "" ) ){
 	    popupParts = TemplateItem_Address.replace( "POPUP_ADDRESS" , feature.properties.Address  );
 	}else{
 	    popupParts = "";
@@ -315,7 +328,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_ADDRESS", popupParts );
 	
 	// ACCESS
-	if ((feature.properties.Access !== null ) && (feature.properties.Access !== "" ) ){
+	if ((feature.properties.Access !== undefined ) && (feature.properties.Access !== "" ) ){
 	    popupParts = TemplateItem_Access.replace( "POPUP_ACCESS" , feature.properties.Access  );
 	}else{
 	    popupParts = "";
@@ -324,7 +337,7 @@ function setPopupContentHotel(feature){
 	
 	// HOTEL_URL
 	//  URL
-	if (( feature.properties.URL !== null )&&( feature.properties.URL != "" )){
+	if (( feature.properties.URL !== undefined )&&( feature.properties.URL != "" )){
 	    popupParts = TemplateParts_Link.replace( "POPUP_URLLINK" , feature.properties.URL );
 	    if (( feature.properties.Urltitle !== undefined )&&( feature.properties.Urltitle !== null )
 		&&( feature.properties.Urltitle != "" )){
@@ -346,8 +359,7 @@ function setPopupContentHotel(feature){
     }else{
 	popupContent = '<h3>No Data</h3><hr class="full"><p>Sorry</p>';
     }
-    
-    // console.log( popupContent );
+    //console.log( popupContent );
     return( popupContent );
 }
 
@@ -387,70 +399,70 @@ function onEachFeaturePOI(feature, layer) {
 //  PopupContent for the Information 
 function setPopupContentInfo(feature, layer) {
 //  console.log( "setPopupContentInfo()" );
-  var popupContent=TemplatePopup_Info ;
-  var popupParts = "" ;
+    var popupContent=TemplatePopup_Info ;
+    var popupParts = "" ;
 
   //  Place Name
-  if ( feature.properties ){
-	  //  Name
-	  if (( feature.properties.Name !== null )&&( feature.properties.Name != "" )){
+    if ( feature.properties ){
+	//  Name
+	if (( feature.properties.Name !== undefined )&&( feature.properties.Name != "" )){
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.Name );
-    }else{
+	}else{
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
-    }
-    popupContent = popupContent.replace("INFO_NAME", popupParts );
-
-	  //  Summery
-	  if (( feature.properties.Summery !== null )&&( feature.properties.Summery != "" )){
-	    popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
-    }else{
-	    popupParts = "";
-    }
-    popupContent = popupContent.replace("INFO_SUMMERY", popupParts );
-
-    //  Photo Image (1)
-	  if (( feature.properties.Photo1 !== null )&&( feature.properties.Photo1 != "" )){
-      popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
-	  }else{
-      popupParts = "";
-	  }
-    popupContent = popupContent.replace("INFO_PHOTO1", popupParts );
-    //  Photo Image (2)
-	  if (( feature.properties.Photo2 !== null )&&( feature.properties.Photo2 != "" )){
-      popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
-	  }else{
-      popupParts = "";
-    }
-    popupContent = popupContent.replace("INFO_PHOTO2", popupParts );
-
-	  //  Remarks
-	  if (( feature.properties.Remarks !== null )&&( feature.properties.Remarks != "" )){
-	    popupParts = TemplateParts_Remarks.replace( "POPUP_REMARKS" , feature.properties.Remarks );
-    }else{
-	    popupParts = "";
-    }
-    popupContent = popupContent.replace("INFO_DESCRIBE", popupParts );
-
-    //  URL
-    if (( feature.properties.URL !== null )&&( feature.properties.URL != "" )){
-	      popupParts = TemplateParts_Link.replace( "POPUP_URLLINK" , feature.properties.URL );
-	  if (( feature.properties.Urltitle !== null )&&( feature.properties.Urltitle != "" )){
-	      popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.Urltitle );
-	  }else{
-        popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.URL );
-	  }
-	  popupParts = TemplateItem_URL.replace( "POPUP_LINK" , popupParts );
-      }else{
-	  popupParts = "";
-      }
-      popupContent = popupContent.replace("INFO_URL", popupParts );
-
-    //  RouteSearch
-    popupParts = TemplateParts_RouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
-    // popupParts += TemplateParts_DemoSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
-    popupContent = popupContent.replace("INFO_ROUTE_SEARCH", popupParts );
 	}
-
+	popupContent = popupContent.replace("INFO_NAME", popupParts );
+	
+	  //  Summery
+	if (( feature.properties.Summery !== undefined )&&( feature.properties.Summery != "" )){
+	    popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("INFO_SUMMERY", popupParts );
+	
+	//  Photo Image (1)
+	if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )){
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("INFO_PHOTO1", popupParts );
+	//  Photo Image (2)
+	if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )){
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("INFO_PHOTO2", popupParts );
+	
+	//  Remarks
+	if (( feature.properties.Remarks !== undefined )&&( feature.properties.Remarks != "" )){
+	    popupParts = TemplateParts_Remarks.replace( "POPUP_REMARKS" , feature.properties.Remarks );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("INFO_DESCRIBE", popupParts );
+	
+	//  URL
+	if (( feature.properties.URL !== undefined )&&( feature.properties.URL != "" )){
+	    popupParts = TemplateParts_Link.replace( "POPUP_URLLINK" , feature.properties.URL );
+	    if (( feature.properties.Urltitle !== undefined )&&( feature.properties.Urltitle != "" )){
+		popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.Urltitle );
+	    }else{
+		popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.URL );
+	    }
+	    popupParts = TemplateItem_URL.replace( "POPUP_LINK" , popupParts );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("INFO_URL", popupParts );
+	
+	//  RouteSearch
+	popupParts = TemplateParts_RouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
+	// popupParts += TemplateParts_DemoSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
+	popupContent = popupContent.replace("INFO_ROUTE_SEARCH", popupParts );
+    }
+    
 //  console.log( "kokoInfo : "+ popupContent );
   return( popupContent );
 }
@@ -460,208 +472,210 @@ function setPopupContentInfo(feature, layer) {
 function setPopupContentPOI(feature, layer) {
 //  console.log( "setPopupContentPOI()" );
 
-  var popupContent=TemplatePopup_POI ;
-  var popupParts = "" ;
-  var popupBlock = "" ;
+    var popupContent=TemplatePopup_POI ;
+    var popupParts = "" ;
+    var popupBlock = "" ;
 
-  //  Place Name
-  if ( feature.properties ){
-	  //  Name
-	  if ( feature.properties.Name !== null ){
+    //  Place Name
+    if ( feature.properties ){
+	//  Name
+	if ( feature.properties.Name !== undefined ){
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.Name );
-    }else{
+	}else{
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
-    }
-    popupContent = popupContent.replace("POI_NAME", popupParts );
-
-	  //  Block
-    var popupBlock = TemplatePopup_BLOCK;
-    {
-      //  Summery
-      if (( feature.properties.Summery !== null ) && ( feature.properties.Summery != "" )){
-	      popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
-      }else{
-	      popupParts = "";
-      }
-      popupBlock = popupBlock.replace("POI_SUMMERY", popupParts );
-	    //  Remarks
-	    if (( feature.properties.Remarks !== null )&&( feature.properties.Remarks != "" )){
-	      popupParts = TemplateParts_Remarks.replace( "POPUP_REMARKS" , feature.properties.Remarks );
-      }else{
-	      popupParts = "";
-      }
-      popupBlock = popupBlock.replace("POI_REMARKS", popupParts );
-      //  Photo1
-	    if (( feature.properties.Photo1 !== null )&&( feature.properties.Photo1 != "" )){
-        popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", feature.properties.Photo1 );
-	    }else{
-        popupParts = "";
-	    }
-      popupBlock = popupBlock.replace("POI_PHOTO1", popupParts );
-      //  Photo2
-	    if (( feature.properties.Photo2 !== null )&&( feature.properties.Photo2 != "" )){
-        popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", feature.properties.Photo2 );
-	    }else{
-        popupParts = "";
-	    }
-      popupBlock = popupBlock.replace("POI_PHOTO2", popupParts );
-    }
-    popupContent = popupContent.replace("POI_BLOCK", popupBlock );
-
-	  //  Item Table
-    popupBlock = TemplatePopup_ITEMS;
-    {
-      // Opening times
-      if (( feature.properties.Open !== null ) && (feature.properties.Open !== "" )  ){    		
-        if (( feature.properties.Close !== null ) && (feature.properties.Close !== "" ) ){    		
-	        popupParts = TemplateItem_OpeningTime.replace( "POPUP_OPENING_TIME" , 
-                                                          feature.properties.Open + "～" + feature.properties.Close );
-        }else{
-	        popupParts = TemplateItem_OpeningTime.replace( "POPUP_OPENING_TIME" , feature.properties.Open  );
-        }
-      }else{
-	      popupParts = "";
-      }
-      popupBlock = popupBlock.replace("POI_OPENINGTIME", popupParts );
-
-      // Opening Note
-      if ((feature.properties.OpeningNote !== null ) && (feature.properties.OpeningNote !== "" ) ){    		
-	      popupParts = TemplateItem_OpeningNote.replace( "POPUP_OPENING_NOTE", feature.properties.OpeningNote  );
-      }else{
-	      popupParts = "";
-      }
-      popupBlock = popupBlock.replace("POI_OPENINGNOTE", popupParts );
-
-      // Holiday
-      if ((feature.properties.Holiday !== null ) && (feature.properties.Holiday !== "" ) ){    		
-	      popupParts = TemplateItem_Holiday.replace( "POPUP_HOLIDAY" , feature.properties.Holiday  );
-      }else{
-	      popupParts = "";
-      }
-      popupBlock = popupBlock.replace("POI_HOLIDAY", popupParts );
-
-      // Price
-      if ((feature.properties.Price !== null ) && (feature.properties.Price !== "" ) ){    		
-	      popupParts = TemplateItem_Price.replace( "POPUP_PRICE" , feature.properties.Price );
-      }else{
-	      popupParts = "";
-      }
-      popupBlock = popupBlock.replace("POI_PRICE", popupParts );
-
-      // Price Note
-      if ((feature.properties.PriceNote !== null ) && (feature.properties.PriceNote !== "" ) ){    		
-	      popupParts = TemplateItem_PriceNote.replace( "POPUP_PRICE_NOTE" , feature.properties.PriceNote );
-      }else{
-	      popupParts = "";
-      }
-      popupBlock = popupBlock.replace("POI_PRICE_NOTE", popupParts );
-
-      // Price Discount
-      if ((feature.properties.Discount !== null ) && (feature.properties.Discount !== "" ) ){    		
-	      popupParts = TemplateItem_PriceDiscount.replace( "POPUP_DISCOUNT" , feature.properties.Discount );
-      }else{
-	      popupParts = "";
-      }
-      popupBlock = popupBlock.replace("POI_PRICE_DISCOUNT", popupParts );
-
-      // TEL
-      if ((feature.properties.TEL !== null ) && (feature.properties.TEL !== "" ) ){    		
-	      popupParts = TemplateItem_TEL.replace( "POPUP_TEL" , feature.properties.TEL  );
-      }else{
-	      popupParts = "";
-      }
-      popupBlock = popupBlock.replace("POI_TEL", popupParts );
-
-      // FAX
-      if ((feature.properties.FAX !== null ) && (feature.properties.FAX !== "" ) ){    		
-	      popupParts = TemplateItem_FAX.replace( "POPUP_FAX" , feature.properties.FAX  );
-      }else{
-	      popupParts = "";
-      }
-      popupBlock = popupBlock.replace("POI_FAX", popupParts );
-
-      // LINK
-      if ((feature.properties.URL !== null ) && (feature.properties.URL !== "" ) ){    		
-	  popupParts = TemplateParts_Link.replace( "POPUP_URLLINK" , feature.properties.URL );
-	  if (( feature.properties.Urltitle !== null )&&( feature.properties.Urltitle != "" )){
-	      popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.Urltitle );
-          }else{
-              popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.URL );
-          }
-	  popupParts = TemplateItem_URL.replace( "POPUP_LINK" , popupParts );
-      }else{
-	  popup = "";
-      }
-      popupBlock = popupBlock.replace("POI_LINK", popupParts );
-    }
-    popupContent = popupContent.replace("POI_ITEMS", popupBlock );
-
-    //  RouteSearch
-    popupParts = TemplateParts_RouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
-    //popupParts += TemplateParts_DemoSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
-    popupContent = popupContent.replace("POI_ROUTE_SEARCH", popupParts );
 	}
+	popupContent = popupContent.replace("POI_NAME", popupParts );
+	
+	//  Block
+	var popupBlock = TemplatePopup_BLOCK;
+	{
+	    //  Summery
+	    if ( checkProp( feature.properties.Summery ) ){
+		popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
+	    }else{
+		popupParts = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_SUMMERY", popupParts );
+	    //  Remarks
+	    if ( checkProp( feature.properties.Remarks ) ){
+		popupParts = TemplateParts_Remarks.replace( "POPUP_REMARKS" , feature.properties.Remarks );
+	    }else{
+		popupParts = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_REMARKS", popupParts );
+	    //  Photo1
+	    //if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )){
+	    if ( checkProp( feature.properties.Photo1 ) ){
+		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", feature.properties.Photo1 );
+	    }else{
+		popupParts = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_PHOTO1", popupParts );
+	    //  Photo2
+	    //if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )){
+	    if ( checkProp( feature.properties.Photo2 ) ){
+		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", feature.properties.Photo2 );
+	    }else{
+		popupParts = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_PHOTO2", popupParts );
+	}
+	popupContent = popupContent.replace("POI_BLOCK", popupBlock );
+	    
+	//  Item Table
+	popupBlock = TemplatePopup_ITEMS;
+	{
+	    // Opening times
+	    if (( feature.properties.Open !== undefined ) && (feature.properties.Open !== "" )  ){    		
+		if (( feature.properties.Close !== undefined ) && (feature.properties.Close !== "" ) ){    		
+		    popupParts = TemplateItem_OpeningTime.replace( "POPUP_OPENING_TIME" , 
+								   feature.properties.Open + "～" + feature.properties.Close );
+		}else{
+		    popupParts = TemplateItem_OpeningTime.replace( "POPUP_OPENING_TIME" , feature.properties.Open  );
+		}
+	    }else{
+		popupParts = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_OPENINGTIME", popupParts );
+	    
+	    // Opening Note
+	    if ((feature.properties.OpeningNote !== undefined ) && (feature.properties.OpeningNote !== "" ) ){    		
+		popupParts = TemplateItem_OpeningNote.replace( "POPUP_OPENING_NOTE", feature.properties.OpeningNote  );
+	    }else{
+		popupParts = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_OPENINGNOTE", popupParts );
+	    
+	    // Holiday
+	    if ((feature.properties.Holiday !== undefined ) && (feature.properties.Holiday !== "" ) ){    		
+		popupParts = TemplateItem_Holiday.replace( "POPUP_HOLIDAY" , feature.properties.Holiday  );
+	    }else{
+		popupParts = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_HOLIDAY", popupParts );
+	    
+	    // Price
+	    if ((feature.properties.Price !== undefined ) && (feature.properties.Price !== "" ) ){    		
+		popupParts = TemplateItem_Price.replace( "POPUP_PRICE" , feature.properties.Price );
+	    }else{
+		popupParts = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_PRICE", popupParts );
 
-//  console.log( "kokoPOI; "+ popupContent );
-  return( popupContent );
+	    // Price Note
+	    if ((feature.properties.PriceNote !== undefined ) && (feature.properties.PriceNote !== "" ) ){    		
+		popupParts = TemplateItem_PriceNote.replace( "POPUP_PRICE_NOTE" , feature.properties.PriceNote );
+	    }else{
+		popupParts = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_PRICE_NOTE", popupParts );
+	    
+	    // Price Discount
+	    if ((feature.properties.Discount !== undefined ) && (feature.properties.Discount !== "" ) ){    		
+		popupParts = TemplateItem_PriceDiscount.replace( "POPUP_DISCOUNT" , feature.properties.Discount );
+	    }else{
+		popupParts = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_PRICE_DISCOUNT", popupParts );
+	    
+	    // TEL
+	    if ((feature.properties.TEL !== undefined ) && (feature.properties.TEL !== "" ) ){    		
+		popupParts = TemplateItem_TEL.replace( "POPUP_TEL" , feature.properties.TEL  );
+	    }else{
+		popupParts = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_TEL", popupParts );
+	    
+	    // FAX
+	    if ((feature.properties.FAX !== undefined ) && (feature.properties.FAX !== "" ) ){    		
+		popupParts = TemplateItem_FAX.replace( "POPUP_FAX" , feature.properties.FAX  );
+	    }else{
+		popupParts = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_FAX", popupParts );
+	    
+	    // LINK
+	    if ((feature.properties.URL !== undefined ) && (feature.properties.URL !== "" ) ){    		
+		popupParts = TemplateParts_Link.replace( "POPUP_URLLINK" , feature.properties.URL );
+		if (( feature.properties.Urltitle !== undefined )&&( feature.properties.Urltitle != "" )){
+		    popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.Urltitle );
+		}else{
+		    popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.URL );
+		}
+		popupParts = TemplateItem_URL.replace( "POPUP_LINK" , popupParts );
+	    }else{
+		popup = "";
+	    }
+	    popupBlock = popupBlock.replace("POI_LINK", popupParts );
+	}
+	popupContent = popupContent.replace("POI_ITEMS", popupBlock );
+	
+	//  RouteSearch
+	popupParts = TemplateParts_RouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
+	//popupParts += TemplateParts_DemoSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
+	popupContent = popupContent.replace("POI_ROUTE_SEARCH", popupParts );
+    }
+    
+    //  console.log( "kokoPOI; "+ popupContent );
+    return( popupContent );
 }
 
 //  エリアポップアップ
 function onEachFeaturePass(feature, layer) {
-	popupContent = setPopupContentPass(feature);
-  layer.bindPopup(popupContent);
+    popupContent = setPopupContentPass(feature);
+    layer.bindPopup(popupContent);
 }
 
 function setPopupContentPass(feature){
 //  console.log( "setPopupContentInfo()" );
-  var popupContent=TemplatePopup_Area ;
-  var popupParts = "" ;
+    var popupContent=TemplatePopup_Area ;
+    var popupParts = "" ;
 
-  //  Place Name
-  if ( feature.properties ){
-	  //  Name
-	  if ( feature.properties.Name !== null ){
+    //  Place Name
+    if ( feature.properties ){
+	//  Name
+	if ( feature.properties.Name !== undefined ){
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.Name );
-    }else{
+	}else{
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
-    }
-    popupContent = popupContent.replace("AREA_NAME", popupParts );
-
-	  //  Summery
-	  if ( feature.properties.Summery !== null ){
-	    popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
-    }else{
-	    popupParts = "";
-    }
-    popupContent = popupContent.replace("AREA_SUMMERY", popupParts );
-
-    //  Photo Image
-    //  Photo1
-	  if (( feature.properties.Photo1 !== null )&&( feature.properties.Photo1 != "" )){
-      popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
-	  }else{
-      popupParts = "";
-	  }
-    popupContent = popupContent.replace("AREA_PHOTO1", popupParts );
-    //  Photo2
-	  if (( feature.properties.Photo2 !== null )&&( feature.properties.Photo2 != "" )){
-      popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
-	  }else{
-      popupParts = "";
-	  }
-    popupContent = popupContent.replace("AREA_PHOTO2", popupParts );
-
-	  //  Remarks
-	  if ( feature.properties.Remarks !== null ){
-	    popupParts = TemplateParts_Remarks.replace( "POPUP_REMARKS" , feature.properties.Remarks );
-    }else{
-	    popupParts = "";
-    }
-    popupContent = popupContent.replace("AREA_DESCRIBE", popupParts );
 	}
+	popupContent = popupContent.replace("AREA_NAME", popupParts );
+	
+	//  Summery
+	if ( feature.properties.Summery !== undefined ){
+	    popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("AREA_SUMMERY", popupParts );
+	
+	//  Photo Image
+	//  Photo1
+	if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )){
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("AREA_PHOTO1", popupParts );
+	//  Photo2
+	if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )){
+	  popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
+      }else{
+	  popupParts = "";
+      }
+      popupContent = popupContent.replace("AREA_PHOTO2", popupParts );
+
+      //  Remarks
+      if ( feature.properties.Remarks !== undefined ){
+	  popupParts = TemplateParts_Remarks.replace( "POPUP_REMARKS" , feature.properties.Remarks );
+      }else{
+	  popupParts = "";
+      }
+      popupContent = popupContent.replace("AREA_DESCRIBE", popupParts );
+  }
 
 //  console.log( "koko AREA; "+ popupContent );
-  return( popupContent );
+    return( popupContent );
 }
 
 
