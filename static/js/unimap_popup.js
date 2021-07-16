@@ -587,7 +587,7 @@ function setPopupContentPOI(feature, layer) {
 	    popupBlock = popupBlock.replace("POI_TEL", popupParts );
 	    
 	    // FAX
-	    if ((feature.properties.FAX !== undefined ) && (feature.properties.FAX !== "" ) ){    		
+	    if ( checkProp( feature.properties.FAX ) ){
 		popupParts = TemplateItem_FAX.replace( "POPUP_FAX" , feature.properties.FAX  );
 	    }else{
 		popupParts = "";
