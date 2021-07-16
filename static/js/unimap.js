@@ -191,8 +191,7 @@ function drawMap( mapimg ){
 
     //  Layer Group
     //  ルートレイヤ：観光コース、坂道情報、ルート地点情報
-    //var courseLayer  = L.layerGroup([ courseRouteLayer, courseSlopeLayer, coursePointLayer ]);
-    var courseLayer  = L.layerGroup([ courseRouteLayer, coursePointLayer ]);
+    var courseLayer  = L.layerGroup([ courseRouteLayer, courseSlopeLayer, coursePointLayer ]);
     //  ルート検索レイヤ：拡張用
     var routeLayer   = L.layerGroup([ ]);
 
@@ -202,16 +201,15 @@ function drawMap( mapimg ){
 	"多目的トイレ"   : toiletLayer,
 	"イラストマップ" : imageLayer,
 	"通行情報"       : zoneLayer,
-	"ルート案内表示" : courseRouteLayer,
 	//"ルート案内表示" : routeLayer,
     };
 
     map.addLayer( courseLayer );
     map.addLayer( hotelLayer );
     map.addLayer( toiletLayer );
-    //map.addLayer( routeLayer );
     map.addLayer( imageLayer );
     map.addLayer( zoneLayer );
+    //map.addLayer( routeLayer );
 
     L.control.layers( baseMaps, overlayMaps ).addTo(map);
 
