@@ -1,10 +1,128 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE HTML>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/index.css" />
+    <title>オンライン版奈良ユニバーサル観光マップ|Nara Universal Map Online</title>
+    <meta name="keywords" content="車椅子,障碍者,地図,奈良公園,東大寺,大仏,高畑,奈良町,ならまち,北町,きたまち,唐招提寺,薬師寺,石舞台,万葉文化館">
+    <meta name="description" content="車いす使用者の方などを対象に、奈良観光を安全に楽しんでいただけるよう障がい者自身が調査し、バリアフリー情報を重視した観光マップです。">
+  </head>
 
-<h2>TopPage</h2>
+<body>
+<section>
+    <h1><img src="/static/index_img/logo.png" height="250px" width="250px" alt="オンライン版 奈良ユニバーサル観光マップ"></h1>
+    <h2 class="kye-cah">車いすの観光モデル<span>9</span>コース</h2>
+    <p class="kye-note">障がい者自身が調査し、とりまとめたバリアフリー情報をご案内します。</p>
+    <ul id="nav">
+      {% for area in arealist %}
+      <li><a href="{% url 'map' %}/{{ area.id }}">{{ area.Name }}</a></li>
+      {% endfor %}
+    </ul>
+</section>
 
-<p>admin       ..........  <a href="/admin">AdminPage</a>
-<p>AreaList  ..........  <a href="/area">AreaList</a>
-<p>admin       ..........  <a href="/map">MapPage</a>
+<nav>
+    <ul id="gnav">
+        <li><a href="#legend">凡例</a></li>   
+        <li><a href="#use">使い方</a></li>         
+        <li><a href="#course">コース紹介</a></li>
+        <li><a href="#about">奈良ユニバーサル観光マップについて</a></li>
+    </ul>
+</nav>
 
-{% endblock %}
+<section id="legend">  
+    <h2>凡例</h2>
+
+    <h3>【経路・道路】</h3>
+    <ul class="legend-item">
+      <li><img src="/static/index_img/ex_course.gif" height="30px" width="30px" alt="">車いす（手動・電動・簡易電動）で通行できるおすすめ経路</li>
+      <li><img src="/static/index_img/ex_course_op.gif" height="30px" width="30px" alt="">オプションコース。通行困難だが車いすや身体の状態によっては通行可能な経路</li>
+      <li><img src="/static/index_img/ex_difficulty.gif" height="30px" width="30px" alt="">車いすの種類により通行困難な場所</li>
+      <li><img src="/static/index_img/ex_impassable.gif" height="30px" width="30px" alt="">通行不可</li>
+      <li><img src="/static/index_img/ex_gravel.gif" height="30px" width="30px" alt="">砂利</li>        
+      <li><img src="/static/index_img/ex_sidewalk.gif" height="30px" width="30px" alt="">歩道</li>
+      <li><img src="/static/index_img/ex_crossing.gif" height="30px" width="30px" alt="">横断歩道</li>
+      <li><img src="/static/index_img/ex_slope1.gif" height="30px" width="30px" alt="">ゆるやかな坂道</li>
+      <li><img src="/static/index_img/ex_slope2.gif" height="30px" width="30px" alt="">急な坂道</li>   
+      <li><img src="/static/index_img/ex_slope3.gif" height="30px" width="30px" alt="">かなり急な坂道（介助が必要）</li>
+      <li>※通行困難な詳細は、地図ページのポップアップからご参照ください。</li>		
+    </ul>
+
+    <h3>【ピン】</h3>
+    <ul class="legend-item">
+      <li><img src="/static/icons/icon_toilet.png" height="38px" width="32px" alt="">多目的トイレ</li>
+      <li><img src="/static/icons/icon_no01.png" height="38px" width="32px" alt="おすすめ経路の施設"><img src="/static/icons/icon_no01_op.png" height="38px" width="32px" alt="オプションコースの施設"><img src="/static/icons/icon_building.png" height="38px" width="32px" alt="施設">車いすで利用できる施設</li><br>   
+      <li><img src="/static/icons/icon_instruction.png" height="38px" width="32px" alt="">強い注意</li>
+      <li><img src="/static/icons/icon_attention.png" height="38px" width="32px" alt="">注意</li>
+      <li><img src="/static/icons/icon_barr_guide.png" height="38px" width="32px" alt="">バリアフリーの案内</li>
+      <li><img src="/static/icons/icon_road_guide.png" height="38px" width="32px" alt="">道の案内</li>  
+      <li><img src="/static/icons/icon_restaurant.png" height="38px" width="32px" alt="">レストラン・カフェ</li>
+      <li><img src="/static/icons/icon_shop.png" height="38px" width="32px" alt="">お土産屋・コンビニ</li>
+      <li><img src="/static/icons/icon_hotel.png" height="38px" width="32px" alt="">ホテル</li>        
+      <li><img src="/static/icons/icon_busstop.png" height="34px" width="22px" alt="">バス停</li>            
+      <li><img src="/static/icons/icon_start.png" height="28px" width="59px" alt=""><img src="/static/icons/icon_goal.png" height="28px" width="49px" alt="">おすすめ経路のスタート・ゴール地点</li> 
+      <li><img src="/static/icons/icon_start_op.png" height="28px" width="59px" alt=""><img src="/static/icons/icon_goal_op.png" height="28px" width="49px" alt="">オプションコースのスタート・ゴール地点</li>       
+    </ul>
+
+    <h3>【多目的トイレ】</h3>
+    <ul class="legend-item">
+	    <li><img src="/static/icons/wc_babyseat.png" height="30px" width="30px" alt="">ベビーシート</li>
+	    <li><img src="/static/icons/wc_ostomate.png" height="30px" width="30px" alt="">オストメイト設備　</li>
+	    <li><img src="/static/icons/wc_nursingbed.png" height="30px" width="30px" alt="">大人用介護ベット　</li>
+	    <li><img src="/static/icons/wc_washlet.png" height="30px" width="30px" alt="">ウォシュレット</li>
+	    <li><img src="/static/icons/wc_rotation.png" height="30px" width="30px" alt="">車いす・転回可能　</li>
+	    <li><img src="/static/icons/wc_sos.png" height="30px" width="30px">呼び出しボタン</li>
+    </ul>
+    <p>
+    ※手すりは「手すりが動かせない」と記載がなければ、可動式です。<br>
+    ※多目的トイレは「男女別トイレ内」と記載がなければ男女共用です。
+    </p>
+</section>
+
+<section id="use">  
+    <h2>使い方</h2>
+    <ol class="use-item">
+        <li>観光地名のボタンを押していただくと地図ページが開き、車いすでのおすすめ観光ルートと観光ポイント、経路の注意地点などが表示されます。</li>
+        <li>地図をタップ（クリック）して移動させたり、地図左上の「＋」「－」などで拡大縮小ができます。</li>
+        <!-- <li>ピンなどをタップ（クリック）すると説明がポップアップ表示されます。一番下の「車椅子でここに行く」をクリックすると、車いすで移動可能なルート検索の結果が表示されます。</li>-->
+        <li>右上のメニューアイコンをタップ（クリック）すると、表示内容の設定ができます。チェックボックスで、マップ切り替え・多目的トイレ・おすすめコース・イラストマップ・通行情報<!--・ルート案内表示（ルート検索前は表示されません）-->の表示を設定できます。</li>    
+    </ol>
+</section> 
+
+<section id="course">
+  <h2>コース紹介</h2>
+  {% for area in arealist %}
+  <h3><a href="{% url 'map' %}/{{ area.id }}">{{ area.Name }}エリア</a>
+    <span>{{ area.SubName }}</span></h3>
+  <ol>
+    <dt>{{ area.Abstruct|linebreaksbr }}</dt>
+  </ol>
+  {% endfor %}
+</section> 
+
+<section id="about">  
+    <h2>奈良ユニバーサル観光マップについて</h2>
+    <p>奈良ユニバーサル観光マップは、車いす使用者の方などを対象に、奈良観光を安全に楽しんでいただけるように、フリーダム21の障がい者が主体となり、調査・編集した観光マップです。特に手動車いす、簡易電動車いす、電動車いすの３種類の車いすのバリアフリー情報を重視しています。他の観光サイトを併用していただくと、より奈良観光をお楽しみいただけます。<br>
+オンライン版奈良ユニバーサル観光マップは、冊子の奈良ユニバーサル観光マップの情報に加えてより多くの情報を掲載しております。<br>
+<br>
+◎［１］のエリアの掲載情報は2016年4月現在、［２］のエリアの掲載情報は2018年4月現在のものです。◎本システムは予告なく一時休止や停止することがありますので、予めご了承ください。◎Androidは、OS 5以上に対応しています。◎<a href="https://openstreetmap.jp/" target=”_blank”>オープンストリートマップ</a>、
+  <a href="https://www.mierune.co.jp/" target=”_blank”>MIERUNE社</a>および  <a href="http://www.gsi.go.jp/index.html" target=”_blank”>地理院地図</a>の地図タイルを利用しています。◎写真提供：矢野建彦（元興寺）・奈良市観光協会　</p>
+
+    <div class="pdf_btn"><a href="http://unimap.org/file/nara_universal_tourism_map2017.pdf" target="_blank">冊子の奈良ユニバーサル観光マップを開く<span>（PDF:33.7M）</span></a></div>
+    <p class="pdf_note01">2017年3月発行した冊子もぜひ、ご利用ください。</p>
+
+    <div class="pdf_btn"><a href="http://unimap.org/file/nara_universal_tourism_map2019.pdf" target="_blank">冊子の奈良ユニバーサル観光マップ2を開く<span>（PDF:38.1M）</span></a></div>
+    <p class="pdf_note02">2019年3月に発行した冊子もぜひ、ご利用ください。</p>    
+
+    <p>※オンライン版奈良ユニバーサル観光マップは「公益財団法人ALSOKありがとう運動財団」「公益財団法人太陽生命厚生財団」の助成を受けて作成しました。また、冊子の奈良ユニバーサル観光マップは「奈良県中央善意銀行助成金」「三澤了基金」の助成を、冊子の奈良ユニバーサル観光マップ2は一般財団法人YS市庭コミュニティー財団の助成を受けて発行しました。</p>
+</section> 
+
+<address>
+    <h2>お問い合わせ先</h2>
+    <p>メール:freedom<img src="index_img/at.gif" height="13px" width="12px" alt="">unimap.org（運営：<a href="http://freedom21.jp/" target=”_blank”>自立生活支援センターフリーダム21</a>）</p>
+</address>
+
+<footer>&copy;2018-2021 Specified Nonprofit Corporation-Independent Living Support Center Freedom21</footer>
+</body>
+</html>

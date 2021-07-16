@@ -16,9 +16,15 @@ from .models import Area, ImageMap, Route, PointData, Toilet, Hotel
 import logging
 
 
-# 暫定トップページ
+# トップページ
 def toppage(request):
-    return render(request, 'toppage.html')
+    try:
+        arealist = Area.objects.all()
+    except:
+        arealist = ""
+    params = { 'arealist': arealist }
+
+    return render(request, 'toppage.html', params)
 
 # エリア一覧
 def arealist(request):
@@ -29,12 +35,9 @@ def arealist(request):
     params = { 'arealist': arealist }
     return render(request, 'area.html', params)
 
-# Method for Class to JSON
-def cj_method(item):
-    if isinstance(item, object) and hasattr(item, '__dict__'):
-        return item.__dict__
-    else:
-        raise TypeError
+# テストトップページ
+def test(request):
+    return render(request, 'test.html')
 
 # マップ
 def map(request,areaid):
@@ -57,4 +60,11 @@ def map(request,areaid):
         return render(request, 'map.html', params )
     except:
         return render(request, 'map.html'  )
+
+# Method for Class to JSON
+def cj_method(item):
+    if isinstance(item, object) and hasattr(item, '__dict__'):
+        return item.__dict__
+    else:
+        raise TypeError
 

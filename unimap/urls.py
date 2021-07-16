@@ -30,11 +30,14 @@ urlpatterns = [
     # rest-API
     path('api/', include('api.urls')),
     
-    # 暫定のトップページ
+    # トップページ
     path('', views.toppage, name='toppage'),
 
     # コース一覧ページ
     path('area', views.arealist, name='arealist'),
+
+    # テストページ
+    path('test', views.test, name='test'),
 
     # エリアマップ
     path('map', views.map, name='map'),
