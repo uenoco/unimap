@@ -8,8 +8,11 @@ var DEF_LON=135.8380;
 var DEF_ZOOM=15;      //ズームレベル
 
 //  おすすめルート
-var GEOJSON_ROUTE = '/api/v1/route.geojson/'; // ルート
-var GEOJSON_POINT = '/api/v1/point.geojson/'; // 地点情報
+// WIP:エリア番号の追加が必要
+var GEOJSON_ROUTE = '/api/v1/route.geojson'; // ルート
+var GEOJSON_POINT = '/api/v1/point.geojson'; // 地点情報
+
+
 var GEOJSON_TOILET= '/api/v1/toilet.geojson'; // 多目的トイレ
 var GEOJSON_HOTEL = '/api/v1/hotel.geojson';  // ホテル
 var GEOJSON_ZONE  = '/api/v1/zone.geojson';   // 通行情報
@@ -38,56 +41,57 @@ function drawMap( mapimg ){
     });
     */
 
-//  Disp Point
-/*
-var coursePointLayer = new L.GeoJSON.AJAX( GEOJSON_POINT , {
-  pointToLayer: function (feature, latlng) {
-    switch ( feature.properties.Sort) {
-	    case 'start'   : return L.marker(latlng, {icon: IconStart, opacity: "0.8"});
-      case 'goal'    : return L.marker(latlng, {icon: IconGoal, opacity: "0.8"});
-	    case 'start_op': return L.marker(latlng, {icon: IconStartOP, opacity: "0.8"});
-      case 'goal_op' : return L.marker(latlng, {icon: IconGoalOP, opacity: "0.8"});
-      case 'location': return L.marker(latlng, {icon: IconLocation, opacity: "0.8"});
-      case 'attention': return L.marker(latlng, {icon: IconAttention, opacity: "0.8"});
-      case 'caution' : return L.marker(latlng, {icon: IconCaution, opacity: "0.8"});
-      case 'busstop' : return L.marker(latlng, {icon: IconBusstop, opacity: "0.8"});
-      case 'guide'   : return L.marker(latlng, {icon: IconGuide, opacity: "0.8"});
-      case 'barrguide': return L.marker(latlng, {icon: IconBarrGuide, opacity: "0.8"});
-      case 'roadguide': return L.marker(latlng, {icon: IconRoadGuide, opacity: "0.8"});
-      case 'restaurant': return L.marker(latlng, {icon: IconRestaurant, opacity: "0.8"});
-      case 'shop'    : return L.marker(latlng, {icon: IconShop, opacity: "0.8"});
-      case 'route' :
-        switch ( feature.properties.No ){
-	  case "1" : return L.marker(latlng, {icon: IconLocateNo01, opacity: "0.8"});
-	  case '2' : return L.marker(latlng, {icon: IconLocateNo02, opacity: "0.8"});
-	  case '3' : return L.marker(latlng, {icon: IconLocateNo03, opacity: "0.8"});
-	  case '4' : return L.marker(latlng, {icon: IconLocateNo04, opacity: "0.8"});
-	  case '5' : return L.marker(latlng, {icon: IconLocateNo05, opacity: "0.8"});
-	  case '6' : return L.marker(latlng, {icon: IconLocateNo06, opacity: "0.8"});
-	  case '7' : return L.marker(latlng, {icon: IconLocateNo07, opacity: "0.8"});
-	  case '8' : return L.marker(latlng, {icon: IconLocateNo08, opacity: "0.8"});
-	  case '9' : return L.marker(latlng, {icon: IconLocateNo09, opacity: "0.8"});
-	  case '10': return L.marker(latlng, {icon: IconLocateNo10, opacity: "0.8"});
-        };
-	case 'option' :
-        switch ( feature.properties.No ){
-	        case "1" : return L.marker(latlng, {icon: IconLocateOp01, opacity: "0.8"});
-	        case '2' : return L.marker(latlng, {icon: IconLocateOp02, opacity: "0.8"});
-	        case '3' : return L.marker(latlng, {icon: IconLocateOp03, opacity: "0.8"});
-	        case '4' : return L.marker(latlng, {icon: IconLocateOp04, opacity: "0.8"});
-	        case '5' : return L.marker(latlng, {icon: IconLocateOp05, opacity: "0.8"});
-	        case '6' : return L.marker(latlng, {icon: IconLocateOp06, opacity: "0.8"});
-	        case '7' : return L.marker(latlng, {icon: IconLocateOp07, opacity: "0.8"});
-	        case '8' : return L.marker(latlng, {icon: IconLocateOp08, opacity: "0.8"});
-	        case '9' : return L.marker(latlng, {icon: IconLocateOp09, opacity: "0.8"});
-	        case '10': return L.marker(latlng, {icon: IconLocateOp10, opacity: "0.8"});
-        }
-	    default : return L.marker(latlng, {icon: IconDefault, opacity: "0.8"});
-        }
-    },
-    onEachFeature: onEachFeaturePOI 
-});
-*/
+    //  Disp Point
+    var coursePointLayer = new L.GeoJSON.AJAX( GEOJSON_POINT , {
+	pointToLayer: function (feature, latlng) {
+	    switch ( feature.properties.Sort) {
+	    case 2   : return L.marker(latlng, {icon: IconStart, opacity: "0.8"});
+	    case 3   : return L.marker(latlng, {icon: IconGoal, opacity: "0.8"});
+	    case 4   : return L.marker(latlng, {icon: IconStartOP, opacity: "0.8"});
+	    case 5   : return L.marker(latlng, {icon: IconGoalOP, opacity: "0.8"});
+	    case 6   : return L.marker(latlng, {icon: IconLocation, opacity: "0.8"});
+	    case 7   : return L.marker(latlng, {icon: IconBarrGuide, opacity: "0.8"});
+	    case 8   : return L.marker(latlng, {icon: IconAttention, opacity: "0.8"});
+	    case 9   : return L.marker(latlng, {icon: IconCaution, opacity: "0.8"});
+	    case 10  : return L.marker(latlng, {icon: IconBusstop, opacity: "0.8"});
+	    case 'guide'   : return L.marker(latlng, {icon: IconGuide, opacity: "0.8"});
+	    case 'roadguide': return L.marker(latlng, {icon: IconRoadGuide, opacity: "0.8"});
+	    case 'restaurant': return L.marker(latlng, {icon: IconRestaurant, opacity: "0.8"});
+	    case 11    : return L.marker(latlng, {icon: IconShop, opacity: "0.8"});
+	    case 1 :
+		// Main Cource
+		switch ( feature.properties.No ){
+		case 1 : return L.marker(latlng, {icon: IconLocateNo01, opacity: "0.8"});
+		case 2 : return L.marker(latlng, {icon: IconLocateNo02, opacity: "0.8"});
+		case 3 : return L.marker(latlng, {icon: IconLocateNo03, opacity: "0.8"});
+		case 4 : return L.marker(latlng, {icon: IconLocateNo04, opacity: "0.8"});
+		case 5 : return L.marker(latlng, {icon: IconLocateNo05, opacity: "0.8"});
+		case 6 : return L.marker(latlng, {icon: IconLocateNo06, opacity: "0.8"});
+		case 7 : return L.marker(latlng, {icon: IconLocateNo07, opacity: "0.8"});
+		case 8 : return L.marker(latlng, {icon: IconLocateNo08, opacity: "0.8"});
+		case 9 : return L.marker(latlng, {icon: IconLocateNo09, opacity: "0.8"});
+		case 10: return L.marker(latlng, {icon: IconLocateNo10, opacity: "0.8"});
+		};
+	    case 12 :
+		// Option Cource
+		switch ( feature.properties.No ){
+	        case 1 : return L.marker(latlng, {icon: IconLocateOp01, opacity: "0.8"});
+	        case 2 : return L.marker(latlng, {icon: IconLocateOp02, opacity: "0.8"});
+	        case 3 : return L.marker(latlng, {icon: IconLocateOp03, opacity: "0.8"});
+	        case 4 : return L.marker(latlng, {icon: IconLocateOp04, opacity: "0.8"});
+	        case 5 : return L.marker(latlng, {icon: IconLocateOp05, opacity: "0.8"});
+	        case 6 : return L.marker(latlng, {icon: IconLocateOp06, opacity: "0.8"});
+	        case 7 : return L.marker(latlng, {icon: IconLocateOp07, opacity: "0.8"});
+	        case 8 : return L.marker(latlng, {icon: IconLocateOp08, opacity: "0.8"});
+	        case 9 : return L.marker(latlng, {icon: IconLocateOp09, opacity: "0.8"});
+	        case 10: return L.marker(latlng, {icon: IconLocateOp10, opacity: "0.8"});
+		}
+	    default :
+		return L.marker(latlng, {icon: IconDefault, opacity: "0.8"});
+            }
+	},
+	onEachFeature: onEachFeaturePOI 
+    });
 
     //  ホテル表示
     var hotelLayer = new L.GeoJSON.AJAX( GEOJSON_HOTEL , {
@@ -109,10 +113,19 @@ var coursePointLayer = new L.GeoJSON.AJAX( GEOJSON_POINT , {
     var zoneLayer = new L.GeoJSON.AJAX( GEOJSON_ZONE, { 
 	style: function(feature) {
 	    switch (feature.properties.Sort) {
-            case 'impassable': return passImpassableStyle;
-            case 'difficulty': return passDifficultyStyle;
-            case 'gravel':     return passGravelStyle;
-            case 'traffic':    return passTrafficStyle;
+            case 1 :
+		console.log( "graval feature.properties.Sort in zoneLayer" )
+		return passGravelStyle;
+	    case 2 :
+		console.log( "DIFF feature.properties.Sort in zoneLayer" )
+		return passDifficultyStyle;
+	    case 3 :
+		console.log( "IMP feature.properties.Sort in zoneLayer" )
+		return passImpassableStyle;
+	    case 4 :
+		return passTrafficStyle;
+	    default :
+		console.log( "Invalid feature.properties.Sort in zoneLayer" )
 	    }
 	},
 	onEachFeature: onEachFeaturePass
@@ -123,24 +136,23 @@ var coursePointLayer = new L.GeoJSON.AJAX( GEOJSON_POINT , {
     var imageBounds = [[ mapimg.lat1, mapimg.lon1 ] , [ mapimg.lat2, mapimg.lon2 ]];
     var imageLayer = new L.imageOverlay(imageUrl, imageBounds, {opacity:1.0} );
 
-    /*
     //  Layer Group
     //  ルートレイヤ：観光コース、坂道情報、ルート地点情報
-    var courseLayer  = L.layerGroup([ courseRouteLayer, courseSlopeLayer, coursePointLayer ]);
+    //var courseLayer  = L.layerGroup([ courseRouteLayer, courseSlopeLayer, coursePointLayer ]);
+    var courseLayer  = L.layerGroup([ coursePointLayer ]);
     //  ルート検索レイヤ：拡張用
     var routeLayer   = L.layerGroup([ ]);
-    */
 
     var overlayMaps = {
+	"おすすめコース" : courseLayer,
 	"バリアフリーホテル"   : hotelLayer,
 	"多目的トイレ"   : toiletLayer,
-	//  "おすすめコース" : courseLayer,
 	"イラストマップ" : imageLayer,
 	"通行情報"      : zoneLayer,
 	//  "ルート案内表示" : routeLayer,
     };
 
-    //map.addLayer( courseLayer );
+    map.addLayer( courseLayer );
     map.addLayer( hotelLayer );
     map.addLayer( toiletLayer );
     //map.addLayer( routeLayer );

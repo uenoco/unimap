@@ -69,21 +69,21 @@ class Route(models.Model):
 
 # 地点
 class PointData(models.Model):
-    PointType_CHOICES = ( ( 1, 'route'), ( 2, 'start'), ( 3, 'end'), ( 4, 'start_op'), ( 5, 'end_op'),
-                          ( 6, 'location'), ( 7, 'barrguide'), ( 8, 'attension'), ( 9, 'cation'), ( 10, 'busstop') )
+    PointType_CHOICES = ( ( 1, 'route'), (12, 'option' ), ( 2, 'start'), ( 3, 'end'), ( 4, 'start_op'), ( 5, 'end_op'),
+                          ( 6, 'location'), ( 7, 'barrguide'), ( 8, 'attension'), ( 9, 'caution'), ( 10, 'busstop'), ( 11, 'shop' ) )
 
-    id       = models.AutoField(primary_key=True)
-    AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID")
-    Sort      = models.IntegerField(verbose_name="地点タイプ",choices=PointType_CHOICES, null=False)
+    id        = models.AutoField(primary_key=True)
+    AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID", default=1)
+    Sort      = models.IntegerField(verbose_name="地点タイプ",choices=PointType_CHOICES, default=1 )
     No        = models.IntegerField(verbose_name="地点番号",null=True,blank=True)
     Name      = models.CharField(verbose_name="エリア名",max_length=24,null=False)
     Summery   = models.CharField(verbose_name="概要",max_length=256,null=True,blank=True)
     Remarks   = models.CharField(verbose_name="備考",max_length=256,null=True,blank=True)
-    Open      = models.TimeField(verbose_name="開始時刻",null=False,blank=True)
-    Close     = models.TimeField(verbose_name="終了時刻",null=False,blank=True)
+    Open      = models.CharField(verbose_name="開始時刻",max_length=256,null=False,blank=True)
+    Close     = models.CharField(verbose_name="終了時刻",max_length=256,null=False,blank=True)
     OpeningNote= models.CharField(verbose_name="時刻注釈",max_length=256,null=False,blank=True)
     Holiday   = models.CharField(verbose_name="休日",max_length=256,null=False,blank=True)
-    Price     = models.IntegerField(verbose_name="価格",null=False,blank=True)
+    Price     = models.CharField(verbose_name="価格",max_length=256,null=False,blank=True)
     PriceNote = models.CharField(verbose_name="価格注釈",max_length=256,null=False,blank=True)
     Discount  = models.CharField(verbose_name="割引",max_length=256,null=False,blank=True)
     TEL       = models.CharField(verbose_name="電話番号",max_length=16,null=False,blank=True)
@@ -94,8 +94,8 @@ class PointData(models.Model):
     Photo3    = models.CharField(verbose_name="Photo3",max_length=256,null=True,blank=True)
     Photo360  = models.CharField(verbose_name="Photo360",max_length=256,null=True,blank=True)
     Photo360_2= models.CharField(verbose_name="Photo360_2",max_length=256,null=True,blank=True)
-    Timestamp = models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
     geom      = models.PointField(srid=4326,default=Point([135.82, 34.68]))
+    Timestamp = models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
     objects   = models.Manager()
     
     def __str__(self):

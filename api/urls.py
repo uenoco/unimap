@@ -28,6 +28,20 @@ urlpatterns = [
     path('v1/zone.geojson',GeoJSONLayerView.as_view(
         model=Zone,
         properties=['Name','Summery','Sort', 'Photo1','Photo2','Photo3','Photo360','Photo360_2']
-    ), name='hotel'),
+    ), name='zone'),
+
+    # Course Route :LineString
+    path('v1/route.geojson',GeoJSONLayerView.as_view(
+        model=Route,
+        properties=['AreaId','Sort','Name','Summery']
+    ), name='route'),
+
+    # Course PointData
+    path('v1/point.geojson',GeoJSONLayerView.as_view(
+        model=PointData,
+        properties=['AreaId','Sort','No','Name','Summery','Remarks','Open','Close','OpeningNote',
+                    'Holiday','Price','PriceNote','Discount','TEL','URL','Urltitle',
+                    'Photo1','Photo2','Photo3','Photo360','Photo360_2']
+    ), name='point'),
 ]
 

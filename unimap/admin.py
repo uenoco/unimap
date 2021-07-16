@@ -28,8 +28,8 @@ admin.site.register(models.Route, RouteAdmin)
 
 # Point
 class PointDataAdmin(admin.ModelAdmin):
-    list_display = ['Name', 'Sort', 'No', 'Summery', 'geom' ]
-admin.site.register(models.PointData, geoadmin.OSMGeoAdmin)
+    list_display = ['Name', 'AreaId', 'Sort', 'No', 'Summery' ]
+admin.site.register(models.PointData, PointDataAdmin)
 
 #admin.site.register(models.PointData, geoadmin.OSMGeoAdmin)
 

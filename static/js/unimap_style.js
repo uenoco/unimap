@@ -132,7 +132,7 @@ var passImpassableStyle = {
   "fillColor": "#888888",
   "fillOpacity": 0.2,
   "weight": 1,
-  "fill" : 'url(image/fillpattern3.gif)'
+  "fill" : 'url(/static/images/fillpattern3.gif)'
 };
 
 //　通行困難場所エリア：車椅子の種類による
@@ -142,7 +142,7 @@ var passDifficultyStyle = {
   "fillColor": "#dd811d",
   "fillOpacity": 0.2,
   "weight": 1,
-  "fill" : 'url(image/fillpattern2.gif)'
+  "fill" : 'url(/static/images/fillpattern2.gif)'
 };
 
 //　通行困難場所エリア：砂利
@@ -153,7 +153,7 @@ var passGravelStyle = {
   "fillOpacity": 0.2,
   "weight": 3,
   "dashArray": "1,6",
-  "fill" : 'url(image/fillpattern1.gif)'
+  "fill" : 'url(/static/images/fillpattern1.gif)'
 };
 
 //　通行困難場所エリア：交通
@@ -164,6 +164,6 @@ var passTrafficStyle = {
   "fillOpacity": 0.2,
   "weight": 2,
   "dashArray": "0.5,5",
-  "fill" : 'url(image/fillpattern3.gif)'
+  "fill" : 'url(/static/images/fillpattern3.gif)'
 };
 
