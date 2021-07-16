@@ -22,7 +22,7 @@ admin.site.register(models.ImageMap, ImageMapAdmin)
 
 # Route
 class RouteAdmin(admin.ModelAdmin):
-    list_display = ['AreaId', 'Name', 'Summery', 'Sort' ]
+    list_display = ['AreaId', 'Sort' , 'Name', 'Summery' ]
 admin.site.register(models.Route, RouteAdmin)
 #admin.site.register(models.Route, geoadmin.OSMGeoAdmin)
 
@@ -32,10 +32,6 @@ class PointDataAdmin(admin.ModelAdmin):
 admin.site.register(models.PointData, PointDataAdmin)
 
 #admin.site.register(models.PointData, geoadmin.OSMGeoAdmin)
-
-
-# Slope
-admin.site.register(models.Slope, geoadmin.OSMGeoAdmin)
 
 # Zone
 class ZoneAdmin(geoadmin.OSMGeoAdmin):

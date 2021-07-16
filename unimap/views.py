@@ -10,7 +10,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Database Tables
-from .models import Area, ImageMap, Route, PointData, Slope, Toilet, Hotel
+from .models import Area, ImageMap, Route, PointData, Toilet, Hotel
 
 # Ffor Logging
 import logging

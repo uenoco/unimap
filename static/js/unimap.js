@@ -12,11 +12,48 @@ var DEF_ZOOM=15;      //ズームレベル
 var GEOJSON_ROUTE = '/api/v1/route.geojson'; // ルート
 var GEOJSON_POINT = '/api/v1/point.geojson'; // 地点情報
 
-
 var GEOJSON_TOILET= '/api/v1/toilet.geojson'; // 多目的トイレ
 var GEOJSON_HOTEL = '/api/v1/hotel.geojson';  // ホテル
 var GEOJSON_ZONE  = '/api/v1/zone.geojson';   // 通行情報
 
+//  坂道レイヤー
+var courseSlopeLayer = new L.GeoJSON();
+//  ルートレイヤー
+var courseRouteLayer = new L.GeoJSON();
+
+// コースとスロープのスタイル設定関数
+function onCoordsSlope( feature ) {
+    latlngs = []; //  座標列格納変数
+    line = feature.geometry.coordinates ;
+    line.forEach(function(entry){
+	latlngs.push(new L.latLng(entry[1],entry[0]));
+    });
+    // console.log( "latlngs : " + latlngs );
+    popupContent = setPopupContentPass(feature);
+
+    switch ( feature.properties.Sort){
+    case 1 :    // おすすめルート
+	style = routeMainStyle ;
+	L.polyline( latlngs, style ).bindPopup(popupContent).addTo( courseRouteLayer );
+	break;
+    case 2 :  // オプションルート
+	style = routeOptionStyle ;
+	L.polyline( latlngs, style ).bindPopup(popupContent).addTo( courseRouteLayer );
+	break;
+    case 11 :
+	style = routeSlopeStyleLv1;
+	L.polyline.antPath( latlngs, style ).bindPopup(popupContent).addTo( courseSlopeLayer );
+	break;
+    case 12 :
+	style = routeSlopeStyleLv2;
+	L.polyline.antPath( latlngs, style ).bindPopup(popupContent).addTo( courseSlopeLayer );
+	break;
+    case 13 :
+	style = routeSlopeStyleLv3;
+	L.polyline.antPath( latlngs, style ).bindPopup(popupContent).addTo( courseSlopeLayer );
+	break;
+    }
+}
 
 function drawMap( mapimg ){
     // console.log( mapimg );
@@ -25,23 +62,42 @@ function drawMap( mapimg ){
     var $maptile = osmorg;
     var map = L.map( 'map', {center: [DEF_LAT, DEF_LON], zoom: DEF_ZOOM, zoomControl: true, layers: [ $maptile ]});
 
+    //  Ajax で JSON(geojson) をゲット
+    result = $.ajax({
+	type: 'GET', 
+	url: GEOJSON_ROUTE,
+	dataType: 'json',
+    }).done( function(data) {
+	//  ファイル読み込み完了後の処理
+	// console.log( data );
+	var Layer = new L.GeoJSON( data ,{
+	    style: routeDefaultStyle ,
+	    onEachFeature: function (feature, layer) {
+		// コースとスロープのスタイル設定
+		onCoordsSlope( feature );
+	    }
+	});
+    }).fail( function(status) {
+	//  ファイル読み込み失敗時の処理
+	console.log( 'Read ERROR : '+GEOJSON_ROUTE );
+	console.log( status );
+    });
+					       
     /*
-    //  Ajax で geojson をゲット
-    result = 
-    $.ajax({ type: 'GET', url: GEOJSON_ROUTE })
-    .done(function(geojsonString) {
-    //  ファイル読み込み完了後の処理
-    var geojson = JSON.parse(geojsonString);
-    var Layer = new L.GeoJSON( geojson ,{
-    style: routeDefaultStyle ,
-    onEachFeature: function (feature, layer) {
-    onCoordsSlope( feature );
-    }
-    });
-    });
+    result = $.ajax({ type: 'GET', url: GEOJSON_ROUTE })
+	.done(function(geojsonString) {
+	    //  ファイル読み込み完了後の処理
+	    var geojson = JSON.parse(geojsonString);
+	    var Layer = new L.GeoJSON( geojson ,{
+		style: routeDefaultStyle ,
+		onEachFeature: function (feature, layer) {
+		    onCoordsSlope( feature );
+		}
+	    });
+	});
     */
 
-    //  Disp Point
+    //  Disp Point on Route
     var coursePointLayer = new L.GeoJSON.AJAX( GEOJSON_POINT , {
 	pointToLayer: function (feature, latlng) {
 	    switch ( feature.properties.Sort) {
@@ -114,13 +170,10 @@ function drawMap( mapimg ){
 	style: function(feature) {
 	    switch (feature.properties.Sort) {
             case 1 :
-		console.log( "graval feature.properties.Sort in zoneLayer" )
 		return passGravelStyle;
 	    case 2 :
-		console.log( "DIFF feature.properties.Sort in zoneLayer" )
 		return passDifficultyStyle;
 	    case 3 :
-		console.log( "IMP feature.properties.Sort in zoneLayer" )
 		return passImpassableStyle;
 	    case 4 :
 		return passTrafficStyle;
@@ -139,7 +192,7 @@ function drawMap( mapimg ){
     //  Layer Group
     //  ルートレイヤ：観光コース、坂道情報、ルート地点情報
     //var courseLayer  = L.layerGroup([ courseRouteLayer, courseSlopeLayer, coursePointLayer ]);
-    var courseLayer  = L.layerGroup([ coursePointLayer ]);
+    var courseLayer  = L.layerGroup([ courseRouteLayer, coursePointLayer ]);
     //  ルート検索レイヤ：拡張用
     var routeLayer   = L.layerGroup([ ]);
 
@@ -148,8 +201,9 @@ function drawMap( mapimg ){
 	"バリアフリーホテル"   : hotelLayer,
 	"多目的トイレ"   : toiletLayer,
 	"イラストマップ" : imageLayer,
-	"通行情報"      : zoneLayer,
-	//  "ルート案内表示" : routeLayer,
+	"通行情報"       : zoneLayer,
+	"ルート案内表示" : courseRouteLayer,
+	//"ルート案内表示" : routeLayer,
     };
 
     map.addLayer( courseLayer );
