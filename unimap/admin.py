@@ -8,11 +8,11 @@ from . import models
 # Register your models here.
 
 #from unimap.models import Border, RecommendCourse
-from unimap.models import Area, PointData
+from unimap.models import Area, ImageMap, Route, PointData, Zone, Toilet, Hotel
 
 # Sightseeing route Area
 class AreaAdmin(admin.ModelAdmin):
-    list_display = ['DisplayOrder', 'Name', 'SubName', 'Booklet', 'DEF_LON', 'DEF_LAT' , 'DEF_Zoom' ]
+    list_display = ['Name', 'DisplayOrder', 'SubName', 'Booklet', 'DEF_LON', 'DEF_LAT' , 'DEF_Zoom' ]
 admin.site.register(models.Area, AreaAdmin)
 
 # Image Map (イラストマップ)

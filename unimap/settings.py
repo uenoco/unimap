@@ -101,7 +101,7 @@ DATABASES = {
 #    }
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'unimap',
+        'NAME': 'unimap_test',
         'USER': 'unimap',
         'HOST': 'localhost',
         'PASSWORD': 'unimap00',
