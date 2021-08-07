@@ -10,6 +10,7 @@ from django.contrib.gis.geos import Point, LineString
 # 推奨コース
 class Area(models.Model):
     id       = models.AutoField(primary_key=True)
+    DisplayOrder = models.IntegerField(verbose_name="表示順",null=True,blank=True)
     Name     = models.CharField(verbose_name="エリア名",max_length=24)
     SubName  = models.CharField(verbose_name="サブタイトル",max_length=24)
     Abstruct = models.TextField(verbose_name="概要",max_length=256)

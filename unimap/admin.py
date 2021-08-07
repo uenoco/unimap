@@ -12,7 +12,7 @@ from unimap.models import Area, PointData
 
 # Sightseeing route Area
 class AreaAdmin(admin.ModelAdmin):
-    list_display = ['Name', 'SubName', 'Booklet', 'DEF_LON', 'DEF_LAT' , 'DEF_Zoom' ]
+    list_display = ['DisplayOrder', 'Name', 'SubName', 'Booklet', 'DEF_LON', 'DEF_LAT' , 'DEF_Zoom' ]
 admin.site.register(models.Area, AreaAdmin)
 
 # Image Map (イラストマップ)
