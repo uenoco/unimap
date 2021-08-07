@@ -6,8 +6,6 @@ from django.contrib.gis import admin as geoadmin
 from . import models
 
 # Register your models here.
-
-#from unimap.models import Border, RecommendCourse
 from unimap.models import Area, ImageMap, Route, PointData, Zone, Toilet, Hotel
 
 # Sightseeing route Area
@@ -36,20 +34,24 @@ admin.site.register(models.PointData, PointDataAdmin)
 # Zone
 class ZoneAdmin(geoadmin.OSMGeoAdmin):
     list_display = ['Name', 'AreaId', 'Summery', 'Sort', 'Photo1' ]
-admin.site.register(models.Zone, ZoneAdmin)
-#admin.site.register(models.Zone, geoadmin.OSMGeoAdmin)
+admin.site.register(models.Zone, geoadmin.OSMGeoAdmin)
+
+## WIP try Proxy
+#class ZoneAdminProxy(admin.ModelAdmin):
+#    list_display = ['Name', 'AreaId', 'Summery', 'Sort', 'Photo1' ]
+#admin.site.register(ZoneAdminProxy)
 
 # Toilet
 class ToiletAdmin(geoadmin.OSMGeoAdmin):
     list_display = ['Name','AreaId', 'Babyseat','Ostomate','Nursingbed','Washlet','Rotation','Emergencycall']
-admin.site.register(models.Toilet, ToiletAdmin)
-# admin.site.register(models.Toilet, geoadmin.OSMGeoAdmin)
+admin.site.register(models.Toilet, geoadmin.OSMGeoAdmin)
+#admin.site.register(models.Toilet, ToiletAdmin)
 
 # Hotel
 class HotelAdmin(geoadmin.OSMGeoAdmin):
     list_display = ['Name','AreaId', 'TEL','Address']
-admin.site.register(models.Hotel, HotelAdmin)
-#admin.site.register(models.Hotel, geoadmin.OSMGeoAdmin)
+admin.site.register(models.Hotel, geoadmin.OSMGeoAdmin)
+#admin.site.register(models.Hotel, HotelAdmin)
 
 
 

@@ -23,6 +23,11 @@ from django.conf.urls.static import static # add
 
 from unimap import views
 
+admin.site.site_header='奈良ユニバーサル観光マップ管理画面'
+admin.site.site_title='奈良ユニバーサル観光マップ管理画面'
+admin.site.index_title='ホーム'
+
+
 urlpatterns = [
     # 管理ページ
     path('admin/', admin.site.urls),

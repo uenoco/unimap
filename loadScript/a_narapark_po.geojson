@@ -1,0 +1,985 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.82832,
+          34.684098
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "start",
+        "No": "",
+        "Name": "スタート近鉄奈良駅",
+        "Attitude": "",
+        "Summery": "エレベーターあり。改札内に授乳スペースあり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://www.kintetsu.co.jp/soukatsu/kounai/nara.html",
+        "Urltitle": "近鉄奈良駅構内図サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831174,
+          34.68299
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "route",
+        "No": "1",
+        "Name": "興福寺",
+        "Attitude": "",
+        "Summery": "【境内】移動可。浅い砂利道で、手動車いすは力が必要【国宝館】バリアフリー。右側の入場用スロープから入場【南円堂・東金堂】境内から拝観【中金堂】階段で中には入れないが外から拝観可能",
+        "Remarks": "駐車場一般３３台、身障者用１台",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "700円",
+        "PriceNote": "国宝館の料金。東金堂は300円。",
+        "Discount": "本人・付添１名半額",
+        "TEL": "0742-22-7755",
+        "URL": "http://www.kohfukuji.com/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/koufukuji.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.832859,
+          34.685123
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "route",
+        "No": "2",
+        "Name": "奈良県庁舎（屋上広場）",
+        "Attitude": "",
+        "Summery": "【庁舎・屋上広場】バリアフリー、屋上広場は格子状の柵なので車いすでも景色を楽しめる。東棟との往来は外を通る必要あり。授乳室あり※開放日、時間は奈良県管財課管理係まで問い合わせが必要。",
+        "Remarks": "車いす貸出４台。駐車場なし（県営登大路駐車場北を利用）",
+        "Open": "8:30",
+        "Close": "17:30",
+        "OpeningNote": "",
+        "Holiday": "要問い合わせ",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-27-8406",
+        "URL": "http://www.pref.nara.jp/4203.htm",
+        "Urltitle": "奈良県庁舎屋上広場サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kenchou1.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.839438,
+          34.686165
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "route",
+        "No": "3",
+        "Name": "東大寺総合文化センター（東大寺ミュージアム）",
+        "Attitude": "",
+        "Summery": "【ミュージアム・ギャラリー・カフェ】バリアフリー。展示すべて鑑賞可。授乳スペースは要相談",
+        "Remarks": "車いす貸出３台（センター内に限る）、警備詰所に東大寺境内すべてで使用できる車椅子２台あり。駐車場なし（大仏前駐車場を利用）",
+        "Open": "9:30",
+        "Close": "17:00",
+        "OpeningNote": "季節により変動",
+        "Holiday": "臨時休館あり。",
+        "Price": "600円（中学生以上）、300円（小学生）",
+        "PriceNote": "ミュージアムの料金",
+        "Discount": "本人・付添１名300円",
+        "TEL": "0742-20-5511",
+        "URL": "http://culturecenter.todaiji.or.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/todaiji1.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.839859,
+          34.688328
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "route",
+        "No": "4",
+        "Name": "東大寺大仏殿",
+        "Attitude": "",
+        "Summery": "【大仏殿】移動可。受付に階段、通路に開閉式の柵、スロープが急斜面の為に介助が必要。賓頭慮尊者像に行くには大仏殿入り口右側へ。中央通路は階段で通行不可。",
+        "Remarks": "車いす貸出３台（大仏殿内に限る）、警備詰所に東大寺境内すべてで使用できる車椅子２台あり。駐車場なし（大仏前駐車場を利用）",
+        "Open": "8:00",
+        "Close": "17:00",
+        "OpeningNote": "季節により変動",
+        "Holiday": "無休",
+        "Price": "600円（中学生以上）、300円（小学生）",
+        "PriceNote": "",
+        "Discount": "本人・付添１名300円",
+        "TEL": "0742-22-5511",
+        "URL": "http://www.todaiji.or.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/todaiji3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.844267,
+          34.689283
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "option",
+        "No": "5",
+        "Name": "東大寺二月堂",
+        "Attitude": "",
+        "Summery": "【二月堂までの道】坂道が続き、石畳・土道が傷み、でこぼこしており移動困難。手動車いすは介助が必要。簡易・電動車いすはバッテリー消耗に注意。バス停からの移動は道中の段差に注意。【二月堂】階段で移動不可。下から拝観。※土日祝はぐるっとバスを利用するのがおすすめ。",
+        "Remarks": "警備詰所に東大寺境内すべてで使用できる車椅子２台あり。駐車場なし",
+        "Open": "終日",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-22-5511",
+        "URL": "http://www.todaiji.or.jp/contents/guidance/guidance6.html",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nigatsudou1.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.838686,
+          34.68364
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "goal",
+        "No": "",
+        "Name": "ゴール東大寺大仏殿・国立博物館バス停",
+        "Attitude": "",
+        "Summery": "【帰り】ＪＲ奈良・近鉄奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834113,
+          34.685103
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "location",
+        "No": "",
+        "Name": "奈良公園バスターミナル",
+        "Attitude": "",
+        "Summery": "【館内】バリアフリー。授乳室２つあり",
+        "Remarks": "車いす貸出５台。駐車場なし（県営登大路駐車場北を利用）",
+        "Open": "7:30",
+        "Close": "18:30",
+        "OpeningNote": "展示等施設営業時間",
+        "Holiday": "無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-81-3151",
+        "URL": "https://npbt.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.839043,
+          34.68438
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "location",
+        "No": "",
+        "Name": "夢風ひろば",
+        "Attitude": "",
+        "Summery": "【施設内】移動可。",
+        "Remarks": "駐車場一般３７台、身障者用３台（有料）",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "各店舗の営業時間を確認",
+        "Holiday": "各店舗の定休日を確認",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-25-0870",
+        "URL": "http://www.yume-kaze.com/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83921,
+          34.685324
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "location",
+        "No": "",
+        "Name": "大仏前駐車場",
+        "Attitude": "",
+        "Summery": "障害者手帳を提示すれば駐車させてもらえる。",
+        "Remarks": "",
+        "Open": "8:30",
+        "Close": "17:00",
+        "OpeningNote": "季節により変動",
+        "Holiday": "",
+        "Price": "1日1,000円",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.829307,
+          34.684793
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "shop",
+        "No": "",
+        "Name": "きてみてならショップ",
+        "Attitude": "",
+        "Summery": "【館内】バリアフリー。一部狭い通路あり。商品すべて見られる",
+        "Remarks": "車いす貸出１台。駐車場あり",
+        "Open": "10:00",
+        "Close": "18:00",
+        "OpeningNote": "行事日は延長",
+        "Holiday": "月曜定休（月曜日が祝日の時は翌日）",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-26-8828",
+        "URL": "https://www.nara-shop.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kitemite.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834237,
+          34.6846
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "caution",
+        "No": "",
+        "Name": "地下道１",
+        "Attitude": "",
+        "Summery": "出入り口傾斜が急なため迂回が必要",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834382,
+          34.684296
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "caution",
+        "No": "",
+        "Name": "地下道２",
+        "Attitude": "",
+        "Summery": "出入り口傾斜が急なため迂回が必要",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.835253,
+          34.684285
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "caution",
+        "No": "",
+        "Name": "地下道３",
+        "Attitude": "",
+        "Summery": "出入り口傾斜が急なため迂回が必要",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834827,
+          34.684634
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "caution",
+        "No": "",
+        "Name": "地下道４",
+        "Attitude": "",
+        "Summery": "階段があり通行不可",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.838974,
+          34.687854
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "大仏殿車いす用出入口",
+        "Attitude": "",
+        "Summery": "一般受付にてチケットを購入、車いす入口から入場。開閉は警備員がしてくれる",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/todaiji4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831658,
+          34.682866
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "中金堂へのスロープ１",
+        "Attitude": "",
+        "Summery": "入口と出口のそれぞれにスロープが有る",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/koufukuji7.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/koufukuji6.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831501,
+          34.683258
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "attention",
+        "No": "",
+        "Name": "中金堂へのスロープ２",
+        "Attitude": "",
+        "Summery": "坂が急なため介助が必要",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/koufukuji3.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/koufukuji2.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.839521,
+          34.688745
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "attention",
+        "No": "",
+        "Name": "大仏殿車いす通路",
+        "Attitude": "",
+        "Summery": "通路の途中に柵があるので介助者が必要",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/todaiji5.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/todaiji6.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.843844,
+          34.688323
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "attention",
+        "No": "",
+        "Name": "二月堂バス停から法華堂への道にある段差",
+        "Attitude": "",
+        "Summery": "段差あり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nigatsudou2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831876,
+          34.684336
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "attention",
+        "No": "",
+        "Name": "鹿が多い",
+        "Attitude": "",
+        "Summery": "鹿がたくさん座っているため、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/narapark3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834817,
+          34.684587
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道に段差",
+        "Attitude": "",
+        "Summery": "歩道の段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/narapark4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.840838,
+          34.687792
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "attention",
+        "No": "",
+        "Name": "参道出入口に段差とポール有り",
+        "Attitude": "",
+        "Summery": "１ｃｍ程度の段差とポールが有るため注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/narapark6.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.838111,
+          34.683866
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "attention",
+        "No": "",
+        "Name": "電柱に注意",
+        "Attitude": "",
+        "Summery": "電柱で歩道が狭いので注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/narapark5.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83877,
+          34.683621
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "東大寺大仏殿・国立博物館バス停",
+        "Attitude": "",
+        "Summery": "【帰り】ＪＲ奈良・近鉄奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.840721,
+          34.683493
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "ぐるっとバス東大寺バス停",
+        "Attitude": "",
+        "Summery": "土日祝はバスで二月堂に行くのがお勧め",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://www.nara-access-navi.com/season-bus/",
+        "Urltitle": "ぐるっとバスサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.844928,
+          34.686775
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "ぐるっとバス手向山八幡宮・二月堂前バス停",
+        "Attitude": "",
+        "Summery": "【帰り】高畑・ならまち経由でＪＲ奈良・近鉄奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://www.nara-access-navi.com/season-bus/",
+        "Urltitle": "ぐるっとバスサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.832788,
+          34.683381
+        ]
+      },
+      "properties": {
+        "Area": "narapark",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "国宝館へのスロープ",
+        "Attitude": "",
+        "Summery": "ゆるやかな坂道",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/koufukuji5.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/koufukuji4.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    }
+  ]
+}

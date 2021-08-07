@@ -24,8 +24,8 @@ class Area(models.Model):
         return self.Name
 
     class Meta:
-        verbose_name = 'マップエリア'
-        verbose_name_plural = 'マップエリア'
+        verbose_name = '1.マップエリア'
+        verbose_name_plural = '1.マップエリア'
 
 # イラスト地図
 class ImageMap(models.Model):
@@ -42,8 +42,8 @@ class ImageMap(models.Model):
     #    return self.AreaId
 
     class Meta:
-        verbose_name = 'イラストマップ'
-        verbose_name_plural = 'イラストマップ'
+        verbose_name = '2.イラストマップ'
+        verbose_name_plural = '2.イラストマップ'
     # See https://qiita.com/kojionilk/items/da20c732642ee7377a78
     
 # 移動ルート
@@ -128,6 +128,12 @@ class Zone(models.Model):
     class Meta:
         verbose_name = 'A.ゾーン情報'
         verbose_name_plural = 'A.ゾーン情報'
+
+## WIP try Proxy
+#class ZoneProxy(Zone):
+#    class Meta:
+#        proxy = True
+
 
 # トイレ
 class Toilet(models.Model):
