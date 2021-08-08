@@ -29,6 +29,10 @@ DEBUG = True
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['*']
 
+#CORS_ORIGIN_ALLOW_ALL = True #add for CROSCORS_ALLOW_CREDENTIALS = True
+#CORS_ALLOW_HEADERS = ['*']
+CORS_ALLOWED_ORIGINS = ['http://localhost:8000', 'http://127.0.0.1', 'https://unimap-staging.zukatech.com' ]
+#CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'https://unimap-staging.zukatech.com' ]
 
 # Application definition
 
@@ -44,27 +48,26 @@ INSTALLED_APPS = [
     'djgeojson',
     ## django-allauth
     #'django.contrib.sites',
-    ##'allauth',
     #'allauth.account',
     #'allauth.socialaccount',    # ソーシャル連携認証なしでも必要',
-    #CORS
-    'corsheaders',      
     # unimap Applicaition
     'unimap',
+    #CORS
+    'corsheaders',      
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    #add for CROS
+    'corsheaders.middleware.CorsMiddleware', 
+    #
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware', #add for CROS
 ]
-
-CORS_ORIGIN_ALLOW_ALL = True #add for CROS
 
 ROOT_URLCONF = 'unimap.urls'
 
