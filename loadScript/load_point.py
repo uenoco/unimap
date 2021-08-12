@@ -63,8 +63,9 @@ def run(verbose=True):
         geojson_file = os.path.abspath(os.path.join(os.path.dirname(__file__), file ))
         print( geojson_file )
 
-#        lm = LayerMapping( PointData, geojson_file, mapping, transform=False, encoding='UTF-8')
-#        lm.save( strict=True, verbose=verbose )
+        lm = LayerMapping( PointData, geojson_file, mapping, transform=False, encoding='UTF-8')
+        lm.save( strict=True, verbose=verbose )
+        
 
     
   

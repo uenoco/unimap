@@ -19,7 +19,7 @@ import logging
 # トップページ
 def toppage(request):
     try:
-        arealist = Area.objects.all()
+        arealist = Area.objects.filter( DisplayFlag=True )
         bookletlist = Booklet.objects.all()
     except:
         arealist = ""
