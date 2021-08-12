@@ -106,16 +106,21 @@
     <p>奈良ユニバーサル観光マップは、車いす使用者の方などを対象に、奈良観光を安全に楽しんでいただけるように、フリーダム21の障がい者が主体となり、調査・編集した観光マップです。特に手動車いす、簡易電動車いす、電動車いすの３種類の車いすのバリアフリー情報を重視しています。他の観光サイトを併用していただくと、より奈良観光をお楽しみいただけます。<br>
 オンライン版奈良ユニバーサル観光マップは、冊子の奈良ユニバーサル観光マップの情報に加えてより多くの情報を掲載しております。<br>
 <br>
-◎［１］のエリアの掲載情報は2016年4月現在、［２］のエリアの掲載情報は2018年4月現在のものです。◎本システムは予告なく一時休止や停止することがありますので、予めご了承ください。◎Androidは、OS 5以上に対応しています。◎<a href="https://openstreetmap.jp/" target=”_blank”>オープンストリートマップ</a>、
+◎本システムは予告なく一時休止や停止することがありますので、予めご了承ください。◎Androidは、OS 5以上に対応しています。◎<a href="https://openstreetmap.jp/" target=”_blank”>オープンストリートマップ</a>、
   <a href="https://www.mierune.co.jp/" target=”_blank”>MIERUNE社</a>および  <a href="http://www.gsi.go.jp/index.html" target=”_blank”>地理院地図</a>の地図タイルを利用しています。◎写真提供：矢野建彦（元興寺）・奈良市観光協会　</p>
-
-    <div class="pdf_btn"><a href="http://unimap.org/file/nara_universal_tourism_map2017.pdf" target="_blank">冊子の奈良ユニバーサル観光マップを開く<span>（PDF:33.7M）</span></a></div>
-    <p class="pdf_note01">2017年3月発行した冊子もぜひ、ご利用ください。</p>
-
-    <div class="pdf_btn"><a href="http://unimap.org/file/nara_universal_tourism_map2019.pdf" target="_blank">冊子の奈良ユニバーサル観光マップ2を開く<span>（PDF:38.1M）</span></a></div>
-    <p class="pdf_note02">2019年3月に発行した冊子もぜひ、ご利用ください。</p>    
-
+<br>
     <p>※オンライン版奈良ユニバーサル観光マップは「公益財団法人ALSOKありがとう運動財団」「公益財団法人太陽生命厚生財団」の助成を受けて作成しました。また、冊子の奈良ユニバーサル観光マップは「奈良県中央善意銀行助成金」「三澤了基金」の助成を、冊子の奈良ユニバーサル観光マップ2は一般財団法人YS市庭コミュニティー財団の助成を受けて発行しました。</p>
+<br>
+  <h2>奈良ユニバーサル観光マップPDF版</h2>
+
+  {% for booklet in bookletlist %}
+  <div class="pdf_btn">
+    <a href="{{mediaurl}}{{booklet.PDFfile}}" target="_blank">
+      {{booklet.Name}}
+      <span>（{{booklet.FileSize}}）</span></a></div>
+    <p class="pdf_note01">{{booklet.Publication|date:"Y年m月"}}発行&nbsp;&nbsp;{{booklet.Remarks}} </p>
+  </ol>
+  {% endfor %}
 </section> 
 
 <address>

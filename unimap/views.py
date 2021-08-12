@@ -10,7 +10,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 # Database Tables
-from .models import Area, ImageMap, Route, PointData, Toilet, Hotel
+from .models import Area, ImageMap, Route, PointData, Toilet, Hotel, Booklet
 
 # Ffor Logging
 import logging
@@ -20,9 +20,12 @@ import logging
 def toppage(request):
     try:
         arealist = Area.objects.all()
+        bookletlist = Booklet.objects.all()
     except:
         arealist = ""
-    params = { 'arealist': arealist }
+        bookletlist = ""
+    mediaURL = settings.MEDIA_URL        
+    params = { 'arealist': arealist,'bookletlist': bookletlist, 'mediaurl': mediaURL }
 
     return render(request, 'toppage.html', params)
 
@@ -47,7 +50,7 @@ def map(request,areaid):
         area  = Area.objects.get( id=areaid )
         # set ImageMap
         image = ImageMap.objects.get( AreaId=area.id )
-        mediaURL = settings.MEDIA_URL        # image Bacs-URL
+        mediaURL = settings.MEDIA_URL        
         # set route
         #route = route.objects.get( AreaId=area.id )
 
@@ -67,4 +70,3 @@ def cj_method(item):
         return item.__dict__
     else:
         raise TypeError
-

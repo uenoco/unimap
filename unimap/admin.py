@@ -65,5 +65,9 @@ class HotelAdmin(geoadmin.OSMGeoAdmin):
     search = [ 'Name' ]
 admin.site.register(models.Hotel, HotelAdmin)
 
-
+# Booklet PDF
+class BookletAdmin(admin.ModelAdmin):
+    list_display = ['Name', 'Publication', 'PDFfile' ]
+    ordering = [ 'Publication' ]
+admin.site.register(models.Booklet, BookletAdmin)
 

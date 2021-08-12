@@ -3,10 +3,16 @@
 #   Unimap Project models.py     
 ####
 from django.contrib.auth import get_user_model
+
 #from django.db import models
 from django.contrib.gis.db import models as models
 from django.contrib.gis.geos import Point, LineString
 
+#FileValidator
+from django.core.validators import FileExtensionValidator
+
+import os
+    
 # 推奨コース
 class Area(models.Model):
     id       = models.AutoField(primary_key=True)
@@ -197,4 +203,22 @@ class Hotel(models.Model):
     class Meta:
         verbose_name = 'C.ホテル情報'
         verbose_name_plural = 'C.ホテル情報'
+
+# 冊子リスト
+class Booklet(models.Model):
+    id       = models.AutoField(primary_key=True)
+    Name     = models.CharField(verbose_name="冊子名",max_length=24)
+    SubName  = models.CharField(verbose_name="サブタイトル",max_length=32)
+    Publication= models.DateField(verbose_name="発売時期",blank=True, null=True)
+    FileSize = models.CharField(verbose_name="PDFサイズ",max_length=24,null=True,blank=True)
+    PDFfile  = models.FileField(verbose_name="冊子PDF",upload_to="pdf/",validators=[ FileExtensionValidator(allowed_extensions=['pdf', ]) ])
+    Remarks   = models.CharField(verbose_name="備考",max_length=256,null=True,blank=True)  
+
+    def __str__(self):
+        return self.Name
+
+    class Meta:
+        verbose_name = 'X.冊子リスト'
+        verbose_name_plural = 'X.冊子'
+
 
