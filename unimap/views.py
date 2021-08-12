@@ -49,15 +49,15 @@ def map(request,areaid):
         # get areaId
         area  = Area.objects.get( id=areaid )
         # set ImageMap
-        image = ImageMap.objects.get( AreaId=area.id )
+        imap = ImageMap.objects.get( AreaId=area.id )
         mediaURL = settings.MEDIA_URL        
-        # set route
+        # set route/point
         #route = route.objects.get( AreaId=area.id )
+        #point = point.objects.get( AreaId=area.id )
 
         #print( json.dumps(area, default=cj_method, indent=2))
-        params = { 'imagemap': image, 'mediaurl': mediaURL }
-        #print( area.id )
-        #print( params )
+        params = { 'areaid':areaid, 'imagemap': imap, 'mediaurl': mediaURL }
+        #print( params.areaid )
         
         print( "----  return in views.py-----" )
         return render(request, 'map.html', params )

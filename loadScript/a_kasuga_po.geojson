@@ -1,0 +1,1125 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.837461,
+          34.684048
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "start",
+        "No": "",
+        "Name": "スタート氷室神社・国立博物館バス停",
+        "Attitude": "",
+        "Summery": "市内循環（大仏殿方面）",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.837316,
+          34.683308
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "route",
+        "No": "1",
+        "Name": "奈良国立博物館",
+        "Attitude": "",
+        "Summery": "【館内】バリアフリー。仏像館にでこぼこ、少し急なスロープあり。青銅器館にある出入口のスロープが急で要介助。展示すべて鑑賞可。※正倉院展の混雑時は移動困難。救護室で授乳可能。休憩所・空調あり【ショップ】一部に狭い箇所あり、商品すべて見られる【レストラン】広さに余裕あり",
+        "Remarks": "車いす貸出１５台。駐車場一般なし、身障者用は要問い合わせ",
+        "Open": "9:30",
+        "Close": "17:00",
+        "OpeningNote": "（日により延長あり）",
+        "Holiday": "月曜定休（休日の場合はその翌日。連休の場合は終了後の翌日）※HPを参照ください",
+        "Price": "520円（2019年11月現在）",
+        "PriceNote": "特別展は要問い合わせ",
+        "Discount": "本人・付添１名無料",
+        "TEL": "050-5542-8600",
+        "URL": "https://www.narahaku.go.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kokurituhakubutukan.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.843281,
+          34.683789
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "route",
+        "No": "2",
+        "Name": "奈良春日野国際フォーラム甍",
+        "Attitude": "",
+        "Summery": "【館内】バリアフリー、出入口に坂あり。能楽ホール利用可。空調、授乳室あり【レストラン】出入口が狭く注意、広さに余裕あり【庭園】移動可、出入口の扉が手動。一部に急な坂があり要介助",
+        "Remarks": "車いす貸出２台。駐車場一般３０台、身障者用２台",
+        "Open": "9:00",
+        "Close": "21:30",
+        "OpeningNote": "",
+        "Holiday": "月曜定休(祝日の場合は翌日)",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-27-2630",
+        "URL": "http://www.i-ra-ka.jp/welcome/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kasuganokokusai.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.844429,
+          34.682382
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "route",
+        "No": "3",
+        "Name": "春日大社 萬葉植物園",
+        "Attitude": "",
+        "Summery": "【園内】移動可、砂利道あり。出入口など段差のある箇所が複数あり。出入口の周辺にある石畳のでこぼこが強いので注意。車いすで藤の園まで行くことが可能",
+        "Remarks": "車いす貸出２台（駐車場乗務員休憩所）、駐車場一般９８台、身障者用２台※春日大社すべての施設共通",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "季節により変動",
+        "Holiday": "年中無休、ただし12月〜2月は月曜定休(祝日の場合は翌日)",
+        "Price": "500円",
+        "PriceNote": "",
+        "Discount": "本人250円",
+        "TEL": "0742-22-7788",
+        "URL": "http://www.kasugataisha.or.jp/h_s_tearoom/manyou-s/index.html",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/manyou.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.843249,
+          34.680732
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "route",
+        "No": "4",
+        "Name": "鹿苑",
+        "Attitude": "",
+        "Summery": "【苑内】移動可、出入口の扉が手動。一部に坂あり。車いすで安全に餌やりが可能",
+        "Remarks": "",
+        "Open": "10:00",
+        "Close": "16:00",
+        "OpeningNote": "",
+        "Holiday": "月曜定休(祝日の場合は翌日)",
+        "Price": "無料、協力金100円(任意)",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-22-2388",
+        "URL": "https://naradeer.com/",
+        "Urltitle": "奈良鹿の愛護会サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/rokuen.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.846537,
+          34.681429
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "route",
+        "No": "5",
+        "Name": "春日大社国宝殿",
+        "Attitude": "",
+        "Summery": "【館内】バリアフリー、エレベーターは狭いので車いすの大きさにより使用困難。展示は一部見にくい。1階展示室は照明がかなり暗いので移動注意。空調あり【だ太鼓ホール】空洞への脱輪注意【カフェ鹿音】広さに余裕あり、商品すべて見られる",
+        "Remarks": "車いす貸出２台（駐車場乗務員休憩所）、駐車場一般９８台、身障者用２台※春日大社すべての施設共通",
+        "Open": "10:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "年中無休(臨時休館あり)",
+        "Price": "500円",
+        "PriceNote": "",
+        "Discount": "本人無料",
+        "TEL": "0742-22-7788",
+        "URL": "http://www.kasugataisha.or.jp/h_s_tearoom/museum/index.html",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kokuhouden.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.848329,
+          34.681376
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "option",
+        "No": "6",
+        "Name": "春日大社本殿",
+        "Attitude": "",
+        "Summery": "【境内】多数の階段で移動不可。手動・簡易電動車いすは事前の問い合わせで職員による介助を申し込める場合あり（祭典・繁忙期を除く）【一言主神社】参拝可",
+        "Remarks": "車いす貸出２台（駐車場乗務員休憩所）、駐車場一般９８台、身障者用２台※春日大社すべての施設共通",
+        "Open": "6:30",
+        "Close": "17:30",
+        "OpeningNote": "11月〜2月は7:00〜17:00",
+        "Holiday": "年中無休",
+        "Price": "無料",
+        "PriceNote": "本殿前特別参拝500円(9：00-16：00)",
+        "Discount": "",
+        "TEL": "0742-22-7788",
+        "URL": "http://www.kasugataisha.or.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kasugataisha.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.846352,
+          34.681759
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "goal",
+        "No": "",
+        "Name": "ゴール春日大社本殿バス停",
+        "Attitude": "",
+        "Summery": "【帰り】こちらのバス停から近鉄・ＪＲ奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.846261,
+          34.681826
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "start_op",
+        "No": "",
+        "Name": "オプションスタート春日大社本殿バス停",
+        "Attitude": "",
+        "Summery": "オプションスタート春日大社本殿バス停",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.846266,
+          34.681936
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "goal_op",
+        "No": "",
+        "Name": "オプションゴール春日大社本殿バス停",
+        "Attitude": "",
+        "Summery": "【帰り】こちらのバス停から近鉄・ＪＲ奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.847176,
+          34.681949
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "location",
+        "No": "",
+        "Name": "一言主神社",
+        "Attitude": "",
+        "Summery": "参拝可能",
+        "Remarks": "",
+        "Open": "終日",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/hitokotonushi.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.846301,
+          34.681363
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "国宝殿へのスロープ",
+        "Attitude": "",
+        "Summery": "国宝殿へのスロープ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kokuhouden3.jpg",
+        "Photo2": "https://unimap.org/akalstabimage/kasugataisha/kokuhouden2.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.847232,
+          34.681815
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "スロープ急傾斜１",
+        "Attitude": "",
+        "Summery": "スロープが急傾斜のため要介助",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kasuga4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.847342,
+          34.68181
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "スロープ急傾斜２",
+        "Attitude": "",
+        "Summery": "スロープが急傾斜のため要介助",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kasuga4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.839894,
+          34.683491
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "信号に注意",
+        "Attitude": "",
+        "Summery": "信号が変わるのが早い",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.842884,
+          34.682942
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道１",
+        "Attitude": "",
+        "Summery": "でこぼこに注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kasuga1.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.84282,
+          34.682527
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道２",
+        "Attitude": "",
+        "Summery": "でこぼこに注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kasuga2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.843775,
+          34.680719
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "砂利道",
+        "Attitude": "",
+        "Summery": "砂利が深いので注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kasuga5.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.844638,
+          34.681019
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "道に石あり鹿苑",
+        "Attitude": "",
+        "Summery": "道に石が埋まっている箇所があるので注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kasuga3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.847237,
+          34.682324
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "道に石あり本殿",
+        "Attitude": "",
+        "Summery": "道に石が埋まっている箇所があるので注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kasuga3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.846323,
+          34.680921
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差１",
+        "Attitude": "",
+        "Summery": "段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kasuga8.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.846189,
+          34.68116
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差２",
+        "Attitude": "",
+        "Summery": "段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kasuga7.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.843515,
+          34.682378
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差３",
+        "Attitude": "",
+        "Summery": "段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/manyou4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.846148,
+          34.682108
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "坂道",
+        "Attitude": "",
+        "Summery": "坂が急傾斜、要介助",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/kasuga6.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.84352,
+          34.682276
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "受付先の段差",
+        "Attitude": "",
+        "Summery": "受付先の段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/manyou3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.845058,
+          34.682032
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "木の根に注意",
+        "Attitude": "",
+        "Summery": "木の根に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/manyou6.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.845136,
+          34.682173
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "attention",
+        "No": "",
+        "Name": "溝と段差に注意",
+        "Attitude": "",
+        "Summery": "溝と段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kasugataisha/manyou5.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.847795,
+          34.681599
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "caution",
+        "No": "",
+        "Name": "石畳の道本殿",
+        "Attitude": "",
+        "Summery": "石畳のでこぼこに注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.843635,
+          34.682256
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "caution",
+        "No": "",
+        "Name": "階段１",
+        "Attitude": "",
+        "Summery": "階段のため通行不可",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.845164,
+          34.682095
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "caution",
+        "No": "",
+        "Name": "階段２",
+        "Attitude": "",
+        "Summery": "階段のため通行不可",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.837506,
+          34.684042
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "氷室神社・国立博物館バス停",
+        "Attitude": "",
+        "Summery": "市内循環（大仏殿方面）",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.846356,
+          34.681779
+        ]
+      },
+      "properties": {
+        "Area": "kasugataisha",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "春日大社本殿バス停",
+        "Attitude": "",
+        "Summery": "【帰り】こちらのバス停から近鉄・ＪＲ奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    }
+  ]
+}

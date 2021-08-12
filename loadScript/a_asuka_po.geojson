@@ -1,0 +1,1790 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.810159,
+          34.47152
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "start",
+        "No": "",
+        "Name": "スタートかめバス野口バス停",
+        "Attitude": "",
+        "Summery": "【行き】近鉄飛鳥駅→かめバス飛鳥駅バス停から乗車",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://asukamura.jp/kame_bus/",
+        "Urltitle": "明日香村かめバスサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.811588,
+          34.471118
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "route",
+        "No": "1",
+        "Name": "亀石",
+        "Attitude": "",
+        "Summery": "亀石の手前に段差あり。車いすでも観賞可",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kameishi.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.81784,
+          34.47007
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "route",
+        "No": "2",
+        "Name": "橘寺",
+        "Attitude": "",
+        "Summery": "【境内】移動可。石畳と砂利道が混在。手動車いすは力が必要。展示鑑賞できない箇所が多い。二面鑑石賞可(本堂横)。【本堂・観音堂】階段で移動不可。観音堂は外から鑑賞可。",
+        "Remarks": "駐車場一般東５台・西１５台",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "受付16:30まで",
+        "Holiday": "無休",
+        "Price": "350円",
+        "PriceNote": "",
+        "Discount": "本人・付添１名250円",
+        "TEL": "0744-54-2026",
+        "URL": "https://tachibanadera-asuka.jimdo.com/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/tachibana.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.823173,
+          34.467266
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "route",
+        "No": "3",
+        "Name": "明日香夢の旬菜館",
+        "Attitude": "",
+        "Summery": "【旬菜館】バリアフリー。通路余裕があり。商品すべて見られる。【ポカフレール（レストラン）】バリアフリー。少し狭く移動注意。ポカフレールへの問い合わせは080-3101-7888まで",
+        "Remarks": "駐車場一般１５台",
+        "Open": "10:00",
+        "Close": "17:00",
+        "OpeningNote": "【ポカフレール】11:00〜17:00",
+        "Holiday": "水曜日定休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "080-6207-2534",
+        "URL": "https://asukadeasobo.jp/shop/shunsaikan",
+        "Urltitle": "あすかであそぼサイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/syunsaikan.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.826102,
+          34.466927
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "route",
+        "No": "4",
+        "Name": "石舞台古墳",
+        "Attitude": "",
+        "Summery": "【古墳内】移動可。出入口段差、出入口先急坂に注意。土道で石のでこぼこ注意。【石舞台】階段で行けない。外周から鑑賞（僅かに石室内鑑賞可）。",
+        "Remarks": "",
+        "Open": "8:30",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "250円",
+        "PriceNote": "",
+        "Discount": "本人・付添１名半額",
+        "TEL": "0744-54-9200",
+        "URL": "https://asukadeasobo.jp/kankou/ishibutai",
+        "Urltitle": "あすかであそぼサイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/ishibutai.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.823378,
+          34.475932
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "route",
+        "No": "5",
+        "Name": "亀形石造物（酒船石遺跡）",
+        "Attitude": "",
+        "Summery": "【亀形石造物】移動可。土道で雨天時は滑らないように注意。段差２箇所あり。車いすで鑑賞可。【酒船石遺跡】階段で移動不可。",
+        "Remarks": "",
+        "Open": "8:30",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "季節により変動・年末年始休み",
+        "Price": "300円",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0744-54-4577",
+        "URL": "https://asukadeasobo.jp/kankou/kameishi",
+        "Urltitle": "あすかであそぼサイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kame.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.822312,
+          34.47738
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "route",
+        "No": "6",
+        "Name": "奈良県立万葉文化館",
+        "Attitude": "",
+        "Summery": "【館内】バリアフリー。各施設車いすで利用しやすい。展示一部を除き鑑賞可。授乳スペースあり（要相談）。【飛鳥池工房遺跡の復原展示（屋外）】移動可。少し急なスロープあり。※車いす貸出あり",
+        "Remarks": "車いす貸出３〜５台、ベビーカー貸出２台。駐車場一般１０７台、身障者用３台",
+        "Open": "10:00",
+        "Close": "17:30",
+        "OpeningNote": "入館17:00まで",
+        "Holiday": "月曜定休／祝日の場合翌平日＊年末年始、展示替休館あり",
+        "Price": "無料",
+        "PriceNote": "展覧会は有料",
+        "Discount": "展覧会：本人・付添１名無料",
+        "TEL": "0744-54‐1850",
+        "URL": "http://www.manyo.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/manyou.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.815571,
+          34.479914
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "option",
+        "No": "7",
+        "Name": "甘樫丘",
+        "Attitude": "",
+        "Summery": "【展望広場までの道】段差はないが坂道。手動車いすは介助が必要。簡易・電動車いすはバッテリー消耗に注意。【展望広場】移動可。土道で特に雨天時は滑らないように注意。",
+        "Remarks": "",
+        "Open": "終日",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0744−54−2441（国営飛鳥歴史公園飛鳥管理センター）",
+        "URL": "https://www.asuka-park.go.jp/area/amakashinooka/",
+        "Urltitle": "飛鳥歴史公園サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/amakasi.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.82225,
+          34.476093
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "goal",
+        "No": "",
+        "Name": "ゴールかめバス万葉文化館西口バス停付近",
+        "Attitude": "",
+        "Summery": "【オプションコース】かめバスに乗り、甘樫丘へ【帰り】かめバスに乗り、橿原神宮前駅東口へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://asukamura.jp/kame_bus/",
+        "Urltitle": "明日香村かめバスサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.814533,
+          34.481811
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "start_op",
+        "No": "",
+        "Name": "オプションスタートかめバス甘樫丘バス停",
+        "Attitude": "",
+        "Summery": "",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.814793,
+          34.481698
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "goal_op",
+        "No": "",
+        "Name": "オプションゴールかめバス甘樫丘バス停",
+        "Attitude": "",
+        "Summery": "【帰り】かめバスに乗り、橿原神宮前駅東口へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://asukamura.jp/kame_bus/",
+        "Urltitle": "明日香村かめバスサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.822675,
+          34.476472
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "restaurant",
+        "No": "",
+        "Name": "ASUCOME-あすかむ-",
+        "Attitude": "",
+        "Summery": "【館内】移動可。２階は階段のため移動不可。",
+        "Remarks": "駐車場は万葉文化館を利用",
+        "Open": "11:00",
+        "Close": "17:00",
+        "OpeningNote": "12月〜3月：11:00〜16:00",
+        "Holiday": "",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0744-54-3455",
+        "URL": "http://asucome.asukamura.jp",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asucome.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.822718,
+          34.476634
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "shop",
+        "No": "",
+        "Name": "飛鳥の郷万葉人",
+        "Attitude": "",
+        "Summery": "【店内】移動可。少し狭いので移動注意。",
+        "Remarks": "駐車場は万葉文化館を利用",
+        "Open": "10:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "月曜定休／祝日の場合翌平日",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0744-54-5456",
+        "URL": "http://www.asukanavi.jp/point.php?pid=270",
+        "Urltitle": "あすかナビ万葉人サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/manyoubito.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.822966,
+          34.477705
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "restaurant",
+        "No": "",
+        "Name": "カリオン（CURRYON）",
+        "Attitude": "",
+        "Summery": "【店内】移動可。広さ余裕あり。",
+        "Remarks": "駐車場は万葉文化館を利用",
+        "Open": "10:00",
+        "Close": "17:30",
+        "OpeningNote": "16:30ラストオーダー",
+        "Holiday": "月曜定休／祝日の場合翌平日＊その他、万葉文化館の休館日に準ずる",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "090-8933-2417",
+        "URL": "https://www.facebook.com/wearethecurryon/",
+        "Urltitle": "公式Facebookサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.817341,
+          34.470231
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "橘寺出入口",
+        "Attitude": "",
+        "Summery": "スロープ急傾斜・でこぼこに注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/tachibana3.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/tachibana4.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.814388,
+          34.47961
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "カーブに注意",
+        "Attitude": "",
+        "Summery": "坂でカーブのため注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/amakasi2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.814844,
+          34.479604
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "カーブに注意",
+        "Attitude": "",
+        "Summery": "坂でカーブのため注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/amakasi2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.814415,
+          34.479297
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "カーブに注意",
+        "Attitude": "",
+        "Summery": "坂でカーブのため注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/amakasi2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.823128,
+          34.47596
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "亀形段差",
+        "Attitude": "",
+        "Summery": "段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kame2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.817612,
+          34.470236
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "橘寺石畳",
+        "Attitude": "",
+        "Summery": "石畳移動に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/tachibana2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.820625,
+          34.468396
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "周遊歩道坂道",
+        "Attitude": "",
+        "Summery": "ゆるやかな坂道",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/yuhodou2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.824506,
+          34.465581
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "周遊歩道坂道2",
+        "Attitude": "",
+        "Summery": "坂道が急なため注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/yuhodou4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.825136,
+          34.46747
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "石畳の歩道",
+        "Attitude": "",
+        "Summery": "石畳移動注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka14.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.826043,
+          34.467317
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "石舞台入口先の坂と出口の段差",
+        "Attitude": "",
+        "Summery": "入口先の坂と出口の段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/ishibutai3.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/ishibutai4.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.821384,
+          34.46723
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "側溝注意",
+        "Attitude": "",
+        "Summery": "側溝に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/yuhodou3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.81528,
+          34.480869
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "登りが続く",
+        "Attitude": "",
+        "Summery": "頂上まで登りが続く。手動車いすは介助が必要。簡易・電動車いすはバッテリー消耗に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/amakasi4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.814756,
+          34.481289
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "location",
+        "No": "",
+        "Name": "豊浦休憩所",
+        "Attitude": "",
+        "Summery": "移動可",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/toyoura.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.82232,
+          34.476049
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道",
+        "Attitude": "",
+        "Summery": "かなりのでこぼこで注意が必要",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka18.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.81898,
+          34.469455
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "roadguide",
+        "No": "",
+        "Name": "周遊歩道入口",
+        "Attitude": "",
+        "Summery": "周遊歩道入口",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/yuhodou.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.810159,
+          34.47152
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "かめバス野口バス停",
+        "Attitude": "",
+        "Summery": "【行き】近鉄飛鳥駅→かめバス飛鳥駅バス停から乗車",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://asukamura.jp/kame_bus/",
+        "Urltitle": "明日香村かめバスサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.823765,
+          34.466957
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "かめバス石舞台バス停",
+        "Attitude": "",
+        "Summery": "【ルート案内】万葉文化館西口まで乗車",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://asukamura.jp/kame_bus/",
+        "Urltitle": "明日香村かめバスサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8221,
+          34.475963
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "かめバス万葉文化館西口バス停",
+        "Attitude": "",
+        "Summery": "【オプションコース】かめバスに乗り、甘樫丘へ【帰り】かめバスに乗り、橿原神宮前駅東口へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://asukamura.jp/kame_bus/",
+        "Urltitle": "明日香村かめバスサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.814637,
+          34.481793
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "かめバス甘樫丘バス停",
+        "Attitude": "",
+        "Summery": "【帰り】かめバスに乗り、橿原神宮前駅東口へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://asukamura.jp/kame_bus/",
+        "Urltitle": "明日香村かめバスサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.823854,
+          34.467
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "roadguide",
+        "No": "",
+        "Name": "【ルート案内】石舞台→万葉文化館",
+        "Attitude": "",
+        "Summery": "かめバスに乗り、万葉文化館西口下車。メインルート２へ進む",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.822234,
+          34.475952
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "roadguide",
+        "No": "",
+        "Name": "メインルート２スタート地点",
+        "Attitude": "",
+        "Summery": "亀形石造物・万葉文化館へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.815534,
+          34.479653
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "caution",
+        "No": "",
+        "Name": "転落注意",
+        "Attitude": "",
+        "Summery": "下り傾斜、転落防止柵なく要注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/amakasi6.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/amakasi5.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.820794,
+          34.468265
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "caution",
+        "No": "",
+        "Name": "通行要注意",
+        "Attitude": "",
+        "Summery": "動物除け高電圧と側溝に柵がなく、横傾斜があるため通行要注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka11.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/asuka10.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.823706,
+          34.466388
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "柵の無い道",
+        "Attitude": "",
+        "Summery": "川に柵がなく、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.812782,
+          34.471054
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（亀石付近）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.813577,
+          34.471713
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "信号に注意",
+        "Attitude": "",
+        "Summery": "信号が変わるのが早い",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.815763,
+          34.471537
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "狭いでこぼこ道",
+        "Attitude": "",
+        "Summery": "歩道の幅とでこぼこに注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka6.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.815687,
+          34.471547
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "傾斜のあるでこぼこ道",
+        "Attitude": "",
+        "Summery": "横の傾斜とでこぼこあり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka5.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.825903,
+          34.467527
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "石畳",
+        "Attitude": "",
+        "Summery": "石畳のでこぼこに注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka17.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.817185,
+          34.471403
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差あり",
+        "Attitude": "",
+        "Summery": "横断歩道を渡るのに段差があるため、もう少し先で渡る方がよい",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka7.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.817299,
+          34.471371
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差あり",
+        "Attitude": "",
+        "Summery": "最大３ｃｍの段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka8.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.82457,
+          34.46746
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "坂あり",
+        "Attitude": "",
+        "Summery": "歩道の急坂に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka13.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.825764,
+          34.467484
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "横断歩道に段差",
+        "Attitude": "",
+        "Summery": "横断歩道を渡る歩道に段差あり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka16.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/asuka15.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.82332,
+          34.475876
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "マンホールの蓋",
+        "Attitude": "",
+        "Summery": "マンホールの木の蓋に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka19.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.81493,
+          34.48075
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（甘樫丘付近）",
+        "Attitude": "",
+        "Summery": "でこぼこと木の幹に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/amakasi8.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/amakasi7.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.81467,
+          34.481783
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差あり（甘樫丘付近）",
+        "Attitude": "",
+        "Summery": "最大３ｃｍの段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/amakasi4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.811591,
+          34.471045
+        ]
+      },
+      "properties": {
+        "Area": "asuka",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差あり（亀石）",
+        "Attitude": "",
+        "Summery": "亀石手前の段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/asuka1.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    }
+  ]
+}

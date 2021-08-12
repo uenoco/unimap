@@ -30,12 +30,14 @@ admin.site.register(models.ImageMap, ImageMapAdmin)
 
 # Route import_export
 class RouteResource(resources.ModelResource):
+    ordering = [ 'id' ]
     class Meta:
         model = Route
 class RouteAdmin(geoadmin.OSMGeoAdmin,ImportExportModelAdmin):
     list_display = ['AreaId', 'Sort' , 'Name', 'Summery' ]
     search_fields = [ 'Name', 'Summery' ]
     list_filter = ['AreaId', 'Sort' ]
+    ordering = [ 'AreaId', 'id' ]
     resource_class = RouteResource
     formats = [base_formats.CSV]
 admin.site.register(models.Route, RouteAdmin)

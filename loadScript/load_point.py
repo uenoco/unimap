@@ -17,8 +17,18 @@ from django.contrib.gis.utils import LayerMapping
 from unimap.models import PointData
 #from unimap.models import PointData
 
-# ファイルパス
-geojson_file = os.path.abspath(os.path.join(os.path.dirname(__file__), 'a_narapark_po.geojson'))
+# geojson ファイルリスト
+geojsonlist = [
+    'a_asuka_po.geojson',
+    'a_ikarugaoji_po.geojson',
+    'a_kashihara_po.geojson',
+    'a_kasuga_po.geojson',
+    'a_kitamachi_po.geojson',
+    'a_naramachi_po.geojson',
+##    'a_narapark_po.geojson',
+    'a_nishinokyo_po.geojson',
+    'a_takabatake_po.geojson'
+]
 
 # ModelとGeojsonのマッピング
 mapping = {
@@ -47,7 +57,14 @@ mapping = {
 
 # 実行
 def run(verbose=True):
-    lm = LayerMapping( PointData, geojson_file, mapping, transform=False, encoding='UTF-8')
-    lm.save( strict=True, verbose=verbose )
+    
+    for file in geojsonlist:
+        # ファイルパス
+        geojson_file = os.path.abspath(os.path.join(os.path.dirname(__file__), file ))
+        print( geojson_file )
+
+#        lm = LayerMapping( PointData, geojson_file, mapping, transform=False, encoding='UTF-8')
+#        lm.save( strict=True, verbose=verbose )
+
     
   

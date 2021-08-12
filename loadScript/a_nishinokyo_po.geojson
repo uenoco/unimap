@@ -1,0 +1,1055 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.783495,
+          34.681567
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "start",
+        "No": "",
+        "Name": "スタート近鉄尼ヶ辻駅西出口",
+        "Attitude": "",
+        "Summery": "エレベーターあり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://www.kintetsu.co.jp/station/station_info/station06006.html",
+        "Urltitle": "近鉄尼ヶ辻駅サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.783299,
+          34.670168
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "goal",
+        "No": "",
+        "Name": "ゴール近鉄西ノ京駅",
+        "Attitude": "",
+        "Summery": "エレベーターあり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://www.kintetsu.co.jp/station/station_info/station06007.html",
+        "Urltitle": "近鉄西ノ京駅サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.782315,
+          34.681916
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "start_op",
+        "No": "",
+        "Name": "オプションスタート",
+        "Attitude": "",
+        "Summery": "",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.78206,
+          34.681861
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "goal_op",
+        "No": "",
+        "Name": "オプションゴール",
+        "Attitude": "",
+        "Summery": "",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.77757,
+          34.684892
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "option",
+        "No": "1",
+        "Name": "喜光寺（オプションコース）",
+        "Attitude": "",
+        "Summery": "【境内】移動可。南大門の受付に階段があり要介助。南大門右側の通用口から入場（受付で申し出が必要）。石畳と砂利道が混在（手動車いすは力が必要）。石畳狭い箇所あり。一部を除き拝観可。授乳スペースは要相談【本堂】階段で移動不可。【お写経道場】バリアフリー。",
+        "Remarks": "車いす貸出２台。駐車場一般１５台",
+        "Open": "9:00",
+        "Close": "16:30",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "500円",
+        "PriceNote": "",
+        "Discount": "本人・付添１名450円",
+        "TEL": "0742-45-4630",
+        "URL": "http://www.kikouji.com/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kikouji.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.781767,
+          34.678517
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "route",
+        "No": "2",
+        "Name": "垂仁天皇陵（拝所）",
+        "Attitude": "",
+        "Summery": "【拝所内】移動可。砂利道で手動車いすは力が必要。車いすで拝観可。",
+        "Remarks": "",
+        "Open": "終日",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0744-22-3338",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/suinin.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.785871,
+          34.675619
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "route",
+        "No": "3",
+        "Name": "唐招提寺",
+        "Attitude": "",
+        "Summery": "【境内】移動可。石畳・砂利道・土道が混在（手動車いすは力が必要）。土道は傷んでいるので注意。【講堂・新宝蔵】バリアフリー。【開山堂】移動可（土道）。【金堂・戒壇・鑑真和上御廟（ごびょう）御影堂】階段・段差で移動不可。",
+        "Remarks": "車いす貸出２台。駐車場一般１５０台（有料）、身障者用４台（有料）",
+        "Open": "8:30",
+        "Close": "17:00",
+        "OpeningNote": "受付16:30まで。新宝蔵は限定公開(3/1〜6/30、9/1〜11/30、12/31〜1/3)",
+        "Holiday": "無休",
+        "Price": "1000円",
+        "PriceNote": "【新宝蔵】200円",
+        "Discount": "本人・付添１名半額",
+        "TEL": "0742-33-7900",
+        "URL": "http://www.toshodaiji.jp/about.html",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/tousyou.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/tousyou2.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.785471,
+          34.674461
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "route",
+        "No": "4",
+        "Name": "西の京みやげ処きとら",
+        "Attitude": "",
+        "Summery": "バリアフリー。通路余裕あり、商品も見やすい。授乳スペースは要相談",
+        "Remarks": "駐車場一般７台",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-35-3324",
+        "URL": "http://www.kitora.com/baiten.htm",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kitora.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.78431,
+          34.668864
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "route",
+        "No": "5",
+        "Name": "薬師寺（白鳳伽藍）",
+        "Attitude": "",
+        "Summery": "【薬師寺境内（全体）】移動可。【東僧坊・大講堂・金堂・中門・食堂】移動可。大講堂・中門はスロープ急傾斜で介助が必要。中門に石畳でこぼこあり注意。展示すべて鑑賞可。【東院堂】階段で移動不可。遠くから拝観可",
+        "Remarks": "車いす貸出２台。駐車場一般２１０台、身障者用２台。※薬師寺すべての施設共通",
+        "Open": "8:30",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "800円",
+        "PriceNote": "玄奘三蔵院伽藍公開時1100円",
+        "Discount": "本人・付添１名半額",
+        "TEL": "0742-33-6001",
+        "URL": "http://nara-yakushiji.com/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/yakusiji.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/yakusiji2.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.785351,
+          34.670907
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "route",
+        "No": "5",
+        "Name": "薬師寺（玄奘三蔵院伽藍）",
+        "Attitude": "",
+        "Summery": "【薬師寺境内（全体）】移動可。【本坊・お写経道場】バリアフリー。簡易スロープを出してもらえる。車いすでお写経体験ができる。【玄奘塔】玄奘段で移動不可。遠くから拝観。【大唐西域壁画】バリアフリー。展示すべて鑑賞可。",
+        "Remarks": "車いす貸出２台。駐車場一般２１０台、身障者用２台。※薬師寺すべての施設共通",
+        "Open": "8:30",
+        "Close": "17:00",
+        "OpeningNote": "玄奘三蔵院伽藍は限定公開(1/1〜15、3/1〜6/30、8/13〜15、9/16〜11/30)",
+        "Holiday": "無休",
+        "Price": "800円",
+        "PriceNote": "玄奘三蔵院伽藍公開時1100円",
+        "Discount": "本人・付添１名半額",
+        "TEL": "0742-33-6001",
+        "URL": "http://nara-yakushiji.com/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/yakusiji.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/yakusiji2.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.783216,
+          34.674711
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "caution",
+        "No": "",
+        "Name": "踏切注意",
+        "Attitude": "",
+        "Summery": "踏切前後の坂道に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nisinokyo9.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.785388,
+          34.676217
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "caution",
+        "No": "",
+        "Name": "唐招提寺土道",
+        "Attitude": "",
+        "Summery": "土道へこみと急傾斜で危険",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/tousyou3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.779717,
+          34.683595
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "roadguide",
+        "No": "",
+        "Name": "大通りに出る歩道",
+        "Attitude": "",
+        "Summery": "大通りに出る歩道",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nisinokyo4",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.782948,
+          34.676903
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "roadguide",
+        "No": "",
+        "Name": "歩道入口",
+        "Attitude": "",
+        "Summery": "歩道入口",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nisinokyo5.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.783184,
+          34.67958
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "attention",
+        "No": "",
+        "Name": "用水路",
+        "Attitude": "",
+        "Summery": "用水路に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nisinokyo6.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.783884,
+          34.674706
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "attention",
+        "No": "",
+        "Name": "狭い道",
+        "Attitude": "",
+        "Summery": "道幅が狭い、注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nisinokyo7.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.782744,
+          34.680299
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（垂仁天皇陵１）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nisinokyo10.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.782862,
+          34.678328
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（垂仁天皇陵２）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nisinokyo11.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/nisinokyo12.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.784745,
+          34.668788
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "attention",
+        "No": "",
+        "Name": "大講堂へのスロープ",
+        "Attitude": "",
+        "Summery": "スロープ急傾斜、注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/yakusiji3.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/yakusiji5.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.78416,
+          34.668386
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "金堂へのスロープ",
+        "Attitude": "",
+        "Summery": "ゆるやかなスロープ。※２つ目のスロープは急傾斜のため、注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/yakusiji7.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.778382,
+          34.683948
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "attention",
+        "No": "",
+        "Name": "信号が変わるのが早い",
+        "Attitude": "",
+        "Summery": "信号が変わるのが早い",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.784322,
+          34.667888
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "attention",
+        "No": "",
+        "Name": "中門スロープ",
+        "Attitude": "",
+        "Summery": "スロープ急傾斜、注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/yakusiji4.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/yakusiji8.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.779949,
+          34.681914
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（宝来交差点付近）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nisinokyo3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.785083,
+          34.675995
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "講堂へのスロープ",
+        "Attitude": "",
+        "Summery": "ゆるやかなスロープ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/tousyou4.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/tousyou5.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.7818,
+          34.681865
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "attention",
+        "No": "",
+        "Name": "側溝板の穴と段差あり",
+        "Attitude": "",
+        "Summery": "側溝板の穴と段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nisinokyo.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/nisinokyo2.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.783023,
+          34.676391
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道に坂あり",
+        "Attitude": "",
+        "Summery": "歩道に坂あり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nisinokyo13.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.786142,
+          34.675877
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "新宝蔵へのスロープ",
+        "Attitude": "",
+        "Summery": "ゆるやかなスロープ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/tousyou6.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.782862,
+          34.675138
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（唐招提寺付近）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nisinokyo14.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/nisinokyo15.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.78501,
+          34.674786
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "唐招提寺へのスロープ",
+        "Attitude": "",
+        "Summery": "スロープが急な場所と１ｃｍ程度の段差がある場所に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nisinokyo16.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/tousyou7.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.783988,
+          34.6691
+        ]
+      },
+      "properties": {
+        "Area": "nishinokyo",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "食堂へのスロープ",
+        "Attitude": "",
+        "Summery": "ゆるやかなスロープ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/yakusiji5.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    }
+  ]
+}

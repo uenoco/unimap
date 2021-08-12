@@ -1,0 +1,1370 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.837251,
+          34.698867
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "start",
+        "No": "",
+        "Name": "スタート般若寺バス停",
+        "Attitude": "",
+        "Summery": "【行き】近鉄奈良駅→東向き２番青山住宅方面へ。ＪＲ奈良駅→西口１１番青山住宅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83472,
+          34.688881
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "goal",
+        "No": "",
+        "Name": "ゴール今小路バス停",
+        "Attitude": "",
+        "Summery": "【帰り】ＪＲ奈良・近鉄奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834073,
+          34.705368
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "start_op",
+        "No": "",
+        "Name": "オプションスタート奈良阪バス停",
+        "Attitude": "",
+        "Summery": "【行き】近鉄奈良駅→東向き２番青山住宅方面へ。ＪＲ奈良駅→西口１１番青山住宅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.837215,
+          34.699342
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "goal_op",
+        "No": "",
+        "Name": "オプションゴール",
+        "Attitude": "",
+        "Summery": "",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83403,
+          34.704381
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "option",
+        "No": "1",
+        "Name": "奈良豆比古神社",
+        "Attitude": "",
+        "Summery": "【境内】移動可。出入口へコミあり。石畳と砂利道が混在。石畳の傾斜・でこぼこ注意・木の看板に注意、【本殿・拝殿・樟（くすのき）】車いすで鑑賞可。",
+        "Remarks": "",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-23-1025",
+        "URL": "https://narashikanko.or.jp/spot/shrine/naratsuhiko-jinja/",
+        "Urltitle": "奈良市観光協会サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/naratuhiko.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.836138,
+          34.699932
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "route",
+        "No": "2",
+        "Name": "般若寺",
+        "Attitude": "",
+        "Summery": "【境内】移動可。受付後に段差あり。砂利道の石が大きく車いすがガタつく。手動・簡易電動車いすは移動注意。展示一部を除き鑑賞可。【本堂】階段で移動不可。※9月下旬から11月上旬の休日は相当な混雑が予想され、境内車いすでの移動困難",
+        "Remarks": "駐車場一般４０台",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "500円",
+        "PriceNote": "",
+        "Discount": "本人1名300円",
+        "TEL": "0742-22‐6287",
+        "URL": "http://hannyaji.com/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/hannyaji.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.835052,
+          34.699895
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "route",
+        "No": "3",
+        "Name": "植村牧場",
+        "Attitude": "",
+        "Summery": "【場内】移動可。出入口へコミあり。【レストランいちづ】狭いが移動可。出入口手押し扉。スロープにある植木鉢に注意。【売店】狭いが移動可。出入口スロープは介助が必要。",
+        "Remarks": "",
+        "Open": "10:00",
+        "Close": "17:00",
+        "OpeningNote": "売店の閉店中は、隣接する「いちづ」にてご購入いただけます。",
+        "Holiday": "牧場／無休、売店／12月〜3月中旬、カフェレストランいちづ／水曜日と年末年始。1〜2月に限り、水・木曜日",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-23-2125",
+        "URL": "http://www.uemura-bokujyo.co.jp/restaurant",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/uemura.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834285,
+          34.698501
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "route",
+        "No": "4",
+        "Name": "奈良少年刑務所跡",
+        "Attitude": "",
+        "Summery": "車いすでも外から観賞可。",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/syounen.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.835438,
+          34.69651
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "route",
+        "No": "5",
+        "Name": "北山十八間戸",
+        "Attitude": "",
+        "Summery": "車いすでも外から観賞可。",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/juhatikenko.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834839,
+          34.691811
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "route",
+        "No": "6",
+        "Name": "奈良市きたまち転害門観光案内所",
+        "Attitude": "",
+        "Summery": "【館内】１F移動可（少し狭い）。２F階段で移動不可。混雑時は移動困難。",
+        "Remarks": "",
+        "Open": "10:00",
+        "Close": "16:00",
+        "OpeningNote": "",
+        "Holiday": "木曜定休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742‐24-1940",
+        "URL": "http://www.city.nara.lg.jp/www/contents/1368772531937/index.html",
+        "Urltitle": "奈良市サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/tegaimonkanko.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83506,
+          34.691619
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "route",
+        "No": "7",
+        "Name": "転害門",
+        "Attitude": "",
+        "Summery": "車いすでも観賞可。",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/tegaimon.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.837353,
+          34.690004
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "route",
+        "No": "8",
+        "Name": "大仏池",
+        "Attitude": "",
+        "Summery": "車いすでも観賞可。",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/daibutuike.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83451,
+          34.705202
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "奈良阪バス停",
+        "Attitude": "",
+        "Summery": "ＪＲ奈良・近鉄奈良駅方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834073,
+          34.705368
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "奈良阪バス停",
+        "Attitude": "",
+        "Summery": "【行き】近鉄奈良駅→東向き２番青山住宅方面へ。ＪＲ奈良駅→西口１１番青山住宅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.836793,
+          34.701164
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "奈良阪南口バス停",
+        "Attitude": "",
+        "Summery": "ＪＲ奈良・近鉄奈良駅方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.836675,
+          34.701081
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "奈良阪南口バス停",
+        "Attitude": "",
+        "Summery": "青山住宅方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.837348,
+          34.698719
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "般若寺バス停",
+        "Attitude": "",
+        "Summery": "ＪＲ奈良・近鉄奈良駅方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.837251,
+          34.698867
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "般若寺バス停",
+        "Attitude": "",
+        "Summery": "【行き】近鉄奈良駅→東向き２番青山住宅方面へ。ＪＲ奈良駅→西口１１番青山住宅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.836873,
+          34.696781
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "東之阪町",
+        "Attitude": "",
+        "Summery": "青山住宅方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.836908,
+          34.69634
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "東之阪町",
+        "Attitude": "",
+        "Summery": "ＪＲ奈良・近鉄奈良駅方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.835197,
+          34.694715
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "今在家バス停",
+        "Attitude": "",
+        "Summery": "青山住宅方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834934,
+          34.693843
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "今在家バス停",
+        "Attitude": "",
+        "Summery": "ＪＲ奈良・近鉄奈良駅方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834642,
+          34.692467
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "手貝町バス停",
+        "Attitude": "",
+        "Summery": "青山住宅方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834754,
+          34.691546
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "手貝町バス停",
+        "Attitude": "",
+        "Summery": "ＪＲ奈良・近鉄奈良駅方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83472,
+          34.688881
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "今小路バス停",
+        "Attitude": "",
+        "Summery": "【帰り】ＪＲ奈良・近鉄奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834229,
+          34.704276
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "通路狭い1",
+        "Attitude": "",
+        "Summery": "木と段差との間が狭いため注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/naratuhiko2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834015,
+          34.704158
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "通路狭い2",
+        "Attitude": "",
+        "Summery": "通路狭くＵターン不可。帰りはバック走行",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/naratuhiko3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.833762,
+          34.704109
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "location",
+        "No": "",
+        "Name": "樟",
+        "Attitude": "",
+        "Summery": "通路からでも樟の雄大さを感じられる。",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/naratuhiko4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83601,
+          34.700157
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "大きい砂利",
+        "Attitude": "",
+        "Summery": "砂利が大きく注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/hannyaji3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83546,
+          34.698832
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（少年刑務所跡周辺）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kitamachi4.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/kitamachi13.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.835223,
+          34.691626
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差・溝に注意",
+        "Attitude": "",
+        "Summery": "段差・溝に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kitamachi3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.8348,
+          34.689297
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道のない道",
+        "Attitude": "",
+        "Summery": "歩道がなく、道幅が狭い上に、車が対向するため要注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kitamachi.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83671,
+          34.69108
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "ガードレールのない道",
+        "Attitude": "",
+        "Summery": "ガードレールなし、注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kitamachi2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83719,
+          34.699503
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "側溝注意",
+        "Attitude": "",
+        "Summery": "側溝の溝に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kitamachi5.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.836053,
+          34.699766
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "般若寺受付",
+        "Attitude": "",
+        "Summery": "段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/hannyaji2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834972,
+          34.694362
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（今在家周辺）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kitamachi9.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834993,
+          34.696452
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（北山十八間戸周辺）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kitamachi6.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834658,
+          34.692999
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道に段差（八鐵神社周辺）",
+        "Attitude": "",
+        "Summery": "歩道に１ｃｍ程度の段差あり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kitamachi11.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/kitamachi10.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834675,
+          34.689263
+        ]
+      },
+      "properties": {
+        "Area": "kitamachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道に段差（今小路周辺）",
+        "Attitude": "",
+        "Summery": "歩道に１ｃｍ程度の段差あり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kitamachi12.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    }
+  ]
+}

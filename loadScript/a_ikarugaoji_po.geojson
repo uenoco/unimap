@@ -1,0 +1,1720 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.736583,
+          34.609423
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "start",
+        "No": "",
+        "Name": "スタート法隆寺前バス停",
+        "Attitude": "",
+        "Summery": "【行き】近鉄筒井駅→バス西向きのりばより王寺北行き乗車。近鉄・ＪＲ王寺駅→バス王寺北のりばより法隆寺前行き乗車",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.735435,
+          34.60962
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "route",
+        "No": "1",
+        "Name": "法隆寺ｉセンター",
+        "Attitude": "",
+        "Summery": "【館内】バリアフリー、一部に狭い箇所あり。エレベーターが少し狭い。展示すべて鑑賞可。授乳室・静かに休める休憩所・空調あり",
+        "Remarks": "車いす貸出２台。駐車場なし",
+        "Open": "8:30",
+        "Close": "18:00",
+        "OpeningNote": "",
+        "Holiday": "年中無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0745-74-6800",
+        "URL": "http://www4.kcn.ne.jp/~ikaru-i/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/icenter.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.73426,
+          34.614358
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "route",
+        "No": "2",
+        "Name": "法隆寺",
+        "Attitude": "",
+        "Summery": "【境内】石畳と砂利道の間と一部の通路に段差。砂利道が深く、手動・簡易電動車いすは移動困難。休憩所に空調あり【西院・東院伽藍】廻廊は移動可、砂利道は移動不可。金堂・五重塔・夢殿は廻廊から鑑賞。東院伽藍の出入口の段差は声掛けでスロープを出してもらえる【大宝蔵院】移動可。スロープ〜出入口まで柵なく注意",
+        "Remarks": "車いす貸出８台（寺務所にて）、駐車場なし",
+        "Open": "8:00",
+        "Close": "17:00",
+        "OpeningNote": "季節により変動",
+        "Holiday": "年中無休",
+        "Price": "1500円",
+        "PriceNote": "西院・東院伽藍・大宝蔵院共通",
+        "Discount": "本人・付添１名半額（車いすは付添２名まで）",
+        "TEL": "0745-75-2555",
+        "URL": "http://www.horyuji.or.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji11.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.736991,
+          34.613502
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "route",
+        "No": "3",
+        "Name": "まほろばステーションｉｋａｒｕｃｏｋｉ",
+        "Attitude": "",
+        "Summery": "【直営店】１階は移動可、狭く移動注意。商品すべて見られる。２階へは階段のみで移動不可。空調あり",
+        "Remarks": "駐車場一般２台",
+        "Open": "10:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "木曜定休(祝日は営業)",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0745-44-9380",
+        "URL": "http://ikaruga-m.com/ikarucoki/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/ikarucoki.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.729381,
+          34.611888
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "route",
+        "No": "4",
+        "Name": "藤ノ木古墳",
+        "Attitude": "",
+        "Summery": "【古墳内】移動可【石室】移動可、車いす転回不可。出入口がかなり狭い。石棺は鑑賞可。春と秋に石室内を公開",
+        "Remarks": "駐車場なし",
+        "Open": "終日",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0745-70-1200",
+        "URL": "http://yamatoji.nara-kankou.or.jp/03history/06kofun/02west_area/fujinokikofun/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/fujinoki2.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/fujinoki3.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.730795,
+          34.610288
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "route",
+        "No": "5",
+        "Name": "斑鳩文化財センター",
+        "Attitude": "",
+        "Summery": "【館内】バリアフリー、出入口の手前に急な坂。展示はすべて鑑賞可で見やすい工夫がされている。静かに休める休憩所・空調あり",
+        "Remarks": "車いす貸出２台。駐車場一般５台、身障者用１台",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "入館１６時半まで",
+        "Holiday": "水曜定休(祝日は営業)",
+        "Price": "無料",
+        "PriceNote": "特別展は有料の場合あり",
+        "Discount": "",
+        "TEL": "0745-70-1200",
+        "URL": "http://www.town.ikaruga.nara.jp/0000000145.html",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/ikarugabunkazai.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.704024,
+          34.598022
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "route",
+        "No": "6",
+        "Name": "王寺町地域交流センター(りーべる王寺東館5階)",
+        "Attitude": "",
+        "Summery": "【館内】バリアフリー。展示すべて鑑賞可。静かに休める休憩所・空調あり",
+        "Remarks": "車いす貸出１台。駐車場一般５００台（りーべる王寺）",
+        "Open": "8:30",
+        "Close": "19:00",
+        "OpeningNote": "",
+        "Holiday": "第１・３水曜定休・祝日の場合は翌日",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0745-33-3000",
+        "URL": "http://www.liebell-oji.com/kouryu/info.htm",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/ojicenter.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.706585,
+          34.590201
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "option",
+        "No": "7",
+        "Name": "達磨寺",
+        "Attitude": "",
+        "Summery": "【境内】移動可。簡易スロープが動くため注意。駐車場の出入口に段差あり。木の枝に注意【本堂】階段のみで移動不可",
+        "Remarks": "駐車場一般２０台",
+        "Open": "9:00",
+        "Close": "15:00",
+        "OpeningNote": "",
+        "Holiday": "年中無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0745-31-2341",
+        "URL": "http://www.darumaji.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/darumaji.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.703758,
+          34.597662
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "goal",
+        "No": "",
+        "Name": "ゴールＪＲ・近鉄王寺駅",
+        "Attitude": "",
+        "Summery": "近鉄・ＪＲ王寺駅から帰路へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.704029,
+          34.597737
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "start_op",
+        "No": "",
+        "Name": "オプションスタートJR王寺駅",
+        "Attitude": "",
+        "Summery": "オプションスタートJR王寺駅",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.704028,
+          34.597624
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "goal_op",
+        "No": "",
+        "Name": "オプションゴールJR王寺駅",
+        "Attitude": "",
+        "Summery": "オプションゴールJR王寺駅",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.737023,
+          34.613396
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "restaurant",
+        "No": "",
+        "Name": "cafeこもど",
+        "Attitude": "",
+        "Summery": "【店内】バリアフリー、一部に狭い箇所あり。机など移動可。空調あり",
+        "Remarks": "",
+        "Open": "10:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "木曜定休(祝日は営業)",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0745-75-0305",
+        "URL": "https://www.facebook.com/pages/category/Restaurant/Cafe%E3%81%93%E3%82%82%E3%81%A9-924618550949599/",
+        "Urltitle": "公式Facebookサイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/cafekomodo.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.704471,
+          34.59807
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "restaurant",
+        "No": "",
+        "Name": "雪丸cafePoem",
+        "Attitude": "",
+        "Summery": "【店内】広さに余裕あり。空調あり",
+        "Remarks": "駐車場一般５００台（りーべる王寺）",
+        "Open": "10:00",
+        "Close": "16:30",
+        "OpeningNote": "",
+        "Holiday": "水曜定休",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "080-9127-6955",
+        "URL": "http://www.liebell-oji.com/kouryu/info.htm",
+        "Urltitle": "王寺町地域交流センターページへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/yukimarucafe.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.730615,
+          34.608171
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "roadguide",
+        "No": "",
+        "Name": "【ルート案内１】斑鳩町役場バス停→王寺駅北口へ",
+        "Attitude": "",
+        "Summery": "バスに乗り、王寺駅北口へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.703769,
+          34.597989
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "roadguide",
+        "No": "",
+        "Name": "【ルート案内２】王寺町地域交流センター→オプションコース又は帰路へ",
+        "Attitude": "",
+        "Summery": "王寺町地域交流センター(りーべる王寺東館5階)に行き、オプションコース又は帰路へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.703897,
+          34.597578
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "location",
+        "No": "",
+        "Name": "JR王寺駅",
+        "Attitude": "",
+        "Summery": "JR王寺駅",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://www.jr-odekake.net/eki/top.php?id=0620820",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.702497,
+          34.597739
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "location",
+        "No": "",
+        "Name": "近鉄王寺駅",
+        "Attitude": "",
+        "Summery": "近鉄王寺駅",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://www.kintetsu.co.jp/station/station_info/station11005.html",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.704278,
+          34.59773
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "location",
+        "No": "",
+        "Name": "近鉄新王寺駅",
+        "Attitude": "",
+        "Summery": "近鉄新王寺駅",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://www.kintetsu.co.jp/station/station_info/station12005.html",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.735097,
+          34.610955
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "石畳みのでこぼこ１",
+        "Attitude": "",
+        "Summery": "石畳みのでこぼこに注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.737583,
+          34.614025
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "石畳みのでこぼこ２",
+        "Attitude": "",
+        "Summery": "石畳みのでこぼこに注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.73683,
+          34.612946
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "傾斜注意",
+        "Attitude": "",
+        "Summery": "傾斜に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/ikaruga2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.734378,
+          34.613506
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差注意",
+        "Attitude": "",
+        "Summery": "段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji7.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.738517,
+          34.614555
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "通行困難（車が多い）",
+        "Attitude": "",
+        "Summery": "通行困難（車が多い）",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.72984,
+          34.612257
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "通行困難（車が多い）",
+        "Attitude": "",
+        "Summery": "通行困難（車が多い）",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.738734,
+          34.614288
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "スロープ急傾斜（東院伽藍）",
+        "Attitude": "",
+        "Summery": "スロープが急傾斜のため要介助",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji17.jpg",
+        "Photo2": "https://unimap.org/akalstabimage/ikaruga/horyuji9.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.734534,
+          34.61269
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "スロープ急傾斜（南門）",
+        "Attitude": "",
+        "Summery": "スロープが急傾斜のため要介助",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.734373,
+          34.614725
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "スロープ急傾斜（大講堂右）",
+        "Attitude": "",
+        "Summery": "スロープが急傾斜のため要介助",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji12.jpg",
+        "Photo2": "https://unimap.org/akalstabimage/ikaruga/horyuji5.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.734035,
+          34.614685
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "スロープ急傾斜（大講堂左）",
+        "Attitude": "",
+        "Summery": "スロープが急傾斜のため要介助",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji13.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.736116,
+          34.613771
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差、スロープ急傾斜",
+        "Attitude": "",
+        "Summery": "スロープが急傾斜のため要介助。上った先の段差にも注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji8.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.736717,
+          34.613882
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "窪み、スロープ急傾斜（東門）",
+        "Attitude": "",
+        "Summery": "スロープが急傾斜のため要介助。窪みにも注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji16.jpg",
+        "Photo2": "https://unimap.org/akalstabimage/ikaruga/horyuji10.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.733852,
+          34.614575
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "坂と横傾斜あり（大講堂左）",
+        "Attitude": "",
+        "Summery": "坂に横傾斜があるので注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.734625,
+          34.614676
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "坂と横傾斜あり（大講堂右）",
+        "Attitude": "",
+        "Summery": "坂に横傾斜があるので注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji15.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.704066,
+          34.595785
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ注意（王寺駅南口付近）",
+        "Attitude": "",
+        "Summery": "でこぼこに注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/oji3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.730644,
+          34.609661
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "溝に柵がない（文化財センター側）",
+        "Attitude": "",
+        "Summery": "溝に柵がなく、落下注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/ikaruga4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.730006,
+          34.610791
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "溝に柵がない（藤ノ木古墳側）",
+        "Attitude": "",
+        "Summery": "溝に柵がなく、落下注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/ikaruga7.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.73294,
+          34.61186
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "溝に柵がない（法隆寺側）",
+        "Attitude": "",
+        "Summery": "溝に柵がなく、落下注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/ikaruga6.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.706598,
+          34.59344
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道に傾斜１",
+        "Attitude": "",
+        "Summery": "歩道の傾斜に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/oji4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.706553,
+          34.593288
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道に傾斜２",
+        "Attitude": "",
+        "Summery": "歩道の傾斜に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/oji4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.706462,
+          34.590228
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "雪丸像に通じる道",
+        "Attitude": "",
+        "Summery": "木の枝に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/darumaji2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.706424,
+          34.590126
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "スロープ固定していない",
+        "Attitude": "",
+        "Summery": "簡易スロープが動くため注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/darumaji.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.704242,
+          34.59537
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこで柵がない",
+        "Attitude": "",
+        "Summery": "でこぼこで溝に柵がないため落下注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/oji.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.730741,
+          34.608305
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "attention",
+        "No": "",
+        "Name": "傾斜・幅に注意",
+        "Attitude": "",
+        "Summery": "傾斜・幅に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/ikaruga5.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.734013,
+          34.613899
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "caution",
+        "No": "",
+        "Name": "スロープの傾斜が危険レベル（西院入口）",
+        "Attitude": "",
+        "Summery": "スロープの傾斜が危険レベルのため要注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji6.jpg",
+        "Photo2": "https://unimap.org/akalstabimage/ikaruga/horyuji14.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.734754,
+          34.614014
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "caution",
+        "No": "",
+        "Name": "スロープの傾斜が危険レベル（西院出口）",
+        "Attitude": "",
+        "Summery": "スロープの傾斜が危険レベルのため要注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/ikaruga/horyuji2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.735703,
+          34.609451
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "法隆寺前バス停",
+        "Attitude": "",
+        "Summery": "筒井駅・国道横田方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.736689,
+          34.609431
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "法隆寺前バス停",
+        "Attitude": "",
+        "Summery": "王寺駅方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.730433,
+          34.608312
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "斑鳩町役場バス停",
+        "Attitude": "",
+        "Summery": "筒井駅・国道横田方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.730465,
+          34.60816
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "斑鳩町役場バス停",
+        "Attitude": "",
+        "Summery": "王寺駅方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.703519,
+          34.597934
+        ]
+      },
+      "properties": {
+        "Area": "ikarugaoji",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "王寺駅北バス停",
+        "Attitude": "",
+        "Summery": "筒井駅・国道横田方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    }
+  ]
+}
