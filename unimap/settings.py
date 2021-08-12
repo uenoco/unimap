@@ -50,10 +50,12 @@ INSTALLED_APPS = [
     #'django.contrib.sites',
     #'allauth.account',
     #'allauth.socialaccount',    # ソーシャル連携認証なしでも必要',
+    'import_export',
     # unimap Applicaition
     'unimap',
     #CORS
-    'corsheaders',      
+    'corsheaders',
+    
 ]
 
 MIDDLEWARE = [
