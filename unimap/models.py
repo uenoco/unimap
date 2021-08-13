@@ -79,7 +79,7 @@ class Route(models.Model):
 class PointData(models.Model):
     PointType_CHOICES = ( ( 1, 'route'), (12, 'option' ),
                           ( 2, 'start'), ( 3, 'end'), ( 4, 'start_op'), ( 5, 'end_op'),
-                          ( 7, 'barrguide'), ( 14, 'roadfuide'),
+                          ( 7, 'barrguide'), ( 14, 'roadguide'),
                           ( 8, 'attension'), ( 9, 'caution'),
                           ( 6, 'location'), (10, 'busstop'),
                           (11, 'shop' ) ,  (13,'restaurant') 
