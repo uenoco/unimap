@@ -77,8 +77,13 @@ class Route(models.Model):
 
 # 地点
 class PointData(models.Model):
-    PointType_CHOICES = ( ( 1, 'route'), (12, 'option' ), ( 2, 'start'), ( 3, 'end'), ( 4, 'start_op'), ( 5, 'end_op'),
-                          ( 6, 'location'), ( 7, 'barrguide'), ( 8, 'attension'), ( 9, 'caution'), ( 10, 'busstop'), ( 11, 'shop' ) )
+    PointType_CHOICES = ( ( 1, 'route'), (12, 'option' ),
+                          ( 2, 'start'), ( 3, 'end'), ( 4, 'start_op'), ( 5, 'end_op'),
+                          ( 7, 'barrguide'), ( 14, 'roadfuide'),
+                          ( 8, 'attension'), ( 9, 'caution'),
+                          ( 6, 'location'), (10, 'busstop'),
+                          (11, 'shop' ) ,  (13,'restaurant') 
+                         )
 
     id        = models.AutoField(primary_key=True)
     AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID", default=1)
