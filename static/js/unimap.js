@@ -2,15 +2,12 @@
 //  奈良ユニバーサル観光マップ
 //  unimap.js
 
-//  背景地図：初期表示の中心の緯度・経度
-var DEF_LAT=34.6850; 
-var DEF_LON=135.8380; 
-var DEF_ZOOM=15;      //ズームレベル
-
 //  おすすめルート
 // WIP:エリア番号の追加が必要
-var GEOJSON_ROUTE = '/api/v1/route.geojson'; // ルート
-var GEOJSON_POINT = '/api/v1/point.geojson'; // 地点情報
+//var GEOJSON_ROUTE = '/api/v1/route.geojson'; // ルート
+// var GEOJSON_POINT = '/api/v1/point.geojson'; 
+var GEOJSON_POINT = '/api/v1/point/' ; // 地点情報
+var GEOJSON_ROUTE = '/api/v1/route/'; // ルート
 
 var GEOJSON_TOILET= '/api/v1/toilet.geojson'; // 多目的トイレ
 var GEOJSON_HOTEL = '/api/v1/hotel.geojson';  // ホテル
@@ -30,7 +27,7 @@ function onCoordsSlope( feature ) {
     });
     // console.log( "latlngs : " + latlngs );
     popupContent = setPopupContentPass(feature);
-	
+
     switch ( feature.properties.Sort){
     case 1 :    // おすすめルート
 	style = routeMainStyle ;
@@ -57,15 +54,20 @@ function onCoordsSlope( feature ) {
 
 function drawMap( mapimg ){
     // console.log( mapimg );
-
     // osm
     var $maptile = osmorg;
+    var DEF_LAT = mapimg.deflat;
+    var DEF_LON = mapimg.deflon;
+    var DEF_ZOOM= mapimg.defzoom;
+    var DEF_MAPID= String( mapimg.id );
+
     var map = L.map( 'map', {center: [DEF_LAT, DEF_LON], zoom: DEF_ZOOM, zoomControl: true, layers: [ $maptile ]});
 
     //  Ajax で JSON(geojson) をゲット
+    url = GEOJSON_ROUTE + DEF_MAPID;
     result = $.ajax({
 	type: 'GET', 
-	url: GEOJSON_ROUTE,
+	url: url,
 	dataType: 'json',
     }).done( function(data) {
 	//  ファイル読み込み完了後の処理
@@ -98,7 +100,8 @@ function drawMap( mapimg ){
     */
 
     //  Disp Point on Route
-    var coursePointLayer = new L.GeoJSON.AJAX( GEOJSON_POINT , {
+    url = GEOJSON_POINT + DEF_MAPID;
+    var coursePointLayer = new L.GeoJSON.AJAX( url , {
 	pointToLayer: function (feature, latlng) {
 	    switch ( feature.properties.Sort) {
 	    case 2   : return L.marker(latlng, {icon: IconStart, opacity: "0.8"});

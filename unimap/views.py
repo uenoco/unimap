@@ -45,19 +45,23 @@ def test(request):
 # マップ
 def map(request,areaid):
     try:
+        #print( "--  unimap/views.py  0  --")
         # get areaId
         area  = Area.objects.get( id=areaid )
+        #print( "--  unimap/views.py  1  --")
+
         # set ImageMap
-        imap = ImageMap.objects.get( AreaId=area.id )
+        imap = ImageMap.objects.get( AreaId=areaid )
+        #print( "--  unimap/views.py  2  --")
+
         mediaURL = settings.MEDIA_URL        
+        #print( "--  unimap/views.py  3  --")
         # set route/point
         #route = route.objects.get( AreaId=area.id )
         #point = point.objects.get( AreaId=area.id )
 
-        #print( json.dumps(area, default=cj_method, indent=2))
-        params = { 'areaid':areaid, 'imagemap': imap, 'mediaurl': mediaURL }
-        #print( params.areaid )
-        
+        params = { 'area':area, 'imagemap': imap, 'mediaurl': mediaURL }
+        #print( areaid )
         return render(request, 'map.html', params )
     except:
         return render(request, 'map.html'  )
