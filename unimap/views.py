@@ -44,7 +44,6 @@ def test(request):
 
 # マップ
 def map(request,areaid):
-    print( "----  map in views.py-----" )
     try:
         # get areaId
         area  = Area.objects.get( id=areaid )
@@ -59,7 +58,6 @@ def map(request,areaid):
         params = { 'areaid':areaid, 'imagemap': imap, 'mediaurl': mediaURL }
         #print( params.areaid )
         
-        print( "----  return in views.py-----" )
         return render(request, 'map.html', params )
     except:
         return render(request, 'map.html'  )

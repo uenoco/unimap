@@ -8,8 +8,8 @@ from django.urls import include, path
 from django.views.decorators.csrf import csrf_exempt
 from djgeojson.views import GeoJSONLayerView
 from unimap.models import Toilet, Hotel, Zone, Route, PointData
-from api import views
 
+from api import views
 
 urlpatterns = [
     #path('', include(router.urls)),
@@ -36,6 +36,9 @@ urlpatterns = [
         properties=['AreaId','Sort','Name','Summery']
     ), name='route'),
 
+    # Course Route bu AreaId
+    path('v1/route/<int:areaid>', views.route, name='route'),
+    
     # Course PointData
     path('v1/point.geojson',GeoJSONLayerView.as_view(
         model=PointData,
@@ -43,5 +46,7 @@ urlpatterns = [
                     'Holiday','Price','PriceNote','Discount','TEL','URL','Urltitle',
                     'Photo1','Photo2','Photo3','Photo360','Photo360_2']
     ), name='point'),
+    # Course Route bu AreaId
+    path('v1/point/<int:areaid>', views.pointdata, name='pointdata'),
 ]
 

@@ -55,7 +55,9 @@ INSTALLED_APPS = [
     'unimap',
     #CORS
     'corsheaders',
-    
+    # restAPI
+    'rest_framework',
+    'rest_framework_gis',
 ]
 
 MIDDLEWARE = [
