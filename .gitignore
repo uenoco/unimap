@@ -1,0 +1,33 @@
+####
+#   .gitignore for NeoUnimap Project
+####
+# Python cache / byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django/Python Environments
+.env
+.env~
+.venv
+venv/
+
+# Deploy Directory for Apache
+/deploy/*
+!/deploy/.gitkeep
+
+# Media Directory for models.ImageField
+/media/*
+!/media/.gitkeep
+
+# Logging Files
+/log/*
+!/log/.gitkeep
+
+# Mac DS_Store files　
+.DS_Store
+
+# IDE eclipse/VS-Code etc.
+.project
+.classpath
+.settings

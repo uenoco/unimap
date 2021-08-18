@@ -1,0 +1,53 @@
+/***
+**  Unimap Project
+***/
+.stdtbl{
+    min-width: 360px;
+    max-width: 800px;
+}
+.stdblk{
+    witdh: 100%;
+    min-width: 360px;
+    max-width: 800px;
+}
+.stdblksmall{
+    witdh: 100%;
+    min-width: 360px;
+    max-width: 500px;
+}
+.stdhr{
+    width: 100%;
+    max-width: 800px;
+}
+
+# GraphChart Page
+.graphtbl{
+    min-width: 360px;
+    max-width: 800px;
+    text-align: center;
+}
+.graphblk{
+    width: 100%;
+    min-width: 350px;
+    max-width: 760px;
+    /*height: 500px;*/
+    float : float;
+}
+.graphtableblk{
+    width: 100%;
+    height: 100px;
+    min-width: 350px;
+    max-width: 760px;
+}
+.graphcanvasblk {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.graphcvs{
+    width: 100%;
+    height: 100%;
+}

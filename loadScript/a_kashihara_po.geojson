@@ -1,0 +1,1300 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.793829,
+          34.483566
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "start",
+        "No": "",
+        "Name": "スタート近鉄橿原神宮前駅",
+        "Attitude": "",
+        "Summery": "エレベーターあり。",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://www.kintetsu.co.jp/station/station_info/station07032.html",
+        "Urltitle": "近鉄橿原神宮前駅サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.786569,
+          34.488364
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "route",
+        "No": "1",
+        "Name": "橿原神宮",
+        "Attitude": "",
+        "Summery": "【境内】移動可。砂利道あり。南神門へのスロープから外拝殿まで車いす用舗装通路あり",
+        "Remarks": "車いす貸出２台（社務所にて）。駐車場一般750台※橿原神宮すべての施設共通",
+        "Open": "日の出",
+        "Close": "日没",
+        "OpeningNote": "",
+        "Holiday": "年中無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0744-22-3271",
+        "URL": "http://www.kashiharajingu.or.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kashiharajinnguu.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.790932,
+          34.485846
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "route",
+        "No": "1",
+        "Name": "崇敬会館（宝物館）",
+        "Attitude": "",
+        "Summery": "【館内】バリアフリー、エレベーターあり。静かに休める休憩所・空調あり【宝物館】展示すべて鑑賞可",
+        "Remarks": "車いす貸出２台（社務所にて）。駐車場一般750台※橿原神宮すべての施設共通",
+        "Open": "9:00",
+        "Close": "16:00",
+        "OpeningNote": "",
+        "Holiday": "宝物館は土日祝開館・平日要予約。崇敬会館は年中無休",
+        "Price": "300円",
+        "PriceNote": "宝物館のみ有料",
+        "Discount": "",
+        "TEL": "0744-22-3271",
+        "URL": "http://www.kashiharajingu.or.jp/point/sukeikaikan/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/suukei.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.786805,
+          34.486246
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "route",
+        "No": "2",
+        "Name": "深田池",
+        "Attitude": "",
+        "Summery": "【遊歩道】移動可、一部にでこぼこあり。橋入り口に緩やかな坂あり",
+        "Remarks": "車いす貸出２台（社務所にて）。駐車場一般750台※橿原神宮すべての施設共通",
+        "Open": "終日",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "年中無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0744-22-3271",
+        "URL": "http://www.kashiharajingu.or.jp/point/fukadaike/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/hukadaike.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/hukadaike3.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.791472,
+          34.492104
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "route",
+        "No": "3",
+        "Name": "奈良県橿原考古学研究所付属博物館",
+        "Attitude": "",
+        "Summery": "【館内】移動可、一部に段差あり。展示すべて鑑賞可。空調あり【ミュージアムショップ・情報コーナー】狭いので移動注意。商品はすべて見られるが、車いすだと高い場所は手が届かない【映像ライブラリー】かなり狭い、車いすでの利用困難※工事のため休館中",
+        "Remarks": "車いす貸出２台。駐車場一般４０台、身障者用１台",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "月曜定休(祝日の場合は翌日)",
+        "Price": "無料",
+        "PriceNote": "有料展示400円",
+        "Discount": "本人・付添１名無料",
+        "TEL": "0744-24-1185",
+        "URL": "http://www.kashikoken.jp/museum/top.html",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/kasikouken.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.788583,
+          34.506572
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "route",
+        "No": "4",
+        "Name": "河合酒造",
+        "Attitude": "",
+        "Summery": "【店内】声を掛けると出入口にスロープを出してもらえる。出入口・店内のスロープが急傾斜で幅が狭いため要介助。商品・展示すべて見られる",
+        "Remarks": "駐車場一般２台",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "年始・お盆休み",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0744-22-2154",
+        "URL": "https://www.nobori-sake.com/shouhin/nara_nihonsyu/kawai/kawaisyuzou.html",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/kawaishuzou2.jpg",
+        "Photo2": "https://unimap.org/akalstabimage/kashihara/kawaishuzou.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.786214,
+          34.506415
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "route",
+        "No": "5",
+        "Name": "恒岡醤油醸造本店",
+        "Attitude": "",
+        "Summery": "【店内】出入口の坂・でこぼこに注意。手動・簡易電動車いすは要介助。商品はすべて見られる。【蔵の見学】段差あり、歩ける人のみ見学可",
+        "Remarks": "",
+        "Open": "10:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "年中無休",
+        "Price": "無料",
+        "PriceNote": "蔵見学500円（醤油付き）",
+        "Discount": "",
+        "TEL": "0744-22-2071",
+        "URL": "http://www.knet-kashihara.com/imai/izutsuman/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/tuneoka2.jpg",
+        "Photo2": "https://unimap.org/akalstabimage/kashihara/tuneoka.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.783882,
+          34.506518
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "route",
+        "No": "6",
+        "Name": "紙半豊田記念館",
+        "Attitude": "",
+        "Summery": "【外】門のレールに注意。【館内】バリアフリー、一部に狭い箇所あり。出入口にスロープあり。展示すべて鑑賞可。空調あり",
+        "Remarks": "駐車場一般10台、身障者用はないが融通を利かせてもらえる",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "年中無休",
+        "Price": "300円",
+        "PriceNote": "",
+        "Discount": "本人無料",
+        "TEL": "0744-24-0348",
+        "URL": "https://toyota-kinenkan.com/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/toyodakinen.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.792512,
+          34.511516
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "option",
+        "No": "7",
+        "Name": "ミグランス",
+        "Attitude": "",
+        "Summery": "【1階・1０階展望フロア】バリアフリー。1階に授乳室・1０階に静かに休める休憩所・空調あり【1０階展望テラス】出入口に段差（8cm）があり、通行不可",
+        "Remarks": "駐車場は施設内の地下駐車場を利用可（有料）",
+        "Open": "9:00",
+        "Close": "21:30",
+        "OpeningNote": "",
+        "Holiday": "年中無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0744-47-2924",
+        "URL": "http://migrans.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/migrans.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.790664,
+          34.509335
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "goal",
+        "No": "",
+        "Name": "ゴール近鉄八木西口駅",
+        "Attitude": "",
+        "Summery": "ゴール近鉄八木西口駅",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://www.kintetsu.co.jp/station/station_info/station06019.html",
+        "Urltitle": "近鉄八木西口駅サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.790527,
+          34.508785
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "start_op",
+        "No": "",
+        "Name": "オプションスタート（近鉄八木西口駅）",
+        "Attitude": "",
+        "Summery": "オプションスタート（近鉄八木西口駅）",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://www.kintetsu.co.jp/station/station_info/station06019.html",
+        "Urltitle": "近鉄八木西口駅サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.792094,
+          34.513061
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "goal_op",
+        "No": "",
+        "Name": "オプションゴール（近鉄大和八木駅）",
+        "Attitude": "",
+        "Summery": "オプションゴール（近鉄大和八木駅）",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://www.kintetsu.co.jp/station/station_info/station02030.html",
+        "Urltitle": "近鉄大和八木駅サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.792512,
+          34.511154
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "restaurant",
+        "No": "",
+        "Name": "奈良食堂",
+        "Attitude": "",
+        "Summery": "移動可。【食事のアレンジ】カットしてもらえる",
+        "Remarks": "駐車場は周辺の駐車場を利用",
+        "Open": "11:00",
+        "Close": "22:00",
+        "OpeningNote": "",
+        "Holiday": "不定休",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0744-23-0020",
+        "URL": "http://nala-shokudo.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nararestaurant.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.789793,
+          34.506194
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "restaurant",
+        "No": "",
+        "Name": "cafetamon",
+        "Attitude": "",
+        "Summery": "【店内】移動可。少し狭いので移動に注意。【食事のアレンジ】カットしてもらえる",
+        "Remarks": "",
+        "Open": "10:00",
+        "Close": "16:00",
+        "OpeningNote": "15時半ラストオーダー。平日のみ営業",
+        "Holiday": "休日",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0744-29-8363",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/cafetamon.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.787443,
+          34.486489
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "location",
+        "No": "",
+        "Name": "深田池休息所",
+        "Attitude": "",
+        "Summery": "【休息所】出入口のスロープが急傾斜。車いすで深田池を一望できる。静かに休める休憩所、自販機あり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.789755,
+          34.507578
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "location",
+        "No": "",
+        "Name": "今井蘇武橋公園",
+        "Attitude": "",
+        "Summery": "静かに休める休憩所",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.787953,
+          34.507036
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "location",
+        "No": "",
+        "Name": "中町筋生活広場",
+        "Attitude": "",
+        "Summery": "静かに休める休憩所",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.78924,
+          34.505169
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "location",
+        "No": "",
+        "Name": "今井まちなみ交流センター華甍",
+        "Attitude": "",
+        "Summery": "【館内】出入口に階段があり、入場困難。入場することができれば1階は移動可能。展示物1階はすべて鑑賞可。入場を手伝ってもらえる",
+        "Remarks": "車いす貸出1台。駐車場はまちなみ広場駐車場（華甍西隣）を利用",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "最終入館は16時30分まで",
+        "Holiday": "年末年始（12月29日〜1月3日）",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0744-24-8719",
+        "URL": "https://www.kashihara-kanko.or.jp/spot/008.html",
+        "Urltitle": "橿原市観光協会サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/imaimachinami.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.786941,
+          34.488169
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "外拝殿へのスロープ",
+        "Attitude": "",
+        "Summery": "外拝殿へのスロープ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/kashiharajinnguu2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.787725,
+          34.487046
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "南神門へのスロープ",
+        "Attitude": "",
+        "Summery": "南神門へのスロープ。※ここから外拝殿まで車いす用舗装通路あり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/hukadaike2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.786995,
+          34.488021
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "外拝殿へ通じる車いす用通路",
+        "Attitude": "",
+        "Summery": "舗装されていて通りやすい",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/jingutuuro1.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.787191,
+          34.487338
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "barrguide",
+        "No": "",
+        "Name": "南神門へ通じる車いす用通路",
+        "Attitude": "",
+        "Summery": "舗装されていて通りやすい",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/jingutuuro2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.794191,
+          34.493493
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "roadguide",
+        "No": "",
+        "Name": "【ルート案内】近鉄畝傍御陵前駅",
+        "Attitude": "",
+        "Summery": "近鉄八木西口駅西側出口へ電車移動。ルート案内２へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "https://www.kintetsu.co.jp/station/station_info/station06020.html",
+        "Urltitle": "近鉄畝傍御陵前駅サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.790664,
+          34.509414
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "roadguide",
+        "No": "",
+        "Name": "【ルート案内２】近鉄八木西口駅西側出口",
+        "Attitude": "",
+        "Summery": "近鉄八木西口駅スタート地点",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.793666,
+          34.483752
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差に注意（橿原神宮前駅）",
+        "Attitude": "",
+        "Summery": "歩道の段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/kasihara6.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.791472,
+          34.485974
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差に注意（橿原神宮付近）",
+        "Attitude": "",
+        "Summery": "歩道の段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/kasihara8.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.78748,
+          34.486118
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "attention",
+        "No": "",
+        "Name": "木の根の段差",
+        "Attitude": "",
+        "Summery": "木の根の段差で通行困難",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kasihara10.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.792361,
+          34.491777
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ注意（博物館前１）",
+        "Attitude": "",
+        "Summery": "歩道が狭く、でこぼこのため注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/kasihara7.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.792547,
+          34.491866
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ注意（博物館前２）",
+        "Attitude": "",
+        "Summery": "歩道が狭く、でこぼこのため注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/kasihara7.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.790147,
+          34.508782
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "attention",
+        "No": "",
+        "Name": "坂と段差に注意",
+        "Attitude": "",
+        "Summery": "坂と歩道の段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/kasihara5.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.78965,
+          34.506626
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "attention",
+        "No": "",
+        "Name": "洗い場柵なし",
+        "Attitude": "",
+        "Summery": "洗い場に柵がなく、落下注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/kasihara2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.79148,
+          34.5088
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "attention",
+        "No": "",
+        "Name": "坂道",
+        "Attitude": "",
+        "Summery": "下り坂の先に車道があるため注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/kasihara1.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.791523,
+          34.509536
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道が狭い",
+        "Attitude": "",
+        "Summery": "歩道が狭いため注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/kasihara9.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.787885,
+          34.507111
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "attention",
+        "No": "",
+        "Name": "段差に注意中町筋",
+        "Attitude": "",
+        "Summery": "２つの段差に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/nakamatisuji.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.79057,
+          34.487097
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "caution",
+        "No": "",
+        "Name": "通行困難（車が多い）神宮",
+        "Attitude": "",
+        "Summery": "通行困難（車が多い）",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.790275,
+          34.508659
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "caution",
+        "No": "",
+        "Name": "信号のない三叉路",
+        "Attitude": "",
+        "Summery": "信号のない三叉路で要注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/akalstabimage/kashihara/kasihara3.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.789793,
+          34.507856
+        ]
+      },
+      "properties": {
+        "Area": "kashihara",
+        "Sort": "caution",
+        "No": "",
+        "Name": "信号なし",
+        "Attitude": "",
+        "Summery": "信号なく横断注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    }
+  ]
+}

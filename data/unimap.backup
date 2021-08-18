@@ -1,0 +1,1895 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 13.3
+-- Dumped by pg_dump version 13.3
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+--
+-- Name: postgis; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS postgis WITH SCHEMA public;
+
+
+--
+-- Name: EXTENSION postgis; Type: COMMENT; Schema: -; Owner: 
+--
+
+COMMENT ON EXTENSION postgis IS 'PostGIS geometry and geography spatial types and functions';
+
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: auth_group; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.auth_group (
+    id integer NOT NULL,
+    name character varying(150) NOT NULL
+);
+
+
+ALTER TABLE public.auth_group OWNER TO unimap;
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.auth_group_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_group_id_seq OWNER TO unimap;
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.auth_group_id_seq OWNED BY public.auth_group.id;
+
+
+--
+-- Name: auth_group_permissions; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.auth_group_permissions (
+    id integer NOT NULL,
+    group_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_group_permissions OWNER TO unimap;
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.auth_group_permissions_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_group_permissions_id_seq OWNER TO unimap;
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.auth_group_permissions_id_seq OWNED BY public.auth_group_permissions.id;
+
+
+--
+-- Name: auth_permission; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.auth_permission (
+    id integer NOT NULL,
+    name character varying(255) NOT NULL,
+    content_type_id integer NOT NULL,
+    codename character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.auth_permission OWNER TO unimap;
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.auth_permission_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_permission_id_seq OWNER TO unimap;
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.auth_permission_id_seq OWNED BY public.auth_permission.id;
+
+
+--
+-- Name: auth_user; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.auth_user (
+    id integer NOT NULL,
+    password character varying(128) NOT NULL,
+    last_login timestamp with time zone,
+    is_superuser boolean NOT NULL,
+    username character varying(150) NOT NULL,
+    first_name character varying(150) NOT NULL,
+    last_name character varying(150) NOT NULL,
+    email character varying(254) NOT NULL,
+    is_staff boolean NOT NULL,
+    is_active boolean NOT NULL,
+    date_joined timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.auth_user OWNER TO unimap;
+
+--
+-- Name: auth_user_groups; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.auth_user_groups (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    group_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_user_groups OWNER TO unimap;
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.auth_user_groups_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_groups_id_seq OWNER TO unimap;
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.auth_user_groups_id_seq OWNED BY public.auth_user_groups.id;
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.auth_user_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_id_seq OWNER TO unimap;
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.auth_user_id_seq OWNED BY public.auth_user.id;
+
+
+--
+-- Name: auth_user_user_permissions; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.auth_user_user_permissions (
+    id integer NOT NULL,
+    user_id integer NOT NULL,
+    permission_id integer NOT NULL
+);
+
+
+ALTER TABLE public.auth_user_user_permissions OWNER TO unimap;
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.auth_user_user_permissions_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.auth_user_user_permissions_id_seq OWNER TO unimap;
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.auth_user_user_permissions_id_seq OWNED BY public.auth_user_user_permissions.id;
+
+
+--
+-- Name: django_admin_log; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.django_admin_log (
+    id integer NOT NULL,
+    action_time timestamp with time zone NOT NULL,
+    object_id text,
+    object_repr character varying(200) NOT NULL,
+    action_flag smallint NOT NULL,
+    change_message text NOT NULL,
+    content_type_id integer,
+    user_id integer NOT NULL,
+    CONSTRAINT django_admin_log_action_flag_check CHECK ((action_flag >= 0))
+);
+
+
+ALTER TABLE public.django_admin_log OWNER TO unimap;
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.django_admin_log_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_admin_log_id_seq OWNER TO unimap;
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.django_admin_log_id_seq OWNED BY public.django_admin_log.id;
+
+
+--
+-- Name: django_content_type; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.django_content_type (
+    id integer NOT NULL,
+    app_label character varying(100) NOT NULL,
+    model character varying(100) NOT NULL
+);
+
+
+ALTER TABLE public.django_content_type OWNER TO unimap;
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.django_content_type_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_content_type_id_seq OWNER TO unimap;
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.django_content_type_id_seq OWNED BY public.django_content_type.id;
+
+
+--
+-- Name: django_migrations; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.django_migrations (
+    id integer NOT NULL,
+    app character varying(255) NOT NULL,
+    name character varying(255) NOT NULL,
+    applied timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.django_migrations OWNER TO unimap;
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.django_migrations_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.django_migrations_id_seq OWNER TO unimap;
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.django_migrations_id_seq OWNED BY public.django_migrations.id;
+
+
+--
+-- Name: django_session; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.django_session (
+    session_key character varying(40) NOT NULL,
+    session_data text NOT NULL,
+    expire_date timestamp with time zone NOT NULL
+);
+
+
+ALTER TABLE public.django_session OWNER TO unimap;
+
+--
+-- Name: unimap_area; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.unimap_area (
+    id integer NOT NULL,
+    "Name" character varying(24) NOT NULL,
+    "SubName" character varying(24) NOT NULL,
+    "Abstruct" text NOT NULL,
+    "Booklet" character varying(24),
+    "DEF_LAT" double precision NOT NULL,
+    "DEF_LON" double precision NOT NULL,
+    "DEF_Zoom" integer NOT NULL,
+    "Timestamp" timestamp with time zone
+);
+
+
+ALTER TABLE public.unimap_area OWNER TO unimap;
+
+--
+-- Name: unimap_area_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.unimap_area_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.unimap_area_id_seq OWNER TO unimap;
+
+--
+-- Name: unimap_area_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.unimap_area_id_seq OWNED BY public.unimap_area.id;
+
+
+--
+-- Name: unimap_hotel; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.unimap_hotel (
+    id integer NOT NULL,
+    "Sort" integer NOT NULL,
+    "Name" character varying(24) NOT NULL,
+    "Summery" character varying(256),
+    "TEL" character varying(24),
+    "Address" character varying(256),
+    "Access" character varying(256),
+    "URL" character varying(256),
+    "URL_f21" character varying(256),
+    "Photo1" character varying(256),
+    "Photo2" character varying(256),
+    "Photo3" character varying(256),
+    "Photo360" character varying(256),
+    "Photo360_2" character varying(256),
+    geom public.geometry(Point,4326) NOT NULL,
+    "Timestamp" timestamp with time zone,
+    "AreaId_id" integer
+);
+
+
+ALTER TABLE public.unimap_hotel OWNER TO unimap;
+
+--
+-- Name: unimap_hotel_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.unimap_hotel_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.unimap_hotel_id_seq OWNER TO unimap;
+
+--
+-- Name: unimap_hotel_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.unimap_hotel_id_seq OWNED BY public.unimap_hotel.id;
+
+
+--
+-- Name: unimap_imagemap; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.unimap_imagemap (
+    id integer NOT NULL,
+    "ImageMap" character varying(100),
+    "LAT1" double precision NOT NULL,
+    "LON1" double precision NOT NULL,
+    "LAT2" double precision NOT NULL,
+    "LON2" double precision NOT NULL,
+    "Timestamp" timestamp with time zone,
+    "AreaId_id" integer NOT NULL
+);
+
+
+ALTER TABLE public.unimap_imagemap OWNER TO unimap;
+
+--
+-- Name: unimap_imagemap_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.unimap_imagemap_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.unimap_imagemap_id_seq OWNER TO unimap;
+
+--
+-- Name: unimap_imagemap_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.unimap_imagemap_id_seq OWNED BY public.unimap_imagemap.id;
+
+
+--
+-- Name: unimap_pointdata; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.unimap_pointdata (
+    id integer NOT NULL,
+    "Sort" integer NOT NULL,
+    "No" integer,
+    "Name" character varying(24) NOT NULL,
+    "Summery" character varying(256),
+    "Remarks" character varying(256),
+    "Open" character varying(256) NOT NULL,
+    "Close" character varying(256) NOT NULL,
+    "OpeningNote" character varying(256) NOT NULL,
+    "Holiday" character varying(256) NOT NULL,
+    "Price" character varying(256) NOT NULL,
+    "PriceNote" character varying(256) NOT NULL,
+    "Discount" character varying(256) NOT NULL,
+    "TEL" character varying(16) NOT NULL,
+    "URL" character varying(256) NOT NULL,
+    "Urltitle" character varying(24) NOT NULL,
+    "Photo1" character varying(256),
+    "Photo2" character varying(256),
+    "Photo3" character varying(256),
+    "Photo360" character varying(256),
+    "Photo360_2" character varying(256),
+    "Timestamp" timestamp with time zone,
+    geom public.geometry(Point,4326) NOT NULL,
+    "AreaId_id" integer NOT NULL
+);
+
+
+ALTER TABLE public.unimap_pointdata OWNER TO unimap;
+
+--
+-- Name: unimap_pointdata_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.unimap_pointdata_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.unimap_pointdata_id_seq OWNER TO unimap;
+
+--
+-- Name: unimap_pointdata_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.unimap_pointdata_id_seq OWNED BY public.unimap_pointdata.id;
+
+
+--
+-- Name: unimap_route; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.unimap_route (
+    id integer NOT NULL,
+    "Sort" integer NOT NULL,
+    "Name" character varying(24) NOT NULL,
+    "Summery" character varying(256),
+    geom public.geometry(LineString,4326) NOT NULL,
+    "Timestamp" timestamp with time zone,
+    "AreaId_id" integer NOT NULL
+);
+
+
+ALTER TABLE public.unimap_route OWNER TO unimap;
+
+--
+-- Name: unimap_route_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.unimap_route_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.unimap_route_id_seq OWNER TO unimap;
+
+--
+-- Name: unimap_route_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.unimap_route_id_seq OWNED BY public.unimap_route.id;
+
+
+--
+-- Name: unimap_toilet; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.unimap_toilet (
+    id integer NOT NULL,
+    "Sort" integer NOT NULL,
+    "Name" character varying(24) NOT NULL,
+    "Summery" character varying(256),
+    "Floor" character varying(24),
+    "Babyseat" boolean NOT NULL,
+    "Ostomate" boolean NOT NULL,
+    "Nursingbed" boolean NOT NULL,
+    "Washlet" boolean NOT NULL,
+    "Rotation" boolean NOT NULL,
+    "Emergencycall" boolean NOT NULL,
+    "Photo1" character varying(256),
+    "Photo2" character varying(256),
+    "Photo3" character varying(256),
+    "Photo360" character varying(256),
+    "Photo360_2" character varying(256),
+    geom public.geometry(Point,4326) NOT NULL,
+    "Timestamp" timestamp with time zone,
+    "AreaId_id" integer
+);
+
+
+ALTER TABLE public.unimap_toilet OWNER TO unimap;
+
+--
+-- Name: unimap_toilet_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.unimap_toilet_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.unimap_toilet_id_seq OWNER TO unimap;
+
+--
+-- Name: unimap_toilet_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.unimap_toilet_id_seq OWNED BY public.unimap_toilet.id;
+
+
+--
+-- Name: unimap_zone; Type: TABLE; Schema: public; Owner: unimap
+--
+
+CREATE TABLE public.unimap_zone (
+    id integer NOT NULL,
+    "Sort" integer NOT NULL,
+    "Name" character varying(24) NOT NULL,
+    "Summery" character varying(256),
+    "Photo1" character varying(256),
+    "Photo2" character varying(256),
+    "Photo3" character varying(256),
+    "Photo360" character varying(256),
+    "Photo360_2" character varying(256),
+    geom public.geometry(Polygon,4326) NOT NULL,
+    "Timestamp" timestamp with time zone,
+    "AreaId_id" integer NOT NULL
+);
+
+
+ALTER TABLE public.unimap_zone OWNER TO unimap;
+
+--
+-- Name: unimap_zone_id_seq; Type: SEQUENCE; Schema: public; Owner: unimap
+--
+
+CREATE SEQUENCE public.unimap_zone_id_seq
+    AS integer
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+ALTER TABLE public.unimap_zone_id_seq OWNER TO unimap;
+
+--
+-- Name: unimap_zone_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: unimap
+--
+
+ALTER SEQUENCE public.unimap_zone_id_seq OWNED BY public.unimap_zone.id;
+
+
+--
+-- Name: auth_group id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_group ALTER COLUMN id SET DEFAULT nextval('public.auth_group_id_seq'::regclass);
+
+
+--
+-- Name: auth_group_permissions id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_group_permissions ALTER COLUMN id SET DEFAULT nextval('public.auth_group_permissions_id_seq'::regclass);
+
+
+--
+-- Name: auth_permission id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_permission ALTER COLUMN id SET DEFAULT nextval('public.auth_permission_id_seq'::regclass);
+
+
+--
+-- Name: auth_user id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user ALTER COLUMN id SET DEFAULT nextval('public.auth_user_id_seq'::regclass);
+
+
+--
+-- Name: auth_user_groups id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user_groups ALTER COLUMN id SET DEFAULT nextval('public.auth_user_groups_id_seq'::regclass);
+
+
+--
+-- Name: auth_user_user_permissions id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions ALTER COLUMN id SET DEFAULT nextval('public.auth_user_user_permissions_id_seq'::regclass);
+
+
+--
+-- Name: django_admin_log id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.django_admin_log ALTER COLUMN id SET DEFAULT nextval('public.django_admin_log_id_seq'::regclass);
+
+
+--
+-- Name: django_content_type id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.django_content_type ALTER COLUMN id SET DEFAULT nextval('public.django_content_type_id_seq'::regclass);
+
+
+--
+-- Name: django_migrations id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.django_migrations ALTER COLUMN id SET DEFAULT nextval('public.django_migrations_id_seq'::regclass);
+
+
+--
+-- Name: unimap_area id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_area ALTER COLUMN id SET DEFAULT nextval('public.unimap_area_id_seq'::regclass);
+
+
+--
+-- Name: unimap_hotel id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_hotel ALTER COLUMN id SET DEFAULT nextval('public.unimap_hotel_id_seq'::regclass);
+
+
+--
+-- Name: unimap_imagemap id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_imagemap ALTER COLUMN id SET DEFAULT nextval('public.unimap_imagemap_id_seq'::regclass);
+
+
+--
+-- Name: unimap_pointdata id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_pointdata ALTER COLUMN id SET DEFAULT nextval('public.unimap_pointdata_id_seq'::regclass);
+
+
+--
+-- Name: unimap_route id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_route ALTER COLUMN id SET DEFAULT nextval('public.unimap_route_id_seq'::regclass);
+
+
+--
+-- Name: unimap_toilet id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_toilet ALTER COLUMN id SET DEFAULT nextval('public.unimap_toilet_id_seq'::regclass);
+
+
+--
+-- Name: unimap_zone id; Type: DEFAULT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_zone ALTER COLUMN id SET DEFAULT nextval('public.unimap_zone_id_seq'::regclass);
+
+
+--
+-- Data for Name: auth_group; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.auth_group (id, name) FROM stdin;
+\.
+
+
+--
+-- Data for Name: auth_group_permissions; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.auth_group_permissions (id, group_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: auth_permission; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.auth_permission (id, name, content_type_id, codename) FROM stdin;
+1	Can add log entry	1	add_logentry
+2	Can change log entry	1	change_logentry
+3	Can delete log entry	1	delete_logentry
+4	Can view log entry	1	view_logentry
+5	Can add permission	2	add_permission
+6	Can change permission	2	change_permission
+7	Can delete permission	2	delete_permission
+8	Can view permission	2	view_permission
+9	Can add group	3	add_group
+10	Can change group	3	change_group
+11	Can delete group	3	delete_group
+12	Can view group	3	view_group
+13	Can add user	4	add_user
+14	Can change user	4	change_user
+15	Can delete user	4	delete_user
+16	Can view user	4	view_user
+17	Can add content type	5	add_contenttype
+18	Can change content type	5	change_contenttype
+19	Can delete content type	5	delete_contenttype
+20	Can view content type	5	view_contenttype
+21	Can add session	6	add_session
+22	Can change session	6	change_session
+23	Can delete session	6	delete_session
+24	Can view session	6	view_session
+25	Can add 1.マップエリア	7	add_area
+26	Can change 1.マップエリア	7	change_area
+27	Can delete 1.マップエリア	7	delete_area
+28	Can view 1.マップエリア	7	view_area
+29	Can add 5.ゾーン情報	8	add_zone
+30	Can change 5.ゾーン情報	8	change_zone
+31	Can delete 5.ゾーン情報	8	delete_zone
+32	Can view 5.ゾーン情報	8	view_zone
+33	Can add A1.トイレ情報	9	add_toilet
+34	Can change A1.トイレ情報	9	change_toilet
+35	Can delete A1.トイレ情報	9	delete_toilet
+36	Can view A1.トイレ情報	9	view_toilet
+37	Can add 4.ルート補足（坂）	10	add_slope
+38	Can change 4.ルート補足（坂）	10	change_slope
+39	Can delete 4.ルート補足（坂）	10	delete_slope
+40	Can view 4.ルート補足（坂）	10	view_slope
+41	Can add 2.推奨ルート	11	add_route
+42	Can change 2.推奨ルート	11	change_route
+43	Can delete 2.推奨ルート	11	delete_route
+44	Can view 2.推奨ルート	11	view_route
+45	Can add 3.地点情報	12	add_pointdata
+46	Can change 3.地点情報	12	change_pointdata
+47	Can delete 3.地点情報	12	delete_pointdata
+48	Can view 3.地点情報	12	view_pointdata
+49	Can add 1.イメージマップ	13	add_imagemap
+50	Can change 1.イメージマップ	13	change_imagemap
+51	Can delete 1.イメージマップ	13	delete_imagemap
+52	Can view 1.イメージマップ	13	view_imagemap
+53	Can add A2.ホテル情報	14	add_hotel
+54	Can change A2.ホテル情報	14	change_hotel
+55	Can delete A2.ホテル情報	14	delete_hotel
+56	Can view A2.ホテル情報	14	view_hotel
+\.
+
+
+--
+-- Data for Name: auth_user; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.auth_user (id, password, last_login, is_superuser, username, first_name, last_name, email, is_staff, is_active, date_joined) FROM stdin;
+1	pbkdf2_sha256$260000$MdxfalrOZ3fSrkmpu7Qhwn$ZlO3USv7Mvblp5mjCqKVX7CTV2HWPWFiVfXKSCgG5QU=	2021-07-14 17:56:46.386538+09	t	admin			unimap@exampl.com	t	t	2021-06-21 14:51:37.466825+09
+\.
+
+
+--
+-- Data for Name: auth_user_groups; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.auth_user_groups (id, user_id, group_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: auth_user_user_permissions; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.auth_user_user_permissions (id, user_id, permission_id) FROM stdin;
+\.
+
+
+--
+-- Data for Name: django_admin_log; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.django_admin_log (id, action_time, object_id, object_repr, action_flag, change_message, content_type_id, user_id) FROM stdin;
+1	2021-07-13 15:17:30.761057+09	1	奈良公園	1	[{"added": {}}]	7	1
+2	2021-07-13 15:22:59.666851+09	2	春日大社エリア	1	[{"added": {}}]	7	1
+3	2021-07-13 15:25:24.556053+09	1	ImageMap object (1)	1	[{"added": {}}]	13	1
+4	2021-07-13 15:26:29.499139+09	2	ImageMap object (2)	1	[{"added": {}}]	13	1
+5	2021-07-13 16:13:44.687686+09	2	ImageMap object (2)	2	[{"changed": {"fields": ["\\u30a4\\u30e9\\u30b9\\u30c8\\u5730\\u56f3"]}}]	13	1
+6	2021-07-14 17:21:05.567824+09	1	ImageMap object (1)	2	[{"changed": {"fields": ["\\u53f3\\u4e0b\\u7d4c\\u5ea6"]}}]	13	1
+7	2021-07-14 18:09:47.737476+09	1	test	1	[{"added": {}}]	11	1
+8	2021-07-15 17:23:04.036652+09	28	国宝館へのスロープ	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+9	2021-07-15 17:23:24.093377+09	27	ぐるっとバス手向山八幡宮・二月堂前バス停	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+10	2021-07-15 17:23:47.820375+09	26	ぐるっとバス東大寺バス停	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+11	2021-07-15 17:23:59.412253+09	25	東大寺大仏殿・国立博物館バス停	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+12	2021-07-15 17:24:12.449048+09	24	電柱に注意	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+13	2021-07-15 17:24:55.571613+09	23	参道出入口に段差とポール有り	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+14	2021-07-15 17:25:11.582232+09	22	歩道に段差	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+15	2021-07-15 17:25:23.087827+09	21	鹿が多い	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+16	2021-07-15 17:25:35.644305+09	20	二月堂バス停から法華堂への道にある段差	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+17	2021-07-15 17:26:01.303897+09	19	大仏殿車いす通路	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+18	2021-07-15 17:26:12.264059+09	17	中金堂へのスロープ１	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+19	2021-07-15 17:26:26.299607+09	18	中金堂へのスロープ２	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+20	2021-07-15 17:26:45.790354+09	16	大仏殿車いす用出入口	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+21	2021-07-15 17:26:56.137967+09	15	地下道４	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+22	2021-07-15 17:27:16.477032+09	14	地下道３	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+23	2021-07-15 17:27:34.01661+09	13	地下道２	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+24	2021-07-15 17:27:41.099701+09	12	地下道１	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+25	2021-07-15 17:30:40.364035+09	11	きてみてならショップ	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+26	2021-07-15 17:31:03.757517+09	10	大仏前駐車場	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+27	2021-07-15 17:33:01.860097+09	9	夢風ひろば	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+28	2021-07-15 17:33:14.287666+09	8	奈良公園バスターミナル	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+29	2021-07-15 17:33:54.711918+09	6	東大寺二月堂	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u756a\\u53f7"]}}]	12	1
+30	2021-07-15 17:34:12.865974+09	5	東大寺大仏殿	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u756a\\u53f7"]}}]	12	1
+31	2021-07-15 17:34:22.376976+09	4	東大寺総合文化センター（東大寺ミュージアム）	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u756a\\u53f7"]}}]	12	1
+32	2021-07-15 17:34:39.313563+09	1	スタート近鉄奈良駅	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+33	2021-07-15 17:34:50.103713+09	2	興福寺	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u756a\\u53f7"]}}]	12	1
+34	2021-07-15 17:34:59.908236+09	3	奈良県庁舎（屋上広場）	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u756a\\u53f7"]}}]	12	1
+35	2021-07-15 17:35:14.130069+09	7	ゴール東大寺大仏殿・国立博物館バス停	2	[{"changed": {"fields": ["\\u5730\\u70b9\\u30bf\\u30a4\\u30d7"]}}]	12	1
+36	2021-07-15 18:24:26.583707+09	9	夢風ひろば	2	[]	12	1
+37	2021-07-15 19:04:45.201868+09	4	東金堂	2	[{"changed": {"fields": ["\\u30be\\u30fc\\u30f3\\u30bf\\u30a4\\u30d7"]}}]	8	1
+38	2021-07-15 19:04:58.841356+09	5	北円堂	2	[{"changed": {"fields": ["\\u30be\\u30fc\\u30f3\\u30bf\\u30a4\\u30d7"]}}]	8	1
+39	2021-07-15 19:05:11.024533+09	6	段差に注意(五重塔)	2	[{"changed": {"fields": ["\\u30be\\u30fc\\u30f3\\u30bf\\u30a4\\u30d7"]}}]	8	1
+40	2021-07-15 19:05:26.478682+09	7	一言観音堂	2	[{"changed": {"fields": ["\\u30be\\u30fc\\u30f3\\u30bf\\u30a4\\u30d7"]}}]	8	1
+41	2021-07-15 19:05:44.583333+09	8	鹿が多い	2	[{"changed": {"fields": ["\\u30be\\u30fc\\u30f3\\u30bf\\u30a4\\u30d7"]}}]	8	1
+42	2021-07-15 19:06:04.800864+09	9	でこぼこ注意（興福寺周辺）	2	[{"changed": {"fields": ["\\u30be\\u30fc\\u30f3\\u30bf\\u30a4\\u30d7"]}}]	8	1
+43	2021-07-15 19:06:16.505832+09	10	でこぼこ注意（手向山八幡宮参道）	2	[{"changed": {"fields": ["\\u30be\\u30fc\\u30f3\\u30bf\\u30a4\\u30d7"]}}]	8	1
+44	2021-07-15 19:06:43.748973+09	11	県営駐車場前歩道	2	[{"changed": {"fields": ["\\u30be\\u30fc\\u30f3\\u30bf\\u30a4\\u30d7"]}}]	8	1
+45	2021-07-16 09:20:50.712766+09	1	test	3		11	1
+46	2021-07-16 09:20:59.716176+09	3	車いすでのおすすめ経路	2	[]	11	1
+47	2021-07-16 09:21:06.910554+09	4	オプションコース	2	[{"changed": {"fields": ["\\u30eb\\u30fc\\u30c8\\u7a2e\\u985e"]}}]	11	1
+48	2021-07-16 09:44:30.755482+09	10	かなり急な坂道（二月堂２）	2	[{"changed": {"fields": ["\\u30eb\\u30fc\\u30c8\\u7a2e\\u985e"]}}]	11	1
+49	2021-07-16 09:44:36.656286+09	9	かなり急な坂道（二月堂１）	2	[{"changed": {"fields": ["\\u30eb\\u30fc\\u30c8\\u7a2e\\u985e"]}}]	11	1
+50	2021-07-16 09:44:43.201812+09	8	かなり急な坂道（興福寺3）	2	[{"changed": {"fields": ["\\u30eb\\u30fc\\u30c8\\u7a2e\\u985e"]}}]	11	1
+51	2021-07-16 09:44:49.640797+09	7	急な坂道（興福寺2）	2	[{"changed": {"fields": ["\\u30eb\\u30fc\\u30c8\\u7a2e\\u985e"]}}]	11	1
+52	2021-07-16 09:44:56.034278+09	6	ゆるやかな坂道（興福寺1）	2	[{"changed": {"fields": ["\\u30eb\\u30fc\\u30c8\\u7a2e\\u985e"]}}]	11	1
+53	2021-07-16 09:45:02.506966+09	5	急な坂道（近鉄奈良）	2	[{"changed": {"fields": ["\\u30eb\\u30fc\\u30c8\\u7a2e\\u985e"]}}]	11	1
+\.
+
+
+--
+-- Data for Name: django_content_type; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.django_content_type (id, app_label, model) FROM stdin;
+1	admin	logentry
+2	auth	permission
+3	auth	group
+4	auth	user
+5	contenttypes	contenttype
+6	sessions	session
+7	unimap	area
+8	unimap	zone
+9	unimap	toilet
+10	unimap	slope
+11	unimap	route
+12	unimap	pointdata
+13	unimap	imagemap
+14	unimap	hotel
+\.
+
+
+--
+-- Data for Name: django_migrations; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.django_migrations (id, app, name, applied) FROM stdin;
+1	contenttypes	0001_initial	2021-06-21 14:51:08.042683+09
+2	auth	0001_initial	2021-06-21 14:51:08.101518+09
+3	admin	0001_initial	2021-06-21 14:51:08.120086+09
+4	admin	0002_logentry_remove_auto_add	2021-06-21 14:51:08.127885+09
+5	admin	0003_logentry_add_action_flag_choices	2021-06-21 14:51:08.135869+09
+6	contenttypes	0002_remove_content_type_name	2021-06-21 14:51:08.155277+09
+7	auth	0002_alter_permission_name_max_length	2021-06-21 14:51:08.163372+09
+8	auth	0003_alter_user_email_max_length	2021-06-21 14:51:08.171523+09
+9	auth	0004_alter_user_username_opts	2021-06-21 14:51:08.179579+09
+10	auth	0005_alter_user_last_login_null	2021-06-21 14:51:08.188743+09
+11	auth	0006_require_contenttypes_0002	2021-06-21 14:51:08.190703+09
+12	auth	0007_alter_validators_add_error_messages	2021-06-21 14:51:08.199145+09
+13	auth	0008_alter_user_username_max_length	2021-06-21 14:51:08.211438+09
+14	auth	0009_alter_user_last_name_max_length	2021-06-21 14:51:08.22008+09
+15	auth	0010_alter_group_name_max_length	2021-06-21 14:51:08.230958+09
+16	auth	0011_update_proxy_permissions	2021-06-21 14:51:08.240221+09
+17	auth	0012_alter_user_first_name_max_length	2021-06-21 14:51:08.248446+09
+18	sessions	0001_initial	2021-06-21 14:51:08.257529+09
+19	unimap	0001_initial	2021-06-21 14:51:08.489697+09
+20	unimap	0002_auto_20210520_1210	2021-06-21 14:51:08.548961+09
+21	unimap	0003_delete_border	2021-06-21 14:51:08.55483+09
+22	unimap	0004_auto_20210714_1851	2021-07-14 18:51:40.913102+09
+23	unimap	0005_auto_20210715_1654	2021-07-15 16:55:04.290855+09
+24	unimap	0006_auto_20210715_1717	2021-07-15 17:17:32.687148+09
+25	unimap	0007_alter_pointdata_price	2021-07-15 17:19:26.227077+09
+26	unimap	0008_alter_pointdata_sort	2021-07-15 17:29:56.328354+09
+27	unimap	0009_alter_pointdata_sort	2021-07-15 17:37:12.909965+09
+28	unimap	0010_alter_route_areaid	2021-07-16 09:19:47.175959+09
+29	unimap	0011_auto_20210716_0944	2021-07-16 09:44:15.513642+09
+\.
+
+
+--
+-- Data for Name: django_session; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.django_session (session_key, session_data, expire_date) FROM stdin;
+knmkk8qgrwpb0ilvxdmxvqj8v9tp3i90	.eJxVjEEOwiAQRe_C2hCGFgGX7nsGMgyDVA0kpV0Z765NutDtf-_9lwi4rSVsnZcwJ3ERIE6_W0R6cN1BumO9NUmtrssc5a7Ig3Y5tcTP6-H-HRTs5VsTaeMVG0uJs3GO0QOr7LPFpFUEN3jUYEYNFLVDcmeb_TBGBwjGRhTvD_O7OAQ:1lvCqy:quw1OCd0tdZKDOg-eNFPofD1_PXY0zpe1lfaRoD75mA	2021-07-05 14:52:12.637336+09
+xubj8sn1u8x3vgkdkd02uydr0m9i4e7v	.eJxVjEEOwiAQRe_C2hCGFgGX7nsGMgyDVA0kpV0Z765NutDtf-_9lwi4rSVsnZcwJ3ERIE6_W0R6cN1BumO9NUmtrssc5a7Ig3Y5tcTP6-H-HRTs5VsTaeMVG0uJs3GO0QOr7LPFpFUEN3jUYEYNFLVDcmeb_TBGBwjGRhTvD_O7OAQ:1m3BfD:bqw06BXIs2PaOfsoCktHT8jelfH6CdzeYp0CUnxlmOQ	2021-07-27 15:13:03.184497+09
+omu9qg7gtowwrwriujs5kwj6u7xnnppb	.eJxVjEEOwiAQRe_C2hCGFgGX7nsGMgyDVA0kpV0Z765NutDtf-_9lwi4rSVsnZcwJ3ERIE6_W0R6cN1BumO9NUmtrssc5a7Ig3Y5tcTP6-H-HRTs5VsTaeMVG0uJs3GO0QOr7LPFpFUEN3jUYEYNFLVDcmeb_TBGBwjGRhTvD_O7OAQ:1m3ahC:8n_nhN9COMsDTzdw2krPUCKFvzSlkuUM3wpEc9se5z8	2021-07-28 17:56:46.388505+09
+\.
+
+
+--
+-- Data for Name: spatial_ref_sys; Type: TABLE DATA; Schema: public; Owner: postgres
+--
+
+COPY public.spatial_ref_sys (srid, auth_name, auth_srid, srtext, proj4text) FROM stdin;
+\.
+
+
+--
+-- Data for Name: unimap_area; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.unimap_area (id, "Name", "SubName", "Abstruct", "Booklet", "DEF_LAT", "DEF_LON", "DEF_Zoom", "Timestamp") FROM stdin;
+1	奈良公園	～奈良の世界遺産を訪ねる～	１．興福寺\r\n２．奈良県庁舎（屋上広場）\r\n３．東大寺総合文化センター（東大寺ミュージアム）\r\n４．東大寺大仏殿\r\n５．東大寺二月堂《オプションコース》	2017年3月発行	34.685	135.838	15	2021-07-13 15:17:30.743164+09
+2	春日大社エリア	～春日山の趣を感じる～	１　奈良国立博物館\r\n２　奈良春日野国際フォーラム甍\r\n３　春日大社 萬葉植物園\r\n４　鹿苑\r\n５　春日大社国宝殿\r\n６　春日大社本殿《オプションコース》	奈良ユニバーサル観光マップ2	34.68477	135.8343	16	2021-07-13 15:22:59.665001+09
+\.
+
+
+--
+-- Data for Name: unimap_hotel; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.unimap_hotel (id, "Sort", "Name", "Summery", "TEL", "Address", "Access", "URL", "URL_f21", "Photo1", "Photo2", "Photo3", "Photo360", "Photo360_2", geom, "Timestamp", "AreaId_id") FROM stdin;
+1	101	奈良ワシントンホテルプラザ	バリアフリー対応ハートフルルームがあり、車いすで利用しやすい。	0742-27-0410	奈良市下三条町３１−１	JR奈良駅より徒歩８分	http://washington.jp/nara/	https://www.unimap.org/hotel/narawashington	https://unimap.org/photo/map6gh3w/washingtonroom.jpg					0101000020E610000027F6D03E56FA60404D8237A451574140	2021-07-13 15:50:55.193139+09	\N
+2	101	天然温泉吉野桜の湯　御宿野乃　奈良	ユニバーサルルームがあり、車いすで利用しやすい。	0742-20-5489	奈良市大宮町１−１−６	JR奈良駅より徒歩５分	https://www.hotespa.net/hotels/nono_nara/	https://www.unimap.org/hotel/nono	https://unimap.org/photo/map6gh3w/nononararoom.jpg					0101000020E6100000F7764B7240FA6040728C648F50574140	2021-07-13 15:50:55.339718+09	\N
+3	101	ホテル日航奈良	ユニバーサルルームがあり、車いすで利用しやすい。	0742-35-8831	奈良市三条本町８−１	JR奈良駅西口に直結	https://www.nikkonara.jp/	https://www.unimap.org/hotel/nikko	https://unimap.org/photo/map6gh3w/nikkonararoom.jpg					0101000020E6100000AC58FCA630FA60400989B48D3F574140	2021-07-13 15:50:55.341543+09	\N
+4	101	ホテル　リガーレ春日野	バリアフリー対応ハートフルルームがあり、車いすで利用しやすい。	0742-22-6021	奈良市法蓮町７５７−２	JR奈良・近鉄奈良・近鉄大和西大寺駅よりバス移動。「佐保小学校」下車すぐ	https://ligare-kasugano.jp/	https://www.unimap.org/hotel/kasugano	https://unimap.org/photo/map6gh3w/ligareroom.jpg					0101000020E6100000F12F82C64CFA6040B4AB90F293584140	2021-07-13 15:50:55.343419+09	\N
+5	101	奈良ロイヤルホテル	バリアフリールームはないが、車いすで利用しやすい。トイレは共用多目的トイレを使用	0742-34-1131	奈良市法華寺町２５４−１	近鉄新大宮駅より徒歩１０分	http://www.nara-royal.co.jp/	https://www.unimap.org/hotel/nararoyal	https://unimap.org/photo/map6gh3w/nararoyalroom.jpg					0101000020E6100000B3D1393FC5F960407A34D593F9574140	2021-07-13 15:50:55.345432+09	\N
+6	101	ダイワロイヤルホテル　THE　KASHIHARA	バリアフリールームはないが、車いすで利用しやすい。トイレは共用多目的トイレを使用。大浴場は浴室まで移動可	0744-28-6636	橿原市久米町６５２−２	近鉄橿原神宮前駅東口より徒歩５分	https://www.daiwaresort.jp/kashihara/index.html	https://www.unimap.org/hotel/daiwa	https://unimap.org/photo/map6gh3w/daiwakashihararoom.jpg					0101000020E6100000EA2285B270F96040FFE89B340D3E4140	2021-07-13 15:50:55.34707+09	\N
+7	101	カンデオホテルズ　奈良橿原	ユニバーサルルームがあり、車いすで利用しやすい。大浴場は脱衣所まで移動可	0744-21-8700	橿原市内膳町１−１−５０	近鉄大和八木駅から徒歩３分	https://www.candeohotels.com/nara-kashihara/	https://www.unimap.org/hotel/candeo	https://unimap.org/photo/map6gh3w/kandeoroom.jpg					0101000020E6100000BFD364C65BF96040B153AC1A84414140	2021-07-13 15:50:55.348526+09	\N
+8	101	かんぽの宿　大和平群	バリアフリールームがあり、車いすで利用しやすい。大浴場は脱衣所まで移動可	0745-45-0351	生駒郡平群町上庄２−１６−１	近鉄元山上口駅より徒歩１５分（坂道が多い）	https://www.kanponoyado.japanpost.jp/yamatoheguri/index.html	https://www.unimap.org/hotel/kanpo-heguri	https://unimap.org/photo/map6gh3w/kanporoom.jpg					0101000020E61000001D75745C8DF660402B357BA015524140	2021-07-13 15:50:55.349958+09	\N
+\.
+
+
+--
+-- Data for Name: unimap_imagemap; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.unimap_imagemap (id, "ImageMap", "LAT1", "LON1", "LAT2", "LON2", "Timestamp", "AreaId_id") FROM stdin;
+2	images/kasuga_IJ7AFDQ.png	34.68477	135.8384	34.68	135.849	2021-07-13 16:13:44.684539+09	2
+1	images/narapark_Z5OGLdK.png	34.6903	135.82725	34.6816	135.84599	2021-07-14 17:21:05.553817+09	1
+\.
+
+
+--
+-- Data for Name: unimap_pointdata; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.unimap_pointdata (id, "Sort", "No", "Name", "Summery", "Remarks", "Open", "Close", "OpeningNote", "Holiday", "Price", "PriceNote", "Discount", "TEL", "URL", "Urltitle", "Photo1", "Photo2", "Photo3", "Photo360", "Photo360_2", "Timestamp", geom, "AreaId_id") FROM stdin;
+21	8	\N	鹿が多い	鹿がたくさん座っているため、通行注意	\N											https://unimap.org/photo/map6gh3w/narapark3.jpg	\N	\N	\N	\N	2021-07-15 17:25:23.084533+09	0101000020E610000079CA6ABA9EFA6040DDBC715298574140	1
+20	8	\N	二月堂バス停から法華堂への道にある段差	段差あり	\N											https://unimap.org/photo/map6gh3w/nigatsudou2.jpg	\N	\N	\N	\N	2021-07-15 17:25:35.637338+09	0101000020E6100000A0DD21C500FB6040D10AD3F71A584140	1
+19	8	\N	大仏殿車いす通路	通路の途中に柵があるので介助者が必要	\N											https://unimap.org/photo/map6gh3w/todaiji5.jpg	https://unimap.org/photo/map6gh3w/todaiji6.jpg	\N	\N	\N	2021-07-15 17:26:01.299987+09	0101000020E6100000C4E9245BDDFA60404924D1CB28584140	1
+17	8	\N	中金堂へのスロープ１	入口と出口のそれぞれにスロープが有る	\N											https://unimap.org/photo/map6gh3w/koufukuji7.jpg	https://unimap.org/photo/map6gh3w/koufukuji6.jpg	\N	\N	\N	2021-07-15 17:26:12.261238+09	0101000020E61000009DEE3CF19CFA60406EC6302768574140	1
+18	8	\N	中金堂へのスロープ２	坂が急なため介助が必要	\N											https://unimap.org/photo/map6gh3w/koufukuji3.jpg	https://unimap.org/photo/map6gh3w/koufukuji2.jpg	\N	\N	\N	2021-07-15 17:26:26.297211+09	0101000020E6100000EB32FCA79BFA60407B5D86FF74574140	1
+16	7	\N	大仏殿車いす用出入口	一般受付にてチケットを購入、車いす入口から入場。開閉は警備員がしてくれる	\N											https://unimap.org/photo/map6gh3w/todaiji4.jpg	\N	\N	\N	\N	2021-07-15 17:26:45.787678+09	0101000020E6100000388600E0D8FA60401C3691990B584140	1
+15	9	\N	地下道４	階段があり通行不可	\N											\N	\N	\N	\N	\N	2021-07-15 17:26:56.134026+09	0101000020E61000002BDA1CE7B6FA604067DD3F16A2574140	1
+14	9	\N	地下道３	出入り口傾斜が急なため迂回が必要	\N											\N	\N	\N	\N	\N	2021-07-15 17:27:16.474357+09	0101000020E610000059DC7F64BAFA60405812A0A696574140	1
+13	9	\N	地下道２	出入り口傾斜が急なため迂回が必要	\N											\N	\N	\N	\N	\N	2021-07-15 17:27:34.013896+09	0101000020E6100000DF4BE141B3FA60404D64E60297574140	1
+12	9	\N	地下道１	出入り口傾斜が急なため迂回が必要	\N											\N	\N	\N	\N	\N	2021-07-15 17:27:41.09697+09	0101000020E61000009F03CB11B2FA6040B86B09F9A0574140	1
+10	6	\N	大仏前駐車場	障害者手帳を提示すれば駐車させてもらえる。	\N	8:30	17:00	季節により変動		1日1,000円						\N	\N	\N	\N	\N	2021-07-15 17:31:03.754996+09	0101000020E61000003D0FEECEDAFA6040FC9463B2B8574140	1
+8	6	\N	奈良公園バスターミナル	【館内】バリアフリー。授乳室２つあり	車いす貸出５台。駐車場なし（県営登大路駐車場北を利用）	7:30	18:30	展示等施設営業時間	無休	無料			0742-81-3151	https://npbt.jp/	公式サイトへ	\N	\N	\N	\N	\N	2021-07-15 17:33:14.283978+09	0101000020E61000006405BF0DB1FA60401BB28174B1574140	1
+6	1	5	東大寺二月堂	【二月堂までの道】坂道が続き、石畳・土道が傷み、でこぼこしており移動困難。手動車いすは介助が必要。簡易・電動車いすはバッテリー消耗に注意。バス停からの移動は道中の段差に注意。【二月堂】階段で移動不可。下から拝観。※土日祝はぐるっとバスを利用するのがおすすめ。	警備詰所に東大寺境内すべてで使用できる車椅子２台あり。駐車場なし	終日			無休	無料			0742-22-5511	http://www.todaiji.or.jp/contents/guidance/guidance6.html	公式サイトへ	https://unimap.org/photo/map6gh3w/nigatsudou1.jpg	\N	\N	\N	\N	2021-07-15 17:33:54.707177+09	0101000020E6100000F2423A3C04FB60402758E36C3A584140	1
+5	1	4	東大寺大仏殿	【大仏殿】移動可。受付に階段、通路に開閉式の柵、スロープが急斜面の為に介助が必要。賓頭慮尊者像に行くには大仏殿入り口右側へ。中央通路は階段で通行不可。	車いす貸出３台（大仏殿内に限る）、警備詰所に東大寺境内すべてで使用できる車椅子２台あり。駐車場なし（大仏前駐車場を利用）	8:00	17:00	季節により変動	無休	600円（中学生以上）、300円（小学生）		本人・付添１名300円	0742-22-5511	http://www.todaiji.or.jp/	公式サイトへ	https://unimap.org/photo/map6gh3w/todaiji3.jpg	\N	\N	\N	\N	2021-07-15 17:34:12.862463+09	0101000020E61000000A48FB1FE0FA6040E275C4211B584140	1
+4	1	3	東大寺総合文化センター（東大寺ミュージアム）	【ミュージアム・ギャラリー・カフェ】バリアフリー。展示すべて鑑賞可。授乳スペースは要相談	車いす貸出３台（センター内に限る）、警備詰所に東大寺境内すべてで使用できる車椅子２台あり。駐車場なし（大仏前駐車場を利用）	9:30	17:00	季節により変動	臨時休館あり。	600円（中学生以上）、300円（小学生）	ミュージアムの料金	本人・付添１名300円	0742-20-5511	http://culturecenter.todaiji.or.jp/	公式サイトへ	https://unimap.org/photo/map6gh3w/todaiji1.jpg	\N	\N	\N	\N	2021-07-15 17:34:22.374807+09	0101000020E6100000A1A014ADDCFA604076543541D4574140	1
+1	2	\N	スタート近鉄奈良駅	エレベーターあり。改札内に授乳スペースあり	\N									http://www.kintetsu.co.jp/soukatsu/kounai/nara.html	近鉄奈良駅構内図サイトへ	\N	\N	\N	\N	\N	2021-07-15 17:34:39.310378+09	0101000020E6100000ECD3F19881FA604026A1F48590574140	1
+2	1	1	興福寺	【境内】移動可。浅い砂利道で、手動車いすは力が必要【国宝館】バリアフリー。右側の入場用スロープから入場【南円堂・東金堂】境内から拝観【中金堂】階段で中には入れないが外から拝観可能	駐車場一般３３台、身障者用１台	9:00	17:00		無休	700円	国宝館の料金。東金堂は300円。	本人・付添１名半額	0742-22-7755	http://www.kohfukuji.com/	公式サイトへ	https://unimap.org/photo/map6gh3w/koufukuji.jpg	\N	\N	\N	\N	2021-07-15 17:34:50.101192+09	0101000020E6100000236937FA98FA60405BBF60376C574140	1
+3	1	2	奈良県庁舎（屋上広場）	【庁舎・屋上広場】バリアフリー、屋上広場は格子状の柵なので車いすでも景色を楽しめる。東棟との往来は外を通る必要あり。授乳室あり※開放日、時間は奈良県管財課管理係まで問い合わせが必要。	車いす貸出４台。駐車場なし（県営登大路駐車場北を利用）	8:30	17:30		要問い合わせ	無料			0742-27-8406	http://www.pref.nara.jp/4203.htm	奈良県庁舎屋上広場サイトへ	https://unimap.org/photo/map6gh3w/kenchou1.jpg	\N	\N	\N	\N	2021-07-15 17:34:59.904969+09	0101000020E6100000BDE5EAC7A6FA6040635E471CB2574140	1
+7	3	\N	ゴール東大寺大仏殿・国立博物館バス停	【帰り】ＪＲ奈良・近鉄奈良駅方面へ	\N											\N	\N	\N	\N	\N	2021-07-15 17:35:14.127471+09	0101000020E61000009DB30584D6FA6040631EF98381574140	1
+9	6	\N	夢風ひろば	【施設内】移動可。	駐車場一般３７台、身障者用３台（有料）			各店舗の営業時間を確認	各店舗の定休日を確認	無料			0742-25-0870	http://www.yume-kaze.com/	公式サイトへ	\N	\N	\N	\N	\N	2021-07-15 18:24:26.580809+09	0101000020E6100000029EB470D9FA6040AA048BC399574140	1
+28	7	\N	国宝館へのスロープ	ゆるやかな坂道	\N											https://unimap.org/photo/map6gh3w/koufukuji5.jpg	https://unimap.org/photo/map6gh3w/koufukuji4.jpg	\N	\N	\N	2021-07-15 17:23:04.031858+09	0101000020E61000000A100533A6FA604096DA520779574140	1
+27	10	\N	ぐるっとバス手向山八幡宮・二月堂前バス停	【帰り】高畑・ならまち経由でＪＲ奈良・近鉄奈良駅方面へ	\N									http://www.nara-access-navi.com/season-bus/	ぐるっとバスサイトへ	\N	\N	\N	\N	\N	2021-07-15 17:23:24.089866+09	0101000020E610000030EF71A609FB6040ED5A423EE8574140	1
+26	10	\N	ぐるっとバス東大寺バス停	土日祝はバスで二月堂に行くのがお勧め	\N									http://www.nara-access-navi.com/season-bus/	ぐるっとバスサイトへ	\N	\N	\N	\N	\N	2021-07-15 17:23:47.8173+09	0101000020E6100000EF01BA2FE7FA6040BE05D9B27C574140	1
+25	10	\N	東大寺大仏殿・国立博物館バス停	【帰り】ＪＲ奈良・近鉄奈良駅方面へ	\N									http://jikoku.narakotsu.co.jp/form/asp/	奈良バスナビサイトへ	\N	\N	\N	\N	\N	2021-07-15 17:23:59.408786+09	0101000020E6100000B6DB2E34D7FA6040ECED96E480574140	1
+24	8	\N	電柱に注意	電柱で歩道が狭いので注意	\N											https://unimap.org/photo/map6gh3w/narapark5.jpg	\N	\N	\N	\N	2021-07-15 17:24:12.446861+09	0101000020E61000005FED28CED1FA6040556CCCEB88574140	1
+23	8	\N	参道出入口に段差とポール有り	１ｃｍ程度の段差とポールが有るため注意	\N											https://unimap.org/photo/map6gh3w/narapark6.jpg	\N	\N	\N	\N	2021-07-15 17:24:55.567922+09	0101000020E61000007DE71725E8FA6040A739799109584140	1
+22	8	\N	歩道に段差	歩道の段差に注意	\N											https://unimap.org/photo/map6gh3w/narapark4.jpg	\N	\N	\N	\N	2021-07-15 17:25:11.578399+09	0101000020E6100000A12424D2B6FA60402522FC8BA0574140	1
+11	11	\N	きてみてならショップ	【館内】バリアフリー。一部狭い通路あり。商品すべて見られる	車いす貸出１台。駐車場あり	10:00	18:00	行事日は延長	月曜定休（月曜日が祝日の時は翌日）	無料			0742-26-8828	https://www.nara-shop.jp/	公式サイトへ	https://unimap.org/photo/map6gh3w/kitemite.jpg	\N	\N	\N	\N	2021-07-15 17:30:40.360505+09	0101000020E6100000006BD5AE89FA6040CEC3094CA7574140	1
+\.
+
+
+--
+-- Data for Name: unimap_route; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.unimap_route (id, "Sort", "Name", "Summery", geom, "Timestamp", "AreaId_id") FROM stdin;
+3	1	車いすでのおすすめ経路	手動・電動・簡易電動車いすで通行できます	0102000020E6100000790000004D10751F80FA60408B6665FB9057414004C8D0B183FA6040078849B890574140F7A6E9B383FA604001637D0393574140EC51B81E85FA604001637D0393574140EC51B81E85FA6040F48079C8945741404FAF946588FA6040E0ADF36F97574140FFC35DBD8AFA6040DE79A9D898574140F01472A59EFA60404082E2C798574140E4F38AA79EFA6040F729C76471574140DFC325C79DFA6040A1CF471971574140268A90BA9DFA6040B4B5BE4868574140AA9CF6949CFA604066187783685741403F73D6A79CFA6040C5094CA7755741403F34F3E49AFA6040C5094CA7755741407AD976DA9AFA60406A8E739B70574140A6D425E398FA6040DE019EB470574140A6D425E398FA6040A30392B06F5741402D3C2F159BFA6040319067976F574140E675C4219BFA6040C7FACDC474574140516B9A779CFA6040C7FACDC47457414080EF366F9CFA60401C6CB1DB675741400F62670A9DFA60407B74EACA675741403FE603029DFA604023D8B8FE5D5741403D0801F992FA60402D8672A25D5741403D0801F992FA60402DBABC395C5741408048BF7D9DFA6040220C03965C57414050C422869DFA60409A8D959867574140374E0AF39EFA60409A8D959867574140917F66109FFA60400BEA5BE6745741404CFF9254A6FA6040ACE122F7745741404CFF9254A6FA60407F7EDFBF79574140AC55BB26A4FA60404FFA42C879574140AC55BB26A4FA604015FC36C478574140C9207711A6FA60404480D3BB78574140999CDA19A6FA60409385AFAF75574140917F66109FFA6040E6DF2EFB7557414072F38DE89EFA60406E067FBF98574140083D9B559FFA60406E067FBF98574140083D9B559FFA6040728BF9B9A1574140C9AD49B7A5FA60403F075DC2A1574140A54A94BDA5FA60405CA10F96B1574140FCA02E52A8FA60401BB28174B1574140FCA02E52A8FA60403F075DC2A15741407DAF2138AEFA604083F6EAE3A15741408F1A1362AEFA6040208C9FC6BD57414006D847A7AEFA6040127651F4C057414028B9C326B2FA604097546D37C157414008DFFB1BB4FA6040F3285C8FC2574140F6B2EDB4B5FA60408481E7DEC3574140670C7382B6FA604051FD4AE7C3574140CC5EB69DB6FA60405FECBDF8A2574140022D5DC1B6FA6040747C7BD7A057414083F1D3B8B7FA60409340834D9D574140F54A5986B8FA60401453E9279C574140866BB587BDFA60409274CDE49B57414037A5BC56C2FA6040401A4E999B574140EFAA07CCC3FA6040D297A59D9A574140959EE925C6FA6040DDBC715298574140CE3461FBC9FA60400F1137A79257414090B41B7DCCFA6040974869368F57414013B87537CFFA604094F3C5DE8B574140B247A819D2FA6040B17405DB88574140043A9336D5FA60408158FD11865741404468041BD7FA6040D2298F6E84574140A9A0A2EAD7FA6040F81C588E9057414067976F7DD8FA6040C460FE0A99574140CDE9B298D8FA6040FE4B1938A0574140546B6116DAFA6040F8F202ECA3574140E4F736FDD9FA60409E2C7C7DAD57414090696D1ADBFA6040E9D84125AE57414053E9279CDDFA60400AAF2479AE57414053E9279CDDFA60409E2C7C7DAD5741408DB3E908E0FA6040947EC2D9AD5741405E2F4D11E0FA60409888B7CEBF5741409995ED43DEFA6040B7C2BB5CC4574140CA198A3BDEFA60400719C8B3CB574140709A3E3BE0FA6040AB65321CCF574140DBC35E28E0FA6040AAF92AF9D8574140AC8DB113DEFA6040AAF92AF9D8574140AC8DB113DEFA6040C99BC3B5DA574140AA3FC230E0FA60409C1727BEDA574140DBC35E28E0FA6040CEA5B8AAEC5741400A48FB1FE0FA60409228B4ACFB574140FE261422E0FA6040F40A0BEE07584140AFEAAC16D8FA6040C4866EF607584140BB0B9414D8FA6040768192020B584140088F368ED8FA6040768192020B584140088F368ED8FA6040EC4960730E584140032B8716D9FA6040B9C5C37B0E584140DEC7D11CD9FA6040E18442041C5841408BE07F2BD9FA6040559E40D8295841401D740987DEFA6040F79507E9295841401D740987DEFA60401213D4F02D584140E9BF07AFDDFA60401213D4F02D5841401844A4A6DDFA6040116404543858414009E066F1E2FA6040E2DF675C38584140386403E9E2FA6040E3C281902C5841404B6BD3D8DEFA6040744F57772C584140578CBAD6DEFA6040CD02ED0E295841407E32C687D9FA60405B8FC2F528584140438D4292D9FA60401071732A195841407311DF89D9FA6040C3B645990D584140D233BDC4D8FA60409532A9A10D584140D233BDC4D8FA6040605969520A5841403EEAAF57D8FA604030D5CC5A0A58414031C9C859D8FA6040F11989D008584140F2052D24E0FA6040300917F2085841404CAAB69BE0FA60408E1150E108584140C2F4BD86E0FA6040B532E197FA574140FD99417CE0FA60401B477364E5574140CF15A584E0FA60403EF20703CF574140151BF33AE2FA60403D5A9C31CC574140C233A149E2FA604059BA826DC4574140BDAAB35AE0FA604091CB7F48BF574140BDAAB35AE0FA6040518F34B8AD574140BDAAB35AE0FA60400DCAFB389A5741408D261763E0FA6040EB51B81E855741405281936DE0FA6040E898F38C7D57414064062AE3DFFA60406C770FD07D574140938AC6DADFFA6040BC48A12C7C57414068CBB914D7FA6040CCA0A17F82574140	2021-07-16 09:20:59.711822+09	1
+4	2	オプションコース	通行困難だが車いすや身体の状態によっては通行可能な経路	0102000020E61000001E0000005D6E30D4E1FA6040C652245F095841409B8D9598E7FA604037C64E7809584140B228ECA2E8FA6040E03785950A58414050A91265EFFA6040C3EA8F300C58414066F6798CF2FA60404D86E3F90C5841401C60E63BF8FA6040ECCEDA6D17584140BCCADAA6F8FA60408239419B1C5841406005F86EF3FA604029EACC3D24584140E8BAF083F3FA6040CB9ECBD424584140F8E28BF6F8FA60405C72DC291D58414028F4FA93F8FA60402CBE688F17584140E5D022DBF9FA6040C2A354C21358414068226C78FAFA6040961FB8CA135841402B499EEBFBFA6040A9AB02B518584140B39602D2FEFA6040461669E21D584140D55240DAFFFA6040A53FFB9122584140355B79C9FFFA604038D6C56D345841409A20EA3E00FB604038D6C56D345841403B18B14F00FB6040A53FFB912258414066F9BA0CFFFA60404907EBFF1C5841406117450FFCFA6040DE2021CA17584140091A3389FAFA604019321EA5125841400934D8D4F9FA6040D642908312584140F1255470F8FA6040C82C42B1155841402237C30DF8FA60400C1CD0D2155841408A592F86F2FA6040DD4603780B5841404CFBE6FEEAFA60402B1895D409584140A70705A5E8FA6040D100DE02095841408F6CAE9AE7FA6040E49F19C407584140504D49D6E1FA604062C1FD8007584140	2021-07-16 09:21:06.908258+09	1
+10	13	かなり急な坂道（二月堂２）	かなり急な坂道（介助が必要）	0102000020E610000005000000FCF84B8BFAFA60400C84640113584140B4FE9600FCFA6040B759BC5818584140ACBF2500FFFA60409B616A4B1D5841407DAEB662FFFA60402ABAF59A1E584140AC18AE0E00FB604077BB5E9A22584140	2021-07-16 09:44:30.750825+09	1
+9	13	かなり急な坂道（二月堂１）	かなり急な坂道（介助が必要）	0102000020E61000000200000078616BB6F2FA60409266F3380C584140B680D07AF8FA6040E611A3E716584140	2021-07-16 09:44:36.65293+09	1
+8	13	かなり急な坂道（興福寺3）	かなり急な坂道（介助が必要）	0102000020E6100000020000006FB54E5C8EFA6040078F368E58574140931804568EFA6040D036FE4465574140	2021-07-16 09:44:43.199012+09	1
+7	13	急な坂道（興福寺2）	急な坂道	0102000020E610000002000000A94E07B29EFA6040395D16139B57414074B4AA259DFA604096654F029B574140	2021-07-16 09:44:49.637116+09	1
+6	11	ゆるやかな坂道（興福寺1）	ゆるやかな坂道	0102000020E610000002000000D3BCE3149DFA604096654F029B57414001158E2095FA6040168733BF9A574140	2021-07-16 09:44:56.031935+09	1
+5	13	急な坂道（近鉄奈良）	急な坂道	0102000020E6100000030000008B497F2F85FA6040298E03AF9657414054ABAFAE8AFA6040C12CB4739A57414091B06F2791FA6040450BD0B69A574140	2021-07-16 09:45:02.504864+09	1
+\.
+
+
+--
+-- Data for Name: unimap_toilet; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.unimap_toilet (id, "Sort", "Name", "Summery", "Floor", "Babyseat", "Ostomate", "Nursingbed", "Washlet", "Rotation", "Emergencycall", "Photo1", "Photo2", "Photo3", "Photo360", "Photo360_2", geom, "Timestamp", "AreaId_id") FROM stdin;
+1	100	中小企業会館トイレ		1	f	t	f	t	t	t						0101000020E6100000F56393FC88FA6040ECDCB419A7574140	2021-07-13 15:54:33.179953+09	\N
+2	100	興福寺国宝館トイレ		1	t	f	f	t	t	t						0101000020E6100000C93A1C5DA5FA6040F1BDBF417B574140	2021-07-13 15:54:33.272995+09	\N
+3	100	五十二段トイレ	トイレの手前に段差と坂あり	1	t	t	f	t	t	t	https://unimap.org/photo/map6gh3w/gojunidantoilet.jpg	https://unimap.org/photo/map6gh3w/koufukuji9.jpg		https://theta360.com/s/oKWYKuLMEKBLJU1xPBmUw7QIK		0101000020E6100000BC94BA649CFA604034F279C553574140	2021-07-13 15:54:33.274535+09	\N
+4	100	奈良県庁主棟Ｂ１トイレ		B1	t	t	f	t	t	t	https://unimap.org/photo/map6gh3w/kenchousyutoutoilet.jpg					0101000020E6100000B212F3ACA4FA6040927A4FE5B4574140	2021-07-13 15:54:33.275999+09	\N
+5	100	奈良県庁東棟１階トイレ		1	t	t	t	t	t	t	https://unimap.org/photo/map6gh3w/kenchou2.jpg					0101000020E610000084A0A355ADFA60403ECF9F36AA574140	2021-07-13 15:54:33.277401+09	\N
+6	100	奈良公園バスターミナル東棟２階トイレ		2	f	t	t	t	f	t	https://unimap.org/photo/map6gh3w/busterminaltoilet.jpg			https://theta360.com/s/hrHBzS0gP2sgXzRoppOmdvVtA		0101000020E6100000E695EB6DB3FA60404679E6E5B0574140	2021-07-13 15:54:33.278753+09	\N
+7	100	大仏前駐車場トイレ		1	t	f	f	f	t	t	https://unimap.org/photo/map6gh3w/daibutuchusyajotoilet.jpg			https://theta360.com/s/ajLaCb8Us6MqUGsNuCbQ5yTfk		0101000020E610000048895DDBDBFA60408B389D64AB574140	2021-07-13 15:54:33.280147+09	\N
+8	100	東大寺総合文化センターＢ１トイレ		B1	t	f	f	t	t	t	https://unimap.org/photo/map6gh3w/todaiji2.jpg			https://theta360.com/s/eVPGyDkFasClRwBiDmv5jOJ8K		0101000020E6100000BAD7497DD9FA604032ACE28DCC574140	2021-07-13 15:54:33.281693+09	\N
+9	100	大仏殿西側トイレ	男女別トイレ内	1	t	f	f	f	t	t	https://unimap.org/photo/map6gh3w/daibutunishigawatoilet.jpg			https://theta360.com/s/cXBDGuqt4RrxJmGBANukTX6QK		0101000020E61000003F524486D5FA6040A839799109584140	2021-07-13 15:54:33.283576+09	\N
+10	100	夢風ひろばトイレ		1	f	f	f	t	t	f				https://theta360.com/s/oRHxAo2Ys6PZpRV4lJb0YvGC4		0101000020E61000008448861CDBFA6040FFAF3A72A4574140	2021-07-13 15:54:33.285633+09	\N
+11	100	入江泰吉記念奈良市写真美術館トイレ		B1	t	f	f	f	t	t	https://unimap.org/photo/map6gh3w/syashintoilet.jpg			https://theta360.com/s/mbsfIR55l6lX8kg8QGtfwFa6q		0101000020E61000005859DB140FFB6040020F0C207C564140	2021-07-13 15:54:33.287271+09	\N
+12	100	荒池園地トイレ		1	f	f	f	f	t	t	https://unimap.org/photo/map6gh3w/araike.jpg			https://theta360.com/s/mU3v7w3z6IvCZ9g8ylLpmsrEO		0101000020E61000007007EA94C7FA6040F65E7CD11E574140	2021-07-13 15:54:33.288946+09	\N
+13	100	奈良ホテルトイレ		1	t	t	f	t	t	t	https://unimap.org/photo/map6gh3w/narahotels2.jpg			https://theta360.com/s/gHFExag1ubYGzvWySfQMZZg00		0101000020E6100000D8BB3FDEABFA6040D34ECDE506574140	2021-07-13 15:54:33.290473+09	\N
+14	100	なら和み館トイレ		1	f	f	f	t	t	t	https://unimap.org/photo/map6gh3w/nagomikan2.jpg			https://theta360.com/s/k5TmuTqc06oBMKS5sT00C2UM4		0101000020E61000007782FDD7B9FA6040F65FE7A6CD564140	2021-07-13 15:54:33.291835+09	\N
+15	100	喜光寺トイレ	手すりが動かせない	1	f	f	f	t	t	f	https://unimap.org/photo/map6gh3w/kikoujitoilet.jpg					0101000020E61000000A14B188E1F8604019AE0E80B8574140	2021-07-13 15:54:33.293179+09	\N
+16	100	唐招提寺トイレ		1	t	f	f	f	t	f	https://unimap.org/photo/map6gh3w/tousyoudaijitoilet.jpg			https://theta360.com/s/h66O2XgASNW8PbfCzvF2zFadc		0101000020E6100000105A0F5F26F9604026C808A870564140	2021-07-13 15:54:33.294648+09	\N
+17	100	唐招提寺駐車場トイレ		1	f	t	f	f	t	t	https://unimap.org/photo/map6gh3w/tousyoucyuusyajotoilet.jpg			https://theta360.com/s/jpo6q1XgC2xyAIrb3p8ViVIqu		0101000020E6100000E76D6C7624F96040B63176C24B564140	2021-07-13 15:54:33.296042+09	\N
+18	100	ローソン奈良五条町店トイレ		1	f	f	f	t	t	f						0101000020E6100000F71DC3633FF960407D2079E750564140	2021-07-13 15:54:33.297606+09	\N
+19	100	玄奘三蔵院伽藍トイレ		1	t	f	f	f	t	t				https://theta360.com/s/ovxqgE65cdlkmaePHeVqDwWNk		0101000020E6100000E78F696D1AF96040E4141DC9E5554140	2021-07-13 15:54:33.299273+09	\N
+20	100	お写経道場トイレ		1	f	f	f	t	t	t	https://unimap.org/photo/map6gh3w/yakushijiosyakeitoilet.jpg			https://theta360.com/s/niHxS2BTYh4zfLWOEFwh1FDRA		0101000020E6100000EF53556820F9604069723106D6554140	2021-07-13 15:54:33.301356+09	\N
+21	100	白鳳伽藍トイレ		1	f	f	f	f	t	f				https://theta360.com/s/q7GzLvZ8b5sUiZWISE9ndBl8S		0101000020E61000007218CC5F21F960406B2C616D8C554140	2021-07-13 15:54:33.302917+09	\N
+22	100	セブン-イレブン明日香川原店トイレ	手すりが動かせない	1	f	f	f	t	t	f						0101000020E6100000745DF8C1F9F960404415FE0C6F3C4140	2021-07-13 15:54:33.304933+09	\N
+23	100	橘寺トイレ	手すりが動かせない	1	t	f	f	f	t	t				https://theta360.com/s/d5xyXynPdHTpPG8gvDzL3LPjE		0101000020E61000003946B24728FA6040F7E6374C343C4140	2021-07-13 15:54:33.306794+09	\N
+24	100	明日香夢の旬菜館トイレ		1	t	f	f	t	t	t	https://unimap.org/photo/map6gh3w/syunsaikantoilet.jpg			https://theta360.com/s/3IScLReaz5syZqEc1ktEUfzxg		0101000020E61000000E4C6E1459FA60403735D07CCE3B4140	2021-07-13 15:54:33.308253+09	\N
+25	100	石舞台売店休憩所トイレ		1	t	f	f	f	f	t	https://unimap.org/photo/map6gh3w/ishibutaitoilet.jpg			https://theta360.com/s/j17WZR9banGPZcyo3iXVdCFzE		0101000020E6100000278925E56EFA60400936AE7FD73B4140	2021-07-13 15:54:33.310331+09	\N
+26	100	万葉文化館管理棟トイレ	男女別トイレ内	1	t	f	f	t	t	t				https://theta360.com/s/dsLaZYe8OQC7aYUzZtBY6IS7E		0101000020E6100000E679707756FA604008CA6DFB1E3D4140	2021-07-13 15:54:33.312418+09	\N
+27	100	万葉文化館展示棟トイレ	男女別トイレ内、場所によって尿器洗浄・オストメイト設備あり	B１,1	t	f	f	t	t	t	https://unimap.org/photo/map6gh3w/manyoutoilet.jpg			https://theta360.com/s/c21MgGOYzIGAqmLkG2CZx4w7s		0101000020E6100000F59ECA694FFA6040F1B8A816113D4140	2021-07-13 15:54:33.314408+09	\N
+28	100	万葉文化館駐車場トイレ	尿器洗浄あり。温水洗浄便座が追加された。	1	f	t	t	t	t	t	https://unimap.org/photo/map6gh3w/manyoutoilet2.jpg			https://theta360.com/s/fHPiCQWLGhb6g64Q60IeK3aeO		0101000020E610000084BBB3765BFA6040F6F065A2083D4140	2021-07-13 15:54:33.316179+09	\N
+29	100	アスカムトイレ		1	t	f	f	t	t	t				https://theta360.com/s/c4TnCn0tiJAAvFgg0pgp73lom		0101000020E61000005F46B1DC52FA604045D95BCAF93C4140	2021-07-13 15:54:33.317695+09	\N
+30	100	豊浦休憩所トイレ		1	f	f	f	f	t	t	https://unimap.org/photo/map6gh3w/toyouratoilet.jpg			https://theta360.com/s/szpi9wpIjg1LprEACnhbZCZdI		0101000020E6100000AFEE586C13FA6040A67B9DD4973D4140	2021-07-13 15:54:33.318996+09	\N
+31	100	川原多機能トイレ		1	t	f	f	t	t	t	https://unimap.org/photo/map6gh3w/kawaharatoilet.jpg			https://theta360.com/s/rbvFKErhwzPQLreN5h9lmjoLg		0101000020E61000000D6D003620FA60400C790437523C4140	2021-07-13 15:54:33.320239+09	\N
+32	100	奈良市きたまち転害門観光案内所トイレ		1	t	f	f	t	t	t	https://unimap.org/photo/map6gh3w/tegaimontoilet.jpg			https://theta360.com/s/tBwgD6cNIEUm3uYRtxUmMae0W		0101000020E6100000A27DACE0B7FA604076C075C58C584140	2021-07-13 15:54:33.321637+09	\N
+33	100	セブン-イレブン奈良般若寺町店トイレ		1	f	f	f	t	t	f	https://unimap.org/photo/map6gh3w/konbinitoilet.jpg					0101000020E6100000BBEEAD48CCFA60405D6E30D461594140	2021-07-13 15:54:33.323364+09	\N
+34	100	奈良公園事務所トイレ	施設入口が手動。施設に駐車場（身障者用1台）あり	1	t	t	f	t	t	t	https://unimap.org/photo/map6gh3w/kouentoilet.jpg			https://theta360.com/s/jRYd9Qx8O2FggxgYMm617SWdU		0101000020E6100000CC61F71DC3FA6040912749D74C584140	2021-07-13 15:54:33.325392+09	\N
+35	100	ならまちセンタートイレ		1	f	t	f	t	t	t	https://unimap.org/photo/map6gh3w/naramachicentertoilet.jpg			https://theta360.com/s/b4DgWCjNlLijPQiLndHZ6BLBQ		0101000020E61000004CFC51D499FA60406D5512D907574140	2021-07-13 15:54:33.327028+09	\N
+36	100	なら工藝館トイレ		1	t	f	f	t	t	t	https://unimap.org/photo/map6gh3w/kogeikantoilet.jpg			https://theta360.com/s/iAcgbbtf06wZUjZkpUrpnBQGW		0101000020E61000001D588E9081FA604046D3D9C9E0564140	2021-07-13 15:54:33.328393+09	\N
+37	100	元興寺トイレ	トイレの手前に段差あり	1	t	f	f	t	t	f				https://theta360.com/s/lw80aZPOscNEXTQmqUz6e3VEu		0101000020E61000000932022A9CFA60400E4E44BFB6564140	2021-07-13 15:54:33.32982+09	\N
+38	100	奈良町からくりおもちゃ館トイレ		1	t	f	f	t	t	t	https://unimap.org/photo/map6gh3w/karakuritoilet.jpg			https://theta360.com/s/kwOL0yegD46O5UjmGjDL9XEPI		0101000020E6100000A16AF46A80FA6040D5EB1681B1564140	2021-07-13 15:54:33.331192+09	\N
+39	100	ならまち格子の家トイレ		1	t	f	f	f	t	f	https://unimap.org/photo/map6gh3w/koushitoilet.jpg			https://theta360.com/s/lS2Ng38Ai4xiqMVw0QmnsIMfA		0101000020E61000005A46EA3D95FA60403DD34B8C65564140	2021-07-13 15:54:33.335022+09	\N
+40	100	鹿の舟トイレ		1	t	f	f	t	f	f	https://unimap.org/photo/map6gh3w/shikanohunetoilet.jpg			https://theta360.com/s/svUbvWRaCSn4NMIVeFsxvND9c		0101000020E6100000FB57569A94FA6040F0DE516342564140	2021-07-13 15:54:33.336532+09	\N
+41	100	国宝殿横公共多目的トイレ		1	t	t	f	t	t	t	https://unimap.org/photo/map6gh3w/kokuhoudenyokotoilet.jpg			https://theta360.com/s/pX2EHRjtWmv46lZrHG2HE0ODw		0101000020E6100000CB9F6F0B16FB6040E140481630574140	2021-07-13 15:54:33.338039+09	\N
+42	100	国宝殿多目的トイレ		1	t	f	f	t	t	t	https://unimap.org/akalstabimage/kasugataisha/kokuhoudentoilet.jpg			https://theta360.com/s/lxWCdR400wnd2eWeAIXqTysKW		0101000020E6100000CB2C42B115FB60406AF981AB3C574140	2021-07-13 15:54:33.339825+09	\N
+43	100	奈良国立博物館トイレ	オストメイトは便座に設置。手すり固定式	B1	t	t	f	t	t	t	https://unimap.org/photo/map6gh3w/kokuhakutoilet.jpg			https://theta360.com/s/lUfvoB5lxwNSjOyEucf5MGvAm		0101000020E610000065DEAAEBD0FA60400FBA84436F574140	2021-07-13 15:54:33.341726+09	\N
+44	100	奈良春日野国際フォーラムトイレ		1	f	t	t	t	t	t	https://unimap.org/akalstabimage/kasugataisha/kasuganokokusaitoilet.jpg			https://theta360.com/s/b135xVlwVSw9zGPIMUk5LYE4m		0101000020E61000000E30F31DFCFA6040BCEA01F390574140	2021-07-13 15:54:33.343318+09	\N
+45	100	ミグランス1F市役所側トイレ		1	f	t	t	t	t	t	https://unimap.org/akalstabimage/kashihara/miguranstoilet2.jpg			https://theta360.com/s/dpE103TOumbUnyOwsL3gMPEPY		0101000020E6100000B96FB54E5CF960406C26DF6C73414140	2021-07-13 15:54:33.344942+09	\N
+46	100	橿原考古学研究所付属博物館トイレ	手すり固定式	1	f	f	f	t	t	t				https://theta360.com/s/lBORutHFmJbxtlvGCLHCeL0vQ		0101000020E61000006551D84551F9604045D95BCAF93E4140	2021-07-13 15:54:33.346371+09	\N
+47	100	深田池休息所トイレ		1	f	f	f	f	t	t	https://unimap.org/akalstabimage/kashihara/hukadaiketoilet.jpg			https://theta360.com/s/bXAYydjh35w5K943VgW41RRtA		0101000020E61000001BD7BFEB33F9604054707841443E4140	2021-07-13 15:54:33.347779+09	\N
+48	100	今井まちなみ交流センター華甍トイレ	片側に手すりが無い	1	f	f	f	t	f	t	https://unimap.org/akalstabimage/kashihara/imaimachinamitoilet.jpg			https://theta360.com/s/ogV56bY7aL9AdN8dJ1nZ9jOVM		0101000020E6100000621399B940F96040CBBC55D7A1404140	2021-07-13 15:54:33.34914+09	\N
+49	100	今井蘇武橋公園トイレ		1	f	f	f	t	t	t	https://unimap.org/akalstabimage/kashihara/sobubashitoilet.jpg			https://theta360.com/s/q6dThwF0AlWWD7sIQjyeZtWV6		0101000020E6100000069FE6E445F960409225732CEF404140	2021-07-13 15:54:33.350407+09	\N
+50	100	第2橿原観光トイレ		1	t	t	f	t	t	t	https://unimap.org/akalstabimage/kashihara/kasiharakankoutoilet.jpg			https://theta360.com/s/kQAFMvlEyDz6IyQ09dqEjipAO		0101000020E610000016889E9449F96040A41CCC26C03E4140	2021-07-13 15:54:33.351815+09	\N
+51	100	中町筋生活広場トイレ		1	f	f	f	f	f	f	https://unimap.org/akalstabimage/kashihara/nakamatisujitoilet.jpg			https://theta360.com/s/r5154WboLpNnFxqH9BBz9WWUC		0101000020E6100000672618CE35F96040E3FA777DE6404140	2021-07-13 15:54:33.353208+09	\N
+52	100	藤原旧跡トイレ		1	t	f	f	t	t	f	https://unimap.org/akalstabimage/kashihara/hujiwaratoilet.jpg			https://theta360.com/s/rbbhB57lPJANmspl84SiZzN1U		0101000020E61000003F8EE6C8CAF9604084622B685A404140	2021-07-13 15:54:33.354517+09	\N
+53	100	養正殿トイレ		1	t	f	f	t	f	t	https://unimap.org/akalstabimage/kashihara/youseidentoilet.jpg			https://theta360.com/s/3CHVj2UyOuarBRl9FodhwOTYG		0101000020E6100000BABA63B14DF96040416326512F3E4140	2021-07-13 15:54:33.356191+09	\N
+54	100	ミグランス1Fホテル側トイレ		1	t	t	f	t	t	t	https://unimap.org/akalstabimage/kashihara/miguranstoilet.jpg			https://theta360.com/s/3dXkpjkGp3fOr80zjD8WkNATg		0101000020E610000001C3F2E75BF96040DDB6EF517F414140	2021-07-13 15:54:33.357812+09	\N
+55	100	橿原ナビプラザトイレ		1	t	t	f	t	t	t	https://unimap.org/photo/map6gh3w/naviplazatoilet.jpg			https://theta360.com/s/etvz3WUiwyD4uekAzrzh7Unei		0101000020E610000087C267EB60F9604035255987A3414140	2021-07-13 15:54:33.359351+09	\N
+56	100	やわらぎ会館トイレ	手すり固定式	1	t	f	f	t	t	t	https://unimap.org/akalstabimage/ikaruga/yawaragitoilet.jpg					0101000020E610000063635E479CF66040F357C85C194C4140	2021-07-13 15:54:33.360841+09	\N
+57	100	王寺小学校横トイレ		1	f	f	f	f	t	f	https://unimap.org/akalstabimage/ikaruga/ojishoutoilet.jpg					0101000020E61000006D8C9DF092F6604059FCA6B0524B4140	2021-07-13 15:54:33.362257+09	\N
+58	100	王寺町地域交流センターリーベルホール側トイレ		1	t	t	t	t	f	t	https://unimap.org/photo/map6gh3w/liberutoilet.jpg			https://theta360.com/s/hTPauTcs8liBk5o4k6jJVITFg		0101000020E6100000603FC4068BF660406DE2E47E874C4140	2021-07-13 15:54:33.363752+09	\N
+59	100	斑鳩文化財センタートイレ		1	t	f	f	t	f	t	https://unimap.org/photo/map6gh3w/ikarugabunkazaitoilet.jpg					0101000020E610000020D4450A65F76040F374AE28254E4140	2021-07-13 15:54:33.365846+09	\N
+60	100	法隆寺ｉセンタートイレ	男女別トイレ内	1	f	t	f	t	f	t	https://unimap.org/photo/map6gh3w/centertoilet.jpg			https://theta360.com/s/iEJBLhRwh7qKwDOE6vgyiNDJg		0101000020E6100000B401D88088F76040F33AE2900D4E4140	2021-07-13 15:54:33.367542+09	\N
+61	100	法隆寺トイレ		1	f	f	f	f	f	f	https://unimap.org/akalstabimage/ikaruga/horyujitoilet.jpg			https://theta360.com/s/jWc67IrkccwrkmztfRg6bBku0		0101000020E6100000BE6C3B6D8DF760408E739B70AF4E4140	2021-07-13 15:54:33.368853+09	\N
+\.
+
+
+--
+-- Data for Name: unimap_zone; Type: TABLE DATA; Schema: public; Owner: unimap
+--
+
+COPY public.unimap_zone (id, "Sort", "Name", "Summery", "Photo1", "Photo2", "Photo3", "Photo360", "Photo360_2", geom, "Timestamp", "AreaId_id") FROM stdin;
+2	1	興福寺砂利道	砂利道						0103000020E6100000010000001B00000019FED30D94FA6040A7583508735741404391EEE794FA6040A758350873574140C02500FF94FA604052280B5F5F574140D3BCE3149DFA6040F31FD26F5F5741400F62670A9DFA60406C5A2904725741407D789620A3FA6040AE49B725725741407D789620A3FA60401B4B581B635741402D25CB49A8FA60401B4B581B635741402D25CB49A8FA60404B033FAA615741405915E126A3FA604057B1F84D6157414041D3122BA3FA6040C8073D9B55574140740D33349EFA604016A584605557414050AA7D3A9EFA60400DC7F31950574140B0E600C19CFA6040CBD765F84F5741403352EFA99CFA604013D55B035B57414019575C1C95FA6040D2E5CDE15A5741403DBA111695FA6040647616BD53574140D828EB3793FA6040056EDDCD5357414014CE6E2D93FA60402F8672A25D574140BAF59A1E94FA6040717500C45D574140C0CC77F093FA6040734BAB2171574140CFBD874B8EFA6040E4BED53A71574140F3203D458EFA6040F5F57CCD72574140CAA7C7B68CFA6040F5F57CCD72574140473CD9CD8CFA6040C3F2E7DB82574140F69A1E1494FA604022FB20CB8257414019FED30D94FA6040A758350873574140	2021-07-14 18:52:10.496427+09	1
+3	1	手向山八幡宮砂利道	砂利道						0103000020E61000000100000006000000BEDC274701FB60402D228AC91B584140C365153603FB6040CE1951DA1B58414087A6ECF403FB6040484E266E15584140452A8C2D04FB60409566F3380C584140BEDC274701FB6040537765170C584140BEDC274701FB60402D228AC91B584140	2021-07-14 18:52:10.542551+09	1
+12	1	浮見堂までの道	木の幹せりだす・道幅狭く柵なし、通行注意	https://unimap.org/photo/map6gh3w/takabatake7.jpg					0103000020E6100000010000000E00000066F84F37D0FA6040DAE1AFC91A57414048C5FF1DD1FA604040DB6AD6195741403BFDA02ED2FA6040ADF9F197165741401D3D7E6FD3FA604013F3ACA4155741409FE74F1BD5FA60404277499C155741407A8F334DD8FA6040917C2590125741402CF2EB87D8FA60406C3EAE0D1557414086E464E2D6FA60404EF1B8A81657414093C6681DD5FA60408EACFC3218574140111C9771D3FA6040E2067C7E18574140E23E726BD2FA6040ED80EB8A19574140CAA31B61D1FA60404B21904B1C5741405A4A9693D0FA6040988A8D791D57414066F84F37D0FA6040DAE1AFC91A574140	2021-07-14 18:52:10.550765+09	1
+13	1	なら和み館前歩道	道幅と傾斜に注意	https://unimap.org/photo/map6gh3w/takabatake23.jpg	https://unimap.org/photo/map6gh3w/takabatake22.jpg				0103000020E6100000010000000D000000488B3386B9FA604034B91803EB564140ADF71BEDB8FA6040C311A452EC564140A7AD11C1B8FA604037894160E5564140F54A5986B8FA6040289D4830D556414060747973B8FA6040342E1C08C95641409C19FD68B8FA604071C806D2C55641406C223317B8FA60403866D993C05641403C84F1D3B8FA6040986E1283C056414018946934B9FA6040B9A81611C5564140D1CDFE40B9FA6040FD84B35BCB5641404241295AB9FA6040D86322A5D9564140B3B45373B9FA604085268925E5564140488B3386B9FA604034B91803EB564140	2021-07-14 18:52:10.551653+09	1
+14	1	柵のない道1	下り傾斜、柵なく通行注意	https://unimap.org/photo/map6gh3w/takabatake10.jpg					0103000020E610000001000000070000004B1DE4F5E0FA6040F14A92E7FA5641400727A25FDBFA6040268C6665FB5641405C1D0071D7FA6040CEA8F92AF9564140D9B11188D7FA6040FE60E0B9F75641400727A25FDBFA604063F20698F956414010786000E1FA60400F98874CF95641404B1DE4F5E0FA6040F14A92E7FA564140	2021-07-14 18:52:10.552502+09	1
+15	1	柵のない道2	下り傾斜、柵なく通行注意	https://unimap.org/photo/map6gh3w/takabatake9.jpg					0103000020E610000001000000070000008C2E6F0ED7FA60408CB96B09F9564140A6F27684D3FA60405053CBD6FA5641405AD76839D0FA60406C04E275FD564140DD425722D0FA60409DBCC804FC5641408EB0A888D3FA6040CEA8F92AF9564140984F560CD7FA60405E6919A9F75641408C2E6F0ED7FA60408CB96B09F9564140	2021-07-14 18:52:10.553347+09	1
+16	1	柵のない道3	下り傾斜、柵なく通行注意	https://unimap.org/photo/map6gh3w/takabatake11.jpg					0103000020E6100000010000000B000000A80183A4CFFA60406FBDA607055741402B6D718DCFFA6040B131AF230E574140C6A70018CFFA6040564ACFF412574140083E062BCEFA60404EF1B8A81657414021753BFBCAFA6040E527D53E1D574140D921FE61CBFA60408BA8893E1F574140EA9788B7CEFA6040B282DF8618574140E9F010C6CFFA604008AD872F1357414066F84F37D0FA604040BE840A0E574140ADBEBA2AD0FA6040FD497CEE04574140A80183A4CFFA60406FBDA60705574140	2021-07-14 18:52:10.554236+09	1
+17	1	歩道が滑る	歩道が滑りやすい素材なため、特に雨天時はスリップ注意						0103000020E6100000010000000C000000D87F9D9BB6FA6040C8091346B3564140DEAF027CB7FA60405796E82CB35641409085E810B8FA60401E6E8786C55641400DC17119B7FA6040A14CA3C9C55641404F3DD2E0B6FA6040A9A5B915C2564140F75965A6B4FA6040B6BB07E8BE564140043C69E1B2FA6040C39D0B23BD5641408600E0D8B3FA60403DD2E0B6B65641407AABAE43B5FA6040BF7CB262B8564140AF5FB01BB6FA6040F5BD86E0B8564140AFD2DD75B6FA6040BAF3C473B6564140D87F9D9BB6FA6040C8091346B3564140	2021-07-14 18:52:10.555108+09	1
+18	1	危険な道	道に段差と石が多数あり、通行不可	https://unimap.org/photo/map6gh3w/takabatake5.jpg	https://unimap.org/photo/map6gh3w/takabatake6.jpg				0103000020E61000000100000005000000AA2D7590D7FA604038143E5B075741402CF2EB87D8FA6040915F3FC4065741404A9869FBD7FA60404FEB36A8FD564140037976F9D6FA6040D7868A71FE564140AA2D7590D7FA604038143E5B07574140	2021-07-14 18:52:10.55597+09	1
+19	1	たかばたけ茶論	通行不可						0103000020E610000001000000050000008CF84ECCFAFA60401024EF1CCA564140910E0F61FCFA60407BDAE1AFC956414073823639FCFA6040EEE9EA8EC5564140CD74AF93FAFA6040959EE925C65641408CF84ECCFAFA60401024EF1CCA564140	2021-07-14 18:52:10.556834+09	1
+20	1	志賀直哉旧居	通行不可						0103000020E61000000100000005000000D13C8045FEFA6040FFEC478AC856414031D28BDAFDFA6040986E1283C05641401842CEFBFFFA6040BC783F6EBF564140BE839F3800FB6040B84082E2C7564140D13C8045FEFA6040FFEC478AC8564140	2021-07-14 18:52:10.557688+09	1
+21	1	新薬師寺	通行不可						0103000020E6100000010000000A000000B82231410DFB604060AFB0E07E5641401D75745C0DFB604080812040865641409F05A1BC0FFB60404DF910548D564140452DCDAD10FB60404DF910548D56414021CA17B410FB6040BB7F2C44875641406C2409C215FB60404A0C022B87564140A7C98CB715FB60405E2A36E6755641403EAF78EA11FB6040B284B53176564140C7F143A511FB60405AF2785A7E564140B82231410DFB604060AFB0E07E564140	2021-07-14 18:52:10.558594+09	1
+22	1	通行困難（車が多い）	通行困難（車が多い）						0103000020E6100000010000000E000000373465A79FFA60401A6F2BBD36574140BA85AE44A0FA60401E335019FF564140BA1281EA9FFA60403BAA9A20EA564140BA85AE44A0FA60403F74417DCB564140B43BA418A0FA6040E8BE9CD9AE564140AF25E4839EFA60403B191C25AF564140B56FEEAF9EFA60405DC136E2C9564140B5FCC0559EFA604012178046E9564140B56FEEAF9EFA60400282397AFC56414026E5EE737CFA604044A51133FB564140A379008B7CFA6040EE7A698A0057414038DBDC989EFA6040170E846401574140B58993FB9DFA6040C614AC7136574140373465A79FFA60401A6F2BBD36574140	2021-07-14 18:52:10.559606+09	1
+23	1	通行困難（車が多い）	通行困難（車が多い）						0103000020E6100000010000000A000000DEE522BE93FA60406DE2E47E875641403C2D3F7095FA60402CF3565D87564140601DC70F95FA604099F4F75278564140FBCA83F494FA604051DA1B7C6156414037FDD98F94FA6040AC36FFAF3A564140A9A44E4093FA604059DC7F643A564140F6B4C35F93FA6040D2E28C614E5641408B8BA37293FA6040B0E2546B6156414097AC8A7093FA6040BCCADAA678564140DEE522BE93FA60406DE2E47E87564140	2021-07-14 18:52:10.560564+09	1
+24	1	柵が無く、道幅が狭いため注意	柵が無く、道幅が狭いため注意	https://unimap.org/photo/map6gh3w/sarusawa2.jpg					0103000020E61000000100000012000000D38558FD91FA60408272DBBE475741409D83674293FA60404774CFBA465741409D103AE892FA6040FC7266BB425741401AA54BFF92FA60402D93E1783E5741403831242793FA60409C19FD683857414097AC8A7093FA6040868DB27E335741403D61890794FA604094A3005130574140DDB1D82695FA60402A55A2EC2D57414083328D2697FA6040E96514CB2D57414023F609A098FA604078F2E9B12D574140537AA69798FA60405C751DAA29574140BFD7101C97FA6040386BF0BE2A57414061AA99B594FA6040850838842A574140DEFFC70993FA6040191EFB592C5741407AC7293A92FA6040EC866D8B325741401B4CC3F091FA60403C11C47938574140F19E03CB91FA6040753FA7203F574140D38558FD91FA60408272DBBE47574140	2021-07-14 18:52:10.561513+09	1
+5	2	北円堂	階段のため、車いすの種類により通行困難	\N	\N	\N	\N	\N	0103000020E610000001000000050000004486E3F98CFA6040CAE369F981574140AC8E1CE98CFA6040FDB2B453735741403C8E91EC91FA6040843F8A3A73574140D58558FD91FA60402AECA2E8815741404486E3F98CFA6040CAE369F981574140	2021-07-15 19:04:58.814701+09	1
+6	2	段差に注意(五重塔)	段差に注意	https://unimap.org/photo/map6gh3w/koufukuji8.jpg	\N	\N	\N	\N	0103000020E61000000100000005000000AD3F89CF9DFA6040D927806264574140B81DA8539EFA60400AAC1C5A6457414047F487669EFA6040357B67B455574140A31EA2D19DFA604063FF03AC55574140AD3F89CF9DFA6040D927806264574140	2021-07-15 19:05:11.022064+09	1
+7	2	一言観音堂	車いすの種類により通行困難	\N	\N	\N	\N	\N	0103000020E61000000100000008000000FC239A4091FA604010BEF73768574140C316821C94FA60404342942F68574140B9F59A1E94FA604095AF04526257414045520B2593FA604095AF0452625741403C31242793FA60408B5A61FA5E574140B54BC63192FA604016E736E15E574140D79FFD4891FA6040681CEA7761574140FC239A4091FA604010BEF73768574140	2021-07-15 19:05:26.475132+09	1
+9	2	でこぼこ注意（興福寺周辺）	所々にでこぼこが有るため注意	https://unimap.org/photo/map6gh3w/narapark2.jpg	https://unimap.org/photo/map6gh3w/narapark1.jpg	\N	\N	\N	0103000020E610000001000000050000006AF4BF5C8BFA6040A31309A69A57414094F678219DFA604092A8177C9A574140AF592E1B9DFA6040A5AFE76B965741409215A75A8BFA6040FE0967B7965741406AF4BF5C8BFA6040A31309A69A574140	2021-07-15 19:06:04.798+09	1
+10	2	でこぼこ注意（手向山八幡宮参道）	所々にでこぼこが有るため注意	https://unimap.org/photo/map6gh3w/narapark7.jpg	\N	\N	\N	\N	0103000020E61000000100000005000000B272F6CEE8FA604031A182C30B584140087B1343F2FA6040332A70B20D584140E5F6764BF2FA604051ABAFAE0A5841404149D6E1E8FA604014E1ED4108584140B272F6CEE8FA604031A182C30B584140	2021-07-15 19:06:16.50275+09	1
+11	2	県営駐車場前歩道	道幅と傾斜に注意	https://unimap.org/photo/map6gh3w/takabatake1.jpg	https://unimap.org/photo/map6gh3w/takabatake16.jpg	\N	\N	\N	0103000020E6100000010000000B000000DF323509DEFA60405E915F3FC45641405DC74620DEFA60406216DA39CD5641402601DC2CDEFA604036D862B7CF564140A495ED43DEFA6040B491B245D25641402C081EDFDEFA60406E9EB12FD9564140C52F4AD0DFFA60402C431CEBE2564140CC368C82E0FA6040E6965643E25641402C081EDFDEFA604036D862B7CF5641403E4AECDADEFA60401FE4839ECD564140941057CEDEFA6040350DC347C4564140DF323509DEFA60405E915F3FC4564140	2021-07-15 19:06:43.746452+09	1
+25	1	人通りが多い	人通りが多く、休日などは通行困難な場合あり						0103000020E61000000100000005000000B1E07EC083FA6040431EC18D945741407F677BF486FA6040431EC18D94574140B5DC990986FA6040E146CA1649574140CF86FC3383FA604034A1496249574140B1E07EC083FA6040431EC18D94574140	2021-07-14 18:52:10.562363+09	1
+26	1	通行困難（車が多い）	通行困難（車が多い）	https://unimap.org/photo/map6gh3w/nisinokyo8.jpg					0103000020E610000001000000050000002C4487C011F96040CBBA7F2C445741406B990CC7F3F86040D177B7B244574140CBA145B6F3F860403EE76ED74B5741402C4487C011F960402DB0C7444A5741402C4487C011F96040CBBA7F2C44574140	2021-07-14 18:52:10.564416+09	1
+27	1	通行困難（車が多い）	通行困難（車が多い）						0103000020E6100000010000000D000000BE86E0B80CF96040520E66136056414017F549EE30F960406479573D6056414017F549EE30F96040DFE17668585641405E6743FE19F960409DF2E8465856414064247B841AF96040D943FB58C1554140AC02B5183CF960402C9E7AA4C1554140B24CBF443CF96040C3B7B06EBC55414086A92D7510F96040FEB5BC72BD55414027A1F48510F960408BA6B393C1554140FA62EFC517F960401A33897AC15541405FCFD72C17F96040323CF6B358564140BE86E0B80CF96040859675FF58564140BE86E0B80CF96040520E661360564140	2021-07-14 18:52:10.56547+09	1
+28	1	垂仁天皇陵砂利道	砂利道						0103000020E6100000010000000700000047AF06280DF960409C4EB2D5E55641409415C3D501F960402BBEA1F0D9564140ED9FA70103F96040247CEF6FD056414062DBA2CC06F960405264ADA1D456414026C3F17C06F96040795BE9B5D9564140A053909F0DF96040F24410E7E156414047AF06280DF960409C4EB2D5E5564140	2021-07-14 18:52:10.566357+09	1
+29	1	唐招提寺砂利道	砂利道						0103000020E6100000010000000F0000006D1CB1161FF9604060CC96AC8A56414061FBC9181FF96040F0C000C287564140041C42951AF960400EDAAB8F875641405E4D9EB21AF960405B09DD25715641408C101E6D1CF96040FC00A436715641408C101E6D1CF9604099BA2BBB60564140CD3E8F511EF960403AB2F2CB60564140F1A1444B1EF96040554CA59F70564140315D88D51FF96040A8A624EB70564140AED7F4A020F96040CE18E6046D564140DA71C3EF26F960403ACFD8976C564140BDE5EAC726F960403A2009FB765641407714E7A823F960403A2009FB765641403B6F63B323F96040EF586C938A5641406D1CB1161FF9604060CC96AC8A564140	2021-07-14 18:52:10.567297+09	1
+30	1	道路狭い	道幅が狭い、注意	https://unimap.org/photo/map6gh3w/nisinokyo7.jpg					0103000020E610000001000000050000000954FF2012F960405663096B635641405F28603B18F9604044F81741635641405F28603B18F960408141D2A7555641409109F83512F96040FE62B664555641400954FF2012F960405663096B63564140	2021-07-14 18:52:10.568279+09	1
+31	1	唐招提寺通行困難	通行困難						0103000020E61000000100000010000000C0594A9613F96040A14D0E9F74564140C6A354C213F96040D42CD0EE90564140C07630621FF96040096EA46C91564140A83462661FF9604059A7CAF78C564140B4AED17220F96040F99E91088D564140CCF09F6E20F96040BBD05CA7915641407EACE0B721F96040CD3B4ED19156414093C5FD4726F96040EDF0D7648D564140BB7D569929F96040E833A0DE8C564140971AA19F29F960400D7217618A5641402FA704C424F96040EF586C938A564140F792C6681DF96040723788D68A564140F792C6681DF96040D2A755F4875641402235ED621AF9604091B8C7D287564140E1B88C9B1AF96040A14D0E9F74564140C0594A9613F96040A14D0E9F74564140	2021-07-14 18:52:10.569267+09	1
+32	1	唐招提寺通行不可	通行不可						0103000020E6100000010000000D0000007D5BB05417F9604039605793A75641405F42058717F9604027874F3A91564140728BF9B921F960400F2BDCF2915641407B832F4C26F96040A053909F8D56414044334FAE29F9604059A7CAF78C564140088ECBB829F9604042B3EBDE8A564140E4839ECD2AF960408F5033A48A564140857B65DE2AF96040F99E91088D5641403BE5D18D30F96040E3AAB2EF8A564140B7EC10FF30F96040CF11F92EA5564140A837A3E62BF9604027F56569A7564140E544BB0A29F960402104E44BA85641407D5BB05417F9604039605793A7564140	2021-07-14 18:52:10.570207+09	1
+33	1	唐招提寺通行不可	通行不可						0103000020E610000001000000050000001762F54718F96040698D412784564140B4AB90F213F960400A8508388456414014B4C9E113F96040BE326FD5755641401762F54718F960406BD8EF89755641401762F54718F96040698D412784564140	2021-07-14 18:52:10.57121+09	1
+34	1	東院堂通行不可	通行不可。遠くから拝観可。						0103000020E61000000100000005000000CC9717601FF96040514B732B845541401FBE4C1421F96040F2423A3C84554140D7F7E12021F960405C74B2D47A5541406D8FDE701FF960408CF84ECC7A554140CC9717601FF96040514B732B84554140	2021-07-14 18:52:10.572975+09	1
+35	1	玄奘塔通行不可	通行不可						0103000020E610000001000000050000002DEE3F321DF96040CE716E13EE554140499F56D11FF960402D7AA702EE5541409065C1C41FF960400262122EE45541406893C3271DF960400262122EE45541402DEE3F321DF96040CE716E13EE554140	2021-07-14 18:52:10.573887+09	1
+36	1	歩道がなく、道幅が狭い（尼ヶ辻駅）	歩道がなく、道幅が狭いので通行注意						0103000020E61000000100000007000000CE55F31C11F96040083E062B4E574140118DEE20F6F860401975ADBD4F5741408EAED2DDF5F86040ED9C66817657414043AD69DEF1F86040DB3175577657414043AD69DEF1F8604014CFD90242574140CE55F31C11F960400989B48D3F574140CE55F31C11F96040083E062B4E574140	2021-07-14 18:52:10.574934+09	1
+37	1	ガードレールのない道	ガードレールなし、注意	https://unimap.org/photo/map6gh3w/kitamachi2.jpg					0103000020E61000000100000005000000AD6D8AC7C5FA6040F819170E84584140D61A4AEDC5FA6040B0AE0AD462584140D673D2FBC6FA604050A6D1E462584140D029C8CFC6FA6040C8957A1684584140AD6D8AC7C5FA6040F819170E84584140	2021-07-14 18:52:10.576226+09	1
+38	1	般若寺砂利道	砂利道						0103000020E610000001000000070000007B1684F2BEFA604054724EECA1594140126745D4C4FA604048C49448A2594140E36F7B82C4FA6040F81C588E905941401021AE9CBDFA6040B76114048F594140C95A43A9BDFA6040BA4E232D9559414015C440D7BEFA6040A1F2AFE5955941407B1684F2BEFA604054724EECA1594140	2021-07-14 18:52:10.577397+09	1
+39	1	通行困難（車が多い）奈良阪	通行困難（車が多い）						0103000020E6100000010000002C000000F31E679AB0FA60406B64575A465A414081D07AF8B2FA6040EF8D2100385A4140B6847CD0B3FA60405723BBD2325A4140A92F4B3BB5FA6040CF6A813D265A41403788D68AB6FA60404F3FA88B145A4140912C6002B7FA60404EEE77280A5A41401F2C6343B7FA60400B462575025A41403DB83B6BB7FA60401F813FFCFC594140137EA99FB7FA604070EEAF1EF7594140A27DACE0B7FA60403FE5982CEE594140EF8D2100B8FA60401DAB949EE9594140AD84EE92B8FA6040D6E1E82ADD594140EF59D768B9FA60401A506F46CD594140770FD07DB9FA604096ECD808C4594140B9FE5D9FB9FA6040C974E8F4BC594140B9718BF9B9FA60409E5C5320B3594140711E4E60BAFA6040F0315871AA59414071917BBABAFA6040433BA759A0594140F46F97FDBAFA60406B7D91D0965941403BA92F4BBBFA604021E4BCFF8F5941403B1C5DA5BBFA6040CE380D5185594140354580D3BBFA6040CA8CB7955E5941407C0BEBC6BBFA60406E6B0BCF4B59414076C1E09ABBFA60407DCC07043A5941403B3602F1BAFA604022FC8BA031594140F4A3E194B9FA60403D2828452B594140F4FC69A3BAFA60406ABFB51325594140FF428F18BDFA6040BE6A65C22F594140BDC62E51BDFA60407286E28E3759414040321D3ABDFA60403543AA285E594140BDC62E51BDFA6040D4298F6E84594140761A69A9BCFA6040AD6C1FF2965941403A02B859BCFA6040842A357BA059414076340EF5BBFA6040438CD7BCAA594140774EB340BBFA60401CCF6740BD594140FAB9A129BBFA60402CBB6070CD594140FA60191BBAFA604011E0F42EDE594140B3B45373B9FA6040F3E32F2DEA594140EF737CB4B8FA6040B1FA230C035A4140AE9E93DEB7FA6040E388B5F8145A4140AE450BD0B6FA6040FEBAD39D275A41406840BD19B5FA60405CACA8C1345A4140E17F2BD9B1FA6040F3CB608C485A4140F31E679AB0FA60406B64575A465A4140	2021-07-14 18:52:10.578553+09	1
+40	1	通行困難（車が多い）大仏池	通行困難（車が多い）						0103000020E6100000010000000D0000002A1C412AC5FA6040E0BDA3C684584140EE76BD34C5FA604095D39E9273584140B3D1393FC5FA6040EFC7ED974F58414054C90050C5FA604013B534B742584140B20DDC81BAFA6040518369183E5841402C0E677EB5FA60400AD7A3703D584140CD052E8FB5FA6040F0C16B97365841409581035ABAFA6040D2A8C0C9365841407C0E2C47C8FA60409A97C3EE3B584140707A17EFC7FA6040786341615058414011FFB0A5C7FA604095D39E927358414011FFB0A5C7FA6040E0BDA3C6845841402A1C412AC5FA6040E0BDA3C684584140	2021-07-14 18:52:10.580109+09	1
+41	1	通行困難（車が多い）少年刑務所跡	通行困難（車が多い）						0103000020E6100000010000000D000000EECC04C3B9FA60400C3D62F4DC584140302FC03EBAFA604051D845D10359414030BC92E4B9FA604035B22B2D23594140F0A7C64BB7FA604088122D793C5941402B4D4A41B7FA60405D8B16A06D594140774EB340BBFA6040861E317A6E5941407D259012BBFA604098DA52077959414021AE9CBDB3FA60400491459A785941402121CA17B4FA604035B8AD2D3C59414026AAB706B6FA6040F4C29D0B235941402C8194D8B5FA6040F88C446804594140A3E5400FB5FA6040CA198A3BDE584140EECC04C3B9FA60400C3D62F4DC584140	2021-07-14 18:52:10.581685+09	1
+42	1	大きい砂利	砂利が大きく注意	https://unimap.org/photo/map6gh3w/hannyaji3.jpg					0103000020E61000000100000007000000C80C54C6BFFA6040BA6B09F9A05941404FCDE506C3FA60406CCEC133A15941404FCDE506C3FA604073F38DE89E5941404A44F817C1FA60400E2E1D739E594140027E8D24C1FA6040404E98309A594140213EB0E3BFFA60409F56D11F9A594140C80C54C6BFFA6040BA6B09F9A0594140	2021-07-14 18:52:10.582722+09	1
+43	1	側溝の蓋の段差	３か所に側溝の蓋に１ｃｍ程度の段差あり	https://unimap.org/photo/map6gh3w/kitamachi8.jpg	https://unimap.org/photo/map6gh3w/kitamachi7.jpg				0103000020E610000001000000050000006E8AC745B5FA6040C37FBA8102594140B2F33636BBFA604059FD118601594140F46F97FDBAFA604017D4B7CCE95841402DB5DE6FB4FA604011E335AFEA5841406E8AC745B5FA6040C37FBA8102594140	2021-07-14 18:52:10.584162+09	1
+44	1	奈良豆比古神社砂利道	砂利道						0103000020E610000001000000050000002FF83427AFFA6040D15790662C5A4140CF2EDFFAB0FA60400C569C6A2D5A41404015376EB1FA6040C879FF1F275A4140E8A4F78DAFFA60401C08C902265A41402FF83427AFFA6040D15790662C5A4140	2021-07-14 18:52:10.585464+09	1
+45	1	転害門砂利道	砂利道						0103000020E610000001000000070000005439ED29B9FA6040DF89592F86584140BF620D17B9FA60408FFF02418058414018946934B9FA6040545227A089584140FA4674CFBAFA604090847D3B89584140594FADBEBAFA6040DC9C4A0680584140BF620D17B9FA60404D10751F805841405439ED29B9FA6040DF89592F86584140	2021-07-14 18:52:10.586821+09	1
+46	1	般若寺歩道	側溝の溝に注意	https://unimap.org/photo/map6gh3w/kitamachi5.jpg					0103000020E610000001000000050000001024EF1CCAFA6040994869368F594140AB5E7EA7C9FA604046EEE9EA8E5941403F1BB96ECAFA60404C8E3BA583594140ECA694D7CAFA6040CE6C57E8835941401024EF1CCAFA6040994869368F594140	2021-07-14 18:52:10.588066+09	1
+47	1	歩道のない道	歩道がなく、道幅が狭い上に、車が対向するため要注意	https://unimap.org/photo/map6gh3w/kitamachi.jpg					0103000020E61000000100000007000000C7A17E17B6FA6040EDF1423A3C5841409B58E02BBAFA60404CFA7B293C5841403509DE90C6FA6040FDC0559E405841403509DE90C6FA604016855D143D584140D026874FBAFA604048A5D8D138584140C7A17E17B6FA60405453927538584140C7A17E17B6FA6040EDF1423A3C584140	2021-07-14 18:52:10.589087+09	1
+48	1	甘樫丘階段	階段で通行不可						0103000020E610000001000000050000008109DCBA1BFA60402159C0046E3D414044300E2E1DFA604033C4B12E6E3D4140C1C41F451DFA6040187B2FBE683D4140FE9DEDD11BFA6040778368AD683D41408109DCBA1BFA60402159C0046E3D4140	2021-07-14 18:52:10.589978+09	1
+49	1	甘樫丘階段2	階段で通行不可						0103000020E6100000010000000500000094F6065F18FA60406FBC3B32563D41407CB4386318FA604083C30B22523D4140BDFC4E9319FA604041D47D00523D41405EF415A419FA60402DCDAD10563D414094F6065F18FA60406FBC3B32563D4140	2021-07-14 18:52:10.591261+09	1
+73	1	東院伽藍付近砂利道	砂利道						0103000020E61000000100000005000000F4A8F8BFA3F7604087FD9E58A74E4140B151D66FA6F76040A99F3715A94E41407592AD2EA7F76040F12E17F19D4E4140B29FC552A4F7604062D68BA19C4E4140F4A8F8BFA3F7604087FD9E58A74E4140	2021-07-14 18:52:10.612116+09	1
+50	1	甘樫丘展望広場	下り傾斜、転落防止柵なく要注意	https://unimap.org/photo/map6gh3w/amakasi6.jpg	https://unimap.org/photo/map6gh3w/amakasi5.jpg				0103000020E610000001000000090000003FA7203F1BFA60407C0C569C6A3D41407BD976DA1AFA6040ECFA05BB613D41409510ACAA17FA6040158E2095623D4140772B4B7416FA604085CD0017643D41401823128516FA604022C154336B3D414012A5BDC117FA6040F5F57CCD723D4140404E98301AFA60409BAA7B64733D4140812381061BFA60406C5A2904723D41403FA7203F1BFA60407C0C569C6A3D4140	2021-07-14 18:52:10.592303+09	1
+51	1	亀形石造物砂利道	砂利道						0103000020E6100000010000000500000009C3802557FA6040DFC2BAF1EE3C41406EA296E656FA6040CA367007EA3C414000FF942A51FA6040CE8B135FED3C414005A2276552FA6040616D8C9DF03C414009C3802557FA6040DFC2BAF1EE3C4140	2021-07-14 18:52:10.593312+09	1
+52	1	石畳の歩道	石畳で移動注意	https://unimap.org/photo/map6gh3w/asuka14.jpg					0103000020E61000000100000007000000908312665AFA6040BB641C23D93B4140908312665AFA604040DF162CD53B4140812216316CFA6040B8770DFAD23B41403F726BD26DFA60406C425A63D03B414021CCED5E6EFA60403A22DFA5D43B4140637C98BD6CFA6040C289E8D7D63B4140908312665AFA6040BB641C23D93B4140	2021-07-14 18:52:10.59419+09	1
+53	1	橘寺砂利道	砂利道						0103000020E61000000100000005000000E02EFB7527FA6040EAD0E979373C4140B1E1E99532FA60402046088F363C414010EA228532FA60404E2844C0213C4140B6813B5027FA604036CCD078223C4140E02EFB7527FA6040EAD0E979373C4140	2021-07-14 18:52:10.595212+09	1
+54	1	橘寺石畳	石畳で移動注意	https://unimap.org/photo/map6gh3w/tachibana2.jpg					0103000020E6100000010000000B0000008099EFE027FA60401C25AFCE313C41408099EFE027FA6040179CC1DF2F3C4140503A91602AFA6040D6AC33BE2F3C4140677C5F5C2AFA6040680932022A3C41407FA4880C2BFA6040C7116BF1293C41406762BA102BFA6040DE054A0A2C3C4140F3380CE62FFA60408AABCABE2B3C4140F3380CE62FFA6040540262122E3C414079CDAB3A2BFA6040B9C7D2872E3C4140A85148322BFA60409946938B313C41408099EFE027FA60401C25AFCE313C4140	2021-07-14 18:52:10.596175+09	1
+55	1	側溝が続く道	側溝に注意						0103000020E6100000010000001E00000020F0C00042FA6040111AC1C6F53B4140BAF605F442FA6040C61858C7F13B41403DBB7CEB43FA60403FE5982CEE3B4140BF7FF3E244FA60402EE23B31EB3B4140A14CA3C945FA60407F4FAC53E53B4140242BBF0C46FA60408978EBFCDB3B4140C408E1D146FA60404C8DD0CFD43B4140E7C41EDA47FA6040963D096CCE3B41406F2C280C4AFA6040766B990CC73B4140730E9E094DFA6040BB5E9A22C03B41403674B33F50FA60408FDE701FB93B41402448A5D851FA6040F18288D4B43B4140E6ADBA0E55FA60405FB87361A43B4140B5A7E49C58FA6040AF25E4839E3B4140C328081E5FFA60405D16139B8F3B414022179CC15FFA60401502B9C4913B41409B560A815CFA60403A9160AA993B41408B6D52D158FA60400118CFA0A13B4140A417B5FB55FA6040871744A4A63B4140DC67959952FA604020D3DA34B63B4140A110018750FA6040BDC62E51BD3B414014ECBFCE4DFA604054FD4AE7C33B41406F1283C04AFA604069554B3ACA3B41400A815CE248FA6040B9DFA128D03B41400551F70148FA604093399677D53B41406ABDDF6847FA60400C570740DC3B41406BD784B446FA604073A1F2AFE53B4140242BBF0C46FA60409F211CB3EC3B414019726C3D43FA6040111AC1C6F53B414020F0C00042FA6040111AC1C6F53B4140	2021-07-14 18:52:10.597089+09	1
+56	1	柵の無い道	川に柵がなく、通行注意						0103000020E6100000010000000F00000003232F6B62FA604080D591239D3B41401C40BFEF5FFA6040E2CAD93BA33B41407D09151C5EFA6040381268B0A93B4140B325AB225CFA6040F8A75489B23B4140D1CB28965BFA604054E0641BB83B4140965AEF375AFA6040621399B9C03B414055DE8E705AFA6040FD87F4DBD73B41404F2157EA59FA6040DF6E490ED83B4140F6EFFACC59FA60400FB9196EC03B4140373811FD5AFA60405BD1E638B73B4140D1CB28965BFA6040FE98D6A6B13B414059C0046E5DFA60404BB1A371A83B41404030478F5FFA6040CBD6FA22A13B4140C2C073EF61FA6040B08D78B29B3B414003232F6B62FA604080D591239D3B4140	2021-07-14 18:52:10.597867+09	1
+57	1	柵の無い用水路と道のでこぼこ	用水路に柵がないため落下注意。また、所々にでこぼこ道あり	https://unimap.org/photo/map6gh3w/asuka3.jpg	https://unimap.org/photo/map6gh3w/asuka2.jpg				0103000020E6100000010000000500000005DF347DF6F96040F6ECB94C4D3C4140C9AF1F6203FA604091F3FE3F4E3C4140EC12D55B03FA60401C5F7B66493C4140C939B187F6F9604016A243E0483C414005DF347DF6F96040F6ECB94C4D3C4140	2021-07-14 18:52:10.598581+09	1
+58	1	でこぼこ道（周遊道付近）	所々にでこぼこあり	https://unimap.org/photo/map6gh3w/asuka9.jpg					0103000020E6100000010000000500000060E7A6CD38FA6040A0FD4811193C41404487C09140FA6040F357C85C193C4140E57E87A240FA6040F4BF5C8B163C414060E7A6CD38FA604030F2B226163C414060E7A6CD38FA6040A0FD4811193C4140	2021-07-14 18:52:10.599301+09	1
+59	1	通行要注意	動物除け高電圧と側溝に柵がなく、横傾斜があるため通行要注意	https://unimap.org/photo/map6gh3w/asuka11.jpg	https://unimap.org/photo/map6gh3w/asuka10.jpg				0103000020E61000000100000005000000567F846140FA6040C4B0C398F43B4140DD3F16A243FA604096438B6CE73B414023F7747547FA60403337DF88EE3B41409BA9108F44FA604061A417B5FB3B4140567F846140FA6040C4B0C398F43B4140	2021-07-14 18:52:10.600147+09	1
+60	1	石のでこぼこ（石舞台）	石のでこぼこに注意	https://unimap.org/photo/map6gh3w/ishibutai5.jpg					0103000020E6100000010000000500000004745FCE6CFA604054E6E61BD13B414089B2B79473FA6040A1664815C53B41404354E1CF70FA60405648F949B53B4140F92D3A596AFA6040747E8AE3C03B414004745FCE6CFA604054E6E61BD13B4140	2021-07-14 18:52:10.601013+09	1
+61	1	橿原神宮砂利道	砂利道						0103000020E6100000010000001B000000F7C77BD54AF960407B849A21553E414057EA59104AF960404C1762F5473E4140CA4FAA7D3AF96040603B18B14F3E414089D349B63AF960404643C6A3543E41403E7958A835F9604086CABF96573E414094895B0531F96040AE2990D9593E4140B779E3A430F96040BEDBBC71523E4140EEAF1EF72DF9604076FBAC32533E4140EAE74D452AF96040B39597FC4F3E414027C11BD228F960407FBC57AD4C3E4140A46FD23428F960400CAD4ECE503E41408AABCABE2BF96040E5D2F885573E4140CC0D863A2CF960405F24B4E55C3E41402B3064752BF9604047E5266A693E4140677C5F5C2AF960408638D6C56D3E414003780B2428F96040BC79AA436E3E4140BD72BD6D26F96040EF1EA0FB723E41407714E7A823F960400A68226C783E414036E675C421F960403CA583F57F3E41403525598723F960409126DE019E3E414002D4D4B235F96040069E7B0F973E4140DA01D71533F96040D520CCED5E3E41400CB265F93AF96040E9279CDD5A3E414035D252793BF960402E043928613E4140DFA7AAD040F960403B1A87FA5D3E4140D95DA0A440F96040E9279CDD5A3E4140F7C77BD54AF960407B849A21553E4140	2021-07-14 18:52:10.601815+09	1
+62	1	通行困難（車が多い）	通行困難（車が多い）						0103000020E610000001000000070000007958A8354DF96040F913950D6B3E4140CDCCCCCC4CF9604058CB9D99603E4140C7293A924BF96040745FCE6C573E4140E59B6D6E4CF96040A9A0A2EA573E414085ECBC8D4DF9604016DC0F78603E41403D997FF44DF9604046B1DCD26A3E41407958A8354DF96040F913950D6B3E4140	2021-07-14 18:52:10.602546+09	1
+63	1	でこぼこ注意	でこぼこしている箇所が多い	https://unimap.org/akalstabimage/kashihara/kasihara4.jpg					0103000020E61000000100000007000000A86E2EFE36F96040B5A4A31CCC404140A86E2EFE36F960400ED940BAD84041400264E8D841F960400ED940BAD84041408542041C42F960406F83DA6FED404140D21DC4CE14F96040207EFE7BF04041405589B2B714F960402BA1BB24CE404140A86E2EFE36F96040B5A4A31CCC404140	2021-07-14 18:52:10.603256+09	1
+64	1	通行困難（車が多い）	通行困難（車が多い）						0103000020E61000000100000014000000E8F8687146F96040DD43C2F7FE404140F3CB608C48F9604051D845D10341414051A04FE449F96040AF78EA91064141408D45D3D949F9604051F52B9D0F414140166EF9484AF960409A266C3F19414140B00111E24AF96040228E75711B4141406FF085C954F960400475CAA31B41414010E84CDA54F9604013109370214141403387A4164AF960403DD7F7E1204141402EE411DC48F960408787307E1A4141406A16687748F96040857D3B890841414065A71FD445F96040F88C4468044141404D6551D845F9604057CF49EF1B414140EC67B11449F9604075E8F4BC1B4141403387A4164AF96040DDCEBEF220414140C6FD47A643F96040247B849A2141414007077B1343F96040FC8BA031934041400685419946F96040FC8BA03193404140EE42739D46F9604044882B67EF404140E8F8687146F96040DD43C2F7FE404140	2021-07-14 18:52:10.603974+09	1
+65	1	石が埋まっている道	道に石が埋まっている箇所あり	https://unimap.org/akalstabimage/kasugataisha/kasuga3.jpg					0103000020E61000000100000012000000132C0E67FEFA6040B2135E8253574140D1C952EBFDFA60407B6AF5D555574140910E0F61FCFA604023BBD23252574140C3482F6AF7FA60400B5F5FEB5257414087A3AB74F7FA604031D120054F5741404F92AE99FCFA60405B9885764E574140A5D93C0E03FB60401C3F541A31574140289EB30504FB6040950B957F2D574140AFD172A007FB6040DACA4BFE275741407B4963B40EFB60402D25CB49285741408FFAEB1516FB60403A3B191C255741408FFAEB1516FB604015C95702295741403ACD02ED0EFB6040950B957F2D574140B39943520BFB60405A0D897B2C574140EA76F69507FB604001C287122D574140E694809804FB6040DB4FC6F830574140D2562591FDFA60407E3A1E3350574140132C0E67FEFA6040B2135E8253574140	2021-07-14 18:52:10.604874+09	1
+66	1	石が埋まっている道	道に石が埋まっている箇所あり	https://unimap.org/akalstabimage/kasugataisha/kasuga3.jpg					0103000020E6100000010000000D000000C26B97361CFB604006854199465741405CFFAECF1CFB6040E2AE5E4546574140F8C610001CFB60402F52280B5F574140FD8348861CFB60408E5A61FA5E5741403882548A1DFB6040D600A5A146574140446FF1F01EFB6040FA0AD28C45574140DEE8633E20FB60403D62F4DC42574140E4326E6A20FB6040D57B2AA73D574140A25D85941FFB6040A5F78DAF3D5741403D0B42791FFB6040BBB7223141574140D95F764F1EFB604025068195435741401B9DF3531CFB6040ADA1D45E44574140C26B97361CFB60400685419946574140	2021-07-14 18:52:10.606054+09	1
+67	1	でこぼこ注意	でこぼこ道						0103000020E61000000100000009000000F4A96395D2FA6040834E081D7457414053B29C84D2FA60400A82C7B777574140A7406667D1FA604044183F8D7B574140C0779B37CEFA60400D6FD6E07D5741409DD5027BCCFA6040FB03E5B67D5741405C59A2B3CCFA6040992B836A83574140B1868BDCD3FA6040A8A9656B7D574140AC3C81B0D3FA60402446CF2D74574140F4A96395D2FA6040834E081D74574140	2021-07-14 18:52:10.606823+09	1
+68	1	春日大社砂利道	砂利道						0103000020E6100000010000000D00000015E0BBCD1BFB60405473B9C15057414048F8DEDF20FB60408AE8D7D64F574140CA15DEE522FB60400C76C3B645574140D3669C8628FB604083DA6FED44574140F722DA8E29FB60402BBD361B2B5741403946B24728FB6040E7E099D024574140077C7E1821FB6040B890477023574140A88DEA7420FB60404E5FCFD72C574140F7AC6BB41CFB6040FB04508C2C574140168733BF1AFB604056F2B1BB40574140E0F76F5E1CFB6040DD257156445741405DA626C11BFB604012842BA05057414015E0BBCD1BFB60405473B9C150574140	2021-07-14 18:52:10.60789+09	1
+69	1	深い砂利道	砂利道が深い						0103000020E6100000010000000500000095F0845EFFFA6040795A7EE02A5741407D073F7100FB6040F92EA52E19574140F981AB3C01FB604040DB6AD6195741405F0839EFFFFA6040DE1FEF552B57414095F0845EFFFA6040795A7EE02A574140	2021-07-14 18:52:10.608788+09	1
+70	1	鹿苑砂利道	砂利道鹿苑						0103000020E6100000010000000800000023A298BC01FB6040F0DB10E33557414095F0845EFFFA6040D27135B22B5741407D073F7100FB6040118B187618574140B9C667B2FFFA60408FE046CA1657414000732D5A00FB604037FDD98F145741409AEC9FA701FB604064E597C1185741409FE8BAF003FB60401361C3D32B57414023A298BC01FB6040F0DB10E335574140	2021-07-14 18:52:10.609785+09	1
+71	1	萬葉植物園砂利道	砂利道植物園						0103000020E610000001000000090000008BC40435FCFA6040467A51BB5F574140FA9B508800FB60403C855CA967574140179E978A0DFB60405DBF60376C5741405ED72FD80DFB60400F63D2DF4B574140815F234910FB60402194F771345741401893FE5E0AFB6040E96514CB2D574140CDAB3AAB05FB6040FF76D9AF3B574140185C7347FFFA60409C8713984E5741408BC40435FCFA6040467A51BB5F574140	2021-07-14 18:52:10.610611+09	1
+72	1	萬葉植物園石畳	石畳凸凹が強いので要注意	https://unimap.org/akalstabimage/kasugataisha/manyou2.jpg					0103000020E61000000100000005000000132C0E67FEFA6040E75432005457414048E00F3FFFFA60404BE658DE5557414048FAB48AFEFA6040438D42925957414043CA4FAAFDFA604062DA37F757574140132C0E67FEFA6040E754320054574140	2021-07-14 18:52:10.61137+09	1
+74	1	法隆寺砂利道	砂利道と舗装道が混在						0103000020E6100000010000000B00000018B5FB5580F76040B0CBF09F6E4E4140DDB6EF517FF760407407B133854E414041B8020A75F76040247D5A457F4E4140F629C76471F760409D0E643DB54E4140E5ED08A785F7604075CC79C6BE4E4140A9FA95CE87F760407711A628974E414076C075C58CF7604070ECD973994E4140404B57B08DF76040009013268C4E4140DCF5D21481F760401BBCAFCA854E4140A680B4FF81F760403733FAD1704E414018B5FB5580F76040B0CBF09F6E4E4140	2021-07-14 18:52:10.612872+09	1
+75	1	でこぼこで柵がない道	でこぼこで溝に柵がないため落下注意	https://unimap.org/akalstabimage/ikaruga/oji.jpg					0103000020E6100000010000000A0000005C77F35487F66040DE567A6D364C4140CE55F31C91F660409929ADBF254C41403A9160AA99F660406346787B104C41402CD49AE69DF6604012BC218D0A4C4140CD3E8F519EF66040033E3F8C104C41407B6649809AF6604078D2C265154C4140B35DA10F96F660403DF19C2D204C41408CBFED0992F66040D3BF2495294C4140C6866EF687F66040FAD346753A4C41405C77F35487F66040DE567A6D364C4140	2021-07-14 18:52:10.61371+09	1
+76	1	通行困難（車が多い）	通行困難（車が多い）						0103000020E61000000100000005000000E3A59BC4A0F76040D4B7CCE9B24E41407171546EA2F76040C9E6AA798E4E4140EED11BEEA3F7604045D4449F8F4E4140A7CCCD37A2F76040CEC64ACCB34E4140E3A59BC4A0F76040D4B7CCE9B24E4140	2021-07-14 18:52:10.614581+09	1
+77	1	通行困難（車が多い）	通行困難（車が多い）						0103000020E61000000100000023000000FA28232E80F76040AC8DB1135E4E4140F17EDC7E79F76040DEAD2CD1594E41403672DD9472F7604006BCCCB0514E41406518778368F76040EA3E00A94D4E4140986C3CD862F760408B36C7B94D4E4140066685225DF7604010B1C1C2494E414066A208A95BF76040C4E9245B5D4E414002840F255AF760403276C24B704E4140DE54A4C258F76040EBC9FCA36F4E4140C07ADCB75AF76040B22D03CE524E4140C5909C4C5CF76040A915A6EF354E4140EE7C3F355EF7604019CA8976154E414029081EDF5EF76040861C5BCF104E4140E99AC9375BF76040D200DE02094E41402A70B20D5CF76040A41820D1044E414034828DEB5FF7604083FB010F0C4E41403200547163F76040DC291DACFF4D4140FDA4DAA763F76040056C0723F64D4140D880087165F760400262122EE44D41405AB8ACC266F76040E4141DC9E54D41407905A22765F7604022516859F74D4140552FBFD364F76040BEDC2747014E4140F8A8BF5E61F76040102043C70E4E4140A794D74A68F760407923F3C81F4E414024438EAD67F76040596E6935244E4140D5EC815660F76040D80E46EC134E41404CDE00335FF76040569E40D8294E4140E84CDA545DF76040E9B985AE444E4140F19D98F562F76040ED0E2906484E414088BA0F406AF7604069FCC22B494E41401AC1C6F56FF7604068942EFD4B4E41405ABBED4273F76040448A01124D4E41404A9693507AF76040A417B5FB554E414018B5FB5580F7604044A7E7DD584E4140FA28232E80F76040AC8DB1135E4E4140	2021-07-14 18:52:10.615582+09	1
+78	1	法隆寺参道石畳	石畳の凸凹注意	https://unimap.org/akalstabimage/ikaruga/horyuji4.jpg					0103000020E61000000100000005000000645DDC4683F76040B4E6C75F5A4E4140EBC4E57885F7604054AA44D95B4E4140EF8CB62A89F760403ACAC16C024E4140EB909BE186F760401137A792014E4140645DDC4683F76040B4E6C75F5A4E4140	2021-07-14 18:52:10.616552+09	1
+79	1	法隆寺参道石畳	石畳の凸凹注意	https://unimap.org/akalstabimage/ikaruga/horyuji4.jpg					0103000020E61000000100000005000000DC291DAC7FF760406EA296E6564E41401DCBBBEA81F76040FDFA2136584E41402D27A1F485F760405917B7D1004E4140E1F1ED5D83F76040EE940ED6FF4D4140DC291DAC7FF760406EA296E6564E4140	2021-07-14 18:52:10.617272+09	1
+80	1	東院伽藍付近石畳	石畳の凸凹注意						0103000020E610000001000000050000008BFED0CC93F76040A20C5531954E41406684B707A1F76040A7B228ECA24E41407862D68BA1F760404489963C9E4E4140670E492D94F76040DA1D520C904E41408BFED0CC93F76040A20C5531954E4140	2021-07-14 18:52:10.61806+09	1
+4	2	東金堂	階段のため、車いすの種類により通行困難	\N	\N	\N	\N	\N	0103000020E61000000100000005000000F82A323AA0FA60407B7077D66E574140AB1E1494A2FA6040BA5F05F86E5741404316DBA4A2FA6040230890A1635741409022F94AA0FA6040230890A163574140F82A323AA0FA60407B7077D66E574140	2021-07-15 19:04:45.196505+09	1
+8	2	鹿が多い	鹿がたくさん座っていて、フンがたくさん有るため、通行注意	\N	\N	\N	\N	\N	0103000020E6100000010000001200000083BF982DD9FA60401358005306584140489B38B9DFFA6040135800530658414012D5CDC5DFFA60402753CC41D05741405D5419C6DDFA60402CACE28DCC57414098B7CEBFDDFA60405EAB048BC357414017ACAA97DFFA604037B4C876BE57414012D5CDC5DFFA60406B662D05A4574140C5D2DC0AE1FA60406B662D05A457414011786000E1FA60408D0E48C2BE5741405F7DAEB6E2FA60408C3E1F65C4574140F42A6B9BE2FA6040C7B22781CD574140C188D2DEE0FA60400FF758FAD05741403F1DE4F5E0FA60401358005306584140226CB1DBE7FA604054478E7406584140D5C62DE6E7FA60409E8BBFED0958414015C26A2CE1FA6040D67A4D0F0A58414083BF982DD9FA6040F0E53E390A58414083BF982DD9FA60401358005306584140	2021-07-15 19:05:44.580097+09	1
+\.
+
+
+--
+-- Name: auth_group_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.auth_group_id_seq', 1, false);
+
+
+--
+-- Name: auth_group_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.auth_group_permissions_id_seq', 1, false);
+
+
+--
+-- Name: auth_permission_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.auth_permission_id_seq', 56, true);
+
+
+--
+-- Name: auth_user_groups_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.auth_user_groups_id_seq', 1, false);
+
+
+--
+-- Name: auth_user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.auth_user_id_seq', 1, true);
+
+
+--
+-- Name: auth_user_user_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.auth_user_user_permissions_id_seq', 1, false);
+
+
+--
+-- Name: django_admin_log_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.django_admin_log_id_seq', 53, true);
+
+
+--
+-- Name: django_content_type_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.django_content_type_id_seq', 14, true);
+
+
+--
+-- Name: django_migrations_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.django_migrations_id_seq', 29, true);
+
+
+--
+-- Name: unimap_area_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.unimap_area_id_seq', 2, true);
+
+
+--
+-- Name: unimap_hotel_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.unimap_hotel_id_seq', 8, true);
+
+
+--
+-- Name: unimap_imagemap_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.unimap_imagemap_id_seq', 2, true);
+
+
+--
+-- Name: unimap_pointdata_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.unimap_pointdata_id_seq', 28, true);
+
+
+--
+-- Name: unimap_route_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.unimap_route_id_seq', 10, true);
+
+
+--
+-- Name: unimap_toilet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.unimap_toilet_id_seq', 61, true);
+
+
+--
+-- Name: unimap_zone_id_seq; Type: SEQUENCE SET; Schema: public; Owner: unimap
+--
+
+SELECT pg_catalog.setval('public.unimap_zone_id_seq', 80, true);
+
+
+--
+-- Name: auth_group auth_group_name_key; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_group
+    ADD CONSTRAINT auth_group_name_key UNIQUE (name);
+
+
+--
+-- Name: auth_group_permissions auth_group_permissions_group_id_permission_id_0cd325b0_uniq; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_permission_id_0cd325b0_uniq UNIQUE (group_id, permission_id);
+
+
+--
+-- Name: auth_group_permissions auth_group_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_group auth_group_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_group
+    ADD CONSTRAINT auth_group_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_permission auth_permission_content_type_id_codename_01ab375a_uniq; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_permission
+    ADD CONSTRAINT auth_permission_content_type_id_codename_01ab375a_uniq UNIQUE (content_type_id, codename);
+
+
+--
+-- Name: auth_permission auth_permission_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_permission
+    ADD CONSTRAINT auth_permission_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups auth_user_groups_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_groups auth_user_groups_user_id_group_id_94350c0c_uniq; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_group_id_94350c0c_uniq UNIQUE (user_id, group_id);
+
+
+--
+-- Name: auth_user auth_user_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user
+    ADD CONSTRAINT auth_user_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permissions_user_id_permission_id_14a6b632_uniq; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_permission_id_14a6b632_uniq UNIQUE (user_id, permission_id);
+
+
+--
+-- Name: auth_user auth_user_username_key; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user
+    ADD CONSTRAINT auth_user_username_key UNIQUE (username);
+
+
+--
+-- Name: django_admin_log django_admin_log_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.django_admin_log
+    ADD CONSTRAINT django_admin_log_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_content_type django_content_type_app_label_model_76bd3d3b_uniq; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.django_content_type
+    ADD CONSTRAINT django_content_type_app_label_model_76bd3d3b_uniq UNIQUE (app_label, model);
+
+
+--
+-- Name: django_content_type django_content_type_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.django_content_type
+    ADD CONSTRAINT django_content_type_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_migrations django_migrations_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.django_migrations
+    ADD CONSTRAINT django_migrations_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: django_session django_session_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.django_session
+    ADD CONSTRAINT django_session_pkey PRIMARY KEY (session_key);
+
+
+--
+-- Name: unimap_area unimap_area_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_area
+    ADD CONSTRAINT unimap_area_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: unimap_hotel unimap_hotel_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_hotel
+    ADD CONSTRAINT unimap_hotel_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: unimap_imagemap unimap_imagemap_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_imagemap
+    ADD CONSTRAINT unimap_imagemap_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: unimap_pointdata unimap_pointdata_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_pointdata
+    ADD CONSTRAINT unimap_pointdata_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: unimap_route unimap_route_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_route
+    ADD CONSTRAINT unimap_route_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: unimap_toilet unimap_toilet_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_toilet
+    ADD CONSTRAINT unimap_toilet_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: unimap_zone unimap_zone_pkey; Type: CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_zone
+    ADD CONSTRAINT unimap_zone_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: auth_group_name_a6ea08ec_like; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX auth_group_name_a6ea08ec_like ON public.auth_group USING btree (name varchar_pattern_ops);
+
+
+--
+-- Name: auth_group_permissions_group_id_b120cbf9; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX auth_group_permissions_group_id_b120cbf9 ON public.auth_group_permissions USING btree (group_id);
+
+
+--
+-- Name: auth_group_permissions_permission_id_84c5c92e; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX auth_group_permissions_permission_id_84c5c92e ON public.auth_group_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_permission_content_type_id_2f476e4b; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX auth_permission_content_type_id_2f476e4b ON public.auth_permission USING btree (content_type_id);
+
+
+--
+-- Name: auth_user_groups_group_id_97559544; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX auth_user_groups_group_id_97559544 ON public.auth_user_groups USING btree (group_id);
+
+
+--
+-- Name: auth_user_groups_user_id_6a12ed8b; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX auth_user_groups_user_id_6a12ed8b ON public.auth_user_groups USING btree (user_id);
+
+
+--
+-- Name: auth_user_user_permissions_permission_id_1fbb5f2c; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX auth_user_user_permissions_permission_id_1fbb5f2c ON public.auth_user_user_permissions USING btree (permission_id);
+
+
+--
+-- Name: auth_user_user_permissions_user_id_a95ead1b; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX auth_user_user_permissions_user_id_a95ead1b ON public.auth_user_user_permissions USING btree (user_id);
+
+
+--
+-- Name: auth_user_username_6821ab7c_like; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX auth_user_username_6821ab7c_like ON public.auth_user USING btree (username varchar_pattern_ops);
+
+
+--
+-- Name: django_admin_log_content_type_id_c4bce8eb; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX django_admin_log_content_type_id_c4bce8eb ON public.django_admin_log USING btree (content_type_id);
+
+
+--
+-- Name: django_admin_log_user_id_c564eba6; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX django_admin_log_user_id_c564eba6 ON public.django_admin_log USING btree (user_id);
+
+
+--
+-- Name: django_session_expire_date_a5c62663; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX django_session_expire_date_a5c62663 ON public.django_session USING btree (expire_date);
+
+
+--
+-- Name: django_session_session_key_c0390e0f_like; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX django_session_session_key_c0390e0f_like ON public.django_session USING btree (session_key varchar_pattern_ops);
+
+
+--
+-- Name: unimap_hotel_AreaId_id_9200ddc7; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX "unimap_hotel_AreaId_id_9200ddc7" ON public.unimap_hotel USING btree ("AreaId_id");
+
+
+--
+-- Name: unimap_hotel_geom_id; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX unimap_hotel_geom_id ON public.unimap_hotel USING gist (geom);
+
+
+--
+-- Name: unimap_imagemap_AreaId_id_92b71962; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX "unimap_imagemap_AreaId_id_92b71962" ON public.unimap_imagemap USING btree ("AreaId_id");
+
+
+--
+-- Name: unimap_pointdata_AreaId_id_e69419f1; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX "unimap_pointdata_AreaId_id_e69419f1" ON public.unimap_pointdata USING btree ("AreaId_id");
+
+
+--
+-- Name: unimap_pointdata_geom_id; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX unimap_pointdata_geom_id ON public.unimap_pointdata USING gist (geom);
+
+
+--
+-- Name: unimap_route_AreaId_id_d8616a65; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX "unimap_route_AreaId_id_d8616a65" ON public.unimap_route USING btree ("AreaId_id");
+
+
+--
+-- Name: unimap_route_geom_id; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX unimap_route_geom_id ON public.unimap_route USING gist (geom);
+
+
+--
+-- Name: unimap_toilet_AreaId_id_a14b7f33; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX "unimap_toilet_AreaId_id_a14b7f33" ON public.unimap_toilet USING btree ("AreaId_id");
+
+
+--
+-- Name: unimap_toilet_geom_id; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX unimap_toilet_geom_id ON public.unimap_toilet USING gist (geom);
+
+
+--
+-- Name: unimap_zone_AreaId_id_71c909b1; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX "unimap_zone_AreaId_id_71c909b1" ON public.unimap_zone USING btree ("AreaId_id");
+
+
+--
+-- Name: unimap_zone_geom_id; Type: INDEX; Schema: public; Owner: unimap
+--
+
+CREATE INDEX unimap_zone_geom_id ON public.unimap_zone USING gist (geom);
+
+
+--
+-- Name: auth_group_permissions auth_group_permissio_permission_id_84c5c92e_fk_auth_perm; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissio_permission_id_84c5c92e_fk_auth_perm FOREIGN KEY (permission_id) REFERENCES public.auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_group_permissions auth_group_permissions_group_id_b120cbf9_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_group_permissions
+    ADD CONSTRAINT auth_group_permissions_group_id_b120cbf9_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES public.auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_permission auth_permission_content_type_id_2f476e4b_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_permission
+    ADD CONSTRAINT auth_permission_content_type_id_2f476e4b_fk_django_co FOREIGN KEY (content_type_id) REFERENCES public.django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups auth_user_groups_group_id_97559544_fk_auth_group_id; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_group_id_97559544_fk_auth_group_id FOREIGN KEY (group_id) REFERENCES public.auth_group(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_groups auth_user_groups_user_id_6a12ed8b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user_groups
+    ADD CONSTRAINT auth_user_groups_user_id_6a12ed8b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm FOREIGN KEY (permission_id) REFERENCES public.auth_permission(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: auth_user_user_permissions auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.auth_user_user_permissions
+    ADD CONSTRAINT auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_log django_admin_log_content_type_id_c4bce8eb_fk_django_co; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.django_admin_log
+    ADD CONSTRAINT django_admin_log_content_type_id_c4bce8eb_fk_django_co FOREIGN KEY (content_type_id) REFERENCES public.django_content_type(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: django_admin_log django_admin_log_user_id_c564eba6_fk_auth_user_id; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.django_admin_log
+    ADD CONSTRAINT django_admin_log_user_id_c564eba6_fk_auth_user_id FOREIGN KEY (user_id) REFERENCES public.auth_user(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: unimap_hotel unimap_hotel_AreaId_id_9200ddc7_fk_unimap_area_id; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_hotel
+    ADD CONSTRAINT "unimap_hotel_AreaId_id_9200ddc7_fk_unimap_area_id" FOREIGN KEY ("AreaId_id") REFERENCES public.unimap_area(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: unimap_imagemap unimap_imagemap_AreaId_id_92b71962_fk_unimap_area_id; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_imagemap
+    ADD CONSTRAINT "unimap_imagemap_AreaId_id_92b71962_fk_unimap_area_id" FOREIGN KEY ("AreaId_id") REFERENCES public.unimap_area(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: unimap_pointdata unimap_pointdata_AreaId_id_e69419f1_fk_unimap_area_id; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_pointdata
+    ADD CONSTRAINT "unimap_pointdata_AreaId_id_e69419f1_fk_unimap_area_id" FOREIGN KEY ("AreaId_id") REFERENCES public.unimap_area(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: unimap_route unimap_route_AreaId_id_d8616a65_fk_unimap_area_id; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_route
+    ADD CONSTRAINT "unimap_route_AreaId_id_d8616a65_fk_unimap_area_id" FOREIGN KEY ("AreaId_id") REFERENCES public.unimap_area(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: unimap_toilet unimap_toilet_AreaId_id_a14b7f33_fk_unimap_area_id; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_toilet
+    ADD CONSTRAINT "unimap_toilet_AreaId_id_a14b7f33_fk_unimap_area_id" FOREIGN KEY ("AreaId_id") REFERENCES public.unimap_area(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- Name: unimap_zone unimap_zone_AreaId_id_71c909b1_fk_unimap_area_id; Type: FK CONSTRAINT; Schema: public; Owner: unimap
+--
+
+ALTER TABLE ONLY public.unimap_zone
+    ADD CONSTRAINT "unimap_zone_AreaId_id_71c909b1_fk_unimap_area_id" FOREIGN KEY ("AreaId_id") REFERENCES public.unimap_area(id) DEFERRABLE INITIALLY DEFERRED;
+
+
+--
+-- PostgreSQL database dump complete
+--
+

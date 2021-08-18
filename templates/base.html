@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>オンライン版奈良ユニバーサル観光マップ|Nara Universal Map Online</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- favicon -->
+    <link rel="icon" href="/static/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/theme.bootstrap_4.min.css">
+    <!-- Bootstrap/jquery js -->
+    <script src="/static/js/jquery-3.5.1.slim.min.js"></script>
+    <script src="/static/js/jquery.tablesorter.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="/static/css/leaflet.css" />
+    <link rel="stylesheet" href="/static/css/unimap.css" />
+
+    <!-- local ico -- 
+    <link rel="icon" href="/static/favicon.ico"> -->
+    <!-- local css --
+    <link rel="stylesheet" href="/static/css/iotview.css"> -->
+    <meta name="keywords" content="車椅子,障碍者,地図,奈良公園,東大寺,大仏,高畑,奈良町,ならまち,北町,きたまち,唐招提寺,薬師寺,石舞台,万葉文化館">
+    <meta name="description" content="車いす使用者の方などを対象に、奈良観光を安全に楽しんでいただけるよう障がい者自身が調査し、バリアフリー情報を重視した観光マップです。">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row mx-auto stdblk">
+	<div class="bg-secondary text-white text-center p-2", style="width: 100%;">NeoUnimap</div>
+      </div>
+      {% if messages %}
+      <div class="mx-auto text-center stdblk">
+	<dl>
+          {% for message in messages %}
+          <dt>{{message}}</dt>
+          {% endfor %}
+	</dl>
+      </div>
+      {% endif %}
+
+      {% block content %}
+      {% endblock %}
+      
+      <hr class="mx-auto m-0" style="width: 100%">
+      
+      <div class="row mx-auto stdblk">
+	<div class="text-right p-1", style="width: 100%;">
+	  <a href="/admin" class="btn btn-outline-secondary text-black-50 btn-sm m-1" role="button">管理画面</a>
+	</div>
+      </div>
+    </div>
+  </body>
+</html>

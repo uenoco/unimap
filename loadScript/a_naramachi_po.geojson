@@ -1,0 +1,1195 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.82832,
+          34.684098
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "start",
+        "No": "",
+        "Name": "スタート近鉄奈良駅",
+        "Attitude": "",
+        "Summery": "エレベーターあり。",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://www.kintetsu.co.jp/soukatsu/kounai/nara.html",
+        "Urltitle": "近鉄奈良駅構内図サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830895,
+          34.681396
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "route",
+        "No": "1",
+        "Name": "猿沢池",
+        "Attitude": "",
+        "Summery": "移動可。道幅が狭いので通行注意。",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/sarusawa.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831541,
+          34.679814
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "route",
+        "No": "2",
+        "Name": "コトコト（ならまちセンター1階）",
+        "Attitude": "",
+        "Summery": "【店内】移動可。通路広く利用しやすい。授乳室あり（ならまちセンター）",
+        "Remarks": "駐車場なし。近隣の有料パーキングを利用",
+        "Open": "11:30",
+        "Close": "22:00",
+        "OpeningNote": "11:30〜16:00／18:00〜22:00の2部制、日曜16:00まで",
+        "Holiday": "火曜定休",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-22-6922",
+        "URL": "http://www.cotocoto.nara.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/cotocoto2.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/cotocoto.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.82819,
+          34.678693
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "route",
+        "No": "3",
+        "Name": "なら工藝館",
+        "Attitude": "",
+        "Summery": "【館内】バリアフリー。展示すべて鑑賞可。車いすで見やすいように工夫されている。授乳スペースは要相談",
+        "Remarks": "車いす貸出１台。駐車場一般３台、身障者用１台",
+        "Open": "10:00",
+        "Close": "18:00",
+        "OpeningNote": "入館は17:30まで",
+        "Holiday": "月曜定休(祝日の場合翌日)、祝日の翌日(土、日、祝日の場合を除く)、年末年始(12/26〜1/5)、展示替えの期間",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-27-0033",
+        "URL": "http://azemame.web.fc2.com/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kogeikan.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831238,
+          34.677714
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "route",
+        "No": "4",
+        "Name": "元興寺",
+        "Attitude": "",
+        "Summery": "【境内】移動可。受付横から入場。手動車いすは力が必要。展示一部を除き鑑賞可。授乳スペースは要相談【極楽堂・禅室・法輪館】階段で移動不可。智光曼荼羅は極楽堂と禅室の間から鑑賞可（急なスロープ注意）",
+        "Remarks": "駐車場一般１０台、身障者用２台",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "500円",
+        "PriceNote": "",
+        "Discount": "本人・付添１名200円",
+        "TEL": "0742-23-1377",
+        "URL": "https://www.gangoji-tera.or.jp",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/gangoji.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830011,
+          34.676852
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "route",
+        "No": "5",
+        "Name": "奈良町資料館",
+        "Attitude": "",
+        "Summery": "【館内】移動可。館内展示場のスロープが急傾斜で介助が必要（電動車いすは男性介助が必要）。展示すべて鑑賞可。通路が狭いため展示物に注意。",
+        "Remarks": "",
+        "Open": "10:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "年中無休",
+        "Price": "館内無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-22-5509",
+        "URL": "http://naramachi.co.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/naramatishiryoukan.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830655,
+          34.675046
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "route",
+        "No": "6",
+        "Name": "ならまち格子の家",
+        "Attitude": "",
+        "Summery": "【館内１Ｆ】移動可。段差一部あり。畳の間は、車いす移動に難あり。",
+        "Remarks": "",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "月曜定休・祝日の場合翌平日",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-23-4820",
+        "URL": "http://www.naramachiinfo.jp/places/detail_29.html",
+        "Urltitle": "ならまち情報サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/koushi.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830881,
+          34.673968
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "route",
+        "No": "7",
+        "Name": "鹿の舟",
+        "Attitude": "",
+        "Summery": "詳細は各施設の情報を参照。",
+        "Remarks": "車いす貸出１台。駐車場は隣のコインパーキングを利用",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831576,
+          34.673657
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "goal",
+        "No": "",
+        "Name": "ゴール田中町バス停",
+        "Attitude": "",
+        "Summery": "【帰り】こちらのバス停から近鉄・ＪＲ奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830356,
+          34.681904
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "start_op",
+        "No": "",
+        "Name": "オプションスタート猿沢池",
+        "Attitude": "",
+        "Summery": "道幅が狭いので通行注意。",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831882,
+          34.681416
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "goal_op",
+        "No": "",
+        "Name": "オプションゴール猿沢池",
+        "Attitude": "",
+        "Summery": "",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.82889,
+          34.68192
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "shop",
+        "No": "",
+        "Name": "中谷堂",
+        "Attitude": "",
+        "Summery": "利用可能",
+        "Remarks": "",
+        "Open": "10:00",
+        "Close": "19:00",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-23-0141",
+        "URL": "http://www.nakatanidou.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.829787,
+          34.680869
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "shop",
+        "No": "",
+        "Name": "遊 中川 本店",
+        "Attitude": "",
+        "Summery": "【店内】移動可。入口にでこぼこあり。一部に狭い場所があるため、移動に注意。商品すべて見られる。",
+        "Remarks": "",
+        "Open": "10:00",
+        "Close": "18:30",
+        "OpeningNote": "",
+        "Holiday": "不定休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-22-1322",
+        "URL": "https://www.nakagawa-masashichi.jp/staffblog/store/s128301/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nakagawa3.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/nakagawa2.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830836,
+          34.677121
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "shop",
+        "No": "",
+        "Name": "吉田蚊帳",
+        "Attitude": "",
+        "Summery": "移動可。",
+        "Remarks": "",
+        "Open": "9:00",
+        "Close": "18:00",
+        "OpeningNote": "",
+        "Holiday": "月曜定休・祝日の場合翌日",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-23-3381",
+        "URL": "http://yoshidakaya.co.jp",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/yoshidakacyou.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.829837,
+          34.676538
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "location",
+        "No": "",
+        "Name": "庚申堂",
+        "Attitude": "",
+        "Summery": "外部から参拝可",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/koshindo.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830911,
+          34.676291
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "location",
+        "No": "",
+        "Name": "御霊神社",
+        "Attitude": "",
+        "Summery": "移動可。出入口段差・溝に注意。一部、砂利道あり。",
+        "Remarks": "駐車場一般２台",
+        "Open": "8:00",
+        "Close": "16:30",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-23-5609",
+        "URL": "https://naramachigoryojinja.amebaownd.com/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/goryou.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830672,
+          34.674057
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "location",
+        "No": "",
+        "Name": "鹿の舟【繭（観光案内所）】",
+        "Attitude": "",
+        "Summery": "移動可。出入口急なスロープに注意。蔵の展示室に段差(１５ｃｍ)があり、電動車いすは移動不可。",
+        "Remarks": "",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-94-3500",
+        "URL": "http://www.kuruminoki.co.jp/shikanofune/mayu/",
+        "Urltitle": "鹿の舟「繭」サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/shikamayu.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830637,
+          34.673807
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "restaurant",
+        "No": "",
+        "Name": "鹿の舟【竈（食堂）】",
+        "Attitude": "",
+        "Summery": "バリアフリー、利用しやすい。",
+        "Remarks": "",
+        "Open": "11:00",
+        "Close": "18:00",
+        "OpeningNote": "土日祝8:00〜18:00、15時以降はグローサリーにて販売のみ",
+        "Holiday": "隔週火曜と毎週水曜定休",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-94-5520",
+        "URL": "http://www.kuruminoki.co.jp/shikanofune/kamado/",
+        "Urltitle": "鹿の舟「竈」サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/shikakamado.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831139,
+          34.674068
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "restaurant",
+        "No": "",
+        "Name": "鹿の舟【囀（レストラン・カフェ）】",
+        "Attitude": "",
+        "Summery": "出入り口に階段(３段)があり、移動困難。テイクアウトあり。",
+        "Remarks": "",
+        "Open": "11:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "隔週火曜と毎週水曜定休",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-94-9700",
+        "URL": "http://www.kuruminoki.co.jp/shikanofune/saezuri/",
+        "Urltitle": "鹿の舟「囀」サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/shikasaezuri.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.828073,
+          34.677288
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "location",
+        "No": "",
+        "Name": "奈良町からくりおもちゃ館",
+        "Attitude": "",
+        "Summery": "【館内】土間のみ移動可、休日は靴が多く、移動困難な場合あり。入口にかなり急な坂があり介助が必要。段差があり部屋には入れないがおもちゃを持ってきてもらえる。授乳スペースは要相談※講習などの参加は上にあがるため車いすは参加困難",
+        "Remarks": "",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "水曜定休（祝日の場合翌日）・休日の翌々日（その日が日曜日、土曜日及び休日を除く）",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-26-5656",
+        "URL": "https://karakuri-omochakan.jimdofree.com/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/karakuri2.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/karakuri.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.829005,
+          34.681981
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "中谷堂付近",
+        "Attitude": "",
+        "Summery": "混雑時は通行注意。",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.829004,
+          34.6785
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道段差１",
+        "Attitude": "",
+        "Summery": "歩道の段差・傾斜に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/naramachi3.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/naramachi2.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830487,
+          34.678478
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道段差２",
+        "Attitude": "",
+        "Summery": "歩道の段差・傾斜に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/naramachi7.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/naramachi6.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831249,
+          34.678456
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道段差３",
+        "Attitude": "",
+        "Summery": "歩道の段差・傾斜に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/naramachi8.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/naramachi11",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831951,
+          34.678464
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道段差４",
+        "Attitude": "",
+        "Summery": "歩道の段差・傾斜に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/naramachi10.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83038,
+          34.681735
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "猿沢池入口に段差",
+        "Attitude": "",
+        "Summery": "１ｃｍ程度の段差あり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/sarusawa2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830904,
+          34.676106
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "御霊神社",
+        "Attitude": "",
+        "Summery": "出入口段差・溝に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/goryou3.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/goryou2.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830981,
+          34.681036
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "caution",
+        "No": "",
+        "Name": "柵がなく、通路が狭い",
+        "Attitude": "",
+        "Summery": "柵がなく、通路が狭いので落下注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/sarusawa4.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/sarusawa3.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831611,
+          34.678411
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道に坂あり",
+        "Attitude": "",
+        "Summery": "歩道に坂あり",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/naramachi9.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831902,
+          34.677714
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "元興寺入口に坂あり",
+        "Attitude": "",
+        "Summery": "元興寺入口の坂に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/gangoji2.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830927,
+          34.673696
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "田中町バス停（大仏殿方面）",
+        "Attitude": "",
+        "Summery": "大仏殿方面",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.831576,
+          34.673657
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "田中町バス停（近鉄・ＪＲ奈良駅方面）",
+        "Attitude": "",
+        "Summery": "【帰り】こちらのバス停から近鉄・ＪＲ奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830004,
+          34.678431
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（ならまち大通り１）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/naramachi4.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.830272,
+          34.678427
+        ]
+      },
+      "properties": {
+        "Area": "naramachi",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（ならまち大通り２）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/naramachi5.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    }
+  ]
+}

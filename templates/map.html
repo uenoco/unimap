@@ -1,0 +1,59 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Unimap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- favicon -->
+    <link rel="icon" href="/static/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/theme.bootstrap_4.min.css">
+    <!-- Leaflet CSS-->
+    <link rel="stylesheet" href="/static/css/leaflet.css">
+
+    <!-- Bootstrap/jquery js -->
+    <script src="/static/js/jquery-3.5.1.min.js"></script>
+    <script src="/static/js/jquery.tablesorter.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- Leaflet JS-->
+    <script type="text/javascript" src="/static/js/leaflet/leaflet.js"></script>
+    <script type="text/javascript" src="/static/js/leaflet/leaflet.ajax.min.js"></script>
+    <script type="text/javascript" src="/static/js/leaflet/gpx.js"></script>
+    <script type="text/javascript" src="/static/js/leaflet/leaflet-ant-path.js"></script>
+    <script type="text/javascript" src="/static/js/leaflet/leaflet-polygon.fillPattern.js"></script>
+    
+    <!-- local ico -- 
+    <link rel="icon" href="/static/favicon.ico"> -->
+    <!-- local css -->
+    <link rel="stylesheet" href="/static/css/unimap_view.css">
+  </head>
+  <body>
+    <div id="map"></div>
+  </body>
+
+  <script type="text/javascript" src="/static/js/unimap_license.js"></script>
+  <script type="text/javascript" src="/static/js/unimap_style.js"></script>
+  <script type="text/javascript" src="/static/js/unimap_popup.js"></script>
+  <script type="text/javascript" src="/static/js/unimap_icon.js"></script>
+  <script type="text/javascript" src="/static/js/unimap.js"></script>
+
+  <script>
+    const mapimg = {};
+    mapimg.id = "{{area.id}}" ;
+    mapimg.deflat = "{{area.DEF_LAT}}" ;
+    mapimg.deflon = "{{area.DEF_LON}}" ;
+    mapimg.defzoom= "{{area.DEF_Zoom}}" ;
+    mapimg.url = "{{mediaurl}}" + "{{imagemap.ImageMap}}" ;
+    mapimg.lat1 = "{{imagemap.LAT1}}" ;
+    mapimg.lon1 = "{{imagemap.LON1}}" ;
+    mapimg.lat2 = "{{imagemap.LAT2}}" ;
+    mapimg.lon2 = "{{imagemap.LON2}}" ;
+
+    /* console.log( "{{image.ImageMap}}" )*/
+    drawMap( mapimg )
+  </script>
+</html>

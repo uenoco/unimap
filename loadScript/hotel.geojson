@@ -1,0 +1,229 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.823028,
+          34.682179
+        ]
+      },
+      "properties": {
+        "Area": "",
+        "Sort": "hotel",
+        "Name": "奈良ワシントンホテルプラザ",
+        "Attitude": "",
+        "Summery": "バリアフリー対応ハートフルルームがあり、車いすで利用しやすい。",
+        "TEL": "0742-27-0410",
+        "Address": "奈良市下三条町３１−１",
+        "Access": "JR奈良駅より徒歩８分",
+        "URL": "http://washington.jp/nara/",
+        "URL_f21": "https://www.unimap.org/hotel/narawashington",
+        "Photo1": "https://unimap.org/photo/map6gh3w/washingtonroom.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.820367,
+          34.682146
+        ]
+      },
+      "properties": {
+        "Area": "",
+        "Sort": "hotel",
+        "Name": "天然温泉吉野桜の湯　御宿野乃　奈良",
+        "Attitude": "",
+        "Summery": "ユニバーサルルームがあり、車いすで利用しやすい。",
+        "TEL": "0742-20-5489",
+        "Address": "奈良市大宮町１−１−６",
+        "Access": "JR奈良駅より徒歩５分",
+        "URL": "https://www.hotespa.net/hotels/nono_nara/",
+        "URL_f21": "https://www.unimap.org/hotel/nono",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nononararoom.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.818439,
+          34.681627
+        ]
+      },
+      "properties": {
+        "Area": "",
+        "Sort": "hotel",
+        "Name": "ホテル日航奈良",
+        "Attitude": "",
+        "Summery": "ユニバーサルルームがあり、車いすで利用しやすい。",
+        "TEL": "0742-35-8831",
+        "Address": "奈良市三条本町８−１",
+        "Access": "JR奈良駅西口に直結",
+        "URL": "https://www.nikkonara.jp/",
+        "URL_f21": "https://www.unimap.org/hotel/nikko",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nikkonararoom.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.821872,
+          34.692015
+        ]
+      },
+      "properties": {
+        "Area": "",
+        "Sort": "hotel",
+        "Name": "ホテル　リガーレ春日野",
+        "Attitude": "",
+        "Summery": "バリアフリー対応ハートフルルームがあり、車いすで利用しやすい。",
+        "TEL": "0742-22-6021",
+        "Address": "奈良市法蓮町７５７−２",
+        "Access": "JR奈良・近鉄奈良・近鉄大和西大寺駅よりバス移動。「佐保小学校」下車すぐ",
+        "URL": "https://ligare-kasugano.jp/",
+        "URL_f21": "https://www.unimap.org/hotel/kasugano",
+        "Photo1": "https://unimap.org/photo/map6gh3w/ligareroom.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.805328,
+          34.687304
+        ]
+      },
+      "properties": {
+        "Area": "",
+        "Sort": "hotel",
+        "Name": "奈良ロイヤルホテル",
+        "Attitude": "",
+        "Summery": "バリアフリールームはないが、車いすで利用しやすい。トイレは共用多目的トイレを使用",
+        "TEL": "0742-34-1131",
+        "Address": "奈良市法華寺町２５４−１",
+        "Access": "近鉄新大宮駅より徒歩１０分",
+        "URL": "http://www.nara-royal.co.jp/",
+        "URL_f21": "https://www.unimap.org/hotel/nararoyal",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nararoyalroom.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.795007,
+          34.484778
+        ]
+      },
+      "properties": {
+        "Area": "",
+        "Sort": "hotel",
+        "Name": "ダイワロイヤルホテル　THE　KASHIHARA",
+        "Attitude": "",
+        "Summery": "バリアフリールームはないが、車いすで利用しやすい。トイレは共用多目的トイレを使用。大浴場は浴室まで移動可",
+        "TEL": "0744-28-6636",
+        "Address": "橿原市久米町６５２−２",
+        "Access": "近鉄橿原神宮前駅東口より徒歩５分",
+        "URL": "https://www.daiwaresort.jp/kashihara/index.html",
+        "URL_f21": "https://www.unimap.org/hotel/daiwa",
+        "Photo1": "https://unimap.org/photo/map6gh3w/daiwakashihararoom.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.792453,
+          34.511844
+        ]
+      },
+      "properties": {
+        "Area": "",
+        "Sort": "hotel",
+        "Name": "カンデオホテルズ　奈良橿原",
+        "Attitude": "",
+        "Summery": "ユニバーサルルームがあり、車いすで利用しやすい。大浴場は脱衣所まで移動可",
+        "TEL": "0744-21-8700",
+        "Address": "橿原市内膳町１−１−５０",
+        "Access": "近鉄大和八木駅から徒歩３分",
+        "URL": "https://www.candeohotels.com/nara-kashihara/",
+        "URL_f21": "https://www.unimap.org/hotel/candeo",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kandeoroom.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.704756,
+          34.641285
+        ]
+      },
+      "properties": {
+        "Area": "",
+        "Sort": "hotel",
+        "Name": "かんぽの宿　大和平群",
+        "Attitude": "",
+        "Summery": "バリアフリールームがあり、車いすで利用しやすい。大浴場は脱衣所まで移動可",
+        "TEL": "0745-45-0351",
+        "Address": "生駒郡平群町上庄２−１６−１",
+        "Access": "近鉄元山上口駅より徒歩１５分（坂道が多い）",
+        "URL": "https://www.kanponoyado.japanpost.jp/yamatoheguri/index.html",
+        "URL_f21": "https://www.unimap.org/hotel/kanpo-heguri",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kanporoom.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    }
+  ]
+}

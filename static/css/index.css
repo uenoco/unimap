@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+/*===================================
+Reset
+===================================*/
+h1, h2, h3, h4, ul, ol ,p{
+    margin: 0; 
+    padding: 0;
+    font-size:100%;    
+}
+p, ul, h3, div, ol{
+    text-align: left;
+}
+ul {
+  list-style:none;
+}
+address {
+    font-style: normal;
+}
+
+/*===================================
+Base
+===================================*/
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", YuGothic , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+    background-color: #fcfcff;
+    font-size: 100%;
+    line-height: 1.7;  
+    padding: 0 12px;
+    color: #222;
+    background-image: url("../index_img/kumo.gif"); 
+    background-repeat: repeat-x;      
+}
+
+html {
+    margin:0 auto;
+    width: 100%;
+    max-width: 736px;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/*===================================
+Style
+===================================*/
+/*--- h1 - h3 ---*/
+h2.kye-cah {
+  display: inline-block;
+  color: #796bae;  
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;  
+  margin-top: 1rem; 
+  margin-bottom: 0.5rem; 
+  padding: 0 0.3rem;
+  background: linear-gradient(transparent 85%, #e6e6ee 85%);
+}
+
+h2.kye-cah span {
+  padding: 0 0.2rem;
+  font-size: 170%;
+  vertical-align:middle;
+}
+
+.kye-note {
+  margin-bottom: 1rem; 
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 0.4rem;
+  font-size: 1.5rem;
+  line-height: 1.8rem;   
+  color: #000;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.2rem;  
+  color: #000;
+}
+
+#legend h3 {
+  margin-left: -0.5rem;
+  font-size: 1rem;  
+}
+
+#course h3 {
+  color: #796bae;
+} 
+
+h3 span {
+  font-size: 80%;
+}
+
+/*--- section ---*/
+#legend,
+#course,
+#use,
+#about {
+  margin-bottom: 3rem;
+}
+
+#legend ul,
+#course ol {
+  margin-top: 0.2rem;
+  margin-bottom: 1.2rem;
+}
+
+ol {
+  margin-left: 1.8rem;
+}
+
+.legend-item li {
+    list-style:none;
+    display: inline-block;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.legend-item li img {
+    vertical-align:middle;  
+    margin-right: 0.2rem;      
+}
+
+.use-item li {
+  margin-left: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.pdf_btn {
+    display: inline-block;
+    text-align: center;
+    margin-top: 2rem;
+    padding: 0.7rem 1.2rem;
+    background-color: #fff;
+    border: solid 1px #796bae;
+    font-size: 110%;
+    border-radius:5px;      
+    color: #ccc;
+    box-shadow: 1px 1px 4px #ddd;     
+}
+
+.pdf_btn a {
+    text-decoration: none;
+    color: #796bae;
+    font-weight: bold;
+}
+
+.pdf_btn span {
+    font-size: 70%;
+}
+
+.pdf_note01 {
+    text-align: center;
+    margin-top: 0.2rem;
+}
+
+.pdf_note02 {
+  text-align: center;
+  margin-top: 0.2rem;
+  margin-bottom: 2rem;
+}
+
+/*--- nav / gnav ---*/
+#nav ul,
+#nav li {
+    text-align: center;
+} 
+
+#nav li {
+    list-style:none;
+    display: inline-block;
+    margin: 0.5rem .95rem;  
+    text-align: center;	
+}
+
+#nav a {
+    display: inline-block;	
+    width: 100%; 
+    padding: 0.7rem 0.5rem;
+    background-color: #fff;
+    border: solid 1px #796bae;;
+    font-size: 110%;
+    border-radius:5px;	    
+    text-decoration: none;
+    color: #796bae;
+    font-weight: bold;
+    box-shadow: 1px 1px 4px #ddd;    
+} 
+
+#gnav {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;  
+  text-align: center;
+}
+
+#gnav li {
+  display: inline-block;
+  margin-right: 1.5rem;
+  position: relative;
+  margin-bottom: 20px;
+  padding: 0 0 0 17px;
+  line-height: 1.4em;
+  text-align: left;
+}
+
+#gnav li::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border: 0px;
+  border-bottom: solid 2px #796bae;
+  border-right: solid 2px #796bae;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -8px;
+}
+
+#gnav li a {
+    text-decoration: none;
+}
+
+/*--- footer ---*/
+footer {
+  margin-top: 2.5rem;
+  font-size: 0.7rem;
+}
+
+/*--- media ---*/
+@media screen and (min-width: 736px) {
+    #nav li {
+     width: 26%;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    h1 img {
+     width: 130px;
+     height: 130px;
+    }
+
+  h2.kye-cah {
+    font-size: 1.1rem;
+    margin-top: 0;  
+    margin-bottom: 0;      
+  }
+
+  h2.kye-cah span {
+    padding: 0 0.2rem;
+    font-size: 150%;
+    vertical-align:middle;
+  }
+
+  .kye-note {
+  margin-bottom: 0; 
+}
+ 
+  #nav li {
+  width: 36%;
+  }
+}

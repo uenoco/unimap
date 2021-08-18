@@ -1,0 +1,1055 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 0,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.839906,
+          34.675057
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "start",
+        "No": "",
+        "Name": "スタート高畑町バス停",
+        "Attitude": "",
+        "Summery": "【行き】近鉄奈良駅→2系統市内循環外回り乗車。ＪＲ奈良駅→東口より1系統市内循環内回り乗車",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 1,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.845458,
+          34.675558
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "route",
+        "No": "1",
+        "Name": "入江泰吉記念奈良市写真美術館",
+        "Attitude": "",
+        "Summery": "【館内】バリアフリー。展示すべて鑑賞可。受付、展示スペースはＢ１Ｆ。車いす貸出あり。入口左側のスロープから入場。",
+        "Remarks": "車いす貸出３台、ベビーカー貸出１台。駐車場一般３８台、身障者用１台",
+        "Open": "9:30",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "月曜定休・祝日は営業",
+        "Price": "500円",
+        "PriceNote": "",
+        "Discount": "本人・付添１名無料",
+        "TEL": "0742-22-9811",
+        "URL": "http://irietaikichi.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/syashin.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.840355,
+          34.677584
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "route",
+        "No": "2",
+        "Name": "空気ケーキ。",
+        "Attitude": "",
+        "Summery": "【店内】バリアフリー、少し狭いので移動に注意。",
+        "Remarks": "駐車場一般４台",
+        "Open": "9:00",
+        "Close": "19:30",
+        "OpeningNote": "",
+        "Holiday": "水曜日定休・祝日は営業。火曜日不定休",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-27-2828",
+        "URL": "http://www.kuukicake.com/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/kukicake2.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/kukicake1.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.838874,
+          34.677245
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "route",
+        "No": "3",
+        "Name": "頭塔",
+        "Attitude": "",
+        "Summery": "【受付】ウェルネス飛鳥路で行うが、入口に段差があり介助が必要。事前に電話予約必要。【頭塔】移動可。出入口段差あり。スロープの滑り止めで車いすがかなり揺れる。展示一部を除き鑑賞可。駐車場混雑時は車いす通行困難のため、お断りする場合もあり。",
+        "Remarks": "駐車場一般１８台",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "要問い合わせ",
+        "Price": "300円",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-22-2857",
+        "URL": "http://www.pref.nara.jp/6709.htm",
+        "Urltitle": "奈良県頭塔サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/zutou1.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/zutou2.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.838657,
+          34.680125
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "route",
+        "No": "4",
+        "Name": "浮見堂",
+        "Attitude": "",
+        "Summery": "【堂内】移動可。出入口にスロープあり。",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/ukimido2.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/ukimido1.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.833794,
+          34.679891
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "route",
+        "No": "5",
+        "Name": "奈良ホテル（ティーラウンジ）",
+        "Attitude": "",
+        "Summery": "【新館５Ｆ・本館１Ｆ（ティーラウンジ）】バリアフリー、ホテル左側の新館より入館。ラウンジの机が少し低め。",
+        "Remarks": "車いす貸出３台（館内のみ）。駐車場一般１００台、身障者用１台",
+        "Open": "8:30",
+        "Close": "18:00",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-26-3300",
+        "URL": "http://www.narahotel.co.jp/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/narahotels1.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/narahotels3.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.835181,
+          34.678345
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "route",
+        "No": "6",
+        "Name": "なら和み館",
+        "Attitude": "",
+        "Summery": "【館内】１Ｆバリアフリー(駐車場側の出入口から入場)、２Ｆ階段で移動不可。通路余裕あり、商品見やすい。授乳スペースは要相談【レストラン＆カフェあをがき（１Ｆ）】移動可。一部通路狭い。",
+        "Remarks": "駐車場一般２０台、身障者用は電話で対応",
+        "Open": "10:00",
+        "Close": "19:00",
+        "OpeningNote": "",
+        "Holiday": "無休",
+        "Price": "無料",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "0742-21-7530",
+        "URL": "https://www.worldheritage.co.jp/nagomi/",
+        "Urltitle": "公式サイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/nagomikan1.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834446,
+          34.677913
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "option",
+        "No": "7",
+        "Name": "名勝旧大乗院庭園",
+        "Attitude": "",
+        "Summery": "【文化館】１Ｆバリアフリー、２Ｆ階段で移動不可。車いすトイレは狭く、車いす転回不可。授乳スペースは要相談【庭園】移動可。出入口に石畳あり。未舗装で池に囲いがなく移動注意。庭園は文化館から入園。",
+        "Remarks": "車いす貸出１台",
+        "Open": "9:00",
+        "Close": "17:00",
+        "OpeningNote": "",
+        "Holiday": "月曜定休・祝日の場合翌日",
+        "Price": "大人200円、小・中学生100円",
+        "PriceNote": "庭園の料金。文化館は無料",
+        "Discount": "",
+        "TEL": "0742-24-0808",
+        "URL": "http://www.national-trust.or.jp/protection/index.php?c=protection_view&pk=1491202122",
+        "Urltitle": "日本ナショナルトラストサイトへ",
+        "Photo1": "https://unimap.org/photo/map6gh3w/daijoin1.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834929,
+          34.678363
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "goal",
+        "No": "",
+        "Name": "ゴール奈良ホテルバス停",
+        "Attitude": "",
+        "Summery": "【帰り】ＪＲ奈良・近鉄奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.835063,
+          34.678442
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "start_op",
+        "No": "",
+        "Name": "オプションスタートなら和み館",
+        "Attitude": "",
+        "Summery": "",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834862,
+          34.677385
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "goal_op",
+        "No": "",
+        "Name": "オプションゴール福智院町バス停",
+        "Attitude": "",
+        "Summery": "【帰り】ＪＲ奈良・近鉄奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.842932,
+          34.676003
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（美術館付近）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake15.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.837117,
+          34.680692
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（荒池園地トイレ付近）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake8.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834808,
+          34.677757
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（大乗院庭園付近）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake19.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.836141,
+          34.681019
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこ道（国道付近）",
+        "Attitude": "",
+        "Summery": "でこぼこ道、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake18.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/takabatake17.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.839853,
+          34.675345
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "でこぼこと溝あり",
+        "Attitude": "",
+        "Summery": "でこぼこと溝に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake13.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/takabatake12.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.84105,
+          34.675972
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "穴に注意",
+        "Attitude": "",
+        "Summery": "道の穴に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake14.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834671,
+          34.677585
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道に坂と段差",
+        "Attitude": "",
+        "Summery": "歩道に坂と１ｃｍ程度の段差があり、横断歩道を渡る際に注意が必要",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake21.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/takabatake20.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.835092,
+          34.679039
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "歩道が狭い場所と坂・段差あり",
+        "Attitude": "",
+        "Summery": "植木で歩道が狭い場所（幅７０ｃｍ）と坂・段差がある場所に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake25.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/takabatake24.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.83973,
+          34.678425
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "県営駐車場前歩道",
+        "Attitude": "",
+        "Summery": "道幅と傾斜に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake1.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/takabatake16.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.838225,
+          34.68041
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "浮見堂までの道",
+        "Attitude": "",
+        "Summery": "木の幹せりだす・道幅狭く柵なし、通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake7.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.839416,
+          34.679525
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "柵のない道1",
+        "Attitude": "",
+        "Summery": "下り傾斜、柵なく通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake10.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.838308,
+          34.67951
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "柵のない道2",
+        "Attitude": "",
+        "Summery": "下り傾斜、柵なく通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake9.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.837817,
+          34.680236
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "attention",
+        "No": "",
+        "Name": "柵のない道3",
+        "Attitude": "",
+        "Summery": "下り傾斜、柵なく通行注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake11.jpg",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.838826,
+          34.679691
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "caution",
+        "No": "",
+        "Name": "危険な道",
+        "Attitude": "",
+        "Summery": "道に段差と石が多数あり、通行不可",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake5.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/takabatake6.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.835025,
+          34.677878
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "caution",
+        "No": "",
+        "Name": "危険な道",
+        "Attitude": "",
+        "Summery": "道幅と横傾斜に注意",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "https://unimap.org/photo/map6gh3w/takabatake23.jpg",
+        "Photo2": "https://unimap.org/photo/map6gh3w/takabatake22.jpg",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.839389,
+          34.677408
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "roadguide",
+        "No": "",
+        "Name": "ホテルウェルネス飛鳥路",
+        "Attitude": "",
+        "Summery": "頭塔の受付場所。入口に段差があり介助が必要。事前に電話予約必要",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "",
+        "Urltitle": "",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.839906,
+          34.675057
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "高畑町バス停",
+        "Attitude": "",
+        "Summery": "【行き】近鉄奈良駅→2系統市内循環外回り乗車。ＪＲ奈良駅→東口より1系統市内循環内回り乗車",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834929,
+          34.678363
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "奈良ホテルバス停北向きのりば",
+        "Attitude": "",
+        "Summery": "【帰り】ＪＲ奈良・近鉄奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.834838,
+          34.677387
+        ]
+      },
+      "properties": {
+        "Area": "takabatake",
+        "Sort": "busstop",
+        "No": "",
+        "Name": "福智院町バス停",
+        "Attitude": "",
+        "Summery": "【帰り】ＪＲ奈良・近鉄奈良駅方面へ",
+        "Remarks": "",
+        "Open": "",
+        "Close": "",
+        "OpeningNote": "",
+        "Holiday": "",
+        "Price": "",
+        "PriceNote": "",
+        "Discount": "",
+        "TEL": "",
+        "URL": "http://jikoku.narakotsu.co.jp/form/asp/",
+        "Urltitle": "奈良バスナビサイトへ",
+        "Photo1": "",
+        "Photo2": "",
+        "Photo3": "",
+        "Photo360": "",
+        "Photo360_2": ""
+      }
+    }
+  ]
+}
