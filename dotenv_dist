@@ -1,0 +1,8 @@
+SECRET_KEY='=y99j$1c3#&&#83-69g+8giaj-xh7d=_p=cl+c%+%4anp9j92_'
+DEBUG=True
+DATABASE_ENGINE='django.contrib.gis.db.backends.postgis'
+DATABASE_NAME='unimap'
+DATABASE_USER='unimap'
+DATABASE_PASSWORD=unimap'
+DATABASE_HOST='localhost'
+

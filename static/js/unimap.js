@@ -113,10 +113,10 @@ function drawMap( mapimg ){
 	    case 8   : return L.marker(latlng, {icon: IconAttention, opacity: "0.8"});
 	    case 9   : return L.marker(latlng, {icon: IconCaution, opacity: "0.8"});
 	    case 10  : return L.marker(latlng, {icon: IconBusstop, opacity: "0.8"});
+	    case 14  : return L.marker(latlng, {icon: IconRoadGuide, opacity: "0.8"});
+	    case 13  : return L.marker(latlng, {icon: IconRestaurant, opacity: "0.8"});
+	    case 11  : return L.marker(latlng, {icon: IconShop, opacity: "0.8"});
 	    case 'guide'   : return L.marker(latlng, {icon: IconGuide, opacity: "0.8"});
-	    case 'roadguide': return L.marker(latlng, {icon: IconRoadGuide, opacity: "0.8"});
-	    case 'restaurant': return L.marker(latlng, {icon: IconRestaurant, opacity: "0.8"});
-	    case 11    : return L.marker(latlng, {icon: IconShop, opacity: "0.8"});
 	    case 1 :
 		// Main Cource
 		switch ( feature.properties.No ){
