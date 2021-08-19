@@ -19,7 +19,7 @@ import logging
 # トップページ
 def toppage(request):
     try:
-        arealist = Area.objects.filter( DisplayFlag=True )
+        arealist = Area.objects.filter( DisplayFlag=True ).order_by('DisplayOrder')
         bookletlist = Booklet.objects.all()
     except:
         arealist = ""
@@ -44,6 +44,7 @@ def test(request):
 
 # マップ
 def map(request,areaid):
+    print( areaid )
     try:
         #print( "--  unimap/views.py  0  --")
         # get areaId
