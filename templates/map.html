@@ -45,13 +45,34 @@
   <body>
     <header>
       <!-- Fixed navbar -->
-      <nav class="m-0 px-2 py-0 navbar navbar-expand-sm navbar-light fixed-top bg-light">
+      <nav class="m-0 px-1 py-0 navbar navbar-expand-xl navbar-light fixed-top bg-light">
 	<div class="container-fluid">
-	  <p class="fs-5 navbar-text text-center">
-	    <a class="p-0 m-0" href="/"><img src="/static/favicon.ico" height="24px" width="24px" alt="オンライン版 奈良ユニバーサル観光マップ"></a>
-	    {{area.Name}}エリア　{{area.SubName}}</p>
+	  <p class="fs-5 navbar-brand">
+	    <a class="px-1 p-0 m-0" href="/"><img src="/static/favicon.ico" height="24px" width="24px" alt="オンライン版 奈良ユニバーサル観光マップ"></a>
+	    {{area.Name}}エリア&nbsp;&nbsp;{{area.SubName}}
+	  </p>
+	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+	  </button>
+	  <div class="mx-2 collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item active">
+		<a class="nav-link" aria-current="page" href="{% url 'toppage' %}">トップページ</a></li>
+	      {% for area in arealist %}
+              <li class="mx-1 nav-item active">
+		<a class="nav-link" aria-current="page" href="{% url 'map' %}/{{ area.id }}">{{ area.Name }}</a></li>
+	      {% endfor %}
+            </ul>
+	  </div>
 	</div>
       </nav>
+
+      <!-- Fixed navbar -->
+      <!-- Fixed navbar 
+	  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+	  </button>
+      -->
     </header>
     
     <!-- Begin page content -->
