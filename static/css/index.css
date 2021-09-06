@@ -106,6 +106,16 @@ h3 span {
   margin-bottom: 1.2rem;
 }
 
+/* ADD for course describe */
+ol.course{
+    padding-left: 0;
+    margin-left: 0.5rem;
+}
+li.course {
+    list-style:none;
+}
+/* ADD for course describe */
+
 ol {
   margin-left: 1.8rem;
 }
