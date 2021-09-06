@@ -19,7 +19,7 @@ import logging
 # トップページ
 def toppage(request):
     try:
-        arealist = Area.objects.filter( DisplayFlag=True )
+        arealist = Area.objects.filter( DisplayFlag=True ).order_by('DisplayOrder')
         bookletlist = Booklet.objects.all()
     except:
         arealist = ""
@@ -44,23 +44,23 @@ def test(request):
 
 # マップ
 def map(request,areaid):
+    print( areaid )
     try:
-        #print( "--  unimap/views.py  0  --")
-        # get areaId
-        area  = Area.objects.get( id=areaid )
-        #print( "--  unimap/views.py  1  --")
+        # get arealist
+        arealist = Area.objects.filter( DisplayFlag=True ).order_by('DisplayOrder')
 
-        # set ImageMap
+        # get target area
+        area  = Area.objects.get( id=areaid )
+
+        # get ImageMap
         imap = ImageMap.objects.get( AreaId=areaid )
-        #print( "--  unimap/views.py  2  --")
 
         mediaURL = settings.MEDIA_URL        
-        #print( "--  unimap/views.py  3  --")
         # set route/point
         #route = route.objects.get( AreaId=area.id )
         #point = point.objects.get( AreaId=area.id )
 
-        params = { 'area':area, 'imagemap': imap, 'mediaurl': mediaURL }
+        params = { 'arealist':arealist, 'area':area, 'imagemap': imap, 'mediaurl': mediaURL }
         #print( areaid )
         return render(request, 'map.html', params )
     except:

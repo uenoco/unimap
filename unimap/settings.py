@@ -11,20 +11,24 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 import os
+import environ
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# dajngo-environ
+env = environ.Env(DEBUG=(bool,True))
+env.read_env(os.path.join(BASE_DIR,'.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=y99j$1c3#&&#83-69g+8giaj-xh7d=_p=cl+c%+%4anp9j9c_'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = env('DEBUG')
 
 #ALLOWED_HOSTS = []
 ALLOWED_HOSTS = ['*']
@@ -107,11 +111,12 @@ DATABASES = {
 #        'NAME': BASE_DIR / 'db.sqlite3',
 #    }
     'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'unimap',
-        'USER': 'unimap',
-        'HOST': 'localhost',
-        'PASSWORD': 'unimap00',
+        'ENGINE': env.get_value('DATABASE_ENGINE', default='django.contrib.gis.db.backends.postgis'),
+        'NAME': env.get_value('DATABASE_NAME', default='unimap'),
+        'USER': env.get_value('DATABASE_USER', default='unimap'),
+        'PASSWORD': env.get_value('DATABASE_PASSWORD', default='unimap00'),
+        'HOST': env.get_value('DATABASE_HOST', default='localhost'),
+        'PORT': env.get_value('DATABASE_PORT', default='5432'),
     }
 }
 

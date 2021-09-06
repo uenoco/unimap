@@ -13,6 +13,11 @@ from import_export.formats import base_formats
 # Register your models here.
 from unimap.models import Area, ImageMap, Route, PointData, Zone, Toilet, Hotel
 
+# For EditMap size
+class LocalGeoAdmin( geoadmin.OSMGeoAdmin):
+    map_width=640
+    map_height=640
+
 # Sightseeing route Area
 class AreaAdmin(admin.ModelAdmin):
     list_display = ['id', 'DisplayOrder', 'DisplayFlag', 'Name', 'SubName', 'Booklet' ]
@@ -33,7 +38,8 @@ class RouteResource(resources.ModelResource):
     ordering = [ 'id' ]
     class Meta:
         model = Route
-class RouteAdmin(geoadmin.OSMGeoAdmin,ImportExportModelAdmin):
+#class RouteAdmin(geoadmin.OSMGeoAdmin,ImportExportModelAdmin):
+class RouteAdmin(LocalGeoAdmin,ImportExportModelAdmin):
     list_display = ['AreaId', 'Sort' , 'Name', 'Summery' ]
     search_fields = [ 'Name', 'Summery' ]
     list_filter = ['AreaId', 'Sort' ]
@@ -61,7 +67,8 @@ class ZoneResource(resources.ModelResource):
     ordering = [ 'id' ]
     class Meta:
         model = Zone
-class ZoneAdmin(geoadmin.OSMGeoAdmin,ImportExportModelAdmin):
+#class ZoneAdmin(geoadmin.OSMGeoAdmin,ImportExportModelAdmin):
+class ZoneAdmin(LocalGeoAdmin,ImportExportModelAdmin):
     list_display = ['Name', 'AreaId', 'Summery', 'Sort' ]
     search_fields = [ 'Name', 'Summery' ]
     list_filter = ['AreaId', 'Sort' ]

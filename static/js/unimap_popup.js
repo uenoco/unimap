@@ -37,8 +37,6 @@ TemplatePopup_Hotel = '<div class="leaflet-popup-content" style="width: 266px;">
 
 //差し替えパラメータ
 
-
-
 //  TOILET_ROUTE_SEARCH :ルート検索ボタン
 
 //  おすすめルート上の施設ポップアップ
@@ -370,22 +368,21 @@ function onEachFeaturePOI(feature, layer) {
   var popupContent = '';
   if( ( feature.properties ) && ( feature.properties.Sort != null )){
     switch( feature.properties.Sort ){
-	    case "caution" :
-	    case "attention" :
-	    case "busstop" :
-/*	    case "location" :*/
-	    case "start" :
-	    case "start_op" :
-	    case "goal" : 
-	    case "goal_op" : 
-	    case "barrguide" :
-	    case "roadguide" :
+    case 2: /*tart*/
+    case 3: /*goal*/
+    case 4: /*start_op*/
+    case 5: /*goal_op*/
+    case 7: /*barrguide*/
+    case 8: /*attention*/
+    case 9: /*caution*/ 
+    case 10: /*busstop*/
+    case 14: /*"roadguide*/
         popupContent = setPopupContentInfo(feature, layer);
-		    break;
-	    default:
+	break;
+    default:
         popupContent = setPopupContentPOI(feature, layer);
-		    break;
-	  }
+	break;
+    }
   }else{
 	  popupContent = '<h3>No Data</h3><hr class="full"><p>Sorry</p>';
   }
