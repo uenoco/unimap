@@ -47,6 +47,9 @@ urlpatterns = [
     # エリアマップ
     path('map', views.map, name='map'),
     path('map/<int:areaid>', views.map, name='map'),
+
+    # ホテル詳細
+    path('hotel/<int:hotelid>', views.hotel, name='hotel'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -350,9 +350,10 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_URL", popupParts );
 	
 	// TemplateParts_HOTELDESC
-	if ((feature.properties.URL_f21 !== null ) && (feature.properties.URL_f21 !== "" ) ){
-	    popupParts = TemplateParts_HOTELDESC.replace( "POPUP_URLDESC" , feature.properties.URL_f21 );
-	}
+	//if ((feature.properties.URL_f21 !== null ) && (feature.properties.URL_f21 !== "" ) ){
+	//    popupParts = TemplateParts_HOTELDESC.replace( "POPUP_URLDESC" , feature.properties.URL_f21 );
+	//}
+	popupParts = TemplateParts_HOTELDESC.replace( "POPUP_URLDESC" , "/hotel/"+feature.id );
 	popupContent = popupContent.replace("HOTEL_DESC_BTN", popupParts );
     }else{
 	popupContent = '<h3>No Data</h3><hr class="full"><p>Sorry</p>';

@@ -20,7 +20,7 @@ class LocalGeoAdmin( geoadmin.OSMGeoAdmin):
 
 # Sightseeing route Area
 class AreaAdmin(admin.ModelAdmin):
-    list_display = ['id', 'DisplayOrder', 'DisplayFlag', 'Name', 'SubName', 'Booklet' ]
+    list_display = ['id', 'DisplayOrder', 'DisplayFlag', 'Name', 'SubName' ]
     list_display_links = [ 'Name', 'SubName' ]
     search_fields = [ 'Name', 'SubName' ]
     list_filter = [ 'Booklet' ]

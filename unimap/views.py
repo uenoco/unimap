@@ -44,7 +44,6 @@ def test(request):
 
 # マップ
 def map(request,areaid):
-    print( areaid )
     try:
         # get arealist
         arealist = Area.objects.filter( DisplayFlag=True ).order_by('DisplayOrder')
@@ -65,6 +64,19 @@ def map(request,areaid):
         return render(request, 'map.html', params )
     except:
         return render(request, 'map.html'  )
+
+# マップ
+def hotel(request,hotelid):
+    print( hotelid )
+    try:
+        # get hotel-detail
+        hotel = Hotel.objects.get( id=hotelid )
+
+        params = { 'hotel':hotel }
+        #print( areaid )
+        return render(request, 'hotel_detail.html', params )
+    except:
+        return render(request, 'hotel_detail.html'  )
 
 # Method for Class to JSON
 def cj_method(item):

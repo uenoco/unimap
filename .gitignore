@@ -19,6 +19,10 @@ venv/
 # Media Directory for models.ImageField
 /media/*
 !/media/.gitkeep
+!/media/images/.gitkeep
+!/media/pdf/.gitkeep
+!/media/photo360/.gitkeep
+!/media/photos/.gitkeep
 
 # Logging Files
 /log/*
