@@ -87,6 +87,10 @@ h3 {
 #course h3 {
   color: #796bae;
 } 
+#course a {
+    text-decoration: underline;
+    color: #796bae;
+} 
 
 h3 span {
   font-size: 80%;
