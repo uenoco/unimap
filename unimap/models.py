@@ -156,7 +156,7 @@ class Toilet(models.Model):
     Sort      = models.IntegerField(verbose_name="地点タイプ",choices=SortType_CHOICES, default=100 )
     Name      = models.CharField(verbose_name="名称",max_length=24,null=False)
     Summery   = models.CharField(verbose_name="概要",max_length=256,null=True,blank=True)
-    Floor     = models.CharField(verbose_name="回数",max_length=24,null=True,blank=True)
+    Floor     = models.CharField(verbose_name="階数",max_length=24,null=True,blank=True)
 
     Babyseat  = models.BooleanField(verbose_name="ベビーシート",default=False)
     Ostomate  = models.BooleanField(verbose_name="オストメイト",default=False)
@@ -183,16 +183,13 @@ class Toilet(models.Model):
 
 # ホテル
 class Hotel(models.Model):
-    SortType_CHOICES = ( ( 101, 'hotel'),( 999, 'etc') )
-
     id       = models.AutoField(primary_key=True)
     AreaId    = models.ForeignKey('Area', to_field='id', on_delete=models.PROTECT, verbose_name="エリアID",null=True,blank=True)
-    Sort      = models.IntegerField(verbose_name="地点タイプ",choices=SortType_CHOICES, default=101 )
     Name      = models.CharField(verbose_name="名称",max_length=24,null=False)
     Summery   = models.CharField(verbose_name="概要",max_length=256,null=True)
-
-    TEL       = models.CharField(verbose_name="電話",max_length=24,null=True,blank=True)
+    TEL       = models.CharField(verbose_name="電話",max_length=24,null=False, default=0)
     Address   = models.CharField(verbose_name="住所",max_length=256,null=True,blank=True)
+    
     Access    = models.CharField(verbose_name="アクセス",max_length=256,null=True,blank=True)
     Parking   = models.CharField(verbose_name="駐車場",max_length=256,null=True,blank=True)
     Staff     = models.CharField(verbose_name="スタッフ補助",max_length=256,null=True,blank=True)
@@ -200,13 +197,16 @@ class Hotel(models.Model):
     Rental    = models.CharField(verbose_name="貸出し備品",max_length=256,null=True,blank=True)
     Bath      = models.CharField(verbose_name="大浴場",max_length=256,null=True,blank=True)
     URL       = models.CharField(verbose_name="ホテルURL",max_length=256,null=True,blank=True)
+    Checkin   = models.TimeField(verbose_name="チェックイン",blank=True, null=True)
+    Checkout  = models.TimeField(verbose_name="チェックアウト",blank=True, null=True)
 
-    Toilet    = models.CharField(verbose_name="多目的トイレ",max_length=256,null=True,blank=True)
-    Babyseat  = models.BooleanField(verbose_name="ベビーシート",default=False)
-    Ostomate  = models.BooleanField(verbose_name="オストメイト",default=False)
-    Nursingbed= models.BooleanField(verbose_name="介護ベット",default=False)
-    Washlet   = models.BooleanField(verbose_name="ウォシュレット",default=False)
-    Rotation  = models.BooleanField(verbose_name="車いす転回",default=False)
+    Toilet     = models.CharField(verbose_name="多目的トイレ",max_length=256,null=True,blank=True)
+    ToiletFloor= models.CharField(verbose_name="トイレ階数",max_length=16,null=True,blank=True)
+    Babyseat   = models.BooleanField(verbose_name="ベビーシート",default=False)
+    Ostomate   = models.BooleanField(verbose_name="オストメイト",default=False)
+    Nursingbed = models.BooleanField(verbose_name="介護ベット",default=False)
+    Washlet    = models.BooleanField(verbose_name="ウォシュレット",default=False)
+    Rotation   = models.BooleanField(verbose_name="車いす転回",default=False)
     Emergencycall = models.BooleanField(verbose_name="呼出ボタン",default=False)
 
     Image1     = models.ImageField(verbose_name="画像１",upload_to="photos/hotel/",null=True,blank=True)

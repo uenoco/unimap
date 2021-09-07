@@ -51,7 +51,7 @@
 			  <td>{% if hotel.Parking != None %}{{hotel.Parking}}{% else %}情報なし{% endif %}</td>
 			</tr>
                         <tr>
-                            <th>共用多目的トイレ 1F </th>
+                            <th>共用多目的トイレ{% if hotel.ToiletFloor != None %} {{hotel.ToiletFloor}} {% endif %}</th>
                             <td>
 			      {% if hotel.Babyseat %}<img src="/static/icons/wc_babyseat.png">{% endif %}
 			      {% if hotel.Ostomate %}<img src="/static/icons/wc_ostomate.png">{% endif %}
@@ -165,7 +165,7 @@
         <hr>
         <h3 class="heading">住所：{{hotel.Address}}</h3>
         <h3 class="heading">アクセス：{{hotel.Access}}</h3>
-        <h3 class="heading">チェックイン：{{hotel.Checkin}}</h3>
+        <h3 class="heading">チェックイン：{{hotel.Checkin}} / チェックアウト：{{hotel.Checkout}}</h3>
 
         <!-- フッター -->
         <div id="footer">
