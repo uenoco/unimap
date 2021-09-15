@@ -162,7 +162,6 @@ DIV.info120 img{
     text-align: center;
 }
 .popup-photo img{
-    -webkit-border-radius:10px;
     border-radius: 3px;
     margin: 6px 0;
 }
