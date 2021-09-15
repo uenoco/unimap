@@ -84,3 +84,4 @@ def cj_method(item):
         return item.__dict__
     else:
         raise TypeError
+
