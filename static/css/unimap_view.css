@@ -158,8 +158,11 @@ DIV.info120 img{
     color: #796bae;
 }
 
-.popup-photo {
+.popup-photo img{
     text-align: center;
+    -webkit-border-radius:10px;
+    border-radius: 5px;
+    margin-bottom: 5px
 }
 
 .leaflet-popup-content p {
