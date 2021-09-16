@@ -17,20 +17,17 @@ from api import views
 
 urlpatterns = [
     #path('', include(router.urls)),
-    path('v1/toilet.geojson',GeoJSONLayerView.as_view(
-        model=Toilet,
-        properties=['Name','Summery','Floor','Babyseat','Ostomate','Nursingbed','Washlet','Rotation','Emergencycall',
-                    'Photo1','Photo2','Photo3','Photo360','Photo360_2']
-    ), name='toilet'),
+
+    # Toilet PointData
+    path('v1/toilet.geojson', views.toiletdata, name="toilet"),
+    #path('v1/toilet.geojson',GeoJSONLayerView.as_view(
+    #    model=Toilet,
+    #    properties=['Name','Summery','Floor','Babyseat','Ostomate','Nursingbed','Washlet','Rotation','Emergencycall',
+    #                'Photo1','Photo2','Photo360']
+    #), name='toilet'),
 
     # Hotel PointData
     path('v1/hotel.geojson', views.hoteldata, name="hotel"),
-    
-    path('v2/hotel.geojson',GeoJSONLayerView.as_view(
-        model=Hotel,
-        properties=['Name','Summery','TEL','Address','Access','URL','URL_f21']
-    ), name='point'),
-    #path('v2/hotel.geojson', views.hoteldata, name='hoteldata'),
     #path('v1/hotel.geojson',GeoJSONLayerView.as_view(
     #    model=Hotel,
     #    properties=['Name','Summery','TEL','Address','Access','URL','URL_f21',

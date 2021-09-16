@@ -36,11 +36,23 @@ def get_absolute_image1_url(self):
     return "{0}{1}".format(MEDIA_URL, self.Image1.url)
 
 def hoteldata(request):
-    hotels=Hotel.objects.all()
-    print(hotels)
+    #hotels=Hotel.objects.all()
+    #print(hotels)
     hotelpoint = serialize('geojson', Hotel.objects.all(), geometry_field='geom',
                            fields=('pk','Name','Summery','TEL','Address','Access','URL','URL_f21','Image1', 'Image2')
                            )
-    print( hotelpoint )
+    #print( hotelpoint )
     return HttpResponse( hotelpoint, content_type='application/json')
+
+def toiletdata(request):
+    #toilets=Toilet.objects.all()
+    #print(toiletss)
+    toiletpoint = serialize('geojson', Toilet.objects.all(), geometry_field='geom',
+                            fields=('Name','Summery','Floor',
+                                    'Babyseat','Ostomate','Nursingbed','Washlet','Rotation','Emergencycall',
+                                    'Image1', 'Image2', 'Image3', 
+                                    'Photo1','Photo2','Photo3','Photo360','Photo360_2')
+                           )
+    #print( toiletpoint )
+    return HttpResponse( toiletpoint, content_type='application/json')
 

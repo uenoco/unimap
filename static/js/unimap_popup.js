@@ -1,5 +1,7 @@
+// -*- coding: utf-8 -*-
 //////////////////////////////////////////////////////////////////////////////////
-//  ポップアップコンテンツ
+//  あいうえお
+//  日本語ポップアップコンテンツ
 //////////////////////////////////////////////////////////////////////////////////
 
 ////////
@@ -199,14 +201,29 @@ function setPopupContentWC(feature){
 	popupContent = popupContent.replace("TOILET_SUMMERY", popupParts );
 	
 	//  Photo1
-	if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 !== "" )){
+	if(( feature.properties.Image1 !== undefined )&&( feature.properties.Image1 != "" )){
+	    // use uploaded Photoimage to django
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
+	}else if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )
+		  &&(feature.properties.Photo1 != null )){
+	    // use PhotoImage Link
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	}else{
+	    console.log( "koko 1none" )
+	    console.log( feature.properties.Image1 )
+	    console.log( feature.properties.Photo1 )
 	    popupParts = "";
 	}
 	popupContent = popupContent.replace("TOILET_PHOTO1", popupParts );
 	//  Photo2
-	if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 !== "" )){
+	if(( feature.properties.Image2 !== undefined )&&( feature.properties.Image2 != "" )){
+	    console.log( "koko" )
+	    console.log( feature.properties.Image2 )
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Image2 );
+	}else if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )
+		  &&(feature.properties.Photo2 != null )){
+	    console.log( "koko-OLD" )
+	    console.log( feature.properties.Photo2 )
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	}else{
 	    popupParts = "";
@@ -695,10 +712,4 @@ function onEachSub_SearchRoute(feature) {
     
   return( popupContent );
 }
-
-
-
-
-
-    
 

@@ -53,3 +53,7 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += static('photo/', document_root=settings.MEDIA_ROOT)
+urlpatterns += static('photos/', document_root=settings.MEDIA_ROOT+"/photos")
+

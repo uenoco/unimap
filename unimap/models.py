@@ -168,11 +168,11 @@ class Toilet(models.Model):
     Rotation  = models.BooleanField(verbose_name="車いす転回",default=False)
     Emergencycall = models.BooleanField(verbose_name="呼出ボタン",default=False)
 
+    Image1    = models.ImageField(verbose_name="画像１",upload_to="photos/toilet/",null=True,blank=True)
+    Image2    = models.ImageField(verbose_name="画像２",upload_to="photos/toilet/",null=True,blank=True)
     Photo1    = models.CharField(verbose_name="Photo1",max_length=256,null=True,blank=True)
     Photo2    = models.CharField(verbose_name="Photo2",max_length=256,null=True,blank=True)
-    Photo3    = models.CharField(verbose_name="Photo3",max_length=256,null=True,blank=True)
     Photo360  = models.CharField(verbose_name="Photo360",max_length=256,null=True,blank=True)
-    Photo360_2= models.CharField(verbose_name="Photo360_2",max_length=256,null=True,blank=True)
     geom      = models.PointField(srid=4326,default=Point([135.82, 34.68]))
     Timestamp = models.DateTimeField(verbose_name="更新日時",blank=True, null=True, auto_now=True)
     objects   = models.Manager()
