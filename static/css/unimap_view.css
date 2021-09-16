@@ -1,4 +1,3 @@
-
 /* H1-H4 */
 h1, h2, h3, h4{
     margin: 0px;padding: 0px;border: 0px;  text-align:center;
@@ -161,6 +160,10 @@ DIV.info120 img{
 .popup-photo {
     text-align: center;
 }
+.popup-photo img{
+    border-radius: 3px;
+    margin: 4px 0;
+}
 
 .leaflet-popup-content p {
     margin: 0; /* リセット */
@@ -256,3 +259,4 @@ table.popup-item {
     color: #796bae;
     text-decoration: none;
 }
+

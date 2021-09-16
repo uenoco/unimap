@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://www.unimap.org/hotel/kanpo-heguri/ -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="{{hotel.Name}}">
+    <title>{{hotel.Name}}</title>
+    <link rel="stylesheet" href="/static/css/hotel_detail.css" type="text/css" media="screen">
+    <!--[if lt IE 9]>
+<script src="js/html5.js"></script><script src="js/css3-mediaqueries.js"></script>
+<![endif]-->
+</head>
+
+<body>
+  <div id="header"></div>
+    <div id="wrapper">
+      <div class="inner">
+        <div class="name"><a>{{hotel.Name}}</a><br></div>
+            <div class="tel"><a><img src="/static/icons/tel_mini.png" alt="">{{hotel.TEL}}</a> </div>
+        </div>
+        <section id="main">
+            <!-- room -->
+	    {% if hotel.Image1 != undefined and hotel.Image1 != "" %}
+	    <a class="thumbnail" href="/media/{{hotel.Image1}}" target="_blank">
+                <img src="/media/{{hotel.Image1}}" align="middle" alt="PhotoHotel"></a>
+	    {% endif %}
+	    {% if hotel.Image2 != undefined and hotel.Image2 != "" %}
+	    {{hotel.Image2}}
+	    <a class="thumbnail" href="/media/{{hotel.Image2}}" target="_blank">
+                <img src="/media/{{hotel.Image2}}" align="middle" alt="PhotoHotel2"></a>
+	    {% endif %}
+            <!-- bathroom -->
+	    {% if hotel.ImageBath != undefined and hotel.ImageBath != "" %}
+            <a class="thumbnail" href="/media/{{hotel.ImageBath}}" target="_blank">
+                <img src="/media/{{hotel.ImageBath}}" align="middle" alt="PhotoBath"></a>
+	    {% endif %}
+            <!-- toilet -->
+	    {% if hotel.ImageToilet != undefined and hotel.ImageToilet != "" %}
+            <a class="thumbnail" href="/media/{{hotel.ImageToilet}}" target="_blank">
+                <img src="/media/{{hotel.ImageToilet}}" align="middle" alt="PhotoToilet"></a>
+	    {% endif %}
+        </section>
+        <section class="content">
+            <h3 class="heading">施設</h3>
+            <article>
+                <table class="table">
+                    <tbody>
+                        <tr>
+			  <th>駐車場</th>
+			  <td>{% if hotel.Parking != None %}{{hotel.Parking}}{% else %}情報なし{% endif %}</td>
+			</tr>
+                        <tr>
+                            <th>共用多目的トイレ{% if hotel.ToiletFloor != None %} {{hotel.ToiletFloor}} {% endif %}</th>
+                            <td>
+			      {% if hotel.Babyseat %}<img src="/static/icons/wc_babyseat.png">{% endif %}
+			      {% if hotel.Ostomate %}<img src="/static/icons/wc_ostomate.png">{% endif %}
+			      {% if hotel.Nursingbed %}<img src="/static/icons/wc_nursingbed.png">{% endif %}
+			      {% if hotel.Washlet %}<img src="/static/icons/wc_washlet.png">{% endif %}
+			      {% if hotel.Rotation %}<img src="/static/icons/wc_rotation.png">{% endif %}
+			      {% if hotel.Emergencycall %}<img src="/static/icons/wc_sos.png">{% endif %}
+			      {% if hotel.Toilet != None %} {{hotel.Toilet}} {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>ホテルスタッフの補助</th>
+			    <td>{% if hotel.Staff != None %}{{hotel.Staff}}{% else %}情報なし{% endif %}</td>
+                        </tr>
+                        <tr>
+                            <th>ロビーから客室への移動</th>
+			    <td>{% if hotel.Moving != None %}{{hotel.Moving}}{% else %}情報なし{% endif %}</td>
+                        </tr>
+                        <tr>
+                            <th>貸出し備品</th>
+			    <td>{% if hotel.Rental != None %}{{hotel.Rental}}{% else %}情報なし{% endif %}</td>
+                        </tr>
+			{% if hotel.Bath != None %}
+                        <tr>
+                            <th>大浴場</th>
+                            <td>{{hotel.Bath}}</td>
+                        </tr>
+			{% endif %}
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <!--/ 車いすのおすすめ客室 -->
+	{% if hotel.RoomName != undefined and hotel.RoomName != "" %}
+        <section class="content">
+            <h3 class="heading">車いすのおすすめ客室</h3>
+            <h3>{{hotel.RoomName}}</h3>
+            <article>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>広さ</th>
+                            <td>{{hotel.RoomSize}}</td>
+                        </tr>
+                        <tr>
+                            <th>トイレ</th>
+                            <td>
+			      {% if hotel.RoomBabyseat == True %}<img src="/static/icons/wc_babyseat.png">{% endif %}
+			      {% if hotel.RoomOstomate %}<img src="/static/icons/wc_ostomate.png">{% endif %}
+			      {% if hotel.RoomNursingbed %}<img src="/static/icons/wc_nursingbed.png">{% endif %}
+			      {% if hotel.RoomWashlet %}<img src="/static/icons/wc_washlet.png">{% endif %}
+			      {% if hotel.RoomRotation %}<img src="/static/icons/wc_rotation.png">{% endif %}
+			      {% if hotel.RoomEmergencycall %}<img src="/static/icons/wc_sos.png">{% endif %}
+			      {% if hotel.RoomToilet != None %} {{hotel.RoomToilet}} {% endif %}
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>浴室</th>
+                            <td>{{hotel.RoomBath}}</td>
+                        </tr>
+                        <tr>
+                            <th>金額</th>
+                            <td>{{hotel.RoomPrice}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+	{% endif %}
+        <!--朝食 -->
+        <section class="content">
+            <h3 class="heading">朝食</h3>
+            <article>
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <th>会場</th>
+			    <td>{% if hotel.BreakfastPlace != None %}{{hotel.BreakfastPlace}}{% else %}情報なし{% endif %}</td>
+                        </tr>
+                        <tr>
+                            <th>食事のアレンジ</th>
+			    <td>{% if hotel.BreakfastArrange != None %}{{hotel.BreakfastArrange}}{% else %}情報なし{% endif %}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+	{% if hotel.Photo360room != undefined and hotel.Photo360room != "" %}
+	  <h2 class="heading">バリアフリールーム</h2>
+          <blockquote data-width="500" data-height="375" class="ricoh-theta-spherical-image"><a href="{{hotel.Photo360room}}" target="_blank"></a></blockquote>
+          <script async="" src="https://theta360.com/widgets.js" charset="utf-8"></script>
+	  <br>
+	{% endif %}
+	{% if hotel.Photo360bath != undefined and hotel.Photo360bath != "" %}
+	  <h2 class="heading">浴室</h2>
+          <blockquote data-width="500" data-height="375" class="ricoh-theta-spherical-image"><a href="{{hotel.Photo360bath}}" target="_blank"></a></blockquote>
+          <script async="" src="https://theta360.com/widgets.js" charset="utf-8"></script>
+          <br>
+	{% endif %}
+	{% if hotel.Photo360toilet != undefined and hotel.Photo360toilet != "" %}
+          <h2 class="heading">共用トイレ</h2>
+          <blockquote data-width="500" data-height="375" class="ricoh-theta-spherical-image"><a href="{{hotel.Photo360toilet}}" target="_blank"></a></blockquote>
+          <script async="" src="https://theta360.com/widgets.js" charset="utf-8"></script>
+          <br>
+	{% endif %}
+	  
+	{% if hotel.Remarks != undefined and hotel.Remarks != "" %}
+          <h3>{{hotel.Remarks}}</h3>
+	{% endif %}
+      
+        <hr>
+        <h3 class="heading">住所：{{hotel.Address}}</h3>
+        <h3 class="heading">アクセス：{{hotel.Access}}</h3>
+        <h3 class="heading">チェックイン：{{hotel.Checkin}} / チェックアウト：{{hotel.Checkout}}</h3>
+
+        <!-- フッター -->
+        <div id="footer">
+            <div class="inner">
+              ©2021 奈良ユニバーサル観光マップ
+            </div>
+        </div>
+    </div>
+
+
+
+</body></html>

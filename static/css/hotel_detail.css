@@ -1,0 +1,399 @@
+ol,
+ul {
+    list-style-type: none;
+    list-style-position: outside;
+    list-style-image: none;
+}
+
+table {
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0px;
+}
+
+caption,
+th,
+td {
+    font-weight: normal;
+    text-align: left;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+    content: "";
+}
+
+blockquote,
+q {
+    quotes: """";
+}
+
+body {
+    color: #333333;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: verdana, "ヒラギノ丸ゴ ProN W4", "Hiragino Maru Gothic ProN", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    background-color: #f0f0f0;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+html {
+    background-color: #f0f0f0;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+}
+
+a {
+    color: #337db6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #246292;
+}
+
+a:active,
+a:focus {
+    outline-width: 0px;
+    outline-style: none;
+}
+
+#wrapper {
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    padding-top: 0px;
+    padding-right: 1%;
+    padding-bottom: 0px;
+    padding-left: 1%;
+    width: 98%;
+    position: relative;
+}
+
+
+#header {
+    padding-top: 25px;
+    padding-right: 0px;
+    padding-bottom: 15px;
+    padding-left: 0px;
+    overflow: hidden;
+}
+
+
+#header h1 {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+#header .logo {
+    float: left;
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+/** ホテル名 **/
+.name a {
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+/** ホテルの電話番号 **/
+.tel a {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1;
+    color: #000
+}
+
+#mainBanner img {
+    max-width: 100%;
+    border-radius: 3px;
+}
+
+.gridWrapper {
+    padding-bottom: 20px;
+    overflow: hidden;
+}
+
+* html .gridWrapper {
+    height: 1%;
+}
+
+
+.grid {
+    float: left;
+    border-radius: 5px;
+    background-color: beige;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+}
+
+.grid h3 {
+    padding-top: 15px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    text-align: center;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #e4e4e4;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+}
+
+.grid p {
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+}
+
+.gridWrapper img {
+    max-width: 100%;
+    height: auto;
+}
+
+#footer .grid {
+    background-color: transparent;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+}
+
+#footer .grid p {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+section.content {
+    padding-top: 19px;
+    padding-right: 19px;
+    padding-bottom: 19px;
+    padding-left: 19px;
+    margin-bottom: 20px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #ebebeb;
+    border-right-color: #ebebeb;
+    border-bottom-color: #ebebeb;
+    border-left-color: #ebebeb;
+    border-radius: 6px;
+    background-color: white;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+* html section.content {
+    height: 1%;
+}
+
+section.content p {
+    margin-bottom: 5px;
+}
+
+h3.heading {
+    padding-left: 7px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-left-width: 10px;
+    border-left-style: solid;
+    border-left-color: #3a3a;
+}
+
+section.content img {
+    max-width: 90%;
+    height: auto;
+}
+
+.alignleft {
+    float: left;
+    clear: left;
+    margin-top: 3px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+.alignright {
+    float: right;
+    clear: right;
+    margin-top: 3px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#gallery .grid {
+    padding-top: 5px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+}
+
+table.table {
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+
+table.table th,
+table.table td {
+    text-align: left;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-top-style: solid;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-top-color: #cacaca;
+    border-right-color: #cacaca;
+    border-bottom-color: #cacaca;
+    border-left-color: #cacaca;
+}
+
+table.table th {
+    width: 200px;
+    text-align: left;
+    font-weight: bold;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    background-color: #2fe2;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+}
+
+table.table td {
+    text-align: left;
+    border-left-width: medium;
+    border-left-style: none;
+    border-left-color: #48370d;
+}
+
+
+#footer {
+    clear: both;
+    padding-top: 20px;
+    padding-right: 0px;
+    padding-bottom: 40px;
+    padding-left: 0px;
+    overflow: hidden;
+}
+
+* html #footer {
+    height: 1%;
+}
+
+.toiawase {
+    font-size: 14px;
+    color: brown;
+}
+
+.tel strong {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#footer a {
+    color: #333333;
+}
+
+#footer a:hover {
+    color: #888888;
+}
+
+#footer .copyright {
+    font-size: 11px;
+
+}
+
+/** サムネイル 高さを揃える **/
+.thumbnail {
+    display: inline-block;
+    height: 150px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.thumbnail img {
+    height: 100%;
+}
+
+@media only screen and (min-width: 960px) {
+
+    #wrapper,
+    .inner {
+        width: 940px;
+        padding: 0px;
+    }
+
+    #wrapper {
+        padding-bottom: 20px;
+    }
+
+    .gridWrapper {
+        width: 960px;
+        margin: 0px 0px 0px -20px;
+    }
+
+    .grid {
+        width: 220px;
+    }
+
+    #sub .grid,
+    #footer .grid {
+        width: 300px;
+    }
+
+    #gallery {
+        width: 920px;
+    }
+
+    #gallery .grid {
+        width: 210px;
+    }
+}

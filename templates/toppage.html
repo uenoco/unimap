@@ -95,8 +95,8 @@
   {% for area in arealist %}
   <h3><a href="{% url 'map' %}/{{ area.id }}">{{ area.Name }}エリア</a>
     <span>{{ area.SubName }}</span></h3>
-  <ol>
-    <dt>{{ area.Abstruct|linebreaksbr }}</dt>
+  <ol class="course">
+    <li class="course">{{ area.Abstruct|linebreaksbr }}</li>
   </ol>
   {% endfor %}
 </section> 
