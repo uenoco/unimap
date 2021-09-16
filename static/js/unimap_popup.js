@@ -201,11 +201,10 @@ function setPopupContentWC(feature){
 	popupContent = popupContent.replace("TOILET_SUMMERY", popupParts );
 	
 	//  Photo1
-	if(( feature.properties.Image1 !== undefined )&&( feature.properties.Image1 != "" )){
+	if( checkProp( feature.properties.Image1 ) ){
 	    // use uploaded Photoimage to django
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
-	}else if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )
-		  &&(feature.properties.Photo1 != null )){
+	}else if( checkProp( feature.properties.Photo1 ) ){
 	    // use PhotoImage Link
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	}else{
@@ -213,10 +212,9 @@ function setPopupContentWC(feature){
 	}
 	popupContent = popupContent.replace("TOILET_PHOTO1", popupParts );
 	//  Photo2
-	if(( feature.properties.Image2 !== undefined )&&( feature.properties.Image2 != "" )){
+	if( checkProp( feature.properties.Image2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Image2 );
-	}else if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )
-		  &&(feature.properties.Photo2 != null )){
+	}else if( checkProp( feature.properties.Photo2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	}else{
 	    popupParts = "";
@@ -296,7 +294,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_NAME", popupParts );
 	
 	//  Photo1
-	if (( feature.properties.Image1 !== undefined )&&( feature.properties.Image1 != "" )){
+	if( checkProp( feature.properties.Image1 ) ){
 	    popupParts = TemplateParts_PhotoH.replace("POPUP_PHOTO",  "/media/"+feature.properties.Image1 );
 	}else{
 	    popupParts = "";
@@ -304,7 +302,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_PHOTO1", popupParts );
 	
 	//  Photo2
-	if (( feature.properties.Image2 !== undefined )&&( feature.properties.Image2 != "" )){
+	if( checkProp( feature.properties.Image2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/media/"+feature.properties.Image2 );
 	}else{
 	    popupParts = "";
@@ -429,14 +427,18 @@ function setPopupContentInfo(feature, layer) {
 	popupContent = popupContent.replace("INFO_SUMMERY", popupParts );
 	
 	//  Photo Image (1)
-	if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )){
+	if( checkProp( feature.properties.Image1 ) ){
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
+	}else if( checkProp( feature.properties.Photo1 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	}else{
 	    popupParts = "";
 	}
 	popupContent = popupContent.replace("INFO_PHOTO1", popupParts );
 	//  Photo Image (2)
-	if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )){
+	if( checkProp( feature.properties.Image2 ) ){
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image2 );
+	}else if( checkProp( feature.properties.Photo2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	}else{
 	    popupParts = "";
@@ -512,8 +514,9 @@ function setPopupContentPOI(feature, layer) {
 	    }
 	    popupBlock = popupBlock.replace("POI_REMARKS", popupParts );
 	    //  Photo1
-	    //if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )){
-	    if ( checkProp( feature.properties.Photo1 ) ){
+	    if ( checkProp( feature.properties.Image1 ) ){
+		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
+	    }else if ( checkProp( feature.properties.Photo1 ) ){
 		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	    }else{
 		popupParts = "";
@@ -521,7 +524,9 @@ function setPopupContentPOI(feature, layer) {
 	    popupBlock = popupBlock.replace("POI_PHOTO1", popupParts );
 	    //  Photo2
 	    //if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )){
-	    if ( checkProp( feature.properties.Photo2 ) ){
+	    if ( checkProp( feature.properties.Image2 ) ){
+		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", "/"+feature.properties.Image2 );
+	    }else if ( checkProp( feature.properties.Photo2 ) ){
 		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	    }else{
 		popupParts = "";
@@ -659,21 +664,19 @@ function setPopupContentPass(feature){
 	
 	//  Photo Image
 	//  Photo1 
-	if(( feature.properties.Image1 !== undefined )&&( feature.properties.Image1 != "" )){
+	if( checkProp( feature.properties.Image1 ) ){
 	    // use uploaded Photoimage to django
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
-	}else if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )
-		  &&( feature.properties.Photo1 != null )){
+	}else if( checkProp( feature.properties.Photo1 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	}else{
 	    popupParts = "";
 	}
 	popupContent = popupContent.replace("AREA_PHOTO1", popupParts );
 	//  Photo2
-	if(( feature.properties.Image2 !== undefined )&&( feature.properties.Image2 != "" )){
+	if( checkProp( feature.properties.image2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image2 );
-	}else if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )
-		  &&( feature.properties.Photo2 != null )){
+	}else if ( checkProp( feature.properties.photo2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	}else{
 	    popupParts = "";

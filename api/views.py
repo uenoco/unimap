@@ -18,22 +18,28 @@ from unimap.models import Area, Toilet, Hotel, Zone, Route, PointData
 import json
 
 # Create your views here.
+# route by areaid
 def route(request, areaid):
     routeline = serialize('geojson', Route.objects.filter( AreaId=areaid ), geometry_field='geom', fields=('Sort','Name','Summery'))
-    
     return HttpResponse( routeline, content_type='application/json')
 
-def pointdata(request, areaid):
+# routepoint by areaid
+def routepointdata(request, areaid):
     routepoint = serialize('geojson', PointData.objects.filter( AreaId=areaid ), geometry_field='geom',
                            fields=('Sort','No','Name','Summery','Remarks','Open','Close','OpeningNote','Holiday','Price',
-                                   'PriceNote','Discount','TEL','URL','Urltitle','Photo1','Photo2','Photo3','Photo360','Photo360_2')
+                                   'PriceNote','Discount','TEL','URL','Urltitle',
+                                   'Image1','image2','Photo1','Photo2','Photo360')
                            )
     return HttpResponse( routepoint, content_type='application/json')
 
-
-@property
-def get_absolute_image1_url(self):
-    return "{0}{1}".format(MEDIA_URL, self.Image1.url)
+# pointdata
+def pointdata(request):
+    routepoint = serialize('geojson', PointData.objects.all(), geometry_field='geom',
+                           fields=('Sort','No','Name','Summery','Remarks','Open','Close','OpeningNote','Holiday','Price',
+                                   'PriceNote','Discount','TEL','URL','Urltitle',
+                                   'Image1','image2','Photo1','Photo2','Photo360')
+                           )
+    return HttpResponse( routepoint, content_type='application/json')
 
 # zone for pass
 def zonedata(request):
