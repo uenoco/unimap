@@ -44,6 +44,7 @@ def test(request):
 
 # マップ
 def map(request,areaid):
+    print( areaid )
     try:
         # get arealist
         arealist = Area.objects.filter( DisplayFlag=True ).order_by('DisplayOrder')
