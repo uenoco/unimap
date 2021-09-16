@@ -28,7 +28,7 @@ def routepointdata(request, areaid):
     routepoint = serialize('geojson', PointData.objects.filter( AreaId=areaid ), geometry_field='geom',
                            fields=('Sort','No','Name','Summery','Remarks','Open','Close','OpeningNote','Holiday','Price',
                                    'PriceNote','Discount','TEL','URL','Urltitle',
-                                   'Image1','image2','Photo1','Photo2','Photo360')
+                                   'Image1','Image2','Photo1','Photo2','Photo360')
                            )
     return HttpResponse( routepoint, content_type='application/json')
 
@@ -37,7 +37,7 @@ def pointdata(request):
     routepoint = serialize('geojson', PointData.objects.all(), geometry_field='geom',
                            fields=('Sort','No','Name','Summery','Remarks','Open','Close','OpeningNote','Holiday','Price',
                                    'PriceNote','Discount','TEL','URL','Urltitle',
-                                   'Image1','image2','Photo1','Photo2','Photo360')
+                                   'Image1','Image2','Photo1','Photo2','Photo360')
                            )
     return HttpResponse( routepoint, content_type='application/json')
 
