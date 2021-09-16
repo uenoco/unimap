@@ -346,7 +346,6 @@ function setPopupContentHotel(feature){
 	if( checkProp( feature.properties.URL ) ){
 	    popupParts = TemplateParts_Link.replace( "POPUP_URLLINK" , feature.properties.URL );
 	    if( checkProp( feature.properties.Urltitle ) ){
-		&&( feature.properties.Urltitle != "" )){
 		popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.Urltitle );
 	    }else{
 		popupParts = popupParts.replace( "POPUP_URLTITLE" , "ホテルの公式サイトへ" );
