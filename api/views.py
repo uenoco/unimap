@@ -35,6 +35,14 @@ def pointdata(request, areaid):
 def get_absolute_image1_url(self):
     return "{0}{1}".format(MEDIA_URL, self.Image1.url)
 
+# zone for pass
+def zonedata(request):
+    zonepolygon = serialize('geojson', Zone.objects.all(), geometry_field='geom',
+                           fields=('Sort','Name','Summery','Image1', 'Image2', 'Photo1', 'Photo2','Photo360')
+                           )
+    #print( hotelpoint )
+    return HttpResponse( zonepolygon, content_type='application/json')
+
 def hoteldata(request):
     #hotels=Hotel.objects.all()
     #print(hotels)
@@ -50,8 +58,7 @@ def toiletdata(request):
     toiletpoint = serialize('geojson', Toilet.objects.all(), geometry_field='geom',
                             fields=('Name','Summery','Floor',
                                     'Babyseat','Ostomate','Nursingbed','Washlet','Rotation','Emergencycall',
-                                    'Image1', 'Image2', 'Image3', 
-                                    'Photo1','Photo2','Photo3','Photo360','Photo360_2')
+                                    'Image1', 'Image2', 'Photo1','Photo2','Photo360')
                            )
     #print( toiletpoint )
     return HttpResponse( toiletpoint, content_type='application/json')

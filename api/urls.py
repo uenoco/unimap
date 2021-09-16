@@ -35,10 +35,12 @@ urlpatterns = [
     #), name='hotel'),
     
 
-    path('v1/zone.geojson',GeoJSONLayerView.as_view(
-        model=Zone,
-        properties=['Name','Summery','Sort', 'Photo1','Photo2','Photo3','Photo360','Photo360_2']
-    ), name='zone'),
+    # Pass ZoneData
+    path('v1/zone.geojson', views.zonedata, name="zone"),
+    #path('v1/zone.geojson',GeoJSONLayerView.as_view(
+    #   model=Zone,
+    #    properties=['Name','Summery','Sort', 'Photo1','Photo2','Photo3','Photo360','Photo360_2']
+    #), name='zone'),
 
     # Course Route :LineString
     path('v1/route.geojson',GeoJSONLayerView.as_view(
