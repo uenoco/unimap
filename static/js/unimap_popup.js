@@ -1,5 +1,7 @@
+// -*- coding: utf-8 -*-
 //////////////////////////////////////////////////////////////////////////////////
-//  ポップアップコンテンツ
+//  あいうえお
+//  日本語ポップアップコンテンツ
 //////////////////////////////////////////////////////////////////////////////////
 
 ////////
@@ -183,7 +185,7 @@ function setPopupContentWC(feature){
     
     if ( feature.properties ){
 	//  Name
-	if ( feature.properties.Name !== undefined ){
+	if( checkProp( feature.properties.Name ) ){
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.Name );
 	}else{
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
@@ -191,7 +193,7 @@ function setPopupContentWC(feature){
 	popupContent = popupContent.replace("TOILET_NAME", popupParts );
 	
 	//  Summery
-	if ( feature.properties.Summery !== undefined ){
+	if( checkProp( feature.properties.Summery ) ){
 	    popupParts = TemplateParts_ToiletSummery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
 	}else{
 	    popupParts = "";
@@ -199,14 +201,20 @@ function setPopupContentWC(feature){
 	popupContent = popupContent.replace("TOILET_SUMMERY", popupParts );
 	
 	//  Photo1
-	if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 !== "" )){
+	if( checkProp( feature.properties.Image1 ) ){
+	    // use uploaded Photoimage to django
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
+	}else if( checkProp( feature.properties.Photo1 ) ){
+	    // use PhotoImage Link
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	}else{
 	    popupParts = "";
 	}
 	popupContent = popupContent.replace("TOILET_PHOTO1", popupParts );
 	//  Photo2
-	if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 !== "" )){
+	if( checkProp( feature.properties.Image2 ) ){
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Image2 );
+	}else if( checkProp( feature.properties.Photo2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	}else{
 	    popupParts = "";
@@ -236,29 +244,29 @@ function setPopupContentWC(feature){
 	popupContent = popupContent.replace("TOILET_PROP_ICON",
                                             TemplateParts_PropIcon.replace("POPUP_TOILET_PROP_ICON", popupParts ));  
     
-	  //  Toilet 360 Photo
-    if (( feature.properties.Photo360 !== undefined ) && ( feature.properties.Photo360 != "" )){
-      popupParts = TemplateParts_360Photo.replace( "POPUP_360PHOTO", feature.properties.Photo360 );
-	  }else{
-      popupParts = "";
-    }
-    popupContent =  popupContent.replace("TOILET_360PHOTO", popupParts );
+	//  Toilet 360 Photo
+	if( checkProp( feature.properties.Photo360 ) ){
+	    popupParts = TemplateParts_360Photo.replace( "POPUP_360PHOTO", feature.properties.Photo360 );
+	}else{
+	    popupParts = "";
+	}
+	popupContent =  popupContent.replace("TOILET_360PHOTO", popupParts );
 
-	  //  Toilet Describe
-		var popupDescribe = "";
-    //  FLOOR
-    if (( feature.properties.Floor !== undefined ) && ( feature.properties.Floor != "" )){
+	//  Toilet Describe
+	var popupDescribe = "";
+	//  FLOOR
+	if( checkProp( feature.properties.Floor ) ){
 	    popupDescribe += TemplateParts_Floor.replace( "POPUP_FLOOR_LEVEL" , feature.properties.Floor );
-	  }
-    popupContent = popupContent.replace("TOILET_DESCRIBE", popupDescribe );
+	}
+	popupContent = popupContent.replace("TOILET_DESCRIBE", popupDescribe );
 
-    //  RouteSearch
-    var popupRouteSearch = "";
-    popupRouteSearch += TemplateParts_RouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
-    //popupRouteSearch += TemplateParts_DemoSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
-    popupContent = popupContent.replace("TOILET_ROUTE_SEARCH", popupRouteSearch );
+	//  RouteSearch
+	var popupRouteSearch = "";
+	popupRouteSearch += TemplateParts_RouteSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
+	//popupRouteSearch += TemplateParts_DemoSearch.replace( "SERARH_GEOMETRY_POINT", feature.geometry.coordinates  );
+	popupContent = popupContent.replace("TOILET_ROUTE_SEARCH", popupRouteSearch );
     }else{
-	  popupContent = '<h3>No Data</h3><hr class="full"><p>Sorry</p>';
+	popupContent = '<h3>No Data</h3><hr class="full"><p>Sorry</p>';
     }
 
 //  console.log( popupContent );
@@ -278,7 +286,7 @@ function setPopupContentHotel(feature){
     
     if ( feature.properties ){
 	//  Name
-	if ( feature.properties.Name !== undefined ){
+	if( checkProp( feature.properties.Name ) ){
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.Name );
 	}else{
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
@@ -286,7 +294,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_NAME", popupParts );
 	
 	//  Photo1
-	if (( feature.properties.Image1 !== undefined )&&( feature.properties.Image1 != "" )){
+	if( checkProp( feature.properties.Image1 ) ){
 	    popupParts = TemplateParts_PhotoH.replace("POPUP_PHOTO",  "/media/"+feature.properties.Image1 );
 	}else{
 	    popupParts = "";
@@ -294,7 +302,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_PHOTO1", popupParts );
 	
 	//  Photo2
-	if (( feature.properties.Image2 !== undefined )&&( feature.properties.Image2 != "" )){
+	if( checkProp( feature.properties.Image2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/media/"+feature.properties.Image2 );
 	}else{
 	    popupParts = "";
@@ -302,7 +310,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_PHOTO2", popupParts );
 	
 	//  Summery
-	if (( feature.properties.Summery !== undefined )&&( feature.properties.Summery != "" )){
+	if( checkProp( feature.properties.Summery ) ){
 	    popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
 	}else{
 	    popupParts = "";
@@ -310,7 +318,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_SUMMERY", popupParts );
 	
 	// TEL
-	if ((feature.properties.TEL !== undefined ) && (feature.properties.TEL !== "" ) ){
+	if( checkProp( feature.properties.TEL ) ){
 	    popupParts = TemplateItem_TEL.replace( "POPUP_TEL" , feature.properties.TEL );
 	}else{
 	    popupParts = "";
@@ -318,7 +326,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_TEL", popupParts );
 	
 	// ADDRESS
-	if ((feature.properties.Address !== undefined ) && (feature.properties.Address !== "" ) ){
+	if( checkProp( feature.properties.Address ) ){
 	    popupParts = TemplateItem_Address.replace( "POPUP_ADDRESS" , feature.properties.Address  );
 	}else{
 	    popupParts = "";
@@ -326,7 +334,7 @@ function setPopupContentHotel(feature){
 	popupContent = popupContent.replace("HOTEL_ADDRESS", popupParts );
 	
 	// ACCESS
-	if ((feature.properties.Access !== undefined ) && (feature.properties.Access !== "" ) ){
+	if( checkProp( feature.properties.Access ) ){
 	    popupParts = TemplateItem_Access.replace( "POPUP_ACCESS" , feature.properties.Access  );
 	}else{
 	    popupParts = "";
@@ -335,10 +343,9 @@ function setPopupContentHotel(feature){
 	
 	// HOTEL_URL
 	//  URL
-	if (( feature.properties.URL !== undefined )&&( feature.properties.URL != "" )){
+	if( checkProp( feature.properties.URL ) ){
 	    popupParts = TemplateParts_Link.replace( "POPUP_URLLINK" , feature.properties.URL );
-	    if (( feature.properties.Urltitle !== undefined )&&( feature.properties.Urltitle !== null )
-		&&( feature.properties.Urltitle != "" )){
+	    if( checkProp( feature.properties.Urltitle ) ){
 		popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.Urltitle );
 	    }else{
 		popupParts = popupParts.replace( "POPUP_URLTITLE" , "ホテルの公式サイトへ" );
@@ -403,7 +410,7 @@ function setPopupContentInfo(feature, layer) {
   //  Place Name
     if ( feature.properties ){
 	//  Name
-	if (( feature.properties.Name !== undefined )&&( feature.properties.Name != "" )){
+	if( checkProp( feature.properties.Name ) ){
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.Name );
 	}else{
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
@@ -411,7 +418,7 @@ function setPopupContentInfo(feature, layer) {
 	popupContent = popupContent.replace("INFO_NAME", popupParts );
 	
 	  //  Summery
-	if (( feature.properties.Summery !== undefined )&&( feature.properties.Summery != "" )){
+	if( checkProp( feature.properties.Summery ) ){
 	    popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
 	}else{
 	    popupParts = "";
@@ -419,14 +426,18 @@ function setPopupContentInfo(feature, layer) {
 	popupContent = popupContent.replace("INFO_SUMMERY", popupParts );
 	
 	//  Photo Image (1)
-	if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )){
+	if( checkProp( feature.properties.Image1 ) ){
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
+	}else if( checkProp( feature.properties.Photo1 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	}else{
 	    popupParts = "";
 	}
 	popupContent = popupContent.replace("INFO_PHOTO1", popupParts );
 	//  Photo Image (2)
-	if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )){
+	if( checkProp( feature.properties.Image2 ) ){
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image2 );
+	}else if( checkProp( feature.properties.Photo2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	}else{
 	    popupParts = "";
@@ -434,7 +445,7 @@ function setPopupContentInfo(feature, layer) {
 	popupContent = popupContent.replace("INFO_PHOTO2", popupParts );
 	
 	//  Remarks
-	if (( feature.properties.Remarks !== undefined )&&( feature.properties.Remarks != "" )){
+	if( checkProp( feature.properties.Remarks ) ){
 	    popupParts = TemplateParts_Remarks.replace( "POPUP_REMARKS" , feature.properties.Remarks );
 	}else{
 	    popupParts = "";
@@ -442,9 +453,9 @@ function setPopupContentInfo(feature, layer) {
 	popupContent = popupContent.replace("INFO_DESCRIBE", popupParts );
 	
 	//  URL
-	if (( feature.properties.URL !== undefined )&&( feature.properties.URL != "" )){
+	if( checkProp( feature.properties.URL ) ){
 	    popupParts = TemplateParts_Link.replace( "POPUP_URLLINK" , feature.properties.URL );
-	    if (( feature.properties.Urltitle !== undefined )&&( feature.properties.Urltitle != "" )){
+	    if( checkProp( feature.properties.Urltitle ) ){
 		popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.Urltitle );
 	    }else{
 		popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.URL );
@@ -477,7 +488,7 @@ function setPopupContentPOI(feature, layer) {
     //  Place Name
     if ( feature.properties ){
 	//  Name
-	if ( feature.properties.Name !== undefined ){
+	if( checkProp( feature.properties.Name ) ){
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.Name );
 	}else{
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
@@ -502,16 +513,18 @@ function setPopupContentPOI(feature, layer) {
 	    }
 	    popupBlock = popupBlock.replace("POI_REMARKS", popupParts );
 	    //  Photo1
-	    //if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )){
-	    if ( checkProp( feature.properties.Photo1 ) ){
+	    if ( checkProp( feature.properties.Image1 ) ){
+		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
+	    }else if ( checkProp( feature.properties.Photo1 ) ){
 		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	    }else{
 		popupParts = "";
 	    }
 	    popupBlock = popupBlock.replace("POI_PHOTO1", popupParts );
 	    //  Photo2
-	    //if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )){
-	    if ( checkProp( feature.properties.Photo2 ) ){
+	    if ( checkProp( feature.properties.Image2 ) ){
+		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", "/"+feature.properties.Image2 );
+	    }else if ( checkProp( feature.properties.Photo2 ) ){
 		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	    }else{
 		popupParts = "";
@@ -524,8 +537,8 @@ function setPopupContentPOI(feature, layer) {
 	popupBlock = TemplatePopup_ITEMS;
 	{
 	    // Opening times
-	    if (( feature.properties.Open !== undefined ) && (feature.properties.Open !== "" )  ){    		
-		if (( feature.properties.Close !== undefined ) && (feature.properties.Close !== "" ) ){    		
+	    if ( checkProp( feature.properties.Open ) ){
+		if ( checkProp( feature.properties.Close ) ){
 		    popupParts = TemplateItem_OpeningTime.replace( "POPUP_OPENING_TIME" , 
 								   feature.properties.Open + "～" + feature.properties.Close );
 		}else{
@@ -537,7 +550,7 @@ function setPopupContentPOI(feature, layer) {
 	    popupBlock = popupBlock.replace("POI_OPENINGTIME", popupParts );
 	    
 	    // Opening Note
-	    if ((feature.properties.OpeningNote !== undefined ) && (feature.properties.OpeningNote !== "" ) ){    		
+	    if ( checkProp( feature.properties.OpeningNote ) ){
 		popupParts = TemplateItem_OpeningNote.replace( "POPUP_OPENING_NOTE", feature.properties.OpeningNote  );
 	    }else{
 		popupParts = "";
@@ -545,7 +558,7 @@ function setPopupContentPOI(feature, layer) {
 	    popupBlock = popupBlock.replace("POI_OPENINGNOTE", popupParts );
 	    
 	    // Holiday
-	    if ((feature.properties.Holiday !== undefined ) && (feature.properties.Holiday !== "" ) ){    		
+	    if ( checkProp( feature.properties.Holiday ) ){
 		popupParts = TemplateItem_Holiday.replace( "POPUP_HOLIDAY" , feature.properties.Holiday  );
 	    }else{
 		popupParts = "";
@@ -553,7 +566,7 @@ function setPopupContentPOI(feature, layer) {
 	    popupBlock = popupBlock.replace("POI_HOLIDAY", popupParts );
 	    
 	    // Price
-	    if ((feature.properties.Price !== undefined ) && (feature.properties.Price !== "" ) ){    		
+	    if ( checkProp( feature.properties.Price ) ){
 		popupParts = TemplateItem_Price.replace( "POPUP_PRICE" , feature.properties.Price );
 	    }else{
 		popupParts = "";
@@ -561,7 +574,7 @@ function setPopupContentPOI(feature, layer) {
 	    popupBlock = popupBlock.replace("POI_PRICE", popupParts );
 
 	    // Price Note
-	    if ((feature.properties.PriceNote !== undefined ) && (feature.properties.PriceNote !== "" ) ){    		
+	    if ( checkProp( feature.properties.PriceNote ) ){
 		popupParts = TemplateItem_PriceNote.replace( "POPUP_PRICE_NOTE" , feature.properties.PriceNote );
 	    }else{
 		popupParts = "";
@@ -569,7 +582,7 @@ function setPopupContentPOI(feature, layer) {
 	    popupBlock = popupBlock.replace("POI_PRICE_NOTE", popupParts );
 	    
 	    // Price Discount
-	    if ((feature.properties.Discount !== undefined ) && (feature.properties.Discount !== "" ) ){    		
+	    if ( checkProp( feature.properties.Discount ) ){
 		popupParts = TemplateItem_PriceDiscount.replace( "POPUP_DISCOUNT" , feature.properties.Discount );
 	    }else{
 		popupParts = "";
@@ -577,7 +590,7 @@ function setPopupContentPOI(feature, layer) {
 	    popupBlock = popupBlock.replace("POI_PRICE_DISCOUNT", popupParts );
 	    
 	    // TEL
-	    if ((feature.properties.TEL !== undefined ) && (feature.properties.TEL !== "" ) ){    		
+	    if ( checkProp( feature.properties.TEL ) ){
 		popupParts = TemplateItem_TEL.replace( "POPUP_TEL" , feature.properties.TEL  );
 	    }else{
 		popupParts = "";
@@ -593,9 +606,9 @@ function setPopupContentPOI(feature, layer) {
 	    popupBlock = popupBlock.replace("POI_FAX", popupParts );
 	    
 	    // LINK
-	    if ((feature.properties.URL !== undefined ) && (feature.properties.URL !== "" ) ){    		
+	    if ( checkProp( feature.properties.URL ) ){
 		popupParts = TemplateParts_Link.replace( "POPUP_URLLINK" , feature.properties.URL );
-		if (( feature.properties.Urltitle !== undefined )&&( feature.properties.Urltitle != "" )){
+		if ( checkProp( feature.properties.Urltitlr ) ){
 		    popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.Urltitle );
 		}else{
 		    popupParts = popupParts.replace( "POPUP_URLTITLE" , feature.properties.URL );
@@ -632,7 +645,7 @@ function setPopupContentPass(feature){
     //  Place Name
     if ( feature.properties ){
 	//  Name
-	if ( feature.properties.Name !== undefined ){
+	if ( checkProp( feature.properties.Name ) ){
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , feature.properties.Name );
 	}else{
 	    popupParts = TemplateParts_Name.replace( "POPUP_NAME" , "No Name" );
@@ -640,7 +653,7 @@ function setPopupContentPass(feature){
 	popupContent = popupContent.replace("AREA_NAME", popupParts );
 	
 	//  Summery
-	if ( feature.properties.Summery !== undefined ){
+	if ( checkProp( feature.properties.Summery ) ){
 	    popupParts = TemplateParts_Summery.replace( "POPUP_SUMMERY" , feature.properties.Summery );
 	}else{
 	    popupParts = "";
@@ -648,29 +661,34 @@ function setPopupContentPass(feature){
 	popupContent = popupContent.replace("AREA_SUMMERY", popupParts );
 	
 	//  Photo Image
-	//  Photo1
-	if (( feature.properties.Photo1 !== undefined )&&( feature.properties.Photo1 != "" )){
+	//  Photo1 
+	if( checkProp( feature.properties.Image1 ) ){
+	    // use uploaded Photoimage to django
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
+	}else if( checkProp( feature.properties.Photo1 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	}else{
 	    popupParts = "";
 	}
 	popupContent = popupContent.replace("AREA_PHOTO1", popupParts );
 	//  Photo2
-	if (( feature.properties.Photo2 !== undefined )&&( feature.properties.Photo2 != "" )){
-	  popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
-      }else{
-	  popupParts = "";
-      }
-      popupContent = popupContent.replace("AREA_PHOTO2", popupParts );
+	if( checkProp( feature.properties.image2 ) ){
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image2 );
+	}else if ( checkProp( feature.properties.photo2 ) ){
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("AREA_PHOTO2", popupParts );
 
-      //  Remarks
-      if ( feature.properties.Remarks !== undefined ){
-	  popupParts = TemplateParts_Remarks.replace( "POPUP_REMARKS" , feature.properties.Remarks );
-      }else{
-	  popupParts = "";
-      }
-      popupContent = popupContent.replace("AREA_DESCRIBE", popupParts );
-  }
+	//  Remarks
+	if ( checkProp( feature.properties.Remarks ) ){
+	    popupParts = TemplateParts_Remarks.replace( "POPUP_REMARKS" , feature.properties.Remarks );
+	}else{
+	    popupParts = "";
+	}
+	popupContent = popupContent.replace("AREA_DESCRIBE", popupParts );
+    }
 
 //  console.log( "koko AREA; "+ popupContent );
     return( popupContent );
@@ -695,10 +713,4 @@ function onEachSub_SearchRoute(feature) {
     
   return( popupContent );
 }
-
-
-
-
-
-    
 

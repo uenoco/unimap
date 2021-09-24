@@ -28,6 +28,10 @@ venv/
 /log/*
 !/log/.gitkeep
 
+# Backup Files
+/backup/*
+!/backup/.gitkeep
+
 # Mac DS_Store files　
 .DS_Store
 
