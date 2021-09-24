@@ -31,7 +31,7 @@ SECRET_KEY = env('SECRET_KEY')
 DEBUG = env('DEBUG')
 
 #ALLOWED_HOSTS = []
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 
 #CORS_ORIGIN_ALLOW_ALL = True #add for CROSCORS_ALLOW_CREDENTIALS = True
 #CORS_ALLOW_HEADERS = ['*']
@@ -179,17 +179,17 @@ LOGGING = {
     "disable_existing_loggers": False,
     "formatters": {"simple": {"format": "%(asctime)s [%(levelname)s] %(message)s"}},
     "handlers": {
-        #"info": {
-        #    "level": "INFO",
-        #    "class": "logging.FileHandler",
-        #    "filename": os.path.join(LOG_BASE_DIR, "info.log"),
-        #    "formatter": "simple",
-        #},
+        "info": {
+            "level": "INFO",
+            "class": "logging.FileHandler",
+            "filename": os.path.join(LOG_BASE_DIR, "info.log"),
+            "formatter": "simple",
+        },
         "warning": {
             "level": "WARNING",
             "class": "logging.FileHandler",
-            "filename": os.path.join(LOG_BASE_DIR, "warning.log"),
-            "formatter": "simple",
+           "filename": os.path.join(LOG_BASE_DIR, "warning.log"),
+          "formatter": "simple",
         },
         "error": {
             "level": "ERROR",
@@ -197,16 +197,16 @@ LOGGING = {
             "filename": os.path.join(LOG_BASE_DIR, "error.log"),
             "formatter": "simple",
         },
-        'console': {
-            'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-           "filename": os.path.join(LOG_BASE_DIR, "debug.log"),
+        "console": {
+            "level": 'DEBUG',
+            "class": 'logging.FileHandler',
+            "filename": os.path.join(LOG_BASE_DIR, "debug.log"),
             "formatter": "simple",
         },
     },
     "root": {
         #"handlers": ["info", "warning", "error"],
-        "handlers": ["warning", "error"],
+        "handlers": ["error"],
         "level": "WARNING",
     },
 }
