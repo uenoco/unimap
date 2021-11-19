@@ -20,7 +20,7 @@ import logging
 def toppage(request):
     try:
         arealist = Area.objects.filter( DisplayFlag=True ).order_by('DisplayOrder')
-        bookletlist = Booklet.objects.all()
+        bookletlist = Booklet.objects.all().order_by('id')
     except:
         arealist = ""
         bookletlist = ""
