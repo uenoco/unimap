@@ -115,7 +115,7 @@ admin.site.register(models.Hotel, HotelAdmin)
 
 # Booklet PDF
 class BookletAdmin(admin.ModelAdmin):
-    list_display = ['Name', 'Publication', 'PDFfile' ]
+    list_display = ['id', 'Name', 'Publication', 'PDFfile' ]
     ordering = [ 'Publication' ]
 admin.site.register(models.Booklet, BookletAdmin)
 
