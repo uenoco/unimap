@@ -1,0 +1,13 @@
+/***
+**  Unimap Project for Admin Page
+***/
+/* フォーム入力 */
+#id_Summery, #id_Remarks, #id_Access, #id_Moving, #id_Rental, #id_Bath{
+    width: 50em;
+}
+#id_SubName, #id_URL, #id_Photo1, #id_Photo2, #id_Photo360{
+    width: 30em;
+}
+
+#header {background: #000080;}
+
