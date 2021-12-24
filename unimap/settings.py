@@ -63,7 +63,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_gis',
     # django-dbbackup
-    'dbbackup',  
+    'dbbackup',
 ]
 
 MIDDLEWARE = [
@@ -96,6 +96,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 # `allauth` needs this from django
                 # 'django.template.context_processors.request',
+                # GOOGLE ANALYTICS
+                'unimap.context_processors.google_analytics',
             ],
         },
     },
@@ -214,3 +216,7 @@ LOGGING = {
 # django-dbbackup
 DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'
 DBBACKUP_STORAGE_OPTIONS = {'location': os.path.join(BASE_DIR, 'backup')}
+
+
+# GOOGLE ANALYTICS ID 
+GOOGLE_ANALYTICS_ID = env('GOOGLE_ANALYTICS_ID')

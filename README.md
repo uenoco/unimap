@@ -58,7 +58,17 @@ $ pip install -r requirements.txt
 
 ## Webサーバでの公開
 
-### さくらのホスティングサーバの場合
+### ホスティングサーバの場合
+
+レスポンスが悪いため困難
+
+### VPSサーバの場合
+
+- 環境構築
+
+参考：https://qiita.com/yasushi00/items/259fef5ecde0cf9578a7
+
+- ソース展開
 
 準備中
 
