@@ -14,7 +14,6 @@ django-leaflet==0.28.1
 djangorestframework==3.12.4
 djangorestframework-gis==0.17
 et-xmlfile==1.1.0
-GDAL==3.0.4
 Markdown==3.3.4
 MarkupPy==1.14
 odfpy==1.4.1

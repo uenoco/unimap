@@ -8,12 +8,15 @@
     <title>オンライン版奈良ユニバーサル観光マップ|Nara Universal Map Online</title>
     <meta name="keywords" content="車椅子,障碍者,地図,奈良公園,東大寺,大仏,高畑,奈良町,ならまち,北町,きたまち,唐招提寺,薬師寺,石舞台,万葉文化館">
     <meta name="description" content="車いす使用者の方などを対象に、奈良観光を安全に楽しんでいただけるよう障がい者自身が調査し、バリアフリー情報を重視した観光マップです。">
+    {% if GOOGLE_ANALYTICS_ID %}
+      <!-- GOOGLE ANALYTICS -->
+      {% include 'ga.html' %}
+    {% endif %}
   </head>
-
 <body>
 <section>
     <h1><img src="/static/index_img/logo.png" height="250px" width="250px" alt="オンライン版 奈良ユニバーサル観光マップ"></h1>
-    <h2 class="kye-cah">車いすの観光モデル<span>9</span>コース</h2>
+    <h2 class="kye-cah">車いすの観光モデル<span>{{ arealist|length }}</span>コース</h2>
     <p class="kye-note">障がい者自身が調査し、とりまとめたバリアフリー情報をご案内します。</p>
     <ul id="nav">
       {% for area in arealist %}
