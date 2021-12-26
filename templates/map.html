@@ -41,6 +41,11 @@
     <link rel="icon" href="/static/favicon.ico"> -->
     <!-- local css -->
     <link rel="stylesheet" href="/static/css/unimap_view.css">
+    <!-- GOOGLE ANALYTICS -->
+    {% if GOOGLE_ANALYTICS_ID %}
+      <!-- GOOGLE ANALYTICS -->
+      {% include 'ga.html' %}
+    {% endif %}
   </head>
   <body>
     <header>
