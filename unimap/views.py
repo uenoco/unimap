@@ -44,17 +44,19 @@ def test(request):
 
 # マップ
 def map(request,areaid):
-    print( areaid )
+    #print( areaid )
     try:
         # get arealist
         arealist = Area.objects.filter( DisplayFlag=True ).order_by('DisplayOrder')
 
         # get target area
         area  = Area.objects.get( id=areaid )
+    except:
+        return render(request, 'map.html'  )
 
+    try:
         # get ImageMap
         imap = ImageMap.objects.get( AreaId=areaid )
-
         mediaURL = settings.MEDIA_URL        
         # set route/point
         #route = route.objects.get( AreaId=area.id )
@@ -64,11 +66,13 @@ def map(request,areaid):
         #print( areaid )
         return render(request, 'map.html', params )
     except:
-        return render(request, 'map.html'  )
+        params = { 'arealist':arealist, 'area':area }
+        #print( areaid )
+        return render(request, 'map.html', params )
 
 # マップ
 def hotel(request,hotelid):
-    print( hotelid )
+    #print( hotelid )
     try:
         # get hotel-detail
         hotel = Hotel.objects.get( id=hotelid )
