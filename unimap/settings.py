@@ -166,6 +166,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),  # プロジェクト直下のstaticディレクトリを指定
 )
+
 # Add for wsgi with Apache
 STATIC_ROOT = os.path.join(BASE_DIR, 'deploy')  # プロジェクト直下のdeployディレクトリを指定
 
