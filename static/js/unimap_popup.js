@@ -213,7 +213,7 @@ function setPopupContentWC(feature){
 	popupContent = popupContent.replace("TOILET_PHOTO1", popupParts );
 	//  Photo2
 	if( checkProp( feature.properties.Image2 ) ){
-	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Image2 );
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image2 );
 	}else if( checkProp( feature.properties.Photo2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	}else{
