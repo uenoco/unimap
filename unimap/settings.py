@@ -64,7 +64,7 @@ INSTALLED_APPS = [
     'rest_framework_gis',
     # django-dbbackup
     'dbbackup',
-    # django_cleanup
+    # django-cleanup
     'django_cleanup',
 ]
 
