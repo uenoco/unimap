@@ -203,7 +203,7 @@ function setPopupContentWC(feature){
 	//  Photo1
 	if( checkProp( feature.properties.Image1 ) ){
 	    // use uploaded Photoimage to django
-	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/media/"+feature.properties.Image1 );
 	}else if( checkProp( feature.properties.Photo1 ) ){
 	    // use PhotoImage Link
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
@@ -213,7 +213,7 @@ function setPopupContentWC(feature){
 	popupContent = popupContent.replace("TOILET_PHOTO1", popupParts );
 	//  Photo2
 	if( checkProp( feature.properties.Image2 ) ){
-	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image2 );
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/media/"+feature.properties.Image2 );
 	}else if( checkProp( feature.properties.Photo2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	}else{
@@ -427,7 +427,7 @@ function setPopupContentInfo(feature, layer) {
 	
 	//  Photo Image (1)
 	if( checkProp( feature.properties.Image1 ) ){
-	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/media/"+feature.properties.Image1 );
 	}else if( checkProp( feature.properties.Photo1 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	}else{
@@ -436,7 +436,7 @@ function setPopupContentInfo(feature, layer) {
 	popupContent = popupContent.replace("INFO_PHOTO1", popupParts );
 	//  Photo Image (2)
 	if( checkProp( feature.properties.Image2 ) ){
-	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image2 );
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/media/"+feature.properties.Image2 );
 	}else if( checkProp( feature.properties.Photo2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	}else{
@@ -514,7 +514,7 @@ function setPopupContentPOI(feature, layer) {
 	    popupBlock = popupBlock.replace("POI_REMARKS", popupParts );
 	    //  Photo1
 	    if ( checkProp( feature.properties.Image1 ) ){
-		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
+		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", "/media/"+feature.properties.Image1 );
 	    }else if ( checkProp( feature.properties.Photo1 ) ){
 		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	    }else{
@@ -523,7 +523,7 @@ function setPopupContentPOI(feature, layer) {
 	    popupBlock = popupBlock.replace("POI_PHOTO1", popupParts );
 	    //  Photo2
 	    if ( checkProp( feature.properties.Image2 ) ){
-		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", "/"+feature.properties.Image2 );
+		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", "/media/"+feature.properties.Image2 );
 	    }else if ( checkProp( feature.properties.Photo2 ) ){
 		popupParts = TemplateParts_PhotoS.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	    }else{
@@ -664,7 +664,7 @@ function setPopupContentPass(feature){
 	//  Photo1 
 	if( checkProp( feature.properties.Image1 ) ){
 	    // use uploaded Photoimage to django
-	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image1 );
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/media/"+feature.properties.Image1 );
 	}else if( checkProp( feature.properties.Photo1 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo1 );
 	}else{
@@ -673,7 +673,7 @@ function setPopupContentPass(feature){
 	popupContent = popupContent.replace("AREA_PHOTO1", popupParts );
 	//  Photo2
 	if( checkProp( feature.properties.image2 ) ){
-	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/"+feature.properties.Image2 );
+	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", "/media/"+feature.properties.Image2 );
 	}else if ( checkProp( feature.properties.photo2 ) ){
 	    popupParts = TemplateParts_PhotoL.replace("POPUP_PHOTO", feature.properties.Photo2 );
 	}else{
