@@ -6,8 +6,9 @@ import os
 import json
 from django.views.generic import TemplateView
 from django.conf import settings
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
+
 
 # Database Tables
 from .models import Area, ImageMap, Route, PointData, Toilet, Hotel, Booklet
@@ -50,9 +51,11 @@ def map(request,areaid):
         arealist = Area.objects.filter( DisplayFlag=True ).order_by('DisplayOrder')
 
         # get target area
-        area  = Area.objects.get( id=areaid )
+        area = Area.objects.get( id=areaid , DisplayFlag=True )
     except:
-        return render(request, 'map.html'  )
+        # If no-map redirect to toppage
+        return redirect( "/" )
+        # return render(request, 'map.html'  )
 
     try:
         # get ImageMap
