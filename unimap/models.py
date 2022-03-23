@@ -15,7 +15,10 @@ import os
     
 # 推奨コース
 class Area(models.Model):
+    AreaType_CHOICES = ( ( 1, 'エリア'),( 2, 'コース') )
+
     id       = models.AutoField(primary_key=True)
+    AreaSort = models.IntegerField(verbose_name="マップタイプ",choices=AreaType_CHOICES, default=1 )
     DisplayOrder = models.IntegerField(verbose_name="表示順",null=True,blank=True)
     DisplayFlag  = models.BooleanField(verbose_name="表示ON/OFF",default=False)
     Name     = models.CharField(verbose_name="エリア名",max_length=24)
